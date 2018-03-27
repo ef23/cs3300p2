@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>INFO/CS3300 Project 2</title>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400,700,800|Space+Mono:400,400i,700" rel="stylesheet">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+
+<style>
+svg { margin:auto; display: block; }
+h1 { font-family: 'Open Sans', sans-serif; text-align: center; }
+path.country { fill: #ccc; stroke: #888;; }
+</style>
+</head>
+<body>
+<h1> Title goes here </h1>
+
+
+<svg height="900" width="1800"></svg>
+
+<script>
+
+var svg = d3.select("svg");
+
+var projection = d3.geoEquirectangular().scale(75);
+var pathGenerator = d3.geoPath().projection(projection);
+
+var rawData;
+var countries;
+
+d3.json("world-50m.json", function (error, data) {
+  rawData = data;
+
+  countries = topojson.feature(rawData, rawData.objects.countries);
+  showMap();
+});
+
+function showMap() {
+  // Create or modify paths for each country
+
+  projection.fitExtent([[0,0], [svg.attr("width"), svg.attr("height")]], countries);
+  pathGenerator = d3.geoPath().projection(projection);
+
+  var paths = svg.selectAll("path.country").data(countries.features);
+  paths = paths.enter().append("path")
+    .attr("class", "country")
+    .attr("opacity", 0.8)
+    .style("stroke","white")
+    .style("stroke-width",0.3)
+    .on('mouseover',function(d){
+          console.log(d);
+          d3.select(this)
+            .style("opacity", 1)
+            .style("stroke","white")
+            .style("stroke-width",0.6);
+        })
+    .on('mouseout', function(d){
+          d3.select(this)
+            .style("opacity", 0.8)
+            .style("stroke","white")
+            .style("stroke-width",0.3);
+        })
+    .merge(paths);
+
+  paths.attr("d", function(country){
+    return pathGenerator(country);
+  })
+}
+</script>
+</body>
+</html>
