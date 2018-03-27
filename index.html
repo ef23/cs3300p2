@@ -28,7 +28,7 @@ var pathGenerator = d3.geoPath().projection(projection);
 var rawData;
 var countries;
 
-d3.json("world-50m.json", function (error, data) {
+d3.json("data/world-50m.json", function (error, data) {
   rawData = data;
 
   countries = topojson.feature(rawData, rawData.objects.countries);
