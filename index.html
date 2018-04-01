@@ -18,13 +18,23 @@
 
 <h1> global <span style="color:green;">green</span>house gases </h1>
 
-<div class="page1">
-  <svg class="heatmap" height="700" width="1400"></svg>
-  <svg class="continentdonut" height="700" width="400"></svg>
-  <div id="yearslider"></div>
+<div class="page1"></div>
 <script>
 
-var svg = d3.select(".heatmap");
+var windowHeight = window.screen.availHeight
+var windowWidth = window.screen.availWidth
+
+var heatmapWidth = .725 * windowWidth
+var heatmapHeight = .6 * windowHeight
+
+var donutWidth = .225 * windowWidth
+var donutHeight = .6 * windowHeight
+
+
+var svg = d3.select(".page1").append("svg").attr("height", heatmapHeight).attr("width", heatmapWidth).attr("class", "heatmap");
+var donut = d3.select(".page1").append("svg").attr("height", donutHeight).attr("width", donutWidth).attr("class", "heatmap");
+d3.select(".page1").append("div").attr("id", "yearslider");
+
 
 var projection = d3.geoEquirectangular().scale(75);
 var pathGenerator = d3.geoPath().projection(projection);
