@@ -51,7 +51,7 @@ function page1(error, map, codes, carbon) {
   carbonData = carbon;
   // console.log(countryCodes)
   countries = topojson.feature(mapData, mapData.objects.countries);
-  showMap(1850);
+  initMap();
 }
 
 function getEmission(countryCode, yearData) {
@@ -73,14 +73,17 @@ function getEmission(countryCode, yearData) {
   return 0;
 }
 
-function showMap(year) {
+
+var colorScale = d3.scaleLinear()
+  .interpolate(d3.interpolateHcl)
+  .range(["#ffff8c","#d7191c"])
+
+function initMap() {
+  var year = 1850;
   var yearData = carbonData.filter(d => d.Year === String(year))
   var validData = yearData.filter(d => Number(d.Total) > 0 && d.Country !== "World" && d.Country !== "European Union (28)")
 
-  var colorScale = d3.scaleLinear()
-    .domain(d3.extent(validData, d => Number(d.Total)))
-    .interpolate(d3.interpolateHcl)
-    .range(["#ffff8c","#f9d057","#f29e2e","#e76818","#d7191c"])
+  colorScale.domain(d3.extent(validData, d => Number(d.Total)))
 
   projection.fitExtent([[0,0], [svg.attr("width"), svg.attr("height")]], countries);
   pathGenerator = d3.geoPath().projection(projection);
@@ -88,6 +91,7 @@ function showMap(year) {
   var paths = svg.selectAll("path.country").data(countries.features);
   paths = paths.enter().append("path")
     .attr("class", "country")
+    .attr("id", d=>"country" +d.id)
     .attr("opacity", 0.8)
     .attr("fill", d => {
       var carbon = getEmission(d.id, validData);
@@ -114,6 +118,38 @@ function showMap(year) {
   })
 }
 
+
+function showMap(year) {
+  var yearData = carbonData.filter(d => d.Year === String(year))
+  var validData = yearData.filter(d => Number(d.Total) > 0 && d.Country !== "World" && d.Country !== "European Union (28)")
+
+  colorScale.domain(d3.extent(validData, d => Number(d.Total)))
+
+  var paths = svg.selectAll("path.country").data(countries.features);
+  var addedpaths = paths.enter().append("path")
+  var mergedpaths = addedpaths.merge(paths);
+
+  mergedpaths
+    .attr("class", "country")
+    .attr("opacity", 0.8)
+    .attr("fill", d => {
+      var carbon = getEmission(d.id, validData);
+      return carbon === 0 ? "#ccc" : colorScale(carbon)
+    })
+    .on('mouseover',function(d){
+          d3.select(this)
+            .style("opacity", 1)
+            .style("stroke","white")
+            .style("stroke-width",0.6);
+        })
+    .on('mouseout', function(d){
+          d3.select(this)
+            .style("opacity", 0.8)
+            .style("stroke","white")
+            .style("stroke-width",0.3);
+    })
+}
+
 // generate the slider
 var yearTicks = []
 
@@ -129,7 +165,6 @@ var yearslider = d3.sliderHorizontal()
   .tickFormat(d3.timeFormat('%Y'))
   .tickValues(yearTicks)
   .on('onchange', val => {
-    d3.select("p#year").text(d3.timeFormat('%Y')(val));
     showMap(val.getFullYear())
   });
  var g = d3.select("div#yearslider").append("svg")
@@ -139,9 +174,6 @@ var yearslider = d3.sliderHorizontal()
   .attr("transform", "translate(50,30)");
 
   g.call(yearslider);
-
-  d3.select("p#year").text(d3.timeFormat('%Y')(yearslider.value()));
-  d3.select("a#setValue3").on("click", () => yearslider.value(new Date(1997, 11, 17)));
 // end slider
 
 </script>
