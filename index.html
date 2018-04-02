@@ -7,25 +7,27 @@
 <script src="https://d3js.org/topojson.v2.min.js"></script>
 
 <style>
+/** {border: 1px solid;}*/
   body { background: #ecf0f1 }
-  h1 { font-size: 50px; font-family: 'Open Sans', sans-serif; text-align: center; }
+  h1 { font-size: 60px; font-family: 'Open Sans', sans-serif; text-align: center; }
   path.country {  stroke: #888; }
   .yearslider { width:1400px; }
-  .heatmap {border: 1px solid #95a5a6; border-radius: 5px; }
+  /*.heatmap {border: 1px solid #95a5a6; border-radius: 5px; }*/
 </style>
 </head>
 <body>
 
 <h1> global <span style="color:green;">green</span>house gases </h1>
-
+<button id="toggle">Toggle Per Capita</button>
 <div class="page1"></div>
+</body>
 <script>
 
 var windowHeight = window.screen.availHeight
 var windowWidth = window.screen.availWidth
 
 var heatmapWidth = .725 * windowWidth
-var heatmapHeight = .6 * windowHeight
+var heatmapHeight = .65 * windowHeight
 
 var donutWidth = .225 * windowWidth
 var donutHeight = .6 * windowHeight
@@ -35,49 +37,52 @@ var svg = d3.select(".page1").append("svg").attr("height", heatmapHeight).attr("
 var donut = d3.select(".page1").append("svg").attr("height", donutHeight).attr("width", donutWidth).attr("class", "heatmap");
 d3.select(".page1").append("div").attr("id", "yearslider");
 
-
 var projection = d3.geoEquirectangular().scale(75);
 var pathGenerator = d3.geoPath().projection(projection);
 
 var mapData;
 var carbonData;
+var carbonPerCapitaData;
 var countryCodes;
 var countries;
 var minYear = 1850;
 var maxYear= 2014;
 
+var perCapita = false;
+
 d3.queue()
   .defer(d3.json, "data/world-50m.json")
   .defer(d3.json, "data/iso-3166-codes.json")
-  .defer(d3.csv, "data/co2emissions.csv")
+  .defer(d3.csv, "data/co-emissions.csv")
+  .defer(d3.csv, "data/co-emissions-per-capita.csv")
   .await(page1);
 
-function page1(error, map, codes, carbon) {
+function page1(error, map, codes, carbon, carbonPerCapita) {
   mapData = map;
   countryCodes = codes.map(d => {
     d["country-code"] = Number(d["country-code"]);
     return d;
   });
   carbonData = carbon;
-  // console.log(countryCodes)
+  carbonPerCapitaData = carbonPerCapita;
   countries = topojson.feature(mapData, mapData.objects.countries);
   initMap();
 }
 
 function getEmission(countryCode, yearData) {
   var name;
-  // console.log(countryCodes)
   for (var i in countryCodes) {
     var country = countryCodes[i];
     if (country["country-code"] === countryCode) {
-      name = country["name"]
+      name = perCapita ? country["alpha-3"] : country["name"];
       break;
     }
   }
   for (var i in yearData) {
     var country = yearData[i];
-    if (country["Country"] === name){
-      return Number(country["Total"])
+    var code = perCapita ? country["Code"] : country["Country"]
+    if (code === name){
+      return Number(country["Emissions"])
     }
   }
   return 0;
@@ -88,14 +93,35 @@ var colorScale = d3.scaleLinear()
   .interpolate(d3.interpolateHcl)
   .range(["#ffff8c","#d7191c"])
 
+var yearData;
+var validData;
+
+function setDomain(year) {
+  var data = perCapita ? carbonPerCapitaData : carbonData;
+  yearData = data.filter(d => d.Year === String(year) && d.Country !== "World" && d.Country !== "European Union (28)")
+  validData = yearData.filter(d => Number(d.Emissions) > 0)
+
+  colorScale.domain(d3.extent(validData, d => Number(d.Emissions)))
+}
+
+var heatmapTitle = "CARBON DIOXIDE EMISSIONS";
+
 function initMap() {
-  var year = 1850;
-  var yearData = carbonData.filter(d => d.Year === String(year))
-  var validData = yearData.filter(d => Number(d.Total) > 0 && d.Country !== "World" && d.Country !== "European Union (28)")
+  svg.append("text")
+    .attr("id", "title")
+    .attr("x", heatmapWidth/2)
+    .attr("y", 0.075 * heatmapHeight)
+    .style("font-family", "Open Sans, sans-serif")
+    .style("font-size", 30)
+    .style("font-weight", "bold")
+    .style("text-anchor", "middle")
+    .text(heatmapTitle + " IN 1969")
+  setDomain(1969);
 
-  colorScale.domain(d3.extent(validData, d => Number(d.Total)))
+  // console.log(validData)
+  // console.log(d3.extent(validData, d => Number(d.Emissions)))
 
-  projection.fitExtent([[0,0], [svg.attr("width"), svg.attr("height")]], countries);
+  projection.fitExtent([[0,.12*heatmapHeight], [svg.attr("width"), svg.attr("height")]], countries);
   pathGenerator = d3.geoPath().projection(projection);
 
   var paths = svg.selectAll("path.country").data(countries.features);
@@ -105,6 +131,7 @@ function initMap() {
     .attr("opacity", 0.8)
     .attr("fill", d => {
       var carbon = getEmission(d.id, validData);
+      // console.log(carbon);
       return carbon === 0 ? "#ccc" : colorScale(carbon)
     })
     .style("stroke","white")
@@ -128,24 +155,20 @@ function initMap() {
   })
 }
 
-
-function showMap(year) {
-  var yearData = carbonData.filter(d => d.Year === String(year))
-  var validData = yearData.filter(d => Number(d.Total) > 0 && d.Country !== "World" && d.Country !== "European Union (28)")
-
-  colorScale.domain(d3.extent(validData, d => Number(d.Total)))
+function showMap(year, isChange) {
+  d3.select("#title").transition().text(heatmapTitle + " IN " + year)
+  setDomain(year);
 
   var paths = svg.selectAll("path.country").data(countries.features);
   var addedpaths = paths.enter().append("path")
   var mergedpaths = addedpaths.merge(paths);
 
-  mergedpaths
-    .attr("class", "country")
-    .attr("opacity", 0.8)
+  mergedpaths.transition().duration(isChange ? 500 : 0)
     .attr("fill", d => {
       var carbon = getEmission(d.id, validData);
       return carbon === 0 ? "#ccc" : colorScale(carbon)
     })
+  mergedpaths
     .on('mouseover',function(d){
           d3.select(this)
             .style("opacity", 1)
@@ -167,15 +190,22 @@ for (var i = minYear+1; i <= maxYear+1; i+=41){
   yearTicks.push(new Date(i, 0, 0));
 }
 
+var prevVal = 1969
+
 var yearslider = d3.sliderHorizontal()
   .min(d3.min(yearTicks))
   .max(d3.max(yearTicks))
   .step(1000 * 60 * 60 * 24 * 365)
-  .width(1300)
+  .width(heatmapWidth*.9)
   .tickFormat(d3.timeFormat('%Y'))
   .tickValues(yearTicks)
   .on('onchange', val => {
-    showMap(val.getFullYear())
+    val = val.getFullYear()
+    if (prevVal !== val){
+      var isChange = Math.abs(prevVal - val) > 3
+      showMap(val, isChange)
+      prevVal = val;
+    }
   });
  var g = d3.select("div#yearslider").append("svg")
   .attr("width", 1400)
@@ -185,7 +215,18 @@ var yearslider = d3.sliderHorizontal()
 
   g.call(yearslider);
 // end slider
+// toggle button
 
+function togglePerCapita() {
+  perCapita = !perCapita;
+  heatmapTitle = perCapita ? "CARBON DIOXIDE EMISSIONS PER CAPITA" : "CARBON DIOXIDE EMISSIONS";
+  showMap(prevVal, true)
+}
+
+d3.select("#toggle")
+  .style("left", heatmapWidth/2)
+  .style("position", "absolute")
+  .on("click", () => togglePerCapita())
+//end button
 </script>
-</body>
 </html>
