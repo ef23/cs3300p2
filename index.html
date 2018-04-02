@@ -4,13 +4,14 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400,700,800|Space+Mono:400,400i,700" rel="stylesheet">
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://unpkg.com/d3-simple-slider@0.2.0/build/d3-simple-slider.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script src="https://d3js.org/topojson.v2.min.js"></script>
 
 <style>
 /** {border: 1px solid;}*/
   body { background: #ecf0f1 }
   h1 { font-size: 60px; font-family: 'Open Sans', sans-serif; text-align: center; }
-  path.country {  stroke: #888; }
+  path.country {  stroke: #aaa; }
   .yearslider { width:1400px; }
   /*.heatmap {border: 1px solid #95a5a6; border-radius: 5px; }*/
 </style>
@@ -30,11 +31,11 @@ var heatmapWidth = .725 * windowWidth
 var heatmapHeight = .65 * windowHeight
 
 var donutWidth = .225 * windowWidth
-var donutHeight = .6 * windowHeight
+var donutHeight = .65 * windowHeight
 
 
 var svg = d3.select(".page1").append("svg").attr("height", heatmapHeight).attr("width", heatmapWidth).attr("class", "heatmap");
-var donut = d3.select(".page1").append("svg").attr("height", donutHeight).attr("width", donutWidth).attr("class", "heatmap");
+var donut = d3.select(".page1").append("svg").attr("height", donutHeight).attr("width", donutWidth).attr("class", "donut");
 d3.select(".page1").append("div").attr("id", "yearslider");
 
 var projection = d3.geoEquirectangular().scale(75);
@@ -53,14 +54,19 @@ var perCapita = false;
 d3.queue()
   .defer(d3.json, "data/world-50m.json")
   .defer(d3.json, "data/iso-3166-codes.json")
-  .defer(d3.csv, "data/co-emissions.csv")
-  .defer(d3.csv, "data/co-emissions-per-capita.csv")
+  .defer(d3.csv, "data/co-emissions.csv", parseEmissions)
+  .defer(d3.csv, "data/co-emissions-per-capita.csv", parseEmissions)
   .await(page1);
+
+function parseEmissions(row) {
+  row["Emissions"] = Number(row["Emissions"]);
+  return row;
+}
 
 function page1(error, map, codes, carbon, carbonPerCapita) {
   mapData = map;
   countryCodes = codes.map(d => {
-    d["country-code"] = Number(d["country-code"]);
+    d["country-code"] = Number(d["country-code"])
     return d;
   });
   carbonData = carbon;
@@ -69,44 +75,127 @@ function page1(error, map, codes, carbon, carbonPerCapita) {
   initMap();
 }
 
-function getEmission(countryCode, yearData) {
-  var name;
-  for (var i in countryCodes) {
-    var country = countryCodes[i];
-    if (country["country-code"] === countryCode) {
-      name = perCapita ? country["alpha-3"] : country["name"];
-      break;
-    }
-  }
-  for (var i in yearData) {
-    var country = yearData[i];
-    var code = perCapita ? country["Code"] : country["Country"]
-    if (code === name){
-      return Number(country["Emissions"])
-    }
-  }
-  return 0;
-}
-
-
 var colorScale = d3.scaleLinear()
   .interpolate(d3.interpolateHcl)
   .range(["#ffff8c","#d7191c"])
 
 var yearData;
 var validData;
-
-function setDomain(year) {
-  var data = perCapita ? carbonPerCapitaData : carbonData;
-  yearData = data.filter(d => d.Year === String(year) && d.Country !== "World" && d.Country !== "European Union (28)")
-  validData = yearData.filter(d => Number(d.Emissions) > 0)
-
-  colorScale.domain(d3.extent(validData, d => Number(d.Emissions)))
-}
-
+var dataArr;
 var heatmapTitle = "CARBON DIOXIDE EMISSIONS";
 
+var tip = d3.select(".donut").append("text")
+  .attr("class", "country-tip")
+  .attr("x", donutWidth/2)
+  .attr("y", donutHeight*.25)
+  .attr("text-anchor", "middle")
+  .style("font-family", "Open Sans, sans-serif")
+  .style("font-weight", "bold")
+  .style("font-size", 30)
+  .text("Hover over a country!")
+
+var emissions = d3.select(".donut").append("text")
+  .attr("class", "country-emissions-tip")
+  .attr("x", donutWidth/2)
+  .attr("y", donutHeight*.3)
+  .attr("text-anchor", "middle")
+  .style("font-family", "Open Sans, sans-serif")
+  .style("font-weight", "bold")
+  .style("font-size", 25)
+
+var flag = d3.select(".donut").append("image")
+  .attr("class", "country-flag-big")
+  .attr("height", donutWidth*.25)
+  .attr("width", donutHeight*.25)
+  .attr("x", donutWidth*.33)
+  .attr("y", donutHeight*.05)
+
+// for the heatmap
+function getEmission(countryCode, yearData) {
+  for (var i in dataArr) {
+    var country = dataArr[i];
+    if (countryCode === country["id"]){
+      return (country["Emissions"])
+    }
+  }
+  return 0;
+}
+
+function setDomain(year) {
+  dataArr = [];
+  var data = perCapita ? carbonPerCapitaData : carbonData;
+  yearData = data.filter(d => d.Year === String(year) && d.Country !== "World" && d.Country !== "European Union (28)")
+  validData = yearData.filter(d => (d.Emissions) > 0)
+
+  colorScale.domain(d3.extent(validData, d => (d.Emissions)));
+
+  for (var i in validData) {
+    var country = validData[i];
+    var id;
+    var code;
+    var name = perCapita ? country["Code"] : country["Country"];
+    for (var i in countryCodes) {
+      var codes = countryCodes[i];
+      if (perCapita) {
+        if (name === codes["alpha-3"]) {
+          code = codes["alpha-2"]
+          id = codes["country-code"]
+          break;
+        }
+      } else {
+        if (name === codes["name"]) {
+          code = codes["alpha-2"]
+          id = codes["country-code"]
+          break;
+        }
+      }
+    }
+    dataArr.push({
+      Country: country.Country,
+      Emissions: country.Emissions,
+      id: id,
+      code: code
+    })
+  }
+}
+
+function scaleTipText(){
+  var length = tip.node().getComputedTextLength();
+    // rescale text accordingly
+  if (length > donutWidth){
+    tip.style("font-size",  Math.round(length/30))
+  } else {
+    tip.style("font-size", 30)
+  }
+}
+
+function setTip(id) {
+  for (var i in dataArr) {
+    var country = dataArr[i];
+    if (id === country["id"]){
+      tip.text(country.Country)
+      scaleTipText();
+      emissions.text(country.Emissions + " Mt CO2" + (perCapita ? " per capita" : ""))
+      flag.attr("href", "data/flags/" + country.code + "-128.png")
+      return;
+    }
+  }
+
+  // if this country has no data, it will not be in dataArr,
+  // must search the entirety of countryCodes instead
+  for (var i in countryCodes) {
+    var country = countryCodes[i];
+    if (id === country["country-code"]){
+      tip.text(country.name)
+      flag.attr("href", "data/flags/" + country["alpha-2"] + "-128.png")
+      scaleTipText();
+      emissions.text("No data.")
+    }
+  }
+}
+
 function initMap() {
+  scaleTipText();
   svg.append("text")
     .attr("id", "title")
     .attr("x", heatmapWidth/2)
@@ -119,7 +208,7 @@ function initMap() {
   setDomain(1969);
 
   // console.log(validData)
-  // console.log(d3.extent(validData, d => Number(d.Emissions)))
+  // console.log(d3.extent(validData, d => (d.Emissions)))
 
   projection.fitExtent([[0,.12*heatmapHeight], [svg.attr("width"), svg.attr("height")]], countries);
   pathGenerator = d3.geoPath().projection(projection);
@@ -131,21 +220,21 @@ function initMap() {
     .attr("opacity", 0.8)
     .attr("fill", d => {
       var carbon = getEmission(d.id, validData);
-      // console.log(carbon);
       return carbon === 0 ? "#ccc" : colorScale(carbon)
     })
-    .style("stroke","white")
+    .style("stroke","#ccc")
     .style("stroke-width",0.3)
     .on('mouseover',function(d){
           d3.select(this)
             .style("opacity", 1)
-            .style("stroke","white")
+            .style("stroke","#bbb")
             .style("stroke-width",0.6);
+          setTip(d.id);
         })
     .on('mouseout', function(d){
           d3.select(this)
             .style("opacity", 0.8)
-            .style("stroke","white")
+            .style("stroke","#ccc")
             .style("stroke-width",0.3);
         })
     .merge(paths);
@@ -172,17 +261,18 @@ function showMap(year, isChange) {
     .on('mouseover',function(d){
           d3.select(this)
             .style("opacity", 1)
-            .style("stroke","white")
+            .style("stroke","#bbb")
             .style("stroke-width",0.6);
+          setTip(d.id);
         })
     .on('mouseout', function(d){
           d3.select(this)
             .style("opacity", 0.8)
-            .style("stroke","white")
+            .style("stroke","#ccc")
             .style("stroke-width",0.3);
     })
 }
-
+// end heatmap
 // generate the slider
 var yearTicks = []
 
