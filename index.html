@@ -13,6 +13,23 @@
   h1 { font-size: 75px; font-family: 'Open Sans', sans-serif; text-align: center; padding: 1% 0%}
   path.country {  stroke: #aaa; }
   .yearslider { width:1400px; }
+
+
+  .toolTip {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #888888;
+    color: black;
+    font: 12px sans-serif;
+    padding: 5px;
+    text-align: center;
+}
 </style>
 </head>
 <body>
@@ -398,7 +415,7 @@ var pie = d3.pie()
 var donutTip = d3.select("body")
   .append("div")
   .attr("class", "donut-tip")
-  .style("left", heatmapWidth + (donut.node().getBBox().width/1.75))
+  .style("left", heatmapWidth + donutWidth/1.75)
   .style("top", donutHeight/1.3 + radius)
   .style("width", width)
   .style("text-align", "center")
@@ -415,6 +432,8 @@ donutTip.append("div")
 donutTip.append("div")
   .attr("class", "percent");
 
+var div = d3.select("body").append("div").attr("class", "toolTip");
+
 function accumulate() {
   cumulativeData = [];
   for (var i in regions) {
@@ -429,17 +448,6 @@ function accumulate() {
   cumulativeData = cumulativeData.map(d => Number.parseFloat(d).toFixed(3))
 }
 
-function donutTipHover(d){
-  var total = d3.sum(cumulativeData);
-  var percent = Math.round(1000 * d.data / total) / 10;
-  donutTip.select(".region").html(regions[d.index]);
-  donutTip.select(".emissions").html(d.data + " Mt CO2");
-  donutTip.select(".percent").html(percent + "%");
-  donutTip.style("display", "block");
-}
-
-var donutgraph;
-
 function initDonut() {
   accumulate()
 
@@ -448,17 +456,58 @@ function initDonut() {
   addedpaths.merge(path)
     .attr("transform", "translate(" + (donutWidth/2) + "," + (donutHeight/1.3) + ")")
     .attr("d", arc)
-    .attr("fill", function(d, i) {
+    .attr("fill", (d, i) => {
       return donutColor(i);
     })
-    .on("mouseover", donutTipHover);
+    .on("mousemove", d => {
+        var total = d3.sum(cumulativeData);
+        var percent = Math.round(1000 * d.data / total) / 10;
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html(regions[d.index]
+          +"<br>"+d.data+" Mt CO2"+ (perCapita ? " per capita" : "")
+          + "<br>"+percent+"%");
+    })
+    .on("mouseout", d => {
+        div.style("display", "none");
+    });
+  path.transition()
+    .duration(1000)
+    .attrTween("d", arcTween)
+
+  // build the legend inspired by http://bl.ocks.org/juan-cb/1984c7f2b446fffeedde
+  var legendRectSize = radius*0.05;
+  var legendSpacing = radius*0.15;
+  var legend = donut.selectAll(".donut-legend")
+  .data(regions)
+  .enter()
+  .append("g")
+  .attr("class", "donut-legend")
+  .attr("transform", (d, i) => {
+      var height = donutHeight/1.3 - radius/3;
+      var offset =  height * 2.5;
+      var horz = donutWidth/2 -radius/4 + legendRectSize;
+      var vert = height + i * legendSpacing;
+      return "translate(" + horz + "," + vert + ")";
+  })
+  legend.append("rect")
+    .attr("width", legendRectSize)
+    .attr("height", legendRectSize)
+    .style("fill", (d, i) => donutColor(i))
+    .style("stroke", (d, i) => donutColor(i))
+  legend.append("text")
+    .attr("x", legendRectSize + legendSpacing/2)
+    .attr("y", legendRectSize*4 - legendSpacing)
+    .style("font-family", "\"Open Sans\", san-serif")
+    .text(function(d) { return d; });
 }
 
 // This function is courtesy of https://bl.ocks.org/mbostock/1346410
 function arcTween(a) {
   var i = d3.interpolate(this._current, a);
   this._current = i(0);
-  return function(t) {
+  return t => {
     return arc(i(t));
   };
 }
@@ -469,7 +518,6 @@ function drawDonut() {
   var path = donut.selectAll("path").data(pie(cumulativeData))
   var addedpaths = path.enter().append("path")
   addedpaths.merge(path)
-    .on("mouseover", donutTipHover)
     .transition().attrTween("d", arcTween)
 
 
