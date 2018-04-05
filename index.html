@@ -338,7 +338,7 @@ function initMap() {
     .attr("class", "country")
     .attr("id", d=>"country" +d.id)
     .attr("opacity", 0.8)
-    .attr("fill", "#ffff8c")
+    .attr("fill", "#ccc")
     .style("stroke","#ccc")
     .style("stroke-width",0.3)
     .on('mouseover',function(d){
@@ -429,7 +429,7 @@ function initHeatmapLegend() {
       .append("svg")
       .attr("width", heatmapWidth)
       .attr("height", h+scalePadding)
-      .attr("transform", "translate(0,"+ (heatmapHeight-h-scalePadding) + ")")
+      .attr("y", heatmapHeight-h-scalePadding)
 
   heatmapLegend = hmapKey.append("defs")
       .append("svg:linearGradient")
