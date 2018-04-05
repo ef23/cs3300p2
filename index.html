@@ -8,12 +8,12 @@
 <script src="https://d3js.org/topojson.v2.min.js"></script>
 
 <style>
-/** {border: 1px solid;}*/
   body { background: #ecf0f1 }
   h1 { font-size: 75px; font-family: 'Open Sans', sans-serif; text-align: center; padding: 1% 0%}
   path.country {  stroke: #aaa; }
   .yearslider { width:1400px; }
 
+  /*.heatmap { border: 1px solid black; }*/
 
   .toolTip {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -30,6 +30,10 @@
     padding: 5px;
     text-align: center;
 }
+
+  .flag {
+    border-radius: 50%;
+  }
 </style>
 </head>
 <body>
@@ -136,9 +140,10 @@ var leaderEmissions = d3.select(".donut").append("text")
 
 // displays the appropriate flag
 var leaderFlag = d3.select(".donut").append("image")
-  .attr("class", "leader-flag-big")
+  .attr("class", "flag")
   .attr("x", donutWidth*.33)
   .attr("y", donutHeight*.15)
+  .style("border-radius", "50%")
 
 // *********** END LEADER TIP ************* //
 
@@ -166,7 +171,7 @@ var emissions = d3.select(".donut").append("text")
 
 // displays the appropriate flag
 var flag = d3.select(".donut").append("image")
-  .attr("class", "country-flag-big")
+  .attr("class", "flag")
 
 d3.select(".donut").append("text")
   .attr("x", donutWidth/2)
@@ -254,12 +259,12 @@ function setTip(id) {
       tip.text(country.Country)
       scaleTipText();
       emissions.text(country.Emissions + " Mt CO2" + (perCapita ? " per capita" : ""))
-      flag.attr("href", "data/flags/" + country.code + "-128.png")
+      flag.attr("href", "data/flags/" + country.code + ".png")
         .attr("height", flagScale(country.Emissions) * donutWidth*.25)
         .attr("width", flagScale(country.Emissions) * donutHeight*.25)
       var flagWidth = flag.node().getBBox().width/2;
       var flagHeight = flag.node().getBBox().height/2;
-      flag.attr("x", donutWidth/2 - leaderWidth)
+      flag.attr("x", donutWidth/2 - flagWidth)
           .attr("y", donutHeight*.375 - flagHeight)
       return true;
     }
@@ -267,16 +272,15 @@ function setTip(id) {
   return false;
 }
 
-var leaderWidth;
 // gets the leader of emissions for the current year
 function setLeader(year) {
   var leader = dataArr.reduce((acc, l) => acc.Emissions > l.Emissions ? acc : l)
   leaderTip.text(leader.Country)
   leaderEmissions.text(leader.Emissions + " Mt CO2" + (perCapita ? " per capita" : ""))
-  leaderFlag.attr("href", "data/flags/" + leader.code + "-128.png")
+  leaderFlag.attr("href", "data/flags/" + leader.code + ".png")
     .attr("height", donutWidth*.25)
     .attr("width", donutHeight*.25)
-  leaderWidth = leaderFlag.node().getBBox().width/2;
+  var leaderWidth = leaderFlag.node().getBBox().width/2;
   leaderFlag.attr("x", donutWidth/2 - leaderWidth)
 }
 
@@ -299,6 +303,7 @@ function initMap() {
   // console.log(d3.extent(validData, d => (d.Emissions)))
 
   projection.fitExtent([[0,.12*heatmapHeight], [svg.attr("width"), svg.attr("height")]], countries);
+
   pathGenerator = d3.geoPath().projection(projection);
 
   var paths = svg.selectAll("path.country").data(countries.features);
