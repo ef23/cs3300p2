@@ -69,6 +69,7 @@ var donutHeight = .65 * windowHeight
 // the two svgs and the timeline slider
 var svg = d3.select(".page1").append("svg").attr("height", heatmapHeight).attr("width", heatmapWidth).attr("class", "heatmap");
 var donut = d3.select(".page1").append("svg").attr("height", donutHeight).attr("width", donutWidth).attr("class", "donut");
+var hmapKey;
 d3.select(".page1").append("div").attr("id", "yearslider").style("width", heatmapWidth);
 
 var projection = d3.geoEquirectangular().scale(75);
@@ -391,6 +392,8 @@ function updateMap(year, isChange) {
 
 var heatmapLegend;
 var heatmapLegendKey;
+var heatmapLegendAxis;
+var heatmapLegendAxisTitle;
 
 var baseWidth = heatmapWidth*.2;
 var heatmapLegendWidth;
@@ -415,16 +418,18 @@ function setHmapLegendScale() {
   heatmapLegendWidthScale.domain([minmaxEmissions, maxEmissions])
 }
 
+var scalePadding = 40;
+// builds the heatmap legend
 function initHeatmapLegend() {
   var h = 10;
   setHmapLegendScale();
   heatmapLegendWidth = heatmapLegendWidthScale(leader.Emissions)
 
-  var hmapKey = d3.select(".heatmap")
+  hmapKey = d3.select(".heatmap")
       .append("svg")
       .attr("width", heatmapWidth)
-      .attr("height", h)
-      .attr("transform", "translate(0,"+ (heatmapHeight-h) + ")")
+      .attr("height", h+scalePadding)
+      .attr("transform", "translate(0,"+ (heatmapHeight-h-scalePadding) + ")")
 
   heatmapLegend = hmapKey.append("defs")
       .append("svg:linearGradient")
@@ -449,11 +454,43 @@ function initHeatmapLegend() {
       .attr("class", "heatmap-legend")
       .attr("width", 0)
       .attr("height", h)
+      .attr("transform", "translate(0," + scalePadding + ")")
       .style("fill", "url(#gradient)")
 
   heatmapLegendKey.transition().duration(2000)
       .attr("width", heatmapLegendWidth)
 
+  // set equal to 0 to get transition
+  var hmapRange = d3.scaleLinear().domain(d3.extent(dataArr, d => d.Emissions)).range([0, 0])
+  var hmapAxis = d3.axisTop()
+    .scale(hmapRange)
+
+  heatmapLegendAxis = hmapKey.append("g")
+    .attr("transform", "translate(0,"+ scalePadding + ")")
+    .call(hmapAxis)
+
+  heatmapLegendAxisTitle = hmapKey
+      .append("text")
+      .attr("x",hmapRange.range()[1]/2)
+      .attr("y", scalePadding *.25)
+      .style("text-anchor", "middle")
+      .style("font-size", 10)
+      .style("font-family", "\"Open Sans\", sans-serif")
+      .text("Emissions (Mt CO2)");
+
+  hmapRange = d3.scaleLinear().domain(d3.extent(dataArr, d => d.Emissions)).range([0, heatmapLegendWidth])
+  hmapAxis = d3.axisTop()
+    .scale(hmapRange)
+    .ticks(10);
+
+  heatmapLegendAxis
+    .transition().duration(2000)
+    .call(hmapAxis)
+
+  heatmapLegendAxisTitle
+    .transition().duration(2000)
+    .attr("x",hmapRange.range()[1]/2)
+    .attr("y", scalePadding *.25)
 }
 
 function updateHeatmapLegend(toggle) {
@@ -472,6 +509,17 @@ function updateHeatmapLegend(toggle) {
       .transition()
       .attr("width", heatmapLegendWidth)
       .style("fill", "url(#gradient)")
+
+  var extent = d3.extent(dataArr, d => d.Emissions)
+  var hmapRange = d3.scaleLinear().domain(extent).range([0, heatmapLegendWidth])
+  var hmapAxis = d3.axisTop().scale(hmapRange)
+
+  heatmapLegendAxis.transition().call(hmapAxis)
+
+  heatmapLegendAxisTitle
+    .transition()
+    .attr("x",hmapRange.range()[1]/2)
+    .attr("y", scalePadding *.25)
 }
 // *****************  end heatmap legend ***************** //
 
