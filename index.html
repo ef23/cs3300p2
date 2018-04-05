@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>INFO/CS3300 Project 2</title>
+<title>INFO3300 Project 2</title>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400,700,800|Space+Mono:400,400i,700" rel="stylesheet">
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://unpkg.com/d3-simple-slider@0.2.0/build/d3-simple-slider.js"></script>
@@ -9,13 +9,12 @@
 
 <style>
   body { background: #ecf0f1 }
-  h1 { font-size: 75px; font-family: 'Open Sans', sans-serif; text-align: center; padding: 1% 0%}
+
+  h1 { font-size: 60px; font-family: 'Open Sans', sans-serif; text-align: center; padding: 1% 0%}
+
   path.country {  stroke: #aaa; }
-  .yearslider { width:1400px; }
 
-  /*.heatmap { border: 1px solid black; }*/
-
-  .toolTip {
+  .tooltip {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: absolute;
     display: none;
@@ -29,16 +28,30 @@
     font: 12px sans-serif;
     padding: 5px;
     text-align: center;
-}
+  }
 
-  .flag {
-    border-radius: 50%;
+  button {
+    border: none;
+    border-radius: 15px;
+    background: #bdc3c7;
+    margin: 1% 1%;
+    padding: 0.5% 1%;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    /*text-decoration: none;*/
+    transition-duration: 0.4s;
+  }
+
+  button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
   }
 </style>
 </head>
 <body>
 
-<h1> global <span style="color:green;">green</span>house gases </h1>
+<h1> global <span style="color:#4CAF50">green</span>house gases </h1>
 <button id="toggle">Toggle Per Capita</button>
 <div class="page1"></div>
 </body>
@@ -53,10 +66,10 @@ var heatmapHeight = .65 * windowHeight
 var donutWidth = .225 * windowWidth
 var donutHeight = .65 * windowHeight
 
-
+// the two svgs and the timeline slider
 var svg = d3.select(".page1").append("svg").attr("height", heatmapHeight).attr("width", heatmapWidth).attr("class", "heatmap");
 var donut = d3.select(".page1").append("svg").attr("height", donutHeight).attr("width", donutWidth).attr("class", "donut");
-d3.select(".page1").append("div").attr("id", "yearslider");
+d3.select(".page1").append("div").attr("id", "yearslider").style("width", heatmapWidth);
 
 var projection = d3.geoEquirectangular().scale(75);
 var pathGenerator = d3.geoPath().projection(projection);
@@ -78,11 +91,13 @@ d3.queue()
   .defer(d3.csv, "data/co-emissions-per-capita.csv", parseEmissions)
   .await(page1);
 
+// convert all Emissions to be numbers for both emissions datasets
 function parseEmissions(row) {
   row["Emissions"] = Number(row["Emissions"]);
   return row;
 }
 
+// renders the heatmap + donut graph
 function page1(error, map, codes, carbon, carbonPerCapita) {
   mapData = map;
   countryCodes = codes.map(d => {
@@ -95,10 +110,12 @@ function page1(error, map, codes, carbon, carbonPerCapita) {
   initMap();
 }
 
+// linear scale based on emissions for the year, from yellow (least) -> red (most)
 var colorScale = d3.scaleLinear()
   .interpolate(d3.interpolateHcl)
   .range(["#ffff8c","#d7191c"])
 
+// sqrt scale since the flags are circles, based on emissions for the year
 var flagScale = d3.scaleSqrt()
   .range([0,1])
 
@@ -175,11 +192,11 @@ var flag = d3.select(".donut").append("image")
 
 d3.select(".donut").append("text")
   .attr("x", donutWidth/2)
-  .attr("y", donutHeight*.55)
+  .attr("y", donutHeight*.525)
   .attr("text-anchor", "middle")
   .style("font-family", "Open Sans, sans-serif")
   .style("font-size", 12)
-  .text("Flags are scaled on a sqrt scale in comparison to the leader.")
+  .text("Flag sizes are proportional to its emissions")
 
 
 // *********** END HOVER TIP ************* //
@@ -230,6 +247,12 @@ function setDomain(year) {
         }
       }
     }
+    // basically normalizes the data across the datasets
+    // Country => the name of the country as a String
+    // Emissions => the total Emissions as a Number
+    // id => the country's ISO-3166 code (for the heatmap)
+    // code => the country's ISO-3166 2-letter code (for the flag)
+    // region => the country's ISO-3166 region (for the donut graph)
     dataArr.push({
       Country: country.Country,
       Emissions: country.Emissions,
@@ -259,6 +282,8 @@ function setTip(id) {
       tip.text(country.Country)
       scaleTipText();
       emissions.text(country.Emissions + " Mt CO2" + (perCapita ? " per capita" : ""))
+
+      //resize the flag
       flag.attr("href", "data/flags/" + country.code + ".png")
         .attr("height", flagScale(country.Emissions) * donutWidth*.25)
         .attr("width", flagScale(country.Emissions) * donutHeight*.25)
@@ -269,6 +294,7 @@ function setTip(id) {
       return true;
     }
   }
+  // if there was no data for this country, disable hover
   return false;
 }
 
@@ -298,9 +324,6 @@ function initMap() {
     .text(heatmapTitle + " IN 1969")
   setDomain(1969);
   setLeader(1969);
-
-  // console.log(validData)
-  // console.log(d3.extent(validData, d => (d.Emissions)))
 
   projection.fitExtent([[0,.12*heatmapHeight], [svg.attr("width"), svg.attr("height")]], countries);
 
@@ -358,6 +381,7 @@ function updateMap(year, isChange) {
   drawDonut();
 }
 // end heatmap
+
 // generate the slider
 var yearTicks = []
 
@@ -390,6 +414,7 @@ var yearslider = d3.sliderHorizontal()
 
   g.call(yearslider);
 // end slider
+
 // toggle button
 function togglePerCapita() {
   perCapita = !perCapita;
@@ -398,10 +423,10 @@ function togglePerCapita() {
 }
 
 d3.select("#toggle")
-  .style("left", heatmapWidth/2)
   .style("position", "absolute")
   .on("click", () => togglePerCapita())
 // end button
+
 // begin donut graph of continents
 var regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"]
 var cumulativeData;
@@ -417,27 +442,7 @@ var pie = d3.pie()
   .value(function(d) { return d; })
   .sort(null);
 
-var donutTip = d3.select("body")
-  .append("div")
-  .attr("class", "donut-tip")
-  .style("left", heatmapWidth + donutWidth/1.75)
-  .style("top", donutHeight/1.3 + radius)
-  .style("width", width)
-  .style("text-align", "center")
-  .style("position", "absolute")
-  .style("z-index", 10)
-  .style("font-family", "\"Open Sans\", sans-serif")
-
-donutTip.append("div")
-  .attr("class", "region");
-
-donutTip.append("div")
-  .attr("class", "emissions");
-
-donutTip.append("div")
-  .attr("class", "percent");
-
-var div = d3.select("body").append("div").attr("class", "toolTip");
+var tooltip = d3.select("body").append("div").attr("class", "tooltip");
 
 function accumulate() {
   cumulativeData = [];
@@ -449,10 +454,10 @@ function accumulate() {
     )
 
   }
-  donutTip.style("display", "none")
   cumulativeData = cumulativeData.map(d => Number.parseFloat(d).toFixed(3))
 }
 
+// initializes the donut chart
 function initDonut() {
   accumulate()
 
@@ -467,19 +472,16 @@ function initDonut() {
     .on("mousemove", d => {
         var total = d3.sum(cumulativeData);
         var percent = Math.round(1000 * d.data / total) / 10;
-        div.style("left", d3.event.pageX+10+"px");
-        div.style("top", d3.event.pageY-25+"px");
-        div.style("display", "inline-block");
-        div.html(regions[d.index]
+        tooltip.style("left", d3.event.pageX+10+"px");
+        tooltip.style("top", d3.event.pageY-25+"px");
+        tooltip.style("display", "inline-block");
+        tooltip.html(regions[d.index]
           +"<br>"+d.data+" Mt CO2"+ (perCapita ? " per capita" : "")
           + "<br>"+percent+"%");
     })
     .on("mouseout", d => {
-        div.style("display", "none");
+        tooltip.style("display", "none");
     });
-  path.transition()
-    .duration(1000)
-    .attrTween("d", arcTween)
 
   // build the legend inspired by http://bl.ocks.org/juan-cb/1984c7f2b446fffeedde
   var legendRectSize = radius*0.05;
@@ -505,10 +507,12 @@ function initDonut() {
     .attr("x", legendRectSize + legendSpacing/2)
     .attr("y", legendRectSize*4 - legendSpacing)
     .style("font-family", "\"Open Sans\", san-serif")
+    .style("font-size", donutWidth/30)
     .text(function(d) { return d; });
 }
 
 // This function is courtesy of https://bl.ocks.org/mbostock/1346410
+// animates the donut chart
 function arcTween(a) {
   var i = d3.interpolate(this._current, a);
   this._current = i(0);
@@ -517,6 +521,7 @@ function arcTween(a) {
   };
 }
 
+// draws the donut for the current year
 function drawDonut() {
   accumulate()
 
@@ -524,8 +529,6 @@ function drawDonut() {
   var addedpaths = path.enter().append("path")
   addedpaths.merge(path)
     .transition().attrTween("d", arcTween)
-
-
 }
 // end donut graph
 </script>
