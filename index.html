@@ -201,6 +201,8 @@ d3.select(".donut").append("text")
 
 // *********** END HOVER TIP ************* //
 
+
+// ***************** BEGIN HEATMAP ***************** //
 // for the heatmap, grabs the emission value
 function getEmission(countryCode, yearData) {
   for (var i in dataArr) {
@@ -285,8 +287,8 @@ function setTip(id) {
 
       //resize the flag
       flag.attr("href", "data/flags/" + country.code + ".png")
-        .attr("height", flagScale(country.Emissions) * donutWidth*.25)
-        .attr("width", flagScale(country.Emissions) * donutHeight*.25)
+        .attr("height", flagScale(country.Emissions) * donutWidth*.2)
+        .attr("width", flagScale(country.Emissions) * donutWidth*.2)
       var flagWidth = flag.node().getBBox().width/2;
       var flagHeight = flag.node().getBBox().height/2;
       flag.attr("x", donutWidth/2 - flagWidth)
@@ -299,13 +301,14 @@ function setTip(id) {
 }
 
 // gets the leader of emissions for the current year
-function setLeader(year) {
-  var leader = dataArr.reduce((acc, l) => acc.Emissions > l.Emissions ? acc : l)
+var leader;
+function setLeader() {
+  leader = dataArr.reduce((acc, l) => acc.Emissions > l.Emissions ? acc : l)
   leaderTip.text(leader.Country)
   leaderEmissions.text(leader.Emissions + " Mt CO2" + (perCapita ? " per capita" : ""))
   leaderFlag.attr("href", "data/flags/" + leader.code + ".png")
-    .attr("height", donutWidth*.25)
-    .attr("width", donutHeight*.25)
+    .attr("height", donutWidth*.2)
+    .attr("width", donutWidth*.2)
   var leaderWidth = leaderFlag.node().getBBox().width/2;
   leaderFlag.attr("x", donutWidth/2 - leaderWidth)
 }
@@ -334,10 +337,7 @@ function initMap() {
     .attr("class", "country")
     .attr("id", d=>"country" +d.id)
     .attr("opacity", 0.8)
-    .attr("fill", d => {
-      var carbon = getEmission(d.id, validData);
-      return carbon === 0 ? "#ccc" : colorScale(carbon)
-    })
+    .attr("fill", "#ffff8c")
     .style("stroke","#ccc")
     .style("stroke-width",0.3)
     .on('mouseover',function(d){
@@ -355,12 +355,17 @@ function initMap() {
             .style("stroke-width",0.3);
         })
     .merge(paths);
-
+  paths.transition().duration(2000)
+    .attr("fill", d => {
+      var carbon = getEmission(d.id, validData);
+      return carbon === 0 ? "#ccc" : colorScale(carbon)
+    })
   paths.attr("d", function(country){
     return pathGenerator(country);
   })
 
   initDonut();
+  initHeatmapLegend();
 }
 
 // updates the map with the given year
@@ -379,10 +384,98 @@ function updateMap(year, isChange) {
       return carbon === 0 ? "#ccc" : colorScale(carbon)
     })
   drawDonut();
+  updateHeatmapLegend();
 }
 // end heatmap
 
-// generate the slider
+
+var heatmapLegend;
+var heatmapLegendKey;
+
+var baseWidth = heatmapWidth*.2;
+var heatmapLegendWidth;
+
+var maxEmissions = 0;
+var minmaxEmissions = Number.POSITIVE_INFINITY;
+
+var heatmapLegendWidthScale = d3.scaleLinear().range([baseWidth, heatmapWidth])
+// ***************** begin heatmap legend ***************** //
+// recalculates the scale between per capita and regular by setting the length of the scale for emissions
+function setHmapLegendScale() {
+  maxEmissions = 0;
+  minmaxEmissions = Number.POSITIVE_INFINITY;
+  var data = perCapita ? carbonPerCapitaData : carbonData;
+  for (var i = minYear; i <= maxYear; i++) {
+    var maxData = data.filter(d => d.Year === String(i) && d.Country !== "World" && d.Country !== "European Union (28)")
+    var maxYearEmissions = maxData.reduce((acc, l) => acc.Emissions > l.Emissions ? acc : l).Emissions
+    maxEmissions = maxYearEmissions > maxEmissions ? maxYearEmissions : maxEmissions;
+    minmaxEmissions = maxYearEmissions < minmaxEmissions ? maxYearEmissions : minmaxEmissions;
+  }
+
+  heatmapLegendWidthScale.domain([minmaxEmissions, maxEmissions])
+}
+
+function initHeatmapLegend() {
+  var h = 10;
+  setHmapLegendScale();
+  heatmapLegendWidth = heatmapLegendWidthScale(leader.Emissions)
+
+  var hmapKey = d3.select(".heatmap")
+      .append("svg")
+      .attr("width", heatmapWidth)
+      .attr("height", h)
+      .attr("transform", "translate(0,"+ (heatmapHeight-h) + ")")
+
+  heatmapLegend = hmapKey.append("defs")
+      .append("svg:linearGradient")
+      .attr("id", "gradient")
+      .attr("x1", "0%")
+      .attr("y1", "100%")
+      .attr("x2", "100%")
+      .attr("y2", "100%")
+      .attr("spreadMethod", "pad");
+
+  heatmapLegend.append("stop")
+      .attr("offset", "0%")
+      .attr("stop-color", "#ffff8c")
+      .attr("stop-opacity", 1);
+
+  heatmapLegend.append("stop")
+      .attr("offset", "100%")
+      .attr("stop-color", "#d7191c")
+      .attr("stop-opacity", 1);
+
+  heatmapLegendKey = hmapKey.append("rect")
+      .attr("class", "heatmap-legend")
+      .attr("width", 0)
+      .attr("height", h)
+      .style("fill", "url(#gradient)")
+
+  heatmapLegendKey.transition().duration(2000)
+      .attr("width", heatmapLegendWidth)
+
+}
+
+function updateHeatmapLegend(toggle) {
+  if (toggle) {
+    setHmapLegendScale()
+  }
+  heatmapLegendWidth = heatmapLegendWidthScale(leader.Emissions)
+  heatmapLegend.attr("id", "gradient")
+      .attr("x1", "0%")
+      .attr("y1", "100%")
+      .attr("x2", "100%")
+      .attr("y2", "100%")
+      .attr("spreadMethod", "pad");
+
+  heatmapLegendKey
+      .transition()
+      .attr("width", heatmapLegendWidth)
+      .style("fill", "url(#gradient)")
+}
+// *****************  end heatmap legend ***************** //
+
+// ***************** generate the slider ***************** //
 var yearTicks = []
 
 for (var i = minYear+1; i <= maxYear+1; i+=41){
@@ -413,26 +506,27 @@ var yearslider = d3.sliderHorizontal()
   .attr("transform", "translate(50,30)");
 
   g.call(yearslider);
-// end slider
+// *****************  end slider ***************** //
 
 // toggle button
 function togglePerCapita() {
   perCapita = !perCapita;
   heatmapTitle = perCapita ? "CARBON DIOXIDE EMISSIONS PER CAPITA" : "CARBON DIOXIDE EMISSIONS";
   updateMap(prevVal, true)
+  updateHeatmapLegend(true)
 }
 
 d3.select("#toggle")
   .style("position", "absolute")
   .on("click", () => togglePerCapita())
-// end button
+// *****************  end button *****************  //
 
-// begin donut graph of continents
+// *****************  begin donut graph of continents ***************** //
 var regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"]
 var cumulativeData;
 var radius = (donutWidth*0.7)/2;
 var width = donutWidth/7;
-var donutColor = d3.scaleOrdinal(d3.schemeCategory20c)
+var donutColor = d3.scaleOrdinal().range(["#00d2d3", "#01a3a4", "#54a0ff", "#2e86de", "#5f27cd"])
 
 var arc = d3.arc()
   .innerRadius(radius - width)
@@ -530,6 +624,6 @@ function drawDonut() {
   addedpaths.merge(path)
     .transition().attrTween("d", arcTween)
 }
-// end donut graph
+// ***************** end donut graph ***************** //
 </script>
 </html>
