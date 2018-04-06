@@ -199,7 +199,7 @@ d3.select(".donut").append("text")
   .style("font-size", 12)
   .text("Flag sizes are proportional to its emissions")
 
-
+var flagLegend;
 // *********** END HOVER TIP ************* //
 
 
@@ -294,6 +294,9 @@ function setTip(id) {
       var flagHeight = flag.node().getBBox().height/2;
       flag.attr("x", donutWidth/2 - flagWidth)
           .attr("y", donutHeight*.375 - flagHeight)
+      flagLegend
+          .attr("href", "data/flags/" + country.code + ".png")
+          .attr("x", hmapRange(country.Emissions)-h*1.5)
       return true;
     }
   }
@@ -402,6 +405,7 @@ var maxEmissions = 0;
 var minmaxEmissions = Number.POSITIVE_INFINITY;
 
 var heatmapLegendWidthScale = d3.scaleLinear().range([baseWidth, heatmapWidth])
+var hmapRange;
 // ***************** begin heatmap legend ***************** //
 // recalculates the scale between per capita and regular by setting the length of the scale for emissions
 function setHmapLegendScale() {
@@ -419,9 +423,9 @@ function setHmapLegendScale() {
 }
 
 var scalePadding = 40;
+var h = 10;
 // builds the heatmap legend
 function initHeatmapLegend() {
-  var h = 10;
   setHmapLegendScale();
   heatmapLegendWidth = heatmapLegendWidthScale(leader.Emissions)
 
@@ -454,14 +458,14 @@ function initHeatmapLegend() {
       .attr("class", "heatmap-legend")
       .attr("width", 0)
       .attr("height", h)
-      .attr("transform", "translate(0," + scalePadding + ")")
+      .attr("y", scalePadding)
       .style("fill", "url(#gradient)")
 
   heatmapLegendKey.transition().duration(2000)
       .attr("width", heatmapLegendWidth)
 
   // set equal to 0 to get transition
-  var hmapRange = d3.scaleLinear().domain(d3.extent(dataArr, d => d.Emissions)).range([0, 0])
+  hmapRange = d3.scaleLinear().domain(d3.extent(dataArr, d => d.Emissions)).range([0, 0])
   var hmapAxis = d3.axisTop()
     .scale(hmapRange)
 
@@ -491,6 +495,12 @@ function initHeatmapLegend() {
     .transition().duration(2000)
     .attr("x",hmapRange.range()[1]/2)
     .attr("y", scalePadding *.25)
+
+  flagLegend = hmapKey
+    .append("image")
+    .attr("y", scalePadding - h)
+    .attr("height", h*1.5)
+    .attr("width", h*1.5)
 }
 
 function updateHeatmapLegend(toggle) {
@@ -498,12 +508,6 @@ function updateHeatmapLegend(toggle) {
     setHmapLegendScale()
   }
   heatmapLegendWidth = heatmapLegendWidthScale(leader.Emissions)
-  heatmapLegend.attr("id", "gradient")
-      .attr("x1", "0%")
-      .attr("y1", "100%")
-      .attr("x2", "100%")
-      .attr("y2", "100%")
-      .attr("spreadMethod", "pad");
 
   heatmapLegendKey
       .transition()
@@ -511,7 +515,7 @@ function updateHeatmapLegend(toggle) {
       .style("fill", "url(#gradient)")
 
   var extent = d3.extent(dataArr, d => d.Emissions)
-  var hmapRange = d3.scaleLinear().domain(extent).range([0, heatmapLegendWidth])
+  hmapRange = d3.scaleLinear().domain(extent).range([0, heatmapLegendWidth])
   var hmapAxis = d3.axisTop().scale(hmapRange)
 
   heatmapLegendAxis.transition().call(hmapAxis)
