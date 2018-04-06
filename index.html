@@ -160,12 +160,37 @@ var leaderEmissions = d3.select(".donut").append("text")
 var leaderFlag = d3.select(".donut").append("image")
   .attr("class", "flag")
   .attr("y", donutHeight*.15)
+  .style("filter", "url(#drop-shadow)")
 
+// stroke around the flag
 var leaderFlagStroke = d3.select(".donut").append("circle")
   .attr("class", "flag-stroke")
-  .attr("stroke", "#ccc")
+  // .attr("stroke", "#ccc")
   .attr("fill", "none")
   .attr("stroke-width", 1)
+
+// drop shadow
+var defs = d3.select(".donut").append("defs")
+var filter = defs.append("filter")
+  .attr("id", "drop-shadow")
+  .attr("height", "130%");
+
+filter.append("feGaussianBlur")
+    .attr("in", "SourceAlpha")
+    .attr("stdDeviation", 1)
+    .attr("result", "blur");
+
+filter.append("feOffset")
+    .attr("in", "blur")
+    .attr("dx", 1)
+    .attr("dy", 1)
+    .attr("result", "offsetBlur");
+
+var feMerge = filter.append("feMerge");
+feMerge.append("feMergeNode")
+    .attr("in", "offsetBlur")
+feMerge.append("feMergeNode")
+    .attr("in", "SourceGraphic");
 
 // *********** END LEADER TIP ************* //
 
@@ -194,6 +219,7 @@ var emissions = d3.select(".donut").append("text")
 // displays the appropriate flag
 var flag = d3.select(".donut").append("image")
   .attr("class", "flag")
+  .style("filter", "url(#drop-shadow)")
 
 var flagStroke = d3.select(".donut").append("circle")
   .attr("class", "flag-stroke")
@@ -310,19 +336,22 @@ function setTip() {
         .attr("cx", donutWidth/2)
         .attr("cy", donutHeight*.375)
 
-      flagLegend
-        .attr("href", "data/flags/" + country.code + ".png")
-        .transition().attr("x", hmapRange(country.Emissions)-h*1.5)
+      var flagLegendxPos = hmapRange(country.Emissions)
+      // ternary statement for x will ensure the flag stays within bounds of the scale
+      flagLegend.attr("href", "data/flags/" + country.code + ".png")
+        .transition().attr("x", flagLegendxPos - (flagLegendxPos > h*1.5 ? h*1.5 : 0))
       flagLegendStroke
-        .transition().attr("cx", hmapRange(country.Emissions)-h*.75)
+        .transition().attr("cx", flagLegendxPos - (flagLegendxPos > h*1.5 ? h*1.5 : 0))
       return true;
     }
   }
-  // if there was no data for this country, disable hover
+  // if there was no data for this country, disable hover and remove tip
   tip.text(null)
   emissions.text(null)
   flag.attr("href", null)
   flagLegend.attr("href", null)
+  flagStroke.attr("r", null)
+  flagLegendStroke.attr("r", null)
   return false;
 }
 
