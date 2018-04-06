@@ -162,13 +162,6 @@ var leaderFlag = d3.select(".donut").append("image")
   .attr("y", donutHeight*.15)
   .style("filter", "url(#drop-shadow)")
 
-// stroke around the flag
-var leaderFlagStroke = d3.select(".donut").append("circle")
-  .attr("class", "flag-stroke")
-  // .attr("stroke", "#ccc")
-  .attr("fill", "none")
-  .attr("stroke-width", 1)
-
 // drop shadow
 var defs = d3.select(".donut").append("defs")
 var filter = defs.append("filter")
@@ -220,12 +213,6 @@ var emissions = d3.select(".donut").append("text")
 var flag = d3.select(".donut").append("image")
   .attr("class", "flag")
   .style("filter", "url(#drop-shadow)")
-
-var flagStroke = d3.select(".donut").append("circle")
-  .attr("class", "flag-stroke")
-  .attr("stroke", "#ccc")
-  .attr("fill", "none")
-  .attr("stroke-width", 1)
 
 d3.select(".donut").append("text")
   .attr("x", donutWidth/2)
@@ -317,6 +304,8 @@ function scaleTipText(){
 var currentId = -1;
 // sets the tip for the country to be displayed, with the flag and emissions
 function setTip() {
+  // completely ignore antartica
+  if (currentId === 10) return false;
   for (var i in dataArr) {
     var country = dataArr[i];
     if (currentId === country["id"]){
@@ -332,16 +321,15 @@ function setTip() {
       var flagHeight = flag.node().getBBox().height/2;
       flag.attr("x", donutWidth/2 - flagWidth)
           .attr("y", donutHeight*.375 - flagHeight)
-      flagStroke.attr("r", flagWidth)
-        .attr("cx", donutWidth/2)
-        .attr("cy", donutHeight*.375)
 
       var flagLegendxPos = hmapRange(country.Emissions)
       // ternary statement for x will ensure the flag stays within bounds of the scale
       flagLegend.attr("href", "data/flags/" + country.code + ".png")
-        .transition().attr("x", flagLegendxPos - (flagLegendxPos > h*1.5 ? h*1.5 : 0))
+        .transition().attr("x", flagLegendxPos - (flagLegendxPos > flagLegendSize ? flagLegendSize : 0))
       flagLegendStroke
-        .transition().attr("cx", flagLegendxPos - (flagLegendxPos > h*1.5 ? h*1.5 : 0))
+        .transition()
+        .attr("cx", flagLegendxPos + flagLegendSize/2 - (flagLegendxPos > flagLegendSize ? flagLegendSize : 0))
+        .attr("cy", scalePadding - h + flagLegendSize/2)
       return true;
     }
   }
@@ -350,7 +338,6 @@ function setTip() {
   emissions.text(null)
   flag.attr("href", null)
   flagLegend.attr("href", null)
-  flagStroke.attr("r", null)
   flagLegendStroke.attr("r", null)
   return false;
 }
@@ -366,10 +353,6 @@ function setLeader() {
     .attr("width", donutWidth*.2)
   var leaderWidth = leaderFlag.node().getBBox().width/2;
   leaderFlag.attr("x", donutWidth/2 - leaderWidth)
-  leaderFlagStroke
-    .attr("r", leaderWidth)
-    .attr("cx", donutWidth/2)
-    .attr("cy", donutHeight*.15+leaderWidth)
 }
 
 // initializes the map
@@ -482,8 +465,9 @@ function setHmapLegendScale() {
   heatmapLegendWidthScale.domain([minmaxEmissions, maxEmissions])
 }
 
-var scalePadding = 40;
-var h = 10;
+var scalePadding = 60;
+var h = 20;
+var flagLegendSize = h*1.5
 // builds the heatmap legend
 function initHeatmapLegend() {
   setHmapLegendScale();
@@ -536,9 +520,9 @@ function initHeatmapLegend() {
   heatmapLegendAxisTitle = hmapKey
       .append("text")
       .attr("x",hmapRange.range()[1]/2)
-      .attr("y", scalePadding *.25)
+      .attr("y", scalePadding *.2)
       .style("text-anchor", "middle")
-      .style("font-size", 10)
+      .style("font-size", 15)
       .style("font-family", "\"Open Sans\", sans-serif")
       .text("Emissions (Mt CO2)");
 
@@ -559,16 +543,13 @@ function initHeatmapLegend() {
   flagLegend = hmapKey
     .append("image")
     .attr("y", scalePadding - h)
-    .attr("height", h*1.5)
-    .attr("width", h*1.5)
+    .attr("height", flagLegendSize)
+    .attr("width", flagLegendSize)
 
   flagLegendStroke = hmapKey
     .append("circle")
-    .attr("cy", scalePadding - h + h*.75)
-    .attr("height", h*1.5)
-    .attr("width", h*1.5)
-    .attr("r", h*.75)
-    .attr("stroke", "#ccc")
+    .attr("r", flagLegendSize/2)
+    .attr("stroke", "#727272")
     .attr("fill", "none")
     .attr("stroke-width", 1)
 }
