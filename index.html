@@ -14,6 +14,8 @@
 
   path.country {  stroke: #aaa; }
 
+  .page1 { margin:auto; }
+
   .tooltip {
     font-family: "Open Sans", sans-serif;
     position: absolute;
@@ -304,8 +306,6 @@ function scaleTipText(){
 var currentId = -1;
 // sets the tip for the country to be displayed, with the flag and emissions
 function setTip() {
-  // completely ignore antartica
-  if (currentId === 10) return false;
   for (var i in dataArr) {
     var country = dataArr[i];
     if (currentId === country["id"]){
@@ -383,20 +383,21 @@ function initMap() {
     .style("stroke","#ccc")
     .style("stroke-width",0.3)
     .on('mouseover',function(d){
-        currentId = d.id
-        if (setTip()) {
-          d3.select(this)
-            .style("opacity", 1)
-            .style("stroke","#bbb")
-            .style("stroke-width",0.6);
-        }
+      // completely ignore antartica
+      currentId = d.id === 10 ? currentId : d.id;
+      if (setTip()) {
+        d3.select(this)
+          .style("opacity", 1)
+          .style("stroke","#bbb")
+          .style("stroke-width",0.6);
+      }
     })
     .on('mouseout', function(d){
-        d3.select(this)
-          .style("opacity", 0.8)
-          .style("stroke","#ccc")
-          .style("stroke-width",0.3);
-        })
+      d3.select(this)
+        .style("opacity", 0.8)
+        .style("stroke","#ccc")
+        .style("stroke-width",0.3);
+      })
     .merge(paths);
   paths.transition().duration(2000)
     .attr("fill", d => {
