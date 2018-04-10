@@ -41,7 +41,8 @@
     color: white;
     font-size: 15px;
     text-align: center;
-    /*text-decoration: none;*/
+    display: inline-block;
+    /*position: absolute;*/
     transition-duration: 0.4s;
   }
 
@@ -55,6 +56,7 @@
 
 <h1> global green<span style="color:#E87E04">house</span> gases </h1>
 <button id="toggle">Toggle Per Capita</button>
+<button id="line-graph-button">Line Graph</button>
 <div class="page1"></div>
 </body>
 <script>
@@ -92,7 +94,7 @@ d3.queue()
   .defer(d3.json, "data/iso-3166-codes.json")
   .defer(d3.csv, "data/co-emissions.csv", parseEmissions)
   .defer(d3.csv, "data/co-emissions-per-capita.csv", parseEmissions)
-  .await(page1);
+  .await(loadData);
 
 // convert all Emissions to be numbers for both emissions datasets
 function parseEmissions(row) {
@@ -101,7 +103,7 @@ function parseEmissions(row) {
 }
 
 // renders the heatmap + donut graph
-function page1(error, map, codes, carbon, carbonPerCapita) {
+function loadData(error, map, codes, carbon, carbonPerCapita) {
   mapData = map;
   countryCodes = codes.map(d => {
     d["country-code"] = Number(d["country-code"])
@@ -110,6 +112,12 @@ function page1(error, map, codes, carbon, carbonPerCapita) {
   carbonData = carbon;
   carbonPerCapitaData = carbonPerCapita;
   countries = topojson.feature(mapData, mapData.objects.countries);
+  page1();
+}
+
+/** ==================================================================== PAGE 1 ==================================================================== */
+
+function page1(){
   initMap();
 }
 
@@ -358,6 +366,7 @@ function setLeader() {
 // initializes the map
 function initMap() {
   scaleTipText();
+  svg.style("opacity", 0);
   svg.append("text")
     .attr("id", "title")
     .attr("x", heatmapWidth/2)
@@ -382,7 +391,7 @@ function initMap() {
     .attr("fill", "#ccc")
     .style("stroke","#ccc")
     .style("stroke-width",0.3)
-    .on('mouseover',function(d){
+    .on('mouseover', function(d) {
       // completely ignore antartica
       currentId = d.id === 10 ? currentId : d.id;
       if (setTip()) {
@@ -392,7 +401,7 @@ function initMap() {
           .style("stroke-width",0.6);
       }
     })
-    .on('mouseout', function(d){
+    .on('mouseout', function(d) {
       d3.select(this)
         .style("opacity", 0.8)
         .style("stroke","#ccc")
@@ -407,7 +416,7 @@ function initMap() {
   paths.attr("d", function(country){
     return pathGenerator(country);
   })
-
+  svg.transition().duration(750).style("opacity", 1);
   initDonut();
   initHeatmapLegend();
 }
@@ -621,7 +630,6 @@ function togglePerCapita() {
 }
 
 d3.select("#toggle")
-  .style("position", "absolute")
   .on("click", () => togglePerCapita())
 // *****************  end button *****************  //
 
@@ -740,5 +748,34 @@ function drawDonut() {
     .transition().attrTween("d", arcTween)
 }
 // ***************** end donut graph ***************** //
+/** ==================================================================== PAGE 2 ==================================================================== */
+
+var mapView = true;
+// toggle button
+function toggleView() {
+  mapView = !mapView;
+  d3.select("#line-graph-button").text(mapView ? "Line Graph" : "Map View")
+
+  svg.transition().duration(750)
+    .style("opacity", 0)
+    .on("end", function() {
+      svg.selectAll("*").remove()
+      if (mapView) {
+        page1();
+      } else {
+        page2();
+      }
+      svg.transition().duration(750).style("opacity", 1)
+    });
+}
+
+d3.select("#line-graph-button")
+  .style("position", "absolute")
+  .on("click", () => toggleView())
+
+// page 2 can recycle svg variable
+function page2() {
+
+}
 </script>
 </html>
