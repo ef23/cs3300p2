@@ -663,7 +663,11 @@ function initDonut() {
   var addedpaths = path.enter().append("path")
   addedpaths.merge(path)
     .attr("transform", "translate(" + (donutWidth/2) + "," + (donutHeight/1.3) + ")")
-    .attr("d", arc)
+    .transition()
+      .duration(2000)
+      .attrTween("d", initDonutTransition)
+
+  addedpaths.attr("d", arc)
     .attr("stroke", "#ddd")
     .attr("fill", (d, i) => {
       return donutColor(i);
@@ -718,6 +722,12 @@ function arcTween(a) {
   return t => {
     return arc(i(t));
   };
+}
+
+// This function is the function that does the funny twirly thing
+function initDonutTransition(b) {
+  var i = d3.interpolate({startAngle: 0, endAngle: 0}, b);
+  return function(t) { return arc(i(t)); };
 }
 
 // draws the donut for the current year
