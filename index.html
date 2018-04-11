@@ -203,7 +203,7 @@ feMerge.append("feMergeNode")
 // *********** END LEADER TIP ************* //
 
 // *********** HOVER TIP ***************** //
-d3.select(".donut").append("text")
+var hoverTitle = d3.select(".donut").append("text")
   .attr("x", donutWidth/2)
   .attr("y", donutHeight*.05)
   .attr("text-anchor", "middle")
@@ -211,7 +211,8 @@ d3.select(".donut").append("text")
   .style("font-family", "Open Sans, sans-serif")
   .style("font-weight", "bold")
   .style("font-size", 20)
-  .text("Currently Selected Country:")
+  .text("Hover over a country!")
+
 // displays the country's name when hovered
 var tip = d3.select(".donut").append("text")
   .attr("class", "country-tip")
@@ -221,7 +222,6 @@ var tip = d3.select(".donut").append("text")
   .style("font-family", "Open Sans, sans-serif")
   .style("font-weight", "bold")
   .style("font-size", 17)
-  .text("Hover over a country!")
 
 // displays the emission
 var emissions = d3.select(".donut").append("text")
@@ -336,6 +336,7 @@ function scaleTipText(){
 }
 
 var currentId = -1;
+var clicked = false;
 // sets the tip for the country to be displayed, with the flag and emissions
 function setTip() {
   for (var i in dataArr) {
@@ -416,21 +417,28 @@ function initMap() {
     .style("stroke","#ccc")
     .style("stroke-width",0.3)
     .on('mouseover', function(d) {
-      // completely ignore antartica
-      currentId = d.id === 10 ? currentId : d.id;
-      if (setTip()) {
-        d3.select(this)
-          .style("opacity", 1)
-          .style("stroke","#bbb")
-          .style("stroke-width",0.6);
+      if (!clicked) {
+        currentId = d.id;
+        if (setTip()) {
+          d3.select(this)
+            .style("opacity", 1)
+            .style("stroke","#bbb")
+            .style("stroke-width",0.6);
+        }
       }
     })
     .on('mouseout', function(d) {
-      d3.select(this)
-        .style("opacity", 0.8)
-        .style("stroke","#ccc")
-        .style("stroke-width",0.3);
-      })
+      if (!clicked){
+        d3.select(this)
+          .style("opacity", 0.8)
+          .style("stroke","#ccc")
+          .style("stroke-width",0.3);
+      }
+    })
+    .on('click', function(d) {
+      clicked = !clicked;
+      hoverTitle.text(clicked ? "Currently Selected Country:" : "Hover over a country:")
+    })
     .merge(paths);
   paths.transition().duration(2000)
     .attr("fill", d => {
@@ -444,7 +452,6 @@ function initMap() {
   initDonut();
   initHeatmapLegend();
 
-  yearTitleScale.domain([minmaxEmissions, maxEmissions])
   title.html(heatmapTitle + "<tspan style=\"stroke:#aaa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;fill:" + yearTitleScale(leader.Emissions) + "\">1969</tspan>")
 }
 
@@ -500,6 +507,7 @@ function setHmapLegendScale() {
     minmaxEmissions = maxYearEmissions < minmaxEmissions ? maxYearEmissions : minmaxEmissions;
   }
 
+  yearTitleScale.domain([minmaxEmissions, maxEmissions])
   heatmapLegendWidthScale.domain([minmaxEmissions, maxEmissions])
 }
 
