@@ -55,8 +55,8 @@
 <body>
 
 <h1> global green<span style="color:#E87E04">house</span> gases </h1>
-  <!-- <button id="toggle">Toggle Per Capita</button>
-  <button id="line-graph-button">Line Graph</button> -->
+<button id="toggle">Toggle Per Capita</button>
+<button id="line-graph-button">Line Graph</button>
 <div class="page1"></div>
 </body>
 <script>
@@ -123,6 +123,11 @@ function page1(){
 
 // linear scale based on emissions for the year, from yellow (least) -> red (most)
 var colorScale = d3.scaleLinear()
+  .interpolate(d3.interpolateHcl)
+  .range(["#ffff8c","#d7191c"])
+
+// linear scale to color the year based on the maximum emissions that year
+var yearTitleScale = d3.scaleLinear()
   .interpolate(d3.interpolateHcl)
   .range(["#ffff8c","#d7191c"])
 
@@ -394,7 +399,6 @@ function initMap() {
     .style("font-size", 30)
     .style("font-weight", "bold")
     .style("text-anchor", "middle")
-  title.html(heatmapTitle + "<tspan style=\"fill:orange\">1969</tspan>")
 
   setDomain(1969);
   setLeader(1969);
@@ -439,13 +443,17 @@ function initMap() {
   svg.transition().duration(750).style("opacity", 1);
   initDonut();
   initHeatmapLegend();
+
+  yearTitleScale.domain([minmaxEmissions, maxEmissions])
+  title.html(heatmapTitle + "<tspan style=\"stroke:#aaa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;fill:" + yearTitleScale(leader.Emissions) + "\">1969</tspan>")
 }
 
 // updates the map with the given year
 function updateMap(year, isChange) {
-  d3.select("#title").html(heatmapTitle + "<tspan style=\"fill:orange\">" + year + "</tspan>")
   setDomain(year);
   setLeader(year);
+
+  d3.select("#title").html(heatmapTitle + "<tspan style=\"stroke:#aaa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;fill:" + yearTitleScale(leader.Emissions) + "\">" + year + "</tspan>")
 
   if (currentId != -1) {
     setTip()
