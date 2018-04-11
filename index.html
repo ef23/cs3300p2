@@ -10,7 +10,7 @@
 <style>
   body { background: #ecf0f1 }
 
-  h1 { font-size: 60px; font-family: 'Open Sans', sans-serif; text-align: center; padding: 1% 0%}
+  h1 { font-size: 60px; font-family: 'Open Sans', sans-serif; text-align: center; }
 
   path.country {  stroke: #aaa; }
 
@@ -73,8 +73,8 @@ var donutHeight = .65 * windowHeight
 // the two svgs and the timeline slider
 var svg = d3.select(".page1").append("svg").attr("height", heatmapHeight).attr("width", heatmapWidth).attr("class", "heatmap");
 var donut = d3.select(".page1").append("svg").attr("height", donutHeight).attr("width", donutWidth).attr("class", "donut");
-var hmapKey;
 d3.select(".page1").append("div").attr("id", "yearslider").style("width", heatmapWidth);
+var hmapKey;
 
 var projection = d3.geoEquirectangular().scale(75);
 var pathGenerator = d3.geoPath().projection(projection);
@@ -133,7 +133,7 @@ var flagScale = d3.scaleSqrt()
 var yearData;
 var validData;
 var dataArr;
-var heatmapTitle = "CARBON DIOXIDE EMISSIONS";
+var heatmapTitle = "CARBON DIOXIDE EMISSIONS IN ";
 
 // *********** LEADER TIP ***************** //
 // displays the country's name when hovered
@@ -367,7 +367,7 @@ function setLeader() {
 function initMap() {
   scaleTipText();
   svg.style("opacity", 0);
-  svg.append("text")
+  var title = svg.append("text")
     .attr("id", "title")
     .attr("x", heatmapWidth/2)
     .attr("y", 0.075 * heatmapHeight)
@@ -375,7 +375,8 @@ function initMap() {
     .style("font-size", 30)
     .style("font-weight", "bold")
     .style("text-anchor", "middle")
-    .text(heatmapTitle + " IN 1969")
+  title.html(heatmapTitle + "<tspan style=\"fill:orange\">1969</tspan>")
+
   setDomain(1969);
   setLeader(1969);
 
@@ -423,7 +424,7 @@ function initMap() {
 
 // updates the map with the given year
 function updateMap(year, isChange) {
-  d3.select("#title").transition().text(heatmapTitle + " IN " + year)
+  d3.select("#title").html(heatmapTitle + "<tspan style=\"fill:orange\">" + year + "</tspan>")
   setDomain(year);
   setLeader(year);
 
@@ -624,7 +625,7 @@ var yearslider = d3.sliderHorizontal()
 // toggle button
 function togglePerCapita() {
   perCapita = !perCapita;
-  heatmapTitle = perCapita ? "CARBON DIOXIDE EMISSIONS PER CAPITA" : "CARBON DIOXIDE EMISSIONS";
+  heatmapTitle = perCapita ? "CARBON DIOXIDE EMISSIONS PER CAPITA IN " : "CARBON DIOXIDE EMISSIONS IN ";
   updateMap(prevVal, true)
   updateHeatmapLegend(true)
 }
