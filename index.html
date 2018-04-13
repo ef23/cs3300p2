@@ -2,10 +2,11 @@
 <head>
 <title>INFO3300 Project 2</title>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400,700,800|Space+Mono:400,400i,700" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="https://unpkg.com/d3-simple-slider@0.2.0/build/d3-simple-slider.js"></script>
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="slider.js"></script>
 
 <style>
   body { background: #ecf0f1 }
@@ -35,7 +36,7 @@
   button {
     border: none;
     border-radius: 15px;
-    background: #bdc3c7;
+    background: #E87E04;
     margin: 1% 1%;
     padding: 0.5% 1%;
     color: white;
@@ -47,7 +48,7 @@
   }
 
   button:hover {
-    background-color: #E87E04; /* Green */
+    background-color: #bdc3c7; /* Green */
     color: white;
   }
 </style>
@@ -73,7 +74,8 @@ var donutHeight = .65 * windowHeight
 // the two svgs and the timeline slider
 var svg = d3.select(".page1").append("svg").attr("height", heatmapHeight).attr("width", heatmapWidth).attr("class", "heatmap");
 var donut = d3.select(".page1").append("svg").attr("height", donutHeight).attr("width", donutWidth).attr("class", "donut");
-d3.select(".page1").append("div").attr("id", "yearslider").style("width", heatmapWidth);
+d3.select(".page1").append("div").attr("id", "playslider").style("top", "-50px").style("position", "relative").style("display", "inline")
+d3.select(".page1").append("div").attr("id", "yearslider").style("display", "inline")
 var hmapKey;
 
 var projection = d3.geoEquirectangular().scale(75);
@@ -633,7 +635,7 @@ for (var i = minYear+1; i <= maxYear+1; i+=41){
 
 var prevVal = 1969
 
-var yearslider = d3.sliderHorizontal()
+var yearslider = slider()
   .min(d3.min(yearTicks))
   .max(d3.max(yearTicks))
   .step(1000 * 60 * 60 * 24 * 365)
@@ -649,12 +651,34 @@ var yearslider = d3.sliderHorizontal()
     }
   });
  var g = d3.select("div#yearslider").append("svg")
-  .attr("width", 1400)
+  .attr("width", heatmapWidth*.925)
   .attr("height", 100)
   .append("g")
-  .attr("transform", "translate(50,30)");
+  .attr("transform", "translate(20,30)");
 
   g.call(yearslider);
+
+var isPlaying = false;
+var interval;
+var playslider = d3.select("#playslider")
+.append("button")
+.html("<i class=\"fa fa-play\"></i>")
+.on("click", function(){
+  isPlaying = !isPlaying;
+  this.innerHTML = isPlaying ? "<i class=\"fa fa-pause\"></i>" : "<i class=\"fa fa-play\"></i>"
+  if (isPlaying) {
+    interval = setInterval(() => {
+      if (prevVal <=2014) {
+        updateMap(prevVal, true);
+        yearslider.moveHandle(new Date(prevVal+1, 0, 0))
+        prevVal++
+      }
+    }, 250);
+  } else {
+    clearInterval(interval);
+  }
+
+})
 // *****************  end slider ***************** //
 
 // toggle button
