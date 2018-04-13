@@ -81,14 +81,26 @@ var hmapKey;
 var projection = d3.geoEquirectangular().scale(75);
 var pathGenerator = d3.geoPath().projection(projection);
 
+// the map projection stuff
 var mapData;
+
+// raw data for carbon emissions by year
 var carbonData;
+
+// raw data for carbon emissions per capita
 var carbonPerCapitaData;
+
+// raw data for the iso-3166-codes json
 var countryCodes;
+
+// data of the countries from the map project
 var countries;
+
+
 var minYear = 1850;
 var maxYear= 2014;
 
+// the variable to indicate if we are using the total carbon emissions or per capita data
 var perCapita = false;
 
 d3.queue()
@@ -104,7 +116,7 @@ function parseEmissions(row) {
   return row;
 }
 
-// renders the heatmap + donut graph
+// callback func for the data and calls to init the first page
 function loadData(error, map, codes, carbon, carbonPerCapita) {
   mapData = map;
   countryCodes = codes.map(d => {
@@ -119,6 +131,7 @@ function loadData(error, map, codes, carbon, carbonPerCapita) {
 
 /** ==================================================================== PAGE 1 ==================================================================== */
 
+// renders the heatmap + donut graph
 function page1(){
   initMap();
 }
@@ -137,8 +150,13 @@ var yearTitleScale = d3.scaleLinear()
 var flagScale = d3.scaleSqrt()
   .range([0,1])
 
+// data for the current year
 var yearData;
+
+// more filtered out data for the current year (excludes non-country data)
 var validData;
+
+// USE THIS ARRAY FOR EVERYTHING! this is a "standardized" data array across both datasets
 var dataArr;
 var heatmapTitle = "CARBON DIOXIDE EMISSIONS IN ";
 
@@ -275,10 +293,12 @@ function getEmission(countryCode, yearData) {
   return 0;
 }
 
-// sets the domain of the colorscale to be the year
+// sets the domain of the colorscale to be the year and the dataArr to reflect the data of the current year
 function setDomain(year) {
   dataArr = [];
   var data = perCapita ? carbonPerCapitaData : carbonData;
+
+  // grab only countries and also filter out everything with > 0 emissions
   yearData = data.filter(d => d.Year === String(year) && d.Country !== "World" && d.Country !== "European Union (28)")
   validData = yearData.filter(d => (d.Emissions) > 0)
 
@@ -344,27 +364,29 @@ function setTip() {
   for (var i in dataArr) {
     var country = dataArr[i];
     if (currentId === country["id"]){
-      tip.text(country.Country)
-      scaleTipText();
-      emissions.text(country.Emissions + " Mt CO2" + (perCapita ? " per capita" : ""))
+      if (!clicked) {
+        tip.text(country.Country)
+        scaleTipText();
+        emissions.text(country.Emissions + " Mt CO2" + (perCapita ? " per capita" : ""))
 
-      //resize the flag
-      flag.attr("href", "data/flags/" + country.code + ".png")
-        .attr("height", flagScale(country.Emissions) * donutWidth*.2)
-        .attr("width", flagScale(country.Emissions) * donutWidth*.2)
-      var flagWidth = flag.node().getBBox().width/2;
-      var flagHeight = flag.node().getBBox().height/2;
-      flag.attr("x", donutWidth/2 - flagWidth)
-          .attr("y", donutHeight*.2 - flagHeight)
+        //resize the flag
+        flag.attr("href", "data/flags/" + country.code + ".png")
+          .attr("height", flagScale(country.Emissions) * donutWidth*.2)
+          .attr("width", flagScale(country.Emissions) * donutWidth*.2)
+        var flagWidth = flag.node().getBBox().width/2;
+        var flagHeight = flag.node().getBBox().height/2;
+        flag.attr("x", donutWidth/2 - flagWidth)
+            .attr("y", donutHeight*.2 - flagHeight)
 
-      var flagLegendxPos = hmapRange(country.Emissions)
-      // ternary statement for x will ensure the flag stays within bounds of the scale
-      flagLegend.attr("href", "data/flags/" + country.code + ".png")
-        .transition().attr("x", flagLegendxPos - (flagLegendxPos > flagLegendSize ? flagLegendSize : 0))
-      flagLegendStroke
-        .transition()
-        .attr("cx", flagLegendxPos + flagLegendSize/2 - (flagLegendxPos > flagLegendSize ? flagLegendSize : 0))
-        .attr("cy", scalePadding - h + flagLegendSize/2)
+        var flagLegendxPos = hmapRange(country.Emissions)
+        // ternary statement for x will ensure the flag stays within bounds of the scale
+        flagLegend.attr("href", "data/flags/" + country.code + ".png")
+          .transition().attr("x", flagLegendxPos - (flagLegendxPos > flagLegendSize ? flagLegendSize : 0))
+        flagLegendStroke
+          .transition()
+          .attr("cx", flagLegendxPos + flagLegendSize/2 - (flagLegendxPos > flagLegendSize ? flagLegendSize : 0))
+          .attr("cy", scalePadding - h + flagLegendSize/2)
+      }
       return true;
     }
   }
@@ -389,6 +411,17 @@ function setLeader() {
   var leaderWidth = leaderFlag.node().getBBox().width/2;
   leaderFlag.attr("x", donutWidth/2 - leaderWidth)
 }
+
+// resets a path's style to be unselected
+function resetCountryStyle(country){
+  d3.select(country)
+    .style("opacity", 0.8)
+    .style("stroke","#ccc")
+    .style("stroke-width",0.3);
+}
+
+// current country that is selected (clicked on)
+var currentSelection;
 
 // initializes the map
 function initMap() {
@@ -419,26 +452,49 @@ function initMap() {
     .style("stroke","#ccc")
     .style("stroke-width",0.3)
     .on('mouseover', function(d) {
-      if (!clicked) {
-        currentId = d.id;
-        if (setTip()) {
-          d3.select(this)
-            .style("opacity", 1)
-            .style("stroke","#bbb")
-            .style("stroke-width",0.6);
-        }
+      if (!clicked) currentId = d.id;
+      if (setTip()) {
+        d3.select(this)
+          .style("opacity", 1)
+          .style("stroke","#bbb")
+          .style("stroke-width",0.6);
       }
     })
     .on('mouseout', function(d) {
       if (!clicked){
-        d3.select(this)
-          .style("opacity", 0.8)
-          .style("stroke","#ccc")
-          .style("stroke-width",0.3);
+        resetCountryStyle(this)
       }
     })
     .on('click', function(d) {
-      clicked = !clicked;
+      // selecting/deselecting same country
+      if (currentId == d.id) {
+        // if it is clicked, deselect, otherwise select it
+        if (clicked) {
+          resetCountryStyle(this);
+        } else {
+          currentSelection = this;
+          d3.select(this)
+            .style("opacity", 1)
+            .style("stroke","#777")
+            .style("stroke-width",0.5);
+        }
+        clicked = !clicked;
+      } else {
+        // selecting other country when other country may be selected
+        if (clicked) resetCountryStyle(currentSelection); // reset old country if any
+
+        currentSelection = this;
+        currentId = d.id;
+
+        // need clicked to be false to update tip, then clicked is true
+        clicked = false;
+        setTip();
+        clicked = true;
+        d3.select(this)
+            .style("opacity", 1)
+            .style("stroke","#777")
+            .style("stroke-width",0.5);
+      }
       hoverTitle.text(clicked ? "Currently Selected Country:" : "Hover over a country:")
     })
     .merge(paths);

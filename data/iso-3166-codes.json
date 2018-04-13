@@ -286,7 +286,7 @@
 "sub-region-code": "034"
 },
 {
-"name": "Bolivia (Plurinational State of)",
+"name": "Bolivia",
 "alpha-2": "BO",
 "alpha-3": "BOL",
 "country-code": "068",
@@ -517,7 +517,7 @@
 "region": null
 },
 {
-"name": "Cocos (Keeling) Islands",
+"name": "Cocos Islands",
 "alpha-2": "CC",
 "alpha-3": "CCK",
 "country-code": "166",
@@ -561,7 +561,7 @@
 "sub-region-code": "017"
 },
 {
-"name": "Congo (Democratic Republic of the)",
+"name": "Congo Dem. Republic",
 "alpha-2": "CD",
 "alpha-3": "COD",
 "country-code": "180",
@@ -594,7 +594,7 @@
 "sub-region-code": "013"
 },
 {
-"name": "Côte d'Ivoire",
+"name": "Ivory Coast",
 "alpha-2": "CI",
 "alpha-3": "CIV",
 "country-code": "384",
@@ -1144,7 +1144,7 @@
 "sub-region-code": "035"
 },
 {
-"name": "Iran (Islamic Republic of)",
+"name": "Iran",
 "alpha-2": "IR",
 "alpha-3": "IRN",
 "country-code": "364",
@@ -1287,7 +1287,7 @@
 "sub-region-code": "057"
 },
 {
-"name": "Korea (Democratic People's Republic of)",
+"name": "North Korea",
 "alpha-2": "KP",
 "alpha-3": "PRK",
 "country-code": "408",
@@ -1298,7 +1298,7 @@
 "sub-region-code": "030"
 },
 {
-"name": "Korea (Republic of)",
+"name": "South Korea",
 "alpha-2": "KR",
 "alpha-3": "KOR",
 "country-code": "410",
@@ -1331,7 +1331,7 @@
 "sub-region-code": "143"
 },
 {
-"name": "Lao People's Democratic Republic",
+"name": "Laos",
 "alpha-2": "LA",
 "alpha-3": "LAO",
 "country-code": "418",
@@ -1441,7 +1441,7 @@
 "sub-region-code": "030"
 },
 {
-"name": "Macedonia (the former Yugoslav Republic of)",
+"name": "Macedonia",
 "alpha-2": "MK",
 "alpha-3": "MKD",
 "country-code": "807",
@@ -1584,7 +1584,7 @@
 "sub-region-code": "013"
 },
 {
-"name": "Micronesia (Federated States of)",
+"name": "Micronesia",
 "alpha-2": "FM",
 "alpha-3": "FSM",
 "country-code": "583",
@@ -1595,7 +1595,7 @@
 "sub-region-code": "057"
 },
 {
-"name": "Moldova (Republic of)",
+"name": "Moldova",
 "alpha-2": "MD",
 "alpha-3": "MDA",
 "country-code": "498",
@@ -2376,7 +2376,7 @@
 "sub-region-code": "155"
 },
 {
-"name": "Syrian Arab Republic",
+"name": "Syria",
 "alpha-2": "SY",
 "alpha-3": "SYR",
 "country-code": "760",
@@ -2387,7 +2387,7 @@
 "sub-region-code": "145"
 },
 {
-"name": "Taiwan, Province of China",
+"name": "Taiwan",
 "alpha-2": "TW",
 "alpha-3": "TWN",
 "country-code": "158",
@@ -2640,7 +2640,7 @@
 "sub-region-code": "054"
 },
 {
-"name": "Venezuela (Bolivarian Republic of)",
+"name": "Venezuela",
 "alpha-2": "VE",
 "alpha-3": "VEN",
 "country-code": "862",
@@ -2651,7 +2651,7 @@
 "sub-region-code": "005"
 },
 {
-"name": "Viet Nam",
+"name": "Vietnam",
 "alpha-2": "VN",
 "alpha-3": "VNM",
 "country-code": "704",
@@ -2662,7 +2662,7 @@
 "sub-region-code": "035"
 },
 {
-"name": "Virgin Islands (British)",
+"name": "British Virgin Islands",
 "alpha-2": "VG",
 "alpha-3": "VGB",
 "country-code": "092",

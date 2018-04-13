@@ -38,10 +38,10 @@ China,1850,
 Colombia,1850,
 Comoros,1850,
 Congo,1850,
-"Congo, Dem. Republic",1850,
+Congo Dem. Republic,1850,
 Cook Islands,1850,
 Costa Rica,1850,
-Cote d'Ivoire,1850,
+Ivory Coast,1850,
 Croatia,1850,
 Cuba,1850,
 Cyprus,1850,
@@ -89,8 +89,8 @@ Jordan,1850,
 Kazakhstan,1850,0.0083
 Kenya,1850,
 Kiribati,1850,
-Korea (North),1850,
-Korea (South),1850,
+North Korea,1850,
+South Korea,1850,
 Kuwait,1850,
 Kyrgyzstan,1850,0.0005
 Laos,1850,
@@ -102,7 +102,7 @@ Libya,1850,
 Liechtenstein,1850,
 Lithuania,1850,0.0008
 Luxembourg,1850,
-"Macedonia, FYR",1850,
+Macedonia,1850,
 Madagascar,1850,
 Malawi,1850,
 Malaysia,1850,
@@ -162,7 +162,7 @@ Somalia,1850,
 South Africa,1850,
 Spain,1850,0.4946
 Sri Lanka,1850,
-Sudan,1850,
+South Sudan,1850,
 Suriname,1850,
 Swaziland,1850,
 Sweden,1850,0.2015
@@ -234,7 +234,7 @@ Congo,1851,
 "Congo, Dem. Republic",1851,
 Cook Islands,1851,
 Costa Rica,1851,
-Cote d'Ivoire,1851,
+Ivory Coast,1851,
 Croatia,1851,
 Cuba,1851,
 Cyprus,1851,
@@ -282,8 +282,8 @@ Jordan,1851,
 Kazakhstan,1851,
 Kenya,1851,
 Kiribati,1851,
-Korea (North),1851,
-Korea (South),1851,
+North Korea,1851,
+South Korea,1851,
 Kuwait,1851,
 Kyrgyzstan,1851,
 Laos,1851,
@@ -295,7 +295,7 @@ Libya,1851,
 Liechtenstein,1851,
 Lithuania,1851,
 Luxembourg,1851,
-"Macedonia, FYR",1851,
+Macedonia,1851,
 Madagascar,1851,
 Malawi,1851,
 Malaysia,1851,
@@ -355,7 +355,7 @@ Somalia,1851,
 South Africa,1851,
 Spain,1851,0.5093
 Sri Lanka,1851,
-Sudan,1851,
+South Sudan,1851,
 Suriname,1851,
 Swaziland,1851,
 Sweden,1851,0.2162
@@ -427,7 +427,7 @@ Congo,1852,
 "Congo, Dem. Republic",1852,
 Cook Islands,1852,
 Costa Rica,1852,
-Cote d'Ivoire,1852,
+Ivory Coast,1852,
 Croatia,1852,
 Cuba,1852,
 Cyprus,1852,
@@ -475,8 +475,8 @@ Jordan,1852,
 Kazakhstan,1852,
 Kenya,1852,
 Kiribati,1852,
-Korea (North),1852,
-Korea (South),1852,
+North Korea,1852,
+South Korea,1852,
 Kuwait,1852,
 Kyrgyzstan,1852,
 Laos,1852,
@@ -488,7 +488,7 @@ Libya,1852,
 Liechtenstein,1852,
 Lithuania,1852,
 Luxembourg,1852,
-"Macedonia, FYR",1852,
+Macedonia,1852,
 Madagascar,1852,
 Malawi,1852,
 Malaysia,1852,
@@ -548,7 +548,7 @@ Somalia,1852,
 South Africa,1852,
 Spain,1852,0.5349
 Sri Lanka,1852,
-Sudan,1852,
+South Sudan,1852,
 Suriname,1852,
 Swaziland,1852,
 Sweden,1852,0.2162
@@ -620,7 +620,7 @@ Congo,1853,
 "Congo, Dem. Republic",1853,
 Cook Islands,1853,
 Costa Rica,1853,
-Cote d'Ivoire,1853,
+Ivory Coast,1853,
 Croatia,1853,
 Cuba,1853,
 Cyprus,1853,
@@ -668,8 +668,8 @@ Jordan,1853,
 Kazakhstan,1853,
 Kenya,1853,
 Kiribati,1853,
-Korea (North),1853,
-Korea (South),1853,
+North Korea,1853,
+South Korea,1853,
 Kuwait,1853,
 Kyrgyzstan,1853,
 Laos,1853,
@@ -681,7 +681,7 @@ Libya,1853,
 Liechtenstein,1853,
 Lithuania,1853,
 Luxembourg,1853,
-"Macedonia, FYR",1853,
+Macedonia,1853,
 Madagascar,1853,
 Malawi,1853,
 Malaysia,1853,
@@ -741,7 +741,7 @@ Somalia,1853,
 South Africa,1853,
 Spain,1853,0.6522
 Sri Lanka,1853,
-Sudan,1853,
+South Sudan,1853,
 Suriname,1853,
 Swaziland,1853,
 Sweden,1853,0.2272
@@ -813,7 +813,7 @@ Congo,1854,
 "Congo, Dem. Republic",1854,
 Cook Islands,1854,
 Costa Rica,1854,
-Cote d'Ivoire,1854,
+Ivory Coast,1854,
 Croatia,1854,
 Cuba,1854,
 Cyprus,1854,
@@ -861,8 +861,8 @@ Jordan,1854,
 Kazakhstan,1854,
 Kenya,1854,
 Kiribati,1854,
-Korea (North),1854,
-Korea (South),1854,
+North Korea,1854,
+South Korea,1854,
 Kuwait,1854,
 Kyrgyzstan,1854,
 Laos,1854,
@@ -874,7 +874,7 @@ Libya,1854,
 Liechtenstein,1854,
 Lithuania,1854,
 Luxembourg,1854,
-"Macedonia, FYR",1854,
+Macedonia,1854,
 Madagascar,1854,
 Malawi,1854,
 Malaysia,1854,
@@ -934,7 +934,7 @@ Somalia,1854,
 South Africa,1854,
 Spain,1854,0.5496
 Sri Lanka,1854,
-Sudan,1854,
+South Sudan,1854,
 Suriname,1854,
 Swaziland,1854,
 Sweden,1854,0.3371
@@ -1006,7 +1006,7 @@ Congo,1855,
 "Congo, Dem. Republic",1855,
 Cook Islands,1855,
 Costa Rica,1855,
-Cote d'Ivoire,1855,
+Ivory Coast,1855,
 Croatia,1855,
 Cuba,1855,
 Cyprus,1855,
@@ -1054,8 +1054,8 @@ Jordan,1855,
 Kazakhstan,1855,0.0252
 Kenya,1855,
 Kiribati,1855,
-Korea (North),1855,
-Korea (South),1855,
+North Korea,1855,
+South Korea,1855,
 Kuwait,1855,
 Kyrgyzstan,1855,0.0016
 Laos,1855,
@@ -1067,7 +1067,7 @@ Libya,1855,
 Liechtenstein,1855,
 Lithuania,1855,0.0025
 Luxembourg,1855,
-"Macedonia, FYR",1855,
+Macedonia,1855,
 Madagascar,1855,
 Malawi,1855,
 Malaysia,1855,
@@ -1127,7 +1127,7 @@ Somalia,1855,
 South Africa,1855,
 Spain,1855,0.5533
 Sri Lanka,1855,
-Sudan,1855,
+South Sudan,1855,
 Suriname,1855,
 Swaziland,1855,
 Sweden,1855,0.3151
@@ -1199,7 +1199,7 @@ Congo,1856,
 "Congo, Dem. Republic",1856,
 Cook Islands,1856,
 Costa Rica,1856,
-Cote d'Ivoire,1856,
+Ivory Coast,1856,
 Croatia,1856,
 Cuba,1856,
 Cyprus,1856,
@@ -1247,8 +1247,8 @@ Jordan,1856,
 Kazakhstan,1856,
 Kenya,1856,
 Kiribati,1856,
-Korea (North),1856,
-Korea (South),1856,
+North Korea,1856,
+South Korea,1856,
 Kuwait,1856,
 Kyrgyzstan,1856,
 Laos,1856,
@@ -1260,7 +1260,7 @@ Libya,1856,
 Liechtenstein,1856,
 Lithuania,1856,
 Luxembourg,1856,
-"Macedonia, FYR",1856,
+Macedonia,1856,
 Madagascar,1856,
 Malawi,1856,
 Malaysia,1856,
@@ -1320,7 +1320,7 @@ Somalia,1856,
 South Africa,1856,
 Spain,1856,0.7548
 Sri Lanka,1856,
-Sudan,1856,
+South Sudan,1856,
 Suriname,1856,
 Swaziland,1856,
 Sweden,1856,0.4763
@@ -1392,7 +1392,7 @@ Congo,1857,
 "Congo, Dem. Republic",1857,
 Cook Islands,1857,
 Costa Rica,1857,
-Cote d'Ivoire,1857,
+Ivory Coast,1857,
 Croatia,1857,
 Cuba,1857,
 Cyprus,1857,
@@ -1440,8 +1440,8 @@ Jordan,1857,
 Kazakhstan,1857,
 Kenya,1857,
 Kiribati,1857,
-Korea (North),1857,
-Korea (South),1857,
+North Korea,1857,
+South Korea,1857,
 Kuwait,1857,
 Kyrgyzstan,1857,
 Laos,1857,
@@ -1453,7 +1453,7 @@ Libya,1857,
 Liechtenstein,1857,
 Lithuania,1857,
 Luxembourg,1857,
-"Macedonia, FYR",1857,
+Macedonia,1857,
 Madagascar,1857,
 Malawi,1857,
 Malaysia,1857,
@@ -1513,7 +1513,7 @@ Somalia,1857,
 South Africa,1857,
 Spain,1857,0.8500
 Sri Lanka,1857,
-Sudan,1857,
+South Sudan,1857,
 Suriname,1857,
 Swaziland,1857,
 Sweden,1857,0.6119
@@ -1585,7 +1585,7 @@ Congo,1858,
 "Congo, Dem. Republic",1858,
 Cook Islands,1858,
 Costa Rica,1858,
-Cote d'Ivoire,1858,
+Ivory Coast,1858,
 Croatia,1858,
 Cuba,1858,
 Cyprus,1858,
@@ -1633,8 +1633,8 @@ Jordan,1858,
 Kazakhstan,1858,0.0354
 Kenya,1858,
 Kiribati,1858,
-Korea (North),1858,
-Korea (South),1858,
+North Korea,1858,
+South Korea,1858,
 Kuwait,1858,
 Kyrgyzstan,1858,0.0022
 Laos,1858,
@@ -1646,7 +1646,7 @@ Libya,1858,
 Liechtenstein,1858,
 Lithuania,1858,0.0036
 Luxembourg,1858,
-"Macedonia, FYR",1858,
+Macedonia,1858,
 Madagascar,1858,
 Malawi,1858,
 Malaysia,1858,
@@ -1706,7 +1706,7 @@ Somalia,1858,
 South Africa,1858,
 Spain,1858,1.1505
 Sri Lanka,1858,
-Sudan,1858,
+South Sudan,1858,
 Suriname,1858,
 Swaziland,1858,
 Sweden,1858,0.5130
@@ -1778,7 +1778,7 @@ Congo,1859,
 "Congo, Dem. Republic",1859,
 Cook Islands,1859,
 Costa Rica,1859,
-Cote d'Ivoire,1859,
+Ivory Coast,1859,
 Croatia,1859,
 Cuba,1859,
 Cyprus,1859,
@@ -1826,8 +1826,8 @@ Jordan,1859,
 Kazakhstan,1859,0.0375
 Kenya,1859,
 Kiribati,1859,
-Korea (North),1859,
-Korea (South),1859,
+North Korea,1859,
+South Korea,1859,
 Kuwait,1859,
 Kyrgyzstan,1859,0.0024
 Laos,1859,
@@ -1839,7 +1839,7 @@ Libya,1859,
 Liechtenstein,1859,
 Lithuania,1859,0.0038
 Luxembourg,1859,
-"Macedonia, FYR",1859,
+Macedonia,1859,
 Madagascar,1859,
 Malawi,1859,
 Malaysia,1859,
@@ -1899,7 +1899,7 @@ Somalia,1859,
 South Africa,1859,
 Spain,1859,1.6305
 Sri Lanka,1859,
-Sudan,1859,
+South Sudan,1859,
 Suriname,1859,
 Swaziland,1859,
 Sweden,1859,0.7548
@@ -1971,7 +1971,7 @@ Congo,1860,
 "Congo, Dem. Republic",1860,
 Cook Islands,1860,
 Costa Rica,1860,
-Cote d'Ivoire,1860,
+Ivory Coast,1860,
 Croatia,1860,
 Cuba,1860,
 Cyprus,1860,
@@ -2019,8 +2019,8 @@ Jordan,1860,
 Kazakhstan,1860,0.0496
 Kenya,1860,
 Kiribati,1860,
-Korea (North),1860,
-Korea (South),1860,
+North Korea,1860,
+South Korea,1860,
 Kuwait,1860,
 Kyrgyzstan,1860,0.0031
 Laos,1860,
@@ -2032,7 +2032,7 @@ Libya,1860,
 Liechtenstein,1860,
 Lithuania,1860,0.0050
 Luxembourg,1860,
-"Macedonia, FYR",1860,
+Macedonia,1860,
 Madagascar,1860,
 Malawi,1860,
 Malaysia,1860,
@@ -2092,7 +2092,7 @@ Somalia,1860,
 South Africa,1860,
 Spain,1860,1.9309
 Sri Lanka,1860,
-Sudan,1860,
+South Sudan,1860,
 Suriname,1860,
 Swaziland,1860,
 Sweden,1860,0.7511
@@ -2164,7 +2164,7 @@ Congo,1861,
 "Congo, Dem. Republic",1861,
 Cook Islands,1861,
 Costa Rica,1861,
-Cote d'Ivoire,1861,
+Ivory Coast,1861,
 Croatia,1861,
 Cuba,1861,
 Cyprus,1861,
@@ -2212,8 +2212,8 @@ Jordan,1861,
 Kazakhstan,1861,0.0632
 Kenya,1861,
 Kiribati,1861,
-Korea (North),1861,
-Korea (South),1861,
+North Korea,1861,
+South Korea,1861,
 Kuwait,1861,
 Kyrgyzstan,1861,0.0040
 Laos,1861,
@@ -2225,7 +2225,7 @@ Libya,1861,
 Liechtenstein,1861,
 Lithuania,1861,0.0064
 Luxembourg,1861,
-"Macedonia, FYR",1861,
+Macedonia,1861,
 Madagascar,1861,
 Malawi,1861,
 Malaysia,1861,
@@ -2285,7 +2285,7 @@ Somalia,1861,
 South Africa,1861,
 Spain,1861,2.0042
 Sri Lanka,1861,
-Sudan,1861,
+South Sudan,1861,
 Suriname,1861,
 Swaziland,1861,
 Sweden,1861,0.9673
@@ -2357,7 +2357,7 @@ Congo,1862,
 "Congo, Dem. Republic",1862,
 Cook Islands,1862,
 Costa Rica,1862,
-Cote d'Ivoire,1862,
+Ivory Coast,1862,
 Croatia,1862,
 Cuba,1862,
 Cyprus,1862,
@@ -2405,8 +2405,8 @@ Jordan,1862,
 Kazakhstan,1862,0.0568
 Kenya,1862,
 Kiribati,1862,
-Korea (North),1862,
-Korea (South),1862,
+North Korea,1862,
+South Korea,1862,
 Kuwait,1862,
 Kyrgyzstan,1862,0.0036
 Laos,1862,
@@ -2418,7 +2418,7 @@ Libya,1862,
 Liechtenstein,1862,
 Lithuania,1862,0.0057
 Luxembourg,1862,
-"Macedonia, FYR",1862,
+Macedonia,1862,
 Madagascar,1862,
 Malawi,1862,
 Malaysia,1862,
@@ -2478,7 +2478,7 @@ Somalia,1862,
 South Africa,1862,
 Spain,1862,2.1874
 Sri Lanka,1862,
-Sudan,1862,
+South Sudan,1862,
 Suriname,1862,
 Swaziland,1862,
 Sweden,1862,0.9856
@@ -2550,7 +2550,7 @@ Congo,1863,
 "Congo, Dem. Republic",1863,
 Cook Islands,1863,
 Costa Rica,1863,
-Cote d'Ivoire,1863,
+Ivory Coast,1863,
 Croatia,1863,
 Cuba,1863,
 Cyprus,1863,
@@ -2598,8 +2598,8 @@ Jordan,1863,
 Kazakhstan,1863,0.0595
 Kenya,1863,
 Kiribati,1863,
-Korea (North),1863,
-Korea (South),1863,
+North Korea,1863,
+South Korea,1863,
 Kuwait,1863,
 Kyrgyzstan,1863,0.0038
 Laos,1863,
@@ -2611,7 +2611,7 @@ Libya,1863,
 Liechtenstein,1863,
 Lithuania,1863,0.0060
 Luxembourg,1863,
-"Macedonia, FYR",1863,
+Macedonia,1863,
 Madagascar,1863,
 Malawi,1863,
 Malaysia,1863,
@@ -2671,7 +2671,7 @@ Somalia,1863,
 South Africa,1863,
 Spain,1863,2.4329
 Sri Lanka,1863,
-Sudan,1863,
+South Sudan,1863,
 Suriname,1863,
 Swaziland,1863,
 Sweden,1863,0.9856
@@ -2743,7 +2743,7 @@ Congo,1864,
 "Congo, Dem. Republic",1864,
 Cook Islands,1864,
 Costa Rica,1864,
-Cote d'Ivoire,1864,
+Ivory Coast,1864,
 Croatia,1864,
 Cuba,1864,
 Cyprus,1864,
@@ -2791,8 +2791,8 @@ Jordan,1864,
 Kazakhstan,1864,0.0667
 Kenya,1864,
 Kiribati,1864,
-Korea (North),1864,
-Korea (South),1864,
+North Korea,1864,
+South Korea,1864,
 Kuwait,1864,
 Kyrgyzstan,1864,0.0042
 Laos,1864,
@@ -2804,7 +2804,7 @@ Libya,1864,
 Liechtenstein,1864,
 Lithuania,1864,0.0067
 Luxembourg,1864,
-"Macedonia, FYR",1864,
+Macedonia,1864,
 Madagascar,1864,
 Malawi,1864,
 Malaysia,1864,
@@ -2864,7 +2864,7 @@ Somalia,1864,
 South Africa,1864,
 Spain,1864,2.3340
 Sri Lanka,1864,
-Sudan,1864,
+South Sudan,1864,
 Suriname,1864,
 Swaziland,1864,
 Sweden,1864,1.0369
@@ -2936,7 +2936,7 @@ Congo,1865,
 "Congo, Dem. Republic",1865,
 Cook Islands,1865,
 Costa Rica,1865,
-Cote d'Ivoire,1865,
+Ivory Coast,1865,
 Croatia,1865,
 Cuba,1865,
 Cyprus,1865,
@@ -2984,8 +2984,8 @@ Jordan,1865,
 Kazakhstan,1865,0.0638
 Kenya,1865,
 Kiribati,1865,
-Korea (North),1865,
-Korea (South),1865,
+North Korea,1865,
+South Korea,1865,
 Kuwait,1865,
 Kyrgyzstan,1865,0.0040
 Laos,1865,
@@ -2997,7 +2997,7 @@ Libya,1865,
 Liechtenstein,1865,
 Lithuania,1865,0.0064
 Luxembourg,1865,
-"Macedonia, FYR",1865,
+Macedonia,1865,
 Madagascar,1865,
 Malawi,1865,
 Malaysia,1865,
@@ -3057,7 +3057,7 @@ Somalia,1865,
 South Africa,1865,
 Spain,1865,2.3047
 Sri Lanka,1865,
-Sudan,1865,
+South Sudan,1865,
 Suriname,1865,
 Swaziland,1865,
 Sweden,1865,1.0809
@@ -3129,7 +3129,7 @@ Congo,1866,
 "Congo, Dem. Republic",1866,
 Cook Islands,1866,
 Costa Rica,1866,
-Cote d'Ivoire,1866,
+Ivory Coast,1866,
 Croatia,1866,
 Cuba,1866,
 Cyprus,1866,
@@ -3177,8 +3177,8 @@ Jordan,1866,
 Kazakhstan,1866,0.2015
 Kenya,1866,
 Kiribati,1866,
-Korea (North),1866,
-Korea (South),1866,
+North Korea,1866,
+South Korea,1866,
 Kuwait,1866,
 Kyrgyzstan,1866,0.0128
 Laos,1866,
@@ -3190,7 +3190,7 @@ Libya,1866,
 Liechtenstein,1866,
 Lithuania,1866,0.0203
 Luxembourg,1866,
-"Macedonia, FYR",1866,
+Macedonia,1866,
 Madagascar,1866,
 Malawi,1866,
 Malaysia,1866,
@@ -3250,7 +3250,7 @@ Somalia,1866,
 South Africa,1866,
 Spain,1866,2.2900
 Sri Lanka,1866,
-Sudan,1866,
+South Sudan,1866,
 Suriname,1866,
 Swaziland,1866,
 Sweden,1866,1.1102
@@ -3322,7 +3322,7 @@ Congo,1867,
 "Congo, Dem. Republic",1867,
 Cook Islands,1867,
 Costa Rica,1867,
-Cote d'Ivoire,1867,
+Ivory Coast,1867,
 Croatia,1867,
 Cuba,1867,
 Cyprus,1867,
@@ -3370,8 +3370,8 @@ Jordan,1867,
 Kazakhstan,1867,0.2310
 Kenya,1867,
 Kiribati,1867,
-Korea (North),1867,
-Korea (South),1867,
+North Korea,1867,
+South Korea,1867,
 Kuwait,1867,
 Kyrgyzstan,1867,0.0146
 Laos,1867,
@@ -3383,7 +3383,7 @@ Libya,1867,
 Liechtenstein,1867,
 Lithuania,1867,0.0233
 Luxembourg,1867,
-"Macedonia, FYR",1867,
+Macedonia,1867,
 Madagascar,1867,
 Malawi,1867,
 Malaysia,1867,
@@ -3443,7 +3443,7 @@ Somalia,1867,
 South Africa,1867,
 Spain,1867,2.5575
 Sri Lanka,1867,
-Sudan,1867,
+South Sudan,1867,
 Suriname,1867,
 Swaziland,1867,
 Sweden,1867,1.0332
@@ -3515,7 +3515,7 @@ Congo,1868,
 "Congo, Dem. Republic",1868,
 Cook Islands,1868,
 Costa Rica,1868,
-Cote d'Ivoire,1868,
+Ivory Coast,1868,
 Croatia,1868,
 Cuba,1868,
 Cyprus,1868,
@@ -3563,8 +3563,8 @@ Jordan,1868,
 Kazakhstan,1868,0.1924
 Kenya,1868,
 Kiribati,1868,
-Korea (North),1868,
-Korea (South),1868,
+North Korea,1868,
+South Korea,1868,
 Kuwait,1868,
 Kyrgyzstan,1868,0.0122
 Laos,1868,
@@ -3576,7 +3576,7 @@ Libya,1868,
 Liechtenstein,1868,
 Lithuania,1868,0.0194
 Luxembourg,1868,
-"Macedonia, FYR",1868,
+Macedonia,1868,
 Madagascar,1868,
 Malawi,1868,
 Malaysia,1868,
@@ -3636,7 +3636,7 @@ Somalia,1868,
 South Africa,1868,
 Spain,1868,2.6601
 Sri Lanka,1868,
-Sudan,1868,
+South Sudan,1868,
 Suriname,1868,
 Swaziland,1868,
 Sweden,1868,1.2238
@@ -3708,7 +3708,7 @@ Congo,1869,
 "Congo, Dem. Republic",1869,
 Cook Islands,1869,
 Costa Rica,1869,
-Cote d'Ivoire,1869,
+Ivory Coast,1869,
 Croatia,1869,
 Cuba,1869,
 Cyprus,1869,
@@ -3756,8 +3756,8 @@ Jordan,1869,
 Kazakhstan,1869,0.2610
 Kenya,1869,
 Kiribati,1869,
-Korea (North),1869,
-Korea (South),1869,
+North Korea,1869,
+South Korea,1869,
 Kuwait,1869,
 Kyrgyzstan,1869,0.0165
 Laos,1869,
@@ -3769,7 +3769,7 @@ Libya,1869,
 Liechtenstein,1869,
 Lithuania,1869,0.0263
 Luxembourg,1869,
-"Macedonia, FYR",1869,
+Macedonia,1869,
 Madagascar,1869,
 Malawi,1869,
 Malaysia,1869,
@@ -3829,7 +3829,7 @@ Somalia,1869,
 South Africa,1869,
 Spain,1869,2.6381
 Sri Lanka,1869,
-Sudan,1869,
+South Sudan,1869,
 Suriname,1869,
 Swaziland,1869,
 Sweden,1869,1.0882
@@ -3901,7 +3901,7 @@ Congo,1870,
 "Congo, Dem. Republic",1870,
 Cook Islands,1870,
 Costa Rica,1870,
-Cote d'Ivoire,1870,
+Ivory Coast,1870,
 Croatia,1870,
 Cuba,1870,
 Cyprus,1870,
@@ -3949,8 +3949,8 @@ Jordan,1870,
 Kazakhstan,1870,0.2833
 Kenya,1870,
 Kiribati,1870,
-Korea (North),1870,
-Korea (South),1870,
+North Korea,1870,
+South Korea,1870,
 Kuwait,1870,
 Kyrgyzstan,1870,0.0180
 Laos,1870,
@@ -3962,7 +3962,7 @@ Libya,1870,
 Liechtenstein,1870,
 Lithuania,1870,0.0285
 Luxembourg,1870,
-"Macedonia, FYR",1870,
+Macedonia,1870,
 Madagascar,1870,
 Malawi,1870,
 Malaysia,1870,
@@ -4022,7 +4022,7 @@ Somalia,1870,
 South Africa,1870,
 Spain,1870,3.0741
 Sri Lanka,1870,
-Sudan,1870,
+South Sudan,1870,
 Suriname,1870,
 Swaziland,1870,
 Sweden,1870,1.3410
@@ -4094,7 +4094,7 @@ Congo,1871,
 "Congo, Dem. Republic",1871,
 Cook Islands,1871,
 Costa Rica,1871,
-Cote d'Ivoire,1871,
+Ivory Coast,1871,
 Croatia,1871,
 Cuba,1871,
 Cyprus,1871,
@@ -4142,8 +4142,8 @@ Jordan,1871,
 Kazakhstan,1871,0.3824
 Kenya,1871,
 Kiribati,1871,
-Korea (North),1871,
-Korea (South),1871,
+North Korea,1871,
+South Korea,1871,
 Kuwait,1871,
 Kyrgyzstan,1871,0.0242
 Laos,1871,
@@ -4155,7 +4155,7 @@ Libya,1871,
 Liechtenstein,1871,
 Lithuania,1871,0.0385
 Luxembourg,1871,
-"Macedonia, FYR",1871,
+Macedonia,1871,
 Madagascar,1871,
 Malawi,1871,
 Malaysia,1871,
@@ -4215,7 +4215,7 @@ Somalia,1871,
 South Africa,1871,
 Spain,1871,2.9385
 Sri Lanka,1871,
-Sudan,1871,
+South Sudan,1871,
 Suriname,1871,
 Swaziland,1871,
 Sweden,1871,1.4363
@@ -4287,7 +4287,7 @@ Congo,1872,
 "Congo, Dem. Republic",1872,
 Cook Islands,1872,
 Costa Rica,1872,
-Cote d'Ivoire,1872,
+Ivory Coast,1872,
 Croatia,1872,
 Cuba,1872,
 Cyprus,1872,
@@ -4335,8 +4335,8 @@ Jordan,1872,
 Kazakhstan,1872,0.3926
 Kenya,1872,
 Kiribati,1872,
-Korea (North),1872,
-Korea (South),1872,
+North Korea,1872,
+South Korea,1872,
 Kuwait,1872,
 Kyrgyzstan,1872,0.0249
 Laos,1872,
@@ -4348,7 +4348,7 @@ Libya,1872,
 Liechtenstein,1872,
 Lithuania,1872,0.0396
 Luxembourg,1872,
-"Macedonia, FYR",1872,
+Macedonia,1872,
 Madagascar,1872,
 Malawi,1872,
 Malaysia,1872,
@@ -4408,7 +4408,7 @@ Somalia,1872,
 South Africa,1872,
 Spain,1872,3.2610
 Sri Lanka,1872,
-Sudan,1872,
+South Sudan,1872,
 Suriname,1872,
 Swaziland,1872,
 Sweden,1872,1.7111
@@ -4480,7 +4480,7 @@ Congo,1873,
 "Congo, Dem. Republic",1873,
 Cook Islands,1873,
 Costa Rica,1873,
-Cote d'Ivoire,1873,
+Ivory Coast,1873,
 Croatia,1873,
 Cuba,1873,
 Cyprus,1873,
@@ -4528,8 +4528,8 @@ Jordan,1873,
 Kazakhstan,1873,0.3685
 Kenya,1873,
 Kiribati,1873,
-Korea (North),1873,
-Korea (South),1873,
+North Korea,1873,
+South Korea,1873,
 Kuwait,1873,
 Kyrgyzstan,1873,0.0234
 Laos,1873,
@@ -4541,7 +4541,7 @@ Libya,1873,
 Liechtenstein,1873,
 Lithuania,1873,0.0371
 Luxembourg,1873,
-"Macedonia, FYR",1873,
+Macedonia,1873,
 Madagascar,1873,
 Malawi,1873,
 Malaysia,1873,
@@ -4601,7 +4601,7 @@ Somalia,1873,
 South Africa,1873,
 Spain,1873,3.1364
 Sri Lanka,1873,
-Sudan,1873,
+South Sudan,1873,
 Suriname,1873,
 Swaziland,1873,
 Sweden,1873,1.7367
@@ -4673,7 +4673,7 @@ Congo,1874,
 "Congo, Dem. Republic",1874,
 Cook Islands,1874,
 Costa Rica,1874,
-Cote d'Ivoire,1874,
+Ivory Coast,1874,
 Croatia,1874,
 Cuba,1874,
 Cyprus,1874,
@@ -4721,8 +4721,8 @@ Jordan,1874,
 Kazakhstan,1874,0.4476
 Kenya,1874,
 Kiribati,1874,
-Korea (North),1874,
-Korea (South),1874,
+North Korea,1874,
+South Korea,1874,
 Kuwait,1874,
 Kyrgyzstan,1874,0.0284
 Laos,1874,
@@ -4734,7 +4734,7 @@ Libya,1874,
 Liechtenstein,1874,
 Lithuania,1874,0.0451
 Luxembourg,1874,
-"Macedonia, FYR",1874,
+Macedonia,1874,
 Madagascar,1874,
 Malawi,1874,
 Malaysia,1874,
@@ -4794,7 +4794,7 @@ Somalia,1874,
 South Africa,1874,
 Spain,1874,3.1181
 Sri Lanka,1874,
-Sudan,1874,
+South Sudan,1874,
 Suriname,1874,
 Swaziland,1874,
 Sweden,1874,1.8760
@@ -4866,7 +4866,7 @@ Congo,1875,
 "Congo, Dem. Republic",1875,
 Cook Islands,1875,
 Costa Rica,1875,
-Cote d'Ivoire,1875,
+Ivory Coast,1875,
 Croatia,1875,
 Cuba,1875,
 Cyprus,1875,
@@ -4914,8 +4914,8 @@ Jordan,1875,
 Kazakhstan,1875,0.5148
 Kenya,1875,
 Kiribati,1875,
-Korea (North),1875,
-Korea (South),1875,
+North Korea,1875,
+South Korea,1875,
 Kuwait,1875,
 Kyrgyzstan,1875,0.0326
 Laos,1875,
@@ -4927,7 +4927,7 @@ Libya,1875,
 Liechtenstein,1875,
 Lithuania,1875,0.0519
 Luxembourg,1875,
-"Macedonia, FYR",1875,
+Macedonia,1875,
 Madagascar,1875,
 Malawi,1875,
 Malaysia,1875,
@@ -4987,7 +4987,7 @@ Somalia,1875,
 South Africa,1875,
 Spain,1875,3.2903
 Sri Lanka,1875,
-Sudan,1875,
+South Sudan,1875,
 Suriname,1875,
 Swaziland,1875,
 Sweden,1875,2.2790
@@ -5059,7 +5059,7 @@ Congo,1876,
 "Congo, Dem. Republic",1876,
 Cook Islands,1876,
 Costa Rica,1876,
-Cote d'Ivoire,1876,
+Ivory Coast,1876,
 Croatia,1876,
 Cuba,1876,
 Cyprus,1876,
@@ -5107,8 +5107,8 @@ Jordan,1876,
 Kazakhstan,1876,0.6392
 Kenya,1876,
 Kiribati,1876,
-Korea (North),1876,
-Korea (South),1876,
+North Korea,1876,
+South Korea,1876,
 Kuwait,1876,
 Kyrgyzstan,1876,0.0405
 Laos,1876,
@@ -5120,7 +5120,7 @@ Libya,1876,
 Liechtenstein,1876,
 Lithuania,1876,0.0644
 Luxembourg,1876,
-"Macedonia, FYR",1876,
+Macedonia,1876,
 Madagascar,1876,
 Malawi,1876,
 Malaysia,1876,
@@ -5180,7 +5180,7 @@ Somalia,1876,
 South Africa,1876,
 Spain,1876,3.5724
 Sri Lanka,1876,
-Sudan,1876,
+South Sudan,1876,
 Suriname,1876,
 Swaziland,1876,
 Sweden,1876,2.4256
@@ -5252,7 +5252,7 @@ Congo,1877,
 "Congo, Dem. Republic",1877,
 Cook Islands,1877,
 Costa Rica,1877,
-Cote d'Ivoire,1877,
+Ivory Coast,1877,
 Croatia,1877,
 Cuba,1877,
 Cyprus,1877,
@@ -5300,8 +5300,8 @@ Jordan,1877,
 Kazakhstan,1877,0.6520
 Kenya,1877,
 Kiribati,1877,
-Korea (North),1877,
-Korea (South),1877,
+North Korea,1877,
+South Korea,1877,
 Kuwait,1877,
 Kyrgyzstan,1877,0.0413
 Laos,1877,
@@ -5313,7 +5313,7 @@ Libya,1877,
 Liechtenstein,1877,
 Lithuania,1877,0.0657
 Luxembourg,1877,
-"Macedonia, FYR",1877,
+Macedonia,1877,
 Madagascar,1877,
 Malawi,1877,
 Malaysia,1877,
@@ -5373,7 +5373,7 @@ Somalia,1877,
 South Africa,1877,
 Spain,1877,3.7812
 Sri Lanka,1877,
-Sudan,1877,
+South Sudan,1877,
 Suriname,1877,
 Swaziland,1877,
 Sweden,1877,2.5721
@@ -5445,7 +5445,7 @@ Congo,1878,
 "Congo, Dem. Republic",1878,
 Cook Islands,1878,
 Costa Rica,1878,
-Cote d'Ivoire,1878,
+Ivory Coast,1878,
 Croatia,1878,
 Cuba,1878,
 Cyprus,1878,
@@ -5493,8 +5493,8 @@ Jordan,1878,
 Kazakhstan,1878,0.8525
 Kenya,1878,
 Kiribati,1878,
-Korea (North),1878,
-Korea (South),1878,
+North Korea,1878,
+South Korea,1878,
 Kuwait,1878,
 Kyrgyzstan,1878,0.0540
 Laos,1878,
@@ -5506,7 +5506,7 @@ Libya,1878,
 Liechtenstein,1878,
 Lithuania,1878,0.0859
 Luxembourg,1878,
-"Macedonia, FYR",1878,
+Macedonia,1878,
 Madagascar,1878,
 Malawi,1878,
 Malaysia,1878,
@@ -5566,7 +5566,7 @@ Somalia,1878,
 South Africa,1878,
 Spain,1878,3.7593
 Sri Lanka,1878,
-Sudan,1878,
+South Sudan,1878,
 Suriname,1878,
 Swaziland,1878,
 Sweden,1878,2.1801
@@ -5638,7 +5638,7 @@ Congo,1879,
 "Congo, Dem. Republic",1879,
 Cook Islands,1879,
 Costa Rica,1879,
-Cote d'Ivoire,1879,
+Ivory Coast,1879,
 Croatia,1879,
 Cuba,1879,
 Cyprus,1879,
@@ -5686,8 +5686,8 @@ Jordan,1879,
 Kazakhstan,1879,0.8747
 Kenya,1879,
 Kiribati,1879,
-Korea (North),1879,
-Korea (South),1879,
+North Korea,1879,
+South Korea,1879,
 Kuwait,1879,
 Kyrgyzstan,1879,0.0554
 Laos,1879,
@@ -5699,7 +5699,7 @@ Libya,1879,
 Liechtenstein,1879,
 Lithuania,1879,0.0881
 Luxembourg,1879,
-"Macedonia, FYR",1879,
+Macedonia,1879,
 Madagascar,1879,
 Malawi,1879,
 Malaysia,1879,
@@ -5759,7 +5759,7 @@ Somalia,1879,
 South Africa,1879,
 Spain,1879,3.9718
 Sri Lanka,1879,
-Sudan,1879,
+South Sudan,1879,
 Suriname,1879,
 Swaziland,1879,
 Sweden,1879,2.2131
@@ -5831,7 +5831,7 @@ Congo,1880,
 "Congo, Dem. Republic",1880,
 Cook Islands,1880,
 Costa Rica,1880,
-Cote d'Ivoire,1880,
+Ivory Coast,1880,
 Croatia,1880,
 Cuba,1880,
 Cyprus,1880,
@@ -5879,8 +5879,8 @@ Jordan,1880,
 Kazakhstan,1880,1.0262
 Kenya,1880,
 Kiribati,1880,
-Korea (North),1880,
-Korea (South),1880,
+North Korea,1880,
+South Korea,1880,
 Kuwait,1880,
 Kyrgyzstan,1880,0.0650
 Laos,1880,
@@ -5892,7 +5892,7 @@ Libya,1880,
 Liechtenstein,1880,
 Lithuania,1880,0.1034
 Luxembourg,1880,
-"Macedonia, FYR",1880,
+Macedonia,1880,
 Madagascar,1880,
 Malawi,1880,
 Malaysia,1880,
@@ -5952,7 +5952,7 @@ Somalia,1880,
 South Africa,1880,
 Spain,1880,4.4151
 Sri Lanka,1880,
-Sudan,1880,
+South Sudan,1880,
 Suriname,1880,
 Swaziland,1880,
 Sweden,1880,2.8286
@@ -6024,7 +6024,7 @@ Congo,1881,
 "Congo, Dem. Republic",1881,
 Cook Islands,1881,
 Costa Rica,1881,
-Cote d'Ivoire,1881,
+Ivory Coast,1881,
 Croatia,1881,
 Cuba,1881,
 Cyprus,1881,
@@ -6072,8 +6072,8 @@ Jordan,1881,
 Kazakhstan,1881,1.0811
 Kenya,1881,
 Kiribati,1881,
-Korea (North),1881,
-Korea (South),1881,
+North Korea,1881,
+South Korea,1881,
 Kuwait,1881,
 Kyrgyzstan,1881,0.0685
 Laos,1881,
@@ -6085,7 +6085,7 @@ Libya,1881,
 Liechtenstein,1881,
 Lithuania,1881,0.1089
 Luxembourg,1881,
-"Macedonia, FYR",1881,
+Macedonia,1881,
 Madagascar,1881,
 Malawi,1881,
 Malaysia,1881,
@@ -6145,7 +6145,7 @@ Somalia,1881,
 South Africa,1881,
 Spain,1881,4.9317
 Sri Lanka,1881,
-Sudan,1881,
+South Sudan,1881,
 Suriname,1881,
 Swaziland,1881,
 Sweden,1881,2.7517
@@ -6217,7 +6217,7 @@ Congo,1882,
 "Congo, Dem. Republic",1882,
 Cook Islands,1882,
 Costa Rica,1882,
-Cote d'Ivoire,1882,
+Ivory Coast,1882,
 Croatia,1882,
 Cuba,1882,
 Cyprus,1882,
@@ -6265,8 +6265,8 @@ Jordan,1882,
 Kazakhstan,1882,1.1384
 Kenya,1882,
 Kiribati,1882,
-Korea (North),1882,
-Korea (South),1882,
+North Korea,1882,
+South Korea,1882,
 Kuwait,1882,
 Kyrgyzstan,1882,0.0721
 Laos,1882,
@@ -6278,7 +6278,7 @@ Libya,1882,
 Liechtenstein,1882,
 Lithuania,1882,0.1147
 Luxembourg,1882,
-"Macedonia, FYR",1882,
+Macedonia,1882,
 Madagascar,1882,
 Malawi,1882,
 Malaysia,1882,
@@ -6338,7 +6338,7 @@ Somalia,1882,
 South Africa,1882,
 Spain,1882,5.3824
 Sri Lanka,1882,
-Sudan,1882,
+South Sudan,1882,
 Suriname,1882,
 Swaziland,1882,
 Sweden,1882,3.1474
@@ -6410,7 +6410,7 @@ Congo,1883,
 "Congo, Dem. Republic",1883,
 Cook Islands,1883,
 Costa Rica,1883,
-Cote d'Ivoire,1883,
+Ivory Coast,1883,
 Croatia,1883,
 Cuba,1883,
 Cyprus,1883,
@@ -6458,8 +6458,8 @@ Jordan,1883,
 Kazakhstan,1883,1.2958
 Kenya,1883,
 Kiribati,1883,
-Korea (North),1883,
-Korea (South),1883,
+North Korea,1883,
+South Korea,1883,
 Kuwait,1883,
 Kyrgyzstan,1883,0.0821
 Laos,1883,
@@ -6471,7 +6471,7 @@ Libya,1883,
 Liechtenstein,1883,
 Lithuania,1883,0.1305
 Luxembourg,1883,
-"Macedonia, FYR",1883,
+Macedonia,1883,
 Madagascar,1883,
 Malawi,1883,
 Malaysia,1883,
@@ -6531,7 +6531,7 @@ Somalia,1883,
 South Africa,1883,
 Spain,1883,5.9027
 Sri Lanka,1883,
-Sudan,1883,
+South Sudan,1883,
 Suriname,1883,
 Swaziland,1883,
 Sweden,1883,3.2207
@@ -6603,7 +6603,7 @@ Congo,1884,
 "Congo, Dem. Republic",1884,
 Cook Islands,1884,
 Costa Rica,1884,
-Cote d'Ivoire,1884,
+Ivory Coast,1884,
 Croatia,1884,
 Cuba,1884,
 Cyprus,1884,
@@ -6651,8 +6651,8 @@ Jordan,1884,
 Kazakhstan,1884,1.3156
 Kenya,1884,
 Kiribati,1884,
-Korea (North),1884,
-Korea (South),1884,
+North Korea,1884,
+South Korea,1884,
 Kuwait,1884,
 Kyrgyzstan,1884,0.0834
 Laos,1884,
@@ -6664,7 +6664,7 @@ Libya,1884,
 Liechtenstein,1884,
 Lithuania,1884,0.1325
 Luxembourg,1884,
-"Macedonia, FYR",1884,
+Macedonia,1884,
 Madagascar,1884,
 Malawi,1884,
 Malaysia,1884,
@@ -6724,7 +6724,7 @@ Somalia,1884,
 South Africa,1884,0.0220
 Spain,1884,5.8697
 Sri Lanka,1884,
-Sudan,1884,
+South Sudan,1884,
 Suriname,1884,
 Swaziland,1884,
 Sweden,1884,3.5504
@@ -6796,7 +6796,7 @@ Congo,1885,
 "Congo, Dem. Republic",1885,
 Cook Islands,1885,
 Costa Rica,1885,
-Cote d'Ivoire,1885,
+Ivory Coast,1885,
 Croatia,1885,
 Cuba,1885,
 Cyprus,1885,
@@ -6844,8 +6844,8 @@ Jordan,1885,
 Kazakhstan,1885,1.4330
 Kenya,1885,
 Kiribati,1885,
-Korea (North),1885,
-Korea (South),1885,
+North Korea,1885,
+South Korea,1885,
 Kuwait,1885,
 Kyrgyzstan,1885,0.0908
 Laos,1885,
@@ -6857,7 +6857,7 @@ Libya,1885,
 Liechtenstein,1885,
 Lithuania,1885,0.1444
 Luxembourg,1885,
-"Macedonia, FYR",1885,
+Macedonia,1885,
 Madagascar,1885,
 Malawi,1885,
 Malaysia,1885,
@@ -6917,7 +6917,7 @@ Somalia,1885,
 South Africa,1885,0.0366
 Spain,1885,5.7598
 Sri Lanka,1885,
-Sudan,1885,
+South Sudan,1885,
 Suriname,1885,
 Swaziland,1885,
 Sweden,1885,3.8289
@@ -6989,7 +6989,7 @@ Congo,1886,
 "Congo, Dem. Republic",1886,
 Cook Islands,1886,
 Costa Rica,1886,
-Cote d'Ivoire,1886,
+Ivory Coast,1886,
 Croatia,1886,
 Cuba,1886,
 Cyprus,1886,
@@ -7037,8 +7037,8 @@ Jordan,1886,
 Kazakhstan,1886,1.4697
 Kenya,1886,
 Kiribati,1886,
-Korea (North),1886,
-Korea (South),1886,
+North Korea,1886,
+South Korea,1886,
 Kuwait,1886,
 Kyrgyzstan,1886,0.0931
 Laos,1886,
@@ -7050,7 +7050,7 @@ Libya,1886,
 Liechtenstein,1886,
 Lithuania,1886,0.1481
 Luxembourg,1886,
-"Macedonia, FYR",1886,
+Macedonia,1886,
 Madagascar,1886,
 Malawi,1886,
 Malaysia,1886,
@@ -7110,7 +7110,7 @@ Somalia,1886,
 South Africa,1886,0.0476
 Spain,1886,6.0969
 Sri Lanka,1886,
-Sudan,1886,
+South Sudan,1886,
 Suriname,1886,
 Swaziland,1886,
 Sweden,1886,3.7519
@@ -7182,7 +7182,7 @@ Congo,1887,
 "Congo, Dem. Republic",1887,
 Cook Islands,1887,
 Costa Rica,1887,
-Cote d'Ivoire,1887,
+Ivory Coast,1887,
 Croatia,1887,
 Cuba,1887,
 Cyprus,1887,
@@ -7230,8 +7230,8 @@ Jordan,1887,
 Kazakhstan,1887,1.5554
 Kenya,1887,
 Kiribati,1887,
-Korea (North),1887,
-Korea (South),1887,
+North Korea,1887,
+South Korea,1887,
 Kuwait,1887,
 Kyrgyzstan,1887,0.0986
 Laos,1887,
@@ -7243,7 +7243,7 @@ Libya,1887,
 Liechtenstein,1887,
 Lithuania,1887,0.1567
 Luxembourg,1887,
-"Macedonia, FYR",1887,
+Macedonia,1887,
 Madagascar,1887,
 Malawi,1887,
 Malaysia,1887,
@@ -7303,7 +7303,7 @@ Somalia,1887,
 South Africa,1887,0.0476
 Spain,1887,6.1409
 Sri Lanka,1887,
-Sudan,1887,
+South Sudan,1887,
 Suriname,1887,
 Swaziland,1887,
 Sweden,1887,3.7996
@@ -7375,7 +7375,7 @@ Congo,1888,
 "Congo, Dem. Republic",1888,
 Cook Islands,1888,
 Costa Rica,1888,
-Cote d'Ivoire,1888,
+Ivory Coast,1888,
 Croatia,1888,
 Cuba,1888,
 Cyprus,1888,
@@ -7423,8 +7423,8 @@ Jordan,1888,
 Kazakhstan,1888,1.6219
 Kenya,1888,
 Kiribati,1888,
-Korea (North),1888,
-Korea (South),1888,
+North Korea,1888,
+South Korea,1888,
 Kuwait,1888,
 Kyrgyzstan,1888,0.1028
 Laos,1888,
@@ -7436,7 +7436,7 @@ Libya,1888,
 Liechtenstein,1888,
 Lithuania,1888,0.1634
 Luxembourg,1888,
-"Macedonia, FYR",1888,
+Macedonia,1888,
 Madagascar,1888,
 Malawi,1888,
 Malaysia,1888,
@@ -7496,7 +7496,7 @@ Somalia,1888,
 South Africa,1888,0.0806
 Spain,1888,6.4303
 Sri Lanka,1888,
-Sudan,1888,
+South Sudan,1888,
 Suriname,1888,
 Swaziland,1888,
 Sweden,1888,4.2502
@@ -7568,7 +7568,7 @@ Congo,1889,
 "Congo, Dem. Republic",1889,
 Cook Islands,1889,
 Costa Rica,1889,
-Cote d'Ivoire,1889,
+Ivory Coast,1889,
 Croatia,1889,
 Cuba,1889,
 Cyprus,1889,
@@ -7616,8 +7616,8 @@ Jordan,1889,
 Kazakhstan,1889,1.7521
 Kenya,1889,
 Kiribati,1889,
-Korea (North),1889,
-Korea (South),1889,
+North Korea,1889,
+South Korea,1889,
 Kuwait,1889,
 Kyrgyzstan,1889,0.1110
 Laos,1889,
@@ -7629,7 +7629,7 @@ Libya,1889,
 Liechtenstein,1889,
 Lithuania,1889,0.1765
 Luxembourg,1889,
-"Macedonia, FYR",1889,
+Macedonia,1889,
 Madagascar,1889,
 Malawi,1889,
 Malaysia,1889,
@@ -7689,7 +7689,7 @@ Somalia,1889,
 South Africa,1889,0.1319
 Spain,1889,6.8260
 Sri Lanka,1889,
-Sudan,1889,
+South Sudan,1889,
 Suriname,1889,
 Swaziland,1889,
 Sweden,1889,4.9574
@@ -7761,7 +7761,7 @@ Congo,1890,
 "Congo, Dem. Republic",1890,
 Cook Islands,1890,
 Costa Rica,1890,
-Cote d'Ivoire,1890,
+Ivory Coast,1890,
 Croatia,1890,0.0135
 Cuba,1890,
 Cyprus,1890,
@@ -7809,8 +7809,8 @@ Jordan,1890,
 Kazakhstan,1890,1.9840
 Kenya,1890,
 Kiribati,1890,
-Korea (North),1890,
-Korea (South),1890,
+North Korea,1890,
+South Korea,1890,
 Kuwait,1890,
 Kyrgyzstan,1890,0.1257
 Laos,1890,
@@ -7822,7 +7822,7 @@ Libya,1890,
 Liechtenstein,1890,
 Lithuania,1890,0.1999
 Luxembourg,1890,
-"Macedonia, FYR",1890,0.0073
+Macedonia,1890,0.0073
 Madagascar,1890,
 Malawi,1890,
 Malaysia,1890,0.0073
@@ -7882,7 +7882,7 @@ Somalia,1890,
 South Africa,1890,0.2968
 Spain,1890,7.3390
 Sri Lanka,1890,
-Sudan,1890,
+South Sudan,1890,
 Suriname,1890,
 Swaziland,1890,
 Sweden,1890,4.9427
@@ -7954,7 +7954,7 @@ Congo,1891,
 "Congo, Dem. Republic",1891,
 Cook Islands,1891,
 Costa Rica,1891,
-Cote d'Ivoire,1891,
+Ivory Coast,1891,
 Croatia,1891,0.0157
 Cuba,1891,
 Cyprus,1891,
@@ -8002,8 +8002,8 @@ Jordan,1891,
 Kazakhstan,1891,2.1844
 Kenya,1891,
 Kiribati,1891,
-Korea (North),1891,
-Korea (South),1891,
+North Korea,1891,
+South Korea,1891,
 Kuwait,1891,
 Kyrgyzstan,1891,0.1384
 Laos,1891,
@@ -8015,7 +8015,7 @@ Libya,1891,
 Liechtenstein,1891,
 Lithuania,1891,0.2201
 Luxembourg,1891,
-"Macedonia, FYR",1891,0.0086
+Macedonia,1891,0.0086
 Madagascar,1891,
 Malawi,1891,
 Malaysia,1891,0.0183
@@ -8075,7 +8075,7 @@ Somalia,1891,
 South Africa,1891,0.2968
 Spain,1891,7.9399
 Sri Lanka,1891,
-Sudan,1891,
+South Sudan,1891,
 Suriname,1891,
 Swaziland,1891,
 Sweden,1891,5.2762
@@ -8147,7 +8147,7 @@ Congo,1892,
 "Congo, Dem. Republic",1892,
 Cook Islands,1892,
 Costa Rica,1892,
-Cote d'Ivoire,1892,
+Ivory Coast,1892,
 Croatia,1892,0.0174
 Cuba,1892,
 Cyprus,1892,
@@ -8195,8 +8195,8 @@ Jordan,1892,
 Kazakhstan,1892,2.3125
 Kenya,1892,
 Kiribati,1892,
-Korea (North),1892,
-Korea (South),1892,
+North Korea,1892,
+South Korea,1892,
 Kuwait,1892,
 Kyrgyzstan,1892,0.1466
 Laos,1892,
@@ -8208,7 +8208,7 @@ Libya,1892,
 Liechtenstein,1892,
 Lithuania,1892,0.2330
 Luxembourg,1892,
-"Macedonia, FYR",1892,0.0095
+Macedonia,1892,0.0095
 Madagascar,1892,
 Malawi,1892,
 Malaysia,1892,0.0476
@@ -8268,7 +8268,7 @@ Somalia,1892,
 South Africa,1892,0.4800
 Spain,1892,8.2990
 Sri Lanka,1892,
-Sudan,1892,
+South Sudan,1892,
 Suriname,1892,
 Swaziland,1892,
 Sweden,1892,5.2505
@@ -8340,7 +8340,7 @@ Congo,1893,
 "Congo, Dem. Republic",1893,
 Cook Islands,1893,
 Costa Rica,1893,
-Cote d'Ivoire,1893,
+Ivory Coast,1893,
 Croatia,1893,0.0309
 Cuba,1893,
 Cyprus,1893,
@@ -8388,8 +8388,8 @@ Jordan,1893,
 Kazakhstan,1893,2.7102
 Kenya,1893,
 Kiribati,1893,
-Korea (North),1893,
-Korea (South),1893,
+North Korea,1893,
+South Korea,1893,
 Kuwait,1893,
 Kyrgyzstan,1893,0.1718
 Laos,1893,
@@ -8401,7 +8401,7 @@ Libya,1893,
 Liechtenstein,1893,
 Lithuania,1893,0.2730
 Luxembourg,1893,
-"Macedonia, FYR",1893,0.0168
+Macedonia,1893,0.0168
 Madagascar,1893,
 Malawi,1893,
 Malaysia,1893,0.0110
@@ -8461,7 +8461,7 @@ Somalia,1893,
 South Africa,1893,1.7990
 Spain,1893,8.1194
 Sri Lanka,1893,
-Sudan,1893,
+South Sudan,1893,
 Suriname,1893,
 Swaziland,1893,
 Sweden,1893,5.2798
@@ -8533,7 +8533,7 @@ Congo,1894,
 "Congo, Dem. Republic",1894,
 Cook Islands,1894,
 Costa Rica,1894,
-Cote d'Ivoire,1894,
+Ivory Coast,1894,
 Croatia,1894,0.0591
 Cuba,1894,
 Cyprus,1894,
@@ -8581,8 +8581,8 @@ Jordan,1894,
 Kazakhstan,1894,2.7601
 Kenya,1894,
 Kiribati,1894,
-Korea (North),1894,
-Korea (South),1894,
+North Korea,1894,
+South Korea,1894,
 Kuwait,1894,
 Kyrgyzstan,1894,0.1749
 Laos,1894,
@@ -8594,7 +8594,7 @@ Libya,1894,
 Liechtenstein,1894,
 Lithuania,1894,0.2780
 Luxembourg,1894,
-"Macedonia, FYR",1894,0.0321
+Macedonia,1894,0.0321
 Madagascar,1894,
 Malawi,1894,
 Malaysia,1894,0.0476
@@ -8654,7 +8654,7 @@ Somalia,1894,
 South Africa,1894,2.4329
 Spain,1894,8.7350
 Sri Lanka,1894,
-Sudan,1894,
+South Sudan,1894,
 Suriname,1894,
 Swaziland,1894,
 Sweden,1894,5.8880
@@ -8726,7 +8726,7 @@ Congo,1895,
 "Congo, Dem. Republic",1895,
 Cook Islands,1895,
 Costa Rica,1895,
-Cote d'Ivoire,1895,
+Ivory Coast,1895,
 Croatia,1895,0.0591
 Cuba,1895,
 Cyprus,1895,
@@ -8774,8 +8774,8 @@ Jordan,1895,
 Kazakhstan,1895,3.1720
 Kenya,1895,
 Kiribati,1895,
-Korea (North),1895,
-Korea (South),1895,
+North Korea,1895,
+South Korea,1895,
 Kuwait,1895,
 Kyrgyzstan,1895,0.2010
 Laos,1895,
@@ -8787,7 +8787,7 @@ Libya,1895,
 Liechtenstein,1895,
 Lithuania,1895,0.3195
 Luxembourg,1895,
-"Macedonia, FYR",1895,0.0321
+Macedonia,1895,0.0321
 Madagascar,1895,
 Malawi,1895,
 Malaysia,1895,0.1099
@@ -8847,7 +8847,7 @@ Somalia,1895,
 South Africa,1895,3.3379
 Spain,1895,8.6031
 Sri Lanka,1895,
-Sudan,1895,
+South Sudan,1895,
 Suriname,1895,
 Swaziland,1895,
 Sweden,1895,5.9540
@@ -8919,7 +8919,7 @@ Congo,1896,
 "Congo, Dem. Republic",1896,
 Cook Islands,1896,
 Costa Rica,1896,
-Cote d'Ivoire,1896,
+Ivory Coast,1896,
 Croatia,1896,0.0658
 Cuba,1896,
 Cyprus,1896,
@@ -8967,8 +8967,8 @@ Jordan,1896,
 Kazakhstan,1896,3.2288
 Kenya,1896,
 Kiribati,1896,
-Korea (North),1896,
-Korea (South),1896,
+North Korea,1896,
+South Korea,1896,
 Kuwait,1896,
 Kyrgyzstan,1896,0.2046
 Laos,1896,
@@ -8980,7 +8980,7 @@ Libya,1896,
 Liechtenstein,1896,
 Lithuania,1896,0.3253
 Luxembourg,1896,
-"Macedonia, FYR",1896,0.0358
+Macedonia,1896,0.0358
 Madagascar,1896,
 Malawi,1896,
 Malaysia,1896,0.1246
@@ -9040,7 +9040,7 @@ Somalia,1896,
 South Africa,1896,4.2576
 Spain,1896,9.3029
 Sri Lanka,1896,
-Sudan,1896,
+South Sudan,1896,
 Suriname,1896,
 Swaziland,1896,
 Sweden,1896,6.1555
@@ -9112,7 +9112,7 @@ Congo,1897,
 "Congo, Dem. Republic",1897,
 Cook Islands,1897,
 Costa Rica,1897,
-Cote d'Ivoire,1897,
+Ivory Coast,1897,
 Croatia,1897,0.0512
 Cuba,1897,
 Cyprus,1897,
@@ -9160,8 +9160,8 @@ Jordan,1897,
 Kazakhstan,1897,3.7332
 Kenya,1897,
 Kiribati,1897,
-Korea (North),1897,
-Korea (South),1897,
+North Korea,1897,
+South Korea,1897,
 Kuwait,1897,
 Kyrgyzstan,1897,0.2366
 Laos,1897,
@@ -9173,7 +9173,7 @@ Libya,1897,
 Liechtenstein,1897,
 Lithuania,1897,0.3761
 Luxembourg,1897,
-"Macedonia, FYR",1897,0.0278
+Macedonia,1897,0.0278
 Madagascar,1897,
 Malawi,1897,
 Malaysia,1897,0.0916
@@ -9233,7 +9233,7 @@ Somalia,1897,
 South Africa,1897,4.7779
 Spain,1897,9.5447
 Sri Lanka,1897,
-Sudan,1897,
+South Sudan,1897,
 Suriname,1897,
 Swaziland,1897,
 Sweden,1897,6.8553
@@ -9305,7 +9305,7 @@ Congo,1898,
 "Congo, Dem. Republic",1898,
 Cook Islands,1898,
 Costa Rica,1898,
-Cote d'Ivoire,1898,
+Ivory Coast,1898,
 Croatia,1898,0.0776
 Cuba,1898,
 Cyprus,1898,
@@ -9353,8 +9353,8 @@ Jordan,1898,
 Kazakhstan,1898,4.1869
 Kenya,1898,
 Kiribati,1898,
-Korea (North),1898,
-Korea (South),1898,
+North Korea,1898,
+South Korea,1898,
 Kuwait,1898,
 Kyrgyzstan,1898,0.2653
 Laos,1898,
@@ -9366,7 +9366,7 @@ Libya,1898,
 Liechtenstein,1898,
 Lithuania,1898,0.4218
 Luxembourg,1898,
-"Macedonia, FYR",1898,0.0422
+Macedonia,1898,0.0422
 Madagascar,1898,
 Malawi,1898,
 Malaysia,1898,0.1282
@@ -9426,7 +9426,7 @@ Somalia,1898,
 South Africa,1898,6.0493
 Spain,1898,9.3762
 Sri Lanka,1898,
-Sudan,1898,
+South Sudan,1898,
 Suriname,1898,
 Swaziland,1898,
 Sweden,1898,7.3024
@@ -9498,7 +9498,7 @@ Congo,1899,
 "Congo, Dem. Republic",1899,
 Cook Islands,1899,
 Costa Rica,1899,
-Cote d'Ivoire,1899,
+Ivory Coast,1899,
 Croatia,1899,0.0906
 Cuba,1899,
 Cyprus,1899,
@@ -9546,8 +9546,8 @@ Jordan,1899,
 Kazakhstan,1899,4.8571
 Kenya,1899,
 Kiribati,1899,
-Korea (North),1899,
-Korea (South),1899,
+North Korea,1899,
+South Korea,1899,
 Kuwait,1899,
 Kyrgyzstan,1899,0.3078
 Laos,1899,
@@ -9559,7 +9559,7 @@ Libya,1899,
 Liechtenstein,1899,
 Lithuania,1899,0.4893
 Luxembourg,1899,
-"Macedonia, FYR",1899,0.0492
+Macedonia,1899,0.0492
 Madagascar,1899,
 Malawi,1899,
 Malaysia,1899,0.1209
@@ -9619,7 +9619,7 @@ Somalia,1899,
 South Africa,1899,5.5180
 Spain,1899,10.6256
 Sri Lanka,1899,
-Sudan,1899,
+South Sudan,1899,
 Suriname,1899,
 Swaziland,1899,
 Sweden,1899,9.1344
@@ -9691,7 +9691,7 @@ Congo,1900,
 "Congo, Dem. Republic",1900,
 Cook Islands,1900,
 Costa Rica,1900,
-Cote d'Ivoire,1900,
+Ivory Coast,1900,
 Croatia,1900,0.1226
 Cuba,1900,
 Cyprus,1900,
@@ -9739,8 +9739,8 @@ Jordan,1900,
 Kazakhstan,1900,5.5022
 Kenya,1900,
 Kiribati,1900,
-Korea (North),1900,
-Korea (South),1900,
+North Korea,1900,
+South Korea,1900,
 Kuwait,1900,
 Kyrgyzstan,1900,0.3487
 Laos,1900,
@@ -9752,7 +9752,7 @@ Libya,1900,
 Liechtenstein,1900,
 Lithuania,1900,0.5543
 Luxembourg,1900,
-"Macedonia, FYR",1900,0.0667
+Macedonia,1900,0.0667
 Madagascar,1900,
 Malawi,1900,
 Malaysia,1900,0.0586
@@ -9812,7 +9812,7 @@ Somalia,1900,
 South Africa,1900,2.3303
 Spain,1900,11.2192
 Sri Lanka,1900,
-Sudan,1900,
+South Sudan,1900,
 Suriname,1900,
 Swaziland,1900,
 Sweden,1900,9.1710
@@ -9884,7 +9884,7 @@ Congo,1901,
 "Congo, Dem. Republic",1901,
 Cook Islands,1901,
 Costa Rica,1901,
-Cote d'Ivoire,1901,
+Ivory Coast,1901,
 Croatia,1901,0.1339
 Cuba,1901,
 Cyprus,1901,
@@ -9932,8 +9932,8 @@ Jordan,1901,
 Kazakhstan,1901,5.6488
 Kenya,1901,
 Kiribati,1901,
-Korea (North),1901,
-Korea (South),1901,
+North Korea,1901,
+South Korea,1901,
 Kuwait,1901,
 Kyrgyzstan,1901,0.3580
 Laos,1901,
@@ -9945,7 +9945,7 @@ Libya,1901,
 Liechtenstein,1901,
 Lithuania,1901,0.5690
 Luxembourg,1901,
-"Macedonia, FYR",1901,0.0728
+Macedonia,1901,0.0728
 Madagascar,1901,
 Malawi,1901,
 Malaysia,1901,0.0476
@@ -10005,7 +10005,7 @@ Somalia,1901,
 South Africa,1901,3.9095
 Spain,1901,11.8054
 Sri Lanka,1901,
-Sudan,1901,
+South Sudan,1901,
 Suriname,1901,
 Swaziland,1901,
 Sweden,1901,8.5225
@@ -10077,7 +10077,7 @@ Congo,1902,
 "Congo, Dem. Republic",1902,
 Cook Islands,1902,
 Costa Rica,1902,
-Cote d'Ivoire,1902,
+Ivory Coast,1902,
 Croatia,1902,0.1254
 Cuba,1902,
 Cyprus,1902,
@@ -10125,8 +10125,8 @@ Jordan,1902,
 Kazakhstan,1902,5.4558
 Kenya,1902,
 Kiribati,1902,
-Korea (North),1902,
-Korea (South),1902,
+North Korea,1902,
+South Korea,1902,
 Kuwait,1902,
 Kyrgyzstan,1902,0.3458
 Laos,1902,
@@ -10138,7 +10138,7 @@ Libya,1902,
 Liechtenstein,1902,
 Lithuania,1902,0.5496
 Luxembourg,1902,
-"Macedonia, FYR",1902,0.0682
+Macedonia,1902,0.0682
 Madagascar,1902,
 Malawi,1902,
 Malaysia,1902,0.0513
@@ -10198,7 +10198,7 @@ Somalia,1902,
 South Africa,1902,5.8258
 Spain,1902,12.3367
 Sri Lanka,1902,
-Sudan,1902,
+South Sudan,1902,
 Suriname,1902,
 Swaziland,1902,
 Sweden,1902,8.9255
@@ -10270,7 +10270,7 @@ Congo,1903,
 "Congo, Dem. Republic",1903,
 Cook Islands,1903,
 Costa Rica,1903,
-Cote d'Ivoire,1903,
+Ivory Coast,1903,
 Croatia,1903,0.1361
 Cuba,1903,
 Cyprus,1903,
@@ -10318,8 +10318,8 @@ Jordan,1903,
 Kazakhstan,1903,5.3368
 Kenya,1903,
 Kiribati,1903,
-Korea (North),1903,
-Korea (South),1903,
+North Korea,1903,
+South Korea,1903,
 Kuwait,1903,
 Kyrgyzstan,1903,0.3382
 Laos,1903,
@@ -10331,7 +10331,7 @@ Libya,1903,
 Liechtenstein,1903,
 Lithuania,1903,0.5376
 Luxembourg,1903,
-"Macedonia, FYR",1903,0.0740
+Macedonia,1903,0.0740
 Madagascar,1903,
 Malawi,1903,
 Malaysia,1903,0.0513
@@ -10391,7 +10391,7 @@ Somalia,1903,
 South Africa,1903,7.7823
 Spain,1903,12.1755
 Sri Lanka,1903,
-Sudan,1903,
+South Sudan,1903,
 Suriname,1903,
 Swaziland,1903,
 Sweden,1903,9.8049
@@ -10463,7 +10463,7 @@ Congo,1904,
 "Congo, Dem. Republic",1904,
 Cook Islands,1904,
 Costa Rica,1904,
-Cote d'Ivoire,1904,
+Ivory Coast,1904,
 Croatia,1904,0.1451
 Cuba,1904,
 Cyprus,1904,
@@ -10511,8 +10511,8 @@ Jordan,1904,
 Kazakhstan,1904,5.9377
 Kenya,1904,
 Kiribati,1904,
-Korea (North),1904,
-Korea (South),1904,
+North Korea,1904,
+South Korea,1904,
 Kuwait,1904,
 Kyrgyzstan,1904,0.3763
 Laos,1904,
@@ -10524,7 +10524,7 @@ Libya,1904,
 Liechtenstein,1904,
 Lithuania,1904,0.5981
 Luxembourg,1904,
-"Macedonia, FYR",1904,0.0789
+Macedonia,1904,0.0789
 Madagascar,1904,
 Malawi,1904,
 Malaysia,1904,0.0330
@@ -10584,7 +10584,7 @@ Somalia,1904,
 South Africa,1904,8.7680
 Spain,1904,12.9925
 Sri Lanka,1904,
-Sudan,1904,
+South Sudan,1904,
 Suriname,1904,
 Swaziland,1904,
 Sweden,1904,10.3252
@@ -10656,7 +10656,7 @@ Congo,1905,
 "Congo, Dem. Republic",1905,
 Cook Islands,1905,
 Costa Rica,1905,
-Cote d'Ivoire,1905,
+Ivory Coast,1905,
 Croatia,1905,0.1575
 Cuba,1905,
 Cyprus,1905,
@@ -10704,8 +10704,8 @@ Jordan,1905,
 Kazakhstan,1905,5.3001
 Kenya,1905,
 Kiribati,1905,
-Korea (North),1905,0.0046
-Korea (South),1905,0.0100
+North Korea,1905,0.0046
+South Korea,1905,0.0100
 Kuwait,1905,
 Kyrgyzstan,1905,0.3359
 Laos,1905,
@@ -10717,7 +10717,7 @@ Libya,1905,
 Liechtenstein,1905,
 Lithuania,1905,0.5339
 Luxembourg,1905,
-"Macedonia, FYR",1905,0.0856
+Macedonia,1905,0.0856
 Madagascar,1905,
 Malawi,1905,
 Malaysia,1905,0.0403
@@ -10777,7 +10777,7 @@ Somalia,1905,
 South Africa,1905,10.0284
 Spain,1905,13.5715
 Sri Lanka,1905,
-Sudan,1905,
+South Sudan,1905,
 Suriname,1905,
 Swaziland,1905,
 Sweden,1905,10.1676
@@ -10849,7 +10849,7 @@ Congo,1906,
 "Congo, Dem. Republic",1906,
 Cook Islands,1906,
 Costa Rica,1906,
-Cote d'Ivoire,1906,
+Ivory Coast,1906,
 Croatia,1906,0.1884
 Cuba,1906,
 Cyprus,1906,
@@ -10897,8 +10897,8 @@ Jordan,1906,
 Kazakhstan,1906,6.0454
 Kenya,1906,
 Kiribati,1906,
-Korea (North),1906,
-Korea (South),1906,
+North Korea,1906,
+South Korea,1906,
 Kuwait,1906,
 Kyrgyzstan,1906,0.3831
 Laos,1906,
@@ -10910,7 +10910,7 @@ Libya,1906,
 Liechtenstein,1906,
 Lithuania,1906,0.6090
 Luxembourg,1906,
-"Macedonia, FYR",1906,0.1024
+Macedonia,1906,0.1024
 Madagascar,1906,
 Malawi,1906,
 Malaysia,1906,0.0366
@@ -10970,7 +10970,7 @@ Somalia,1906,
 South Africa,1906,11.4647
 Spain,1906,13.8609
 Sri Lanka,1906,
-Sudan,1906,
+South Sudan,1906,
 Suriname,1906,
 Swaziland,1906,
 Sweden,1906,11.2924
@@ -11042,7 +11042,7 @@ Congo,1907,
 "Congo, Dem. Republic",1907,
 Cook Islands,1907,
 Costa Rica,1907,
-Cote d'Ivoire,1907,
+Ivory Coast,1907,
 Croatia,1907,0.1918
 Cuba,1907,
 Cyprus,1907,
@@ -11090,8 +11090,8 @@ Jordan,1907,
 Kazakhstan,1907,6.7714
 Kenya,1907,
 Kiribati,1907,
-Korea (North),1907,
-Korea (South),1907,
+North Korea,1907,
+South Korea,1907,
 Kuwait,1907,
 Kyrgyzstan,1907,0.4291
 Laos,1907,
@@ -11103,7 +11103,7 @@ Libya,1907,
 Liechtenstein,1907,
 Lithuania,1907,0.6821
 Luxembourg,1907,
-"Macedonia, FYR",1907,0.1043
+Macedonia,1907,0.1043
 Madagascar,1907,
 Malawi,1907,
 Malaysia,1907,0.0879
@@ -11163,7 +11163,7 @@ Somalia,1907,
 South Africa,1907,12.6518
 Spain,1907,14.0954
 Sri Lanka,1907,
-Sudan,1907,
+South Sudan,1907,
 Suriname,1907,
 Swaziland,1907,
 Sweden,1907,12.7764
@@ -11235,7 +11235,7 @@ Congo,1908,
 "Congo, Dem. Republic",1908,
 Cook Islands,1908,
 Costa Rica,1908,
-Cote d'Ivoire,1908,
+Ivory Coast,1908,
 Croatia,1908,0.2064
 Cuba,1908,
 Cyprus,1908,
@@ -11283,8 +11283,8 @@ Jordan,1908,
 Kazakhstan,1908,6.8132
 Kenya,1908,
 Kiribati,1908,
-Korea (North),1908,
-Korea (South),1908,
+North Korea,1908,
+South Korea,1908,
 Kuwait,1908,
 Kyrgyzstan,1908,0.4318
 Laos,1908,
@@ -11296,7 +11296,7 @@ Libya,1908,
 Liechtenstein,1908,
 Lithuania,1908,0.6863
 Luxembourg,1908,
-"Macedonia, FYR",1908,0.1122
+Macedonia,1908,0.1122
 Madagascar,1908,
 Malawi,1908,
 Malaysia,1908,0.0916
@@ -11356,7 +11356,7 @@ Somalia,1908,
 South Africa,1908,13.0072
 Spain,1908,14.7842
 Sri Lanka,1908,
-Sudan,1908,
+South Sudan,1908,
 Suriname,1908,
 Swaziland,1908,
 Sweden,1908,13.6447
@@ -11428,7 +11428,7 @@ Congo,1909,
 "Congo, Dem. Republic",1909,
 Cook Islands,1909,
 Costa Rica,1909,
-Cote d'Ivoire,1909,
+Ivory Coast,1909,
 Croatia,1909,0.2121
 Cuba,1909,
 Cyprus,1909,
@@ -11476,8 +11476,8 @@ Jordan,1909,
 Kazakhstan,1909,7.1916
 Kenya,1909,
 Kiribati,1909,
-Korea (North),1909,0.0497
-Korea (South),1909,0.1079
+North Korea,1909,0.0497
+South Korea,1909,0.1079
 Kuwait,1909,
 Kyrgyzstan,1909,0.4558
 Laos,1909,
@@ -11489,7 +11489,7 @@ Libya,1909,
 Liechtenstein,1909,
 Lithuania,1909,0.7245
 Luxembourg,1909,
-"Macedonia, FYR",1909,0.1153
+Macedonia,1909,0.1153
 Madagascar,1909,
 Malawi,1909,
 Malaysia,1909,0.1685
@@ -11549,7 +11549,7 @@ Somalia,1909,
 South Africa,1909,14.9748
 Spain,1909,15.1653
 Sri Lanka,1909,
-Sudan,1909,
+South Sudan,1909,
 Suriname,1909,
 Swaziland,1909,
 Sweden,1909,12.5565
@@ -11621,7 +11621,7 @@ Congo,1910,
 "Congo, Dem. Republic",1910,
 Cook Islands,1910,
 Costa Rica,1910,
-Cote d'Ivoire,1910,
+Ivory Coast,1910,
 Croatia,1910,0.2098
 Cuba,1910,
 Cyprus,1910,
@@ -11669,8 +11669,8 @@ Jordan,1910,
 Kazakhstan,1910,7.0531
 Kenya,1910,
 Kiribati,1910,
-Korea (North),1910,0.0624
-Korea (South),1910,0.1354
+North Korea,1910,0.0624
+South Korea,1910,0.1354
 Kuwait,1910,
 Kyrgyzstan,1910,0.4470
 Laos,1910,
@@ -11682,7 +11682,7 @@ Libya,1910,
 Liechtenstein,1910,
 Lithuania,1910,0.7105
 Luxembourg,1910,
-"Macedonia, FYR",1910,0.1140
+Macedonia,1910,0.1140
 Madagascar,1910,
 Malawi,1910,
 Malaysia,1910,0.2345
@@ -11742,7 +11742,7 @@ Somalia,1910,
 South Africa,1910,16.9790
 Spain,1910,14.8942
 Sri Lanka,1910,
-Sudan,1910,
+South Sudan,1910,
 Suriname,1910,
 Swaziland,1910,
 Sweden,1910,12.9889
@@ -11814,7 +11814,7 @@ Congo,1911,
 "Congo, Dem. Republic",1911,
 Cook Islands,1911,
 Costa Rica,1911,
-Cote d'Ivoire,1911,
+Ivory Coast,1911,
 Croatia,1911,0.2272
 Cuba,1911,
 Cyprus,1911,
@@ -11862,8 +11862,8 @@ Jordan,1911,
 Kazakhstan,1911,7.3125
 Kenya,1911,
 Kiribati,1911,
-Korea (North),1911,0.0740
-Korea (South),1911,0.1605
+North Korea,1911,0.0740
+South Korea,1911,0.1605
 Kuwait,1911,
 Kyrgyzstan,1911,0.4634
 Laos,1911,
@@ -11875,7 +11875,7 @@ Libya,1911,
 Liechtenstein,1911,
 Lithuania,1911,0.7366
 Luxembourg,1911,
-"Macedonia, FYR",1911,0.1235
+Macedonia,1911,0.1235
 Madagascar,1911,
 Malawi,1911,
 Malaysia,1911,0.0000
@@ -11935,7 +11935,7 @@ Somalia,1911,
 South Africa,1911,16.3414
 Spain,1911,14.7293
 Sri Lanka,1911,
-Sudan,1911,
+South Sudan,1911,
 Suriname,1911,
 Swaziland,1911,
 Sweden,1911,12.6518
@@ -12007,7 +12007,7 @@ Congo,1912,
 "Congo, Dem. Republic",1912,
 Cook Islands,1912,
 Costa Rica,1912,
-Cote d'Ivoire,1912,
+Ivory Coast,1912,
 Croatia,1912,0.2329
 Cuba,1912,
 Cyprus,1912,
@@ -12055,8 +12055,8 @@ Jordan,1912,
 Kazakhstan,1912,8.2835
 Kenya,1912,
 Kiribati,1912,
-Korea (North),1912,0.0925
-Korea (South),1912,0.2007
+North Korea,1912,0.0925
+South Korea,1912,0.2007
 Kuwait,1912,
 Kyrgyzstan,1912,0.5250
 Laos,1912,
@@ -12068,7 +12068,7 @@ Libya,1912,
 Liechtenstein,1912,
 Lithuania,1912,0.8344
 Luxembourg,1912,
-"Macedonia, FYR",1912,0.1266
+Macedonia,1912,0.1266
 Madagascar,1912,
 Malawi,1912,
 Malaysia,1912,0.0183
@@ -12128,7 +12128,7 @@ Somalia,1912,
 South Africa,1912,17.3490
 Spain,1912,15.9824
 Sri Lanka,1912,
-Sudan,1912,
+South Sudan,1912,
 Suriname,1912,
 Swaziland,1912,
 Sweden,1912,14.0185
@@ -12200,7 +12200,7 @@ Congo,1913,
 "Congo, Dem. Republic",1913,
 Cook Islands,1913,
 Costa Rica,1913,
-Cote d'Ivoire,1913,
+Ivory Coast,1913,
 Croatia,1913,0.6395
 Cuba,1913,
 Cyprus,1913,
@@ -12248,8 +12248,8 @@ Jordan,1913,
 Kazakhstan,1913,8.9987
 Kenya,1913,
 Kiribati,1913,
-Korea (North),1913,0.1075
-Korea (South),1913,0.2333
+North Korea,1913,0.1075
+South Korea,1913,0.2333
 Kuwait,1913,
 Kyrgyzstan,1913,0.5703
 Laos,1913,
@@ -12261,7 +12261,7 @@ Libya,1913,
 Liechtenstein,1913,
 Lithuania,1913,0.9065
 Luxembourg,1913,
-"Macedonia, FYR",1913,0.3476
+Macedonia,1913,0.3476
 Madagascar,1913,
 Malawi,1913,
 Malaysia,1913,0.0623
@@ -12321,7 +12321,7 @@ Somalia,1913,
 South Africa,1913,18.9832
 Spain,1913,17.4187
 Sri Lanka,1913,
-Sudan,1913,
+South Sudan,1913,
 Suriname,1913,
 Swaziland,1913,
 Sweden,1913,15.7589
@@ -12393,7 +12393,7 @@ Congo,1914,
 "Congo, Dem. Republic",1914,
 Cook Islands,1914,
 Costa Rica,1914,
-Cote d'Ivoire,1914,
+Ivory Coast,1914,
 Croatia,1914,
 Cuba,1914,
 Cyprus,1914,
@@ -12441,8 +12441,8 @@ Jordan,1914,
 Kazakhstan,1914,8.1213
 Kenya,1914,
 Kiribati,1914,
-Korea (North),1914,0.1537
-Korea (South),1914,0.3336
+North Korea,1914,0.1537
+South Korea,1914,0.3336
 Kuwait,1914,
 Kyrgyzstan,1914,0.5147
 Laos,1914,
@@ -12454,7 +12454,7 @@ Libya,1914,
 Liechtenstein,1914,
 Lithuania,1914,0.8181
 Luxembourg,1914,
-"Macedonia, FYR",1914,
+Macedonia,1914,
 Madagascar,1914,
 Malawi,1914,
 Malaysia,1914,0.1466
@@ -12514,7 +12514,7 @@ Somalia,1914,
 South Africa,1914,18.4006
 Spain,1914,17.3014
 Sri Lanka,1914,
-Sudan,1914,
+South Sudan,1914,
 Suriname,1914,
 Swaziland,1914,
 Sweden,1914,14.8502
@@ -12586,7 +12586,7 @@ Congo,1915,
 "Congo, Dem. Republic",1915,
 Cook Islands,1915,
 Costa Rica,1915,
-Cote d'Ivoire,1915,
+Ivory Coast,1915,
 Croatia,1915,
 Cuba,1915,
 Cyprus,1915,
@@ -12634,8 +12634,8 @@ Jordan,1915,
 Kazakhstan,1915,7.4543
 Kenya,1915,
 Kiribati,1915,
-Korea (North),1915,0.1919
-Korea (South),1915,0.4164
+North Korea,1915,0.1919
+South Korea,1915,0.4164
 Kuwait,1915,
 Kyrgyzstan,1915,0.4724
 Laos,1915,
@@ -12647,7 +12647,7 @@ Libya,1915,
 Liechtenstein,1915,
 Lithuania,1915,0.7509
 Luxembourg,1915,
-"Macedonia, FYR",1915,
+Macedonia,1915,
 Madagascar,1915,
 Malawi,1915,
 Malaysia,1915,0.2052
@@ -12707,7 +12707,7 @@ Somalia,1915,
 South Africa,1915,18.5105
 Spain,1915,15.3119
 Sri Lanka,1915,
-Sudan,1915,
+South Sudan,1915,
 Suriname,1915,
 Swaziland,1915,
 Sweden,1915,14.9491
@@ -12779,7 +12779,7 @@ Congo,1916,
 "Congo, Dem. Republic",1916,
 Cook Islands,1916,
 Costa Rica,1916,
-Cote d'Ivoire,1916,
+Ivory Coast,1916,
 Croatia,1916,
 Cuba,1916,
 Cyprus,1916,
@@ -12827,8 +12827,8 @@ Jordan,1916,
 Kazakhstan,1916,7.9447
 Kenya,1916,
 Kiribati,1916,
-Korea (North),1916,0.1595
-Korea (South),1916,0.3461
+North Korea,1916,0.1595
+South Korea,1916,0.3461
 Kuwait,1916,
 Kyrgyzstan,1916,0.5035
 Laos,1916,
@@ -12840,7 +12840,7 @@ Libya,1916,
 Liechtenstein,1916,
 Lithuania,1916,0.8003
 Luxembourg,1916,
-"Macedonia, FYR",1916,
+Macedonia,1916,
 Madagascar,1916,
 Malawi,1916,
 Malaysia,1916,0.5496
@@ -12900,7 +12900,7 @@ Somalia,1916,
 South Africa,1916,21.8118
 Spain,1916,17.8657
 Sri Lanka,1916,
-Sudan,1916,
+South Sudan,1916,
 Suriname,1916,
 Swaziland,1916,
 Sweden,1916,15.7552
@@ -12972,7 +12972,7 @@ Congo,1917,
 "Congo, Dem. Republic",1917,
 Cook Islands,1917,
 Costa Rica,1917,
-Cote d'Ivoire,1917,
+Ivory Coast,1917,
 Croatia,1917,
 Cuba,1917,
 Cyprus,1917,
@@ -13020,8 +13020,8 @@ Jordan,1917,
 Kazakhstan,1917,7.3120
 Kenya,1917,
 Kiribati,1917,
-Korea (North),1917,
-Korea (South),1917,
+North Korea,1917,
+South Korea,1917,
 Kuwait,1917,
 Kyrgyzstan,1917,0.4634
 Laos,1917,
@@ -13033,7 +13033,7 @@ Libya,1917,
 Liechtenstein,1917,
 Lithuania,1917,0.7366
 Luxembourg,1917,
-"Macedonia, FYR",1917,
+Macedonia,1917,
 Madagascar,1917,
 Malawi,1917,
 Malaysia,1917,0.6485
@@ -13093,7 +13093,7 @@ Somalia,1917,
 South Africa,1917,23.3397
 Spain,1917,15.8505
 Sri Lanka,1917,
-Sudan,1917,
+South Sudan,1917,
 Suriname,1917,
 Swaziland,1917,
 Sweden,1917,6.7637
@@ -13165,7 +13165,7 @@ Congo,1918,
 "Congo, Dem. Republic",1918,
 Cook Islands,1918,
 Costa Rica,1918,
-Cote d'Ivoire,1918,
+Ivory Coast,1918,
 Croatia,1918,
 Cuba,1918,
 Cyprus,1918,
@@ -13213,8 +13213,8 @@ Jordan,1918,
 Kazakhstan,1918,2.9161
 Kenya,1918,
 Kiribati,1918,
-Korea (North),1918,0.1572
-Korea (South),1918,0.3411
+North Korea,1918,0.1572
+South Korea,1918,0.3411
 Kuwait,1918,
 Kyrgyzstan,1918,0.1848
 Laos,1918,
@@ -13226,7 +13226,7 @@ Libya,1918,
 Liechtenstein,1918,
 Lithuania,1918,0.2938
 Luxembourg,1918,
-"Macedonia, FYR",1918,
+Macedonia,1918,
 Madagascar,1918,
 Malawi,1918,
 Malaysia,1918,0.6705
@@ -13286,7 +13286,7 @@ Somalia,1918,
 South Africa,1918,22.2222
 Spain,1918,16.7335
 Sri Lanka,1918,
-Sudan,1918,
+South Sudan,1918,
 Suriname,1918,
 Swaziland,1918,
 Sweden,1918,8.0022
@@ -13358,7 +13358,7 @@ Congo,1919,
 "Congo, Dem. Republic",1919,
 Cook Islands,1919,
 Costa Rica,1919,
-Cote d'Ivoire,1919,
+Ivory Coast,1919,
 Croatia,1919,0.4584
 Cuba,1919,
 Cyprus,1919,
@@ -13406,8 +13406,8 @@ Jordan,1919,
 Kazakhstan,1919,2.4907
 Kenya,1919,
 Kiribati,1919,
-Korea (North),1919,0.1861
-Korea (South),1919,0.4038
+North Korea,1919,0.1861
+South Korea,1919,0.4038
 Kuwait,1919,
 Kyrgyzstan,1919,0.1579
 Laos,1919,
@@ -13419,7 +13419,7 @@ Libya,1919,
 Liechtenstein,1919,
 Lithuania,1919,0.2509
 Luxembourg,1919,
-"Macedonia, FYR",1919,0.2492
+Macedonia,1919,0.2492
 Madagascar,1919,
 Malawi,1919,
 Malaysia,1919,0.7694
@@ -13479,7 +13479,7 @@ Somalia,1919,
 South Africa,1919,23.1382
 Spain,1919,15.9311
 Sri Lanka,1919,
-Sudan,1919,
+South Sudan,1919,
 Suriname,1919,
 Swaziland,1919,
 Sweden,1919,7.6761
@@ -13551,7 +13551,7 @@ Congo,1920,
 "Congo, Dem. Republic",1920,0.0037
 Cook Islands,1920,
 Costa Rica,1920,
-Cote d'Ivoire,1920,
+Ivory Coast,1920,
 Croatia,1920,0.6086
 Cuba,1920,
 Cyprus,1920,
@@ -13599,8 +13599,8 @@ Jordan,1920,
 Kazakhstan,1920,2.2713
 Kenya,1920,
 Kiribati,1920,
-Korea (North),1920,0.2415
-Korea (South),1920,0.5242
+North Korea,1920,0.2415
+South Korea,1920,0.5242
 Kuwait,1920,
 Kyrgyzstan,1920,0.1439
 Laos,1920,
@@ -13612,7 +13612,7 @@ Libya,1920,
 Liechtenstein,1920,
 Lithuania,1920,0.2288
 Luxembourg,1920,
-"Macedonia, FYR",1920,0.3308
+Macedonia,1920,0.3308
 Madagascar,1920,
 Malawi,1920,
 Malaysia,1920,1.1102
@@ -13672,7 +13672,7 @@ Somalia,1920,
 South Africa,1920,25.6663
 Spain,1920,14.0551
 Sri Lanka,1920,
-Sudan,1920,
+South Sudan,1920,
 Suriname,1920,
 Swaziland,1920,
 Sweden,1920,10.4021
@@ -13744,7 +13744,7 @@ Congo,1921,
 "Congo, Dem. Republic",1921,0.0073
 Cook Islands,1921,
 Costa Rica,1921,
-Cote d'Ivoire,1921,
+Ivory Coast,1921,
 Croatia,1921,0.6480
 Cuba,1921,
 Cyprus,1921,
@@ -13792,8 +13792,8 @@ Jordan,1921,
 Kazakhstan,1921,2.4634
 Kenya,1921,
 Kiribati,1921,
-Korea (North),1921,0.2600
-Korea (South),1921,0.5644
+North Korea,1921,0.2600
+South Korea,1921,0.5644
 Kuwait,1921,
 Kyrgyzstan,1921,0.1561
 Laos,1921,
@@ -13805,7 +13805,7 @@ Libya,1921,
 Liechtenstein,1921,
 Lithuania,1921,0.2482
 Luxembourg,1921,
-"Macedonia, FYR",1921,0.3522
+Macedonia,1921,0.3522
 Madagascar,1921,
 Malawi,1921,
 Malaysia,1921,1.4180
@@ -13865,7 +13865,7 @@ Somalia,1921,
 South Africa,1921,25.4135
 Spain,1921,14.8465
 Sri Lanka,1921,
-Sudan,1921,
+South Sudan,1921,
 Suriname,1921,
 Swaziland,1921,
 Sweden,1921,6.0126
@@ -13937,7 +13937,7 @@ Congo,1922,
 "Congo, Dem. Republic",1922,0.0806
 Cook Islands,1922,
 Costa Rica,1922,
-Cote d'Ivoire,1922,
+Ivory Coast,1922,
 Croatia,1922,0.9422
 Cuba,1922,
 Cyprus,1922,
@@ -13985,8 +13985,8 @@ Jordan,1922,
 Kazakhstan,1922,3.0042
 Kenya,1922,
 Kiribati,1922,
-Korea (North),1922,0.2658
-Korea (South),1922,0.5769
+North Korea,1922,0.2658
+South Korea,1922,0.5769
 Kuwait,1922,
 Kyrgyzstan,1922,0.1904
 Laos,1922,
@@ -13998,7 +13998,7 @@ Libya,1922,
 Liechtenstein,1922,
 Lithuania,1922,0.3026
 Luxembourg,1922,
-"Macedonia, FYR",1922,0.5121
+Macedonia,1922,0.5121
 Madagascar,1922,
 Malawi,1922,
 Malaysia,1922,2.0042
@@ -14058,7 +14058,7 @@ Somalia,1922,
 South Africa,1922,21.7861
 Spain,1922,14.9455
 Sri Lanka,1922,
-Sudan,1922,
+South Sudan,1922,
 Suriname,1922,
 Swaziland,1922,
 Sweden,1922,9.9441
@@ -14130,7 +14130,7 @@ Congo,1923,
 "Congo, Dem. Republic",1923,0.1612
 Cook Islands,1923,
 Costa Rica,1923,
-Cote d'Ivoire,1923,
+Ivory Coast,1923,
 Croatia,1923,1.0271
 Cuba,1923,
 Cyprus,1923,
@@ -14178,8 +14178,8 @@ Jordan,1923,
 Kazakhstan,1923,3.3183
 Kenya,1923,
 Kiribati,1923,
-Korea (North),1923,0.3178
-Korea (South),1923,0.6898
+North Korea,1923,0.3178
+South Korea,1923,0.6898
 Kuwait,1923,
 Kyrgyzstan,1923,0.2103
 Laos,1923,
@@ -14191,7 +14191,7 @@ Libya,1923,
 Liechtenstein,1923,
 Lithuania,1923,0.3343
 Luxembourg,1923,
-"Macedonia, FYR",1923,0.5583
+Macedonia,1923,0.5583
 Madagascar,1923,
 Malawi,1923,
 Malaysia,1923,2.5831
@@ -14251,7 +14251,7 @@ Somalia,1923,
 South Africa,1923,26.4431
 Spain,1923,17.2135
 Sri Lanka,1923,
-Sudan,1923,
+South Sudan,1923,
 Suriname,1923,
 Swaziland,1923,
 Sweden,1923,12.1022
@@ -14323,7 +14323,7 @@ Congo,1924,
 "Congo, Dem. Republic",1924,0.2162
 Cook Islands,1924,
 Costa Rica,1924,
-Cote d'Ivoire,1924,
+Ivory Coast,1924,
 Croatia,1924,1.0530
 Cuba,1924,
 Cyprus,1924,
@@ -14371,8 +14371,8 @@ Jordan,1924,
 Kazakhstan,1924,3.9535
 Kenya,1924,
 Kiribati,1924,
-Korea (North),1924,0.3340
-Korea (South),1924,0.7249
+North Korea,1924,0.3340
+South Korea,1924,0.7249
 Kuwait,1924,
 Kyrgyzstan,1924,0.2506
 Laos,1924,
@@ -14384,7 +14384,7 @@ Libya,1924,
 Liechtenstein,1924,
 Lithuania,1924,0.3983
 Luxembourg,1924,
-"Macedonia, FYR",1924,0.5724
+Macedonia,1924,0.5724
 Madagascar,1924,
 Malawi,1924,
 Malaysia,1924,2.8359
@@ -14444,7 +14444,7 @@ Somalia,1924,
 South Africa,1924,27.7768
 Spain,1924,18.3896
 Sri Lanka,1924,
-Sudan,1924,
+South Sudan,1924,
 Suriname,1924,
 Swaziland,1924,
 Sweden,1924,14.4398
@@ -14516,7 +14516,7 @@ Congo,1925,
 "Congo, Dem. Republic",1925,0.1722
 Cook Islands,1925,
 Costa Rica,1925,
-Cote d'Ivoire,1925,
+Ivory Coast,1925,
 Croatia,1925,1.1559
 Cuba,1925,
 Cyprus,1925,
@@ -14564,8 +14564,8 @@ Jordan,1925,
 Kazakhstan,1925,3.9020
 Kenya,1925,
 Kiribati,1925,
-Korea (North),1925,0.5328
-Korea (South),1925,1.1563
+North Korea,1925,0.5328
+South Korea,1925,1.1563
 Kuwait,1925,
 Kyrgyzstan,1925,0.2473
 Laos,1925,
@@ -14577,7 +14577,7 @@ Libya,1925,
 Liechtenstein,1925,
 Lithuania,1925,0.3931
 Luxembourg,1925,
-"Macedonia, FYR",1925,0.6283
+Macedonia,1925,0.6283
 Madagascar,1925,
 Malawi,1925,
 Malaysia,1925,2.9605
@@ -14637,7 +14637,7 @@ Somalia,1925,
 South Africa,1925,28.9529
 Spain,1925,19.0491
 Sri Lanka,1925,
-Sudan,1925,
+South Sudan,1925,
 Suriname,1925,
 Swaziland,1925,
 Sweden,1925,12.8973
@@ -14709,7 +14709,7 @@ Congo,1926,
 "Congo, Dem. Republic",1926,0.2382
 Cook Islands,1926,
 Costa Rica,1926,
-Cote d'Ivoire,1926,
+Ivory Coast,1926,
 Croatia,1926,1.1261
 Cuba,1926,
 Cyprus,1926,
@@ -14757,8 +14757,8 @@ Jordan,1926,
 Kazakhstan,1926,5.6536
 Kenya,1926,
 Kiribati,1926,
-Korea (North),1926,0.5721
-Korea (South),1926,1.2416
+North Korea,1926,0.5721
+South Korea,1926,1.2416
 Kuwait,1926,
 Kyrgyzstan,1926,0.3583
 Laos,1926,
@@ -14770,7 +14770,7 @@ Libya,1926,
 Liechtenstein,1926,
 Lithuania,1926,0.5695
 Luxembourg,1926,
-"Macedonia, FYR",1926,0.6121
+Macedonia,1926,0.6121
 Madagascar,1926,
 Malawi,1926,
 Malaysia,1926,3.4002
@@ -14830,7 +14830,7 @@ Somalia,1926,
 South Africa,1926,30.4295
 Spain,1926,18.3786
 Sri Lanka,1926,
-Sudan,1926,
+South Sudan,1926,
 Suriname,1926,
 Swaziland,1926,
 Sweden,1926,12.5309
@@ -14902,7 +14902,7 @@ Congo,1927,
 "Congo, Dem. Republic",1927,0.2308
 Cook Islands,1927,
 Costa Rica,1927,
-Cote d'Ivoire,1927,
+Ivory Coast,1927,
 Croatia,1927,1.2718
 Cuba,1927,
 Cyprus,1927,
@@ -14950,8 +14950,8 @@ Jordan,1927,
 Kazakhstan,1927,7.0287
 Kenya,1927,
 Kiribati,1927,
-Korea (North),1927,0.5929
-Korea (South),1927,1.2867
+North Korea,1927,0.5929
+South Korea,1927,1.2867
 Kuwait,1927,
 Kyrgyzstan,1927,0.4454
 Laos,1927,
@@ -14963,7 +14963,7 @@ Libya,1927,
 Liechtenstein,1927,
 Lithuania,1927,0.7080
 Luxembourg,1927,
-"Macedonia, FYR",1927,0.6913
+Macedonia,1927,0.6913
 Madagascar,1927,
 Malawi,1927,
 Malaysia,1927,3.3782
@@ -15023,7 +15023,7 @@ Somalia,1927,
 South Africa,1927,29.5612
 Spain,1927,21.4491
 Sri Lanka,1927,
-Sudan,1927,
+South Sudan,1927,
 Suriname,1927,
 Swaziland,1927,
 Sweden,1927,17.6275
@@ -15095,7 +15095,7 @@ Congo,1928,
 "Congo, Dem. Republic",1928,0.2821
 Cook Islands,1928,
 Costa Rica,1928,
-Cote d'Ivoire,1928,
+Ivory Coast,1928,
 Croatia,1928,1.5254
 Cuba,1928,
 Cyprus,1928,
@@ -15143,8 +15143,8 @@ Jordan,1928,
 Kazakhstan,1928,7.7846
 Kenya,1928,
 Kiribati,1928,
-Korea (North),1928,0.6830
-Korea (South),1928,1.4824
+North Korea,1928,0.6830
+South Korea,1928,1.4824
 Kuwait,1928,
 Kyrgyzstan,1928,0.4990
 Laos,1928,
@@ -15156,7 +15156,7 @@ Libya,1928,
 Liechtenstein,1928,
 Lithuania,1928,0.7924
 Luxembourg,1928,
-"Macedonia, FYR",1928,0.7912
+Macedonia,1928,0.7912
 Madagascar,1928,
 Malawi,1928,
 Malaysia,1928,3.8069
@@ -15216,7 +15216,7 @@ Somalia,1928,
 South Africa,1928,29.6234
 Spain,1928,21.5150
 Sri Lanka,1928,
-Sudan,1928,
+South Sudan,1928,
 Suriname,1928,
 Swaziland,1928,
 Sweden,1928,16.2462
@@ -15288,7 +15288,7 @@ Congo,1929,
 "Congo, Dem. Republic",1929,0.3041
 Cook Islands,1929,
 Costa Rica,1929,
-Cote d'Ivoire,1929,
+Ivory Coast,1929,
 Croatia,1929,1.5755
 Cuba,1929,
 Cyprus,1929,
@@ -15336,8 +15336,8 @@ Jordan,1929,
 Kazakhstan,1929,8.3792
 Kenya,1929,
 Kiribati,1929,
-Korea (North),1929,0.7847
-Korea (South),1929,1.7031
+North Korea,1929,0.7847
+South Korea,1929,1.7031
 Kuwait,1929,
 Kyrgyzstan,1929,0.5380
 Laos,1929,
@@ -15349,7 +15349,7 @@ Libya,1929,
 Liechtenstein,1929,
 Lithuania,1929,0.8543
 Luxembourg,1929,
-"Macedonia, FYR",1929,0.8564
+Macedonia,1929,0.8564
 Madagascar,1929,
 Malawi,1929,
 Malaysia,1929,4.1147
@@ -15409,7 +15409,7 @@ Somalia,1929,
 South Africa,1929,30.7703
 Spain,1929,23.9772
 Sri Lanka,1929,
-Sudan,1929,
+South Sudan,1929,
 Suriname,1929,
 Swaziland,1929,
 Sweden,1929,19.3716
@@ -15481,7 +15481,7 @@ Congo,1930,
 "Congo, Dem. Republic",1930,0.3884
 Cook Islands,1930,
 Costa Rica,1930,
-Cote d'Ivoire,1930,
+Ivory Coast,1930,
 Croatia,1930,1.4827
 Cuba,1930,
 Cyprus,1930,
@@ -15529,8 +15529,8 @@ Jordan,1930,
 Kazakhstan,1930,11.3930
 Kenya,1930,
 Kiribati,1930,
-Korea (North),1930,0.7397
-Korea (South),1930,1.6053
+North Korea,1930,0.7397
+South Korea,1930,1.6053
 Kuwait,1930,
 Kyrgyzstan,1930,0.7313
 Laos,1930,
@@ -15542,7 +15542,7 @@ Libya,1930,
 Liechtenstein,1930,
 Lithuania,1930,1.1611
 Luxembourg,1930,
-"Macedonia, FYR",1930,0.8060
+Macedonia,1930,0.8060
 Madagascar,1930,
 Malawi,1930,
 Malaysia,1930,3.6677
@@ -15602,7 +15602,7 @@ Somalia,1930,
 South Africa,1930,28.7221
 Spain,1930,23.6475
 Sri Lanka,1930,
-Sudan,1930,
+South Sudan,1930,
 Suriname,1930,
 Swaziland,1930,
 Sweden,1930,18.9319
@@ -15674,7 +15674,7 @@ Congo,1931,
 "Congo, Dem. Republic",1931,0.2492
 Cook Islands,1931,
 Costa Rica,1931,
-Cote d'Ivoire,1931,
+Ivory Coast,1931,
 Croatia,1931,1.4593
 Cuba,1931,
 Cyprus,1931,
@@ -15722,8 +15722,8 @@ Jordan,1931,
 Kazakhstan,1931,13.6922
 Kenya,1931,
 Kiribati,1931,
-Korea (North),1931,0.7836
-Korea (South),1931,1.7006
+North Korea,1931,0.7836
+South Korea,1931,1.7006
 Kuwait,1931,
 Kyrgyzstan,1931,0.8776
 Laos,1931,
@@ -15735,7 +15735,7 @@ Libya,1931,
 Liechtenstein,1931,
 Lithuania,1931,1.3937
 Luxembourg,1931,
-"Macedonia, FYR",1931,0.7515
+Macedonia,1931,0.7515
 Madagascar,1931,
 Malawi,1931,
 Malaysia,1931,2.7077
@@ -15795,7 +15795,7 @@ Somalia,1931,
 South Africa,1931,25.5674
 Spain,1931,22.5373
 Sri Lanka,1931,
-Sudan,1931,
+South Sudan,1931,
 Suriname,1931,
 Swaziland,1931,
 Sweden,1931,18.9392
@@ -15867,7 +15867,7 @@ Congo,1932,
 "Congo, Dem. Republic",1932,0.0513
 Cook Islands,1932,
 Costa Rica,1932,
-Cote d'Ivoire,1932,
+Ivory Coast,1932,
 Croatia,1932,1.3149
 Cuba,1932,
 Cyprus,1932,
@@ -15915,8 +15915,8 @@ Jordan,1932,
 Kazakhstan,1932,15.4300
 Kenya,1932,
 Kiribati,1932,
-Korea (North),1932,0.9234
-Korea (South),1932,2.0041
+North Korea,1932,0.9234
+South Korea,1932,2.0041
 Kuwait,1932,
 Kyrgyzstan,1932,0.9882
 Laos,1932,
@@ -15928,7 +15928,7 @@ Libya,1932,
 Liechtenstein,1932,
 Lithuania,1932,1.5694
 Luxembourg,1932,
-"Macedonia, FYR",1932,0.6837
+Macedonia,1932,0.6837
 Madagascar,1932,
 Malawi,1932,
 Malaysia,1932,1.7954
@@ -15988,7 +15988,7 @@ Somalia,1932,
 South Africa,1932,23.4569
 Spain,1932,21.1816
 Sri Lanka,1932,
-Sudan,1932,
+South Sudan,1932,
 Suriname,1932,
 Swaziland,1932,
 Sweden,1932,18.7414
@@ -16060,7 +16060,7 @@ Congo,1933,
 "Congo, Dem. Republic",1933,0.0037
 Cook Islands,1933,
 Costa Rica,1933,
-Cote d'Ivoire,1933,
+Ivory Coast,1933,
 Croatia,1933,1.2201
 Cuba,1933,
 Cyprus,1933,
@@ -16108,8 +16108,8 @@ Jordan,1933,
 Kazakhstan,1933,17.2593
 Kenya,1933,
 Kiribati,1933,
-Korea (North),1933,1.0887
-Korea (South),1933,2.3628
+North Korea,1933,1.0887
+South Korea,1933,2.3628
 Kuwait,1933,
 Kyrgyzstan,1933,1.1019
 Laos,1933,
@@ -16121,7 +16121,7 @@ Libya,1933,
 Liechtenstein,1933,
 Lithuania,1933,1.7503
 Luxembourg,1933,
-"Macedonia, FYR",1933,0.6329
+Macedonia,1933,0.6329
 Madagascar,1933,0.0037
 Malawi,1933,
 Malaysia,1933,1.5902
@@ -16181,7 +16181,7 @@ Somalia,1933,
 South Africa,1933,25.3329
 Spain,1933,18.7120
 Sri Lanka,1933,
-Sudan,1933,
+South Sudan,1933,
 Suriname,1933,
 Swaziland,1933,
 Sweden,1933,19.5181
@@ -16253,7 +16253,7 @@ Congo,1934,
 "Congo, Dem. Republic",1934,0.0183
 Cook Islands,1934,
 Costa Rica,1934,
-Cote d'Ivoire,1934,
+Ivory Coast,1934,
 Croatia,1934,1.2701
 Cuba,1934,
 Cyprus,1934,
@@ -16301,8 +16301,8 @@ Jordan,1934,
 Kazakhstan,1934,20.8737
 Kenya,1934,
 Kiribati,1934,
-Korea (North),1934,1.4969
-Korea (South),1934,3.0941
+North Korea,1934,1.4969
+South Korea,1934,3.0941
 Kuwait,1934,
 Kyrgyzstan,1934,1.3333
 Laos,1934,
@@ -16314,7 +16314,7 @@ Libya,1934,
 Liechtenstein,1934,
 Lithuania,1934,2.1180
 Luxembourg,1934,
-"Macedonia, FYR",1934,0.6590
+Macedonia,1934,0.6590
 Madagascar,1934,0.0073
 Malawi,1934,
 Malaysia,1934,1.7331
@@ -16374,7 +16374,7 @@ Somalia,1934,
 South Africa,1934,28.8687
 Spain,1934,20.2509
 Sri Lanka,1934,
-Sudan,1934,
+South Sudan,1934,
 Suriname,1934,
 Swaziland,1934,
 Sweden,1934,21.7348
@@ -16446,7 +16446,7 @@ Congo,1935,
 "Congo, Dem. Republic",1935,0.0330
 Cook Islands,1935,
 Costa Rica,1935,
-Cote d'Ivoire,1935,
+Ivory Coast,1935,
 Croatia,1935,1.3381
 Cuba,1935,
 Cyprus,1935,
@@ -16494,8 +16494,8 @@ Jordan,1935,
 Kazakhstan,1935,23.6216
 Kenya,1935,
 Kiribati,1935,
-Korea (North),1935,1.8060
-Korea (South),1935,3.5947
+North Korea,1935,1.8060
+South Korea,1935,3.5947
 Kuwait,1935,
 Kyrgyzstan,1935,1.5103
 Laos,1935,
@@ -16507,7 +16507,7 @@ Libya,1935,
 Liechtenstein,1935,
 Lithuania,1935,2.3988
 Luxembourg,1935,
-"Macedonia, FYR",1935,0.6905
+Macedonia,1935,0.6905
 Madagascar,1935,0.0037
 Malawi,1935,
 Malaysia,1935,1.8064
@@ -16567,7 +16567,7 @@ Somalia,1935,
 South Africa,1935,32.1589
 Spain,1935,22.4603
 Sri Lanka,1935,
-Sudan,1935,
+South Sudan,1935,
 Suriname,1935,
 Swaziland,1935,
 Sweden,1935,22.8670
@@ -16639,7 +16639,7 @@ Congo,1936,
 "Congo, Dem. Republic",1936,0.0403
 Cook Islands,1936,
 Costa Rica,1936,
-Cote d'Ivoire,1936,
+Ivory Coast,1936,
 Croatia,1936,1.3054
 Cuba,1936,
 Cyprus,1936,
@@ -16687,8 +16687,8 @@ Jordan,1936,
 Kazakhstan,1936,27.0776
 Kenya,1936,
 Kiribati,1936,
-Korea (North),1936,2.1235
-Korea (South),1936,4.2116
+North Korea,1936,2.1235
+South Korea,1936,4.2116
 Kuwait,1936,
 Kyrgyzstan,1936,1.7334
 Laos,1936,
@@ -16700,7 +16700,7 @@ Libya,1936,
 Liechtenstein,1936,
 Lithuania,1936,2.7529
 Luxembourg,1936,
-"Macedonia, FYR",1936,0.6796
+Macedonia,1936,0.6796
 Madagascar,1936,
 Malawi,1936,
 Malaysia,1936,2.0482
@@ -16760,7 +16760,7 @@ Somalia,1936,
 South Africa,1936,35.2550
 Spain,1936,8.0608
 Sri Lanka,1936,
-Sudan,1936,
+South Sudan,1936,
 Suriname,1936,
 Swaziland,1936,
 Sweden,1936,25.0508
@@ -16832,7 +16832,7 @@ Congo,1937,
 "Congo, Dem. Republic",1937,0.0989
 Cook Islands,1937,
 Costa Rica,1937,
-Cote d'Ivoire,1937,
+Ivory Coast,1937,
 Croatia,1937,1.4461
 Cuba,1937,
 Cyprus,1937,
@@ -16880,8 +16880,8 @@ Jordan,1937,
 Kazakhstan,1937,27.6945
 Kenya,1937,
 Kiribati,1937,
-Korea (North),1937,2.2844
-Korea (South),1937,4.4940
+North Korea,1937,2.2844
+South Korea,1937,4.4940
 Kuwait,1937,
 Kyrgyzstan,1937,1.7713
 Laos,1937,
@@ -16893,7 +16893,7 @@ Libya,1937,
 Liechtenstein,1937,
 Lithuania,1937,2.8134
 Luxembourg,1937,
-"Macedonia, FYR",1937,0.7571
+Macedonia,1937,0.7571
 Madagascar,1937,
 Malawi,1937,
 Malaysia,1937,2.3450
@@ -16953,7 +16953,7 @@ Somalia,1937,
 South Africa,1937,36.8195
 Spain,1937,5.2468
 Sri Lanka,1937,
-Sudan,1937,
+South Sudan,1937,
 Suriname,1937,
 Swaziland,1937,
 Sweden,1937,28.9456
@@ -17025,7 +17025,7 @@ Congo,1938,
 "Congo, Dem. Republic",1938,0.1172
 Cook Islands,1938,
 Costa Rica,1938,
-Cote d'Ivoire,1938,
+Ivory Coast,1938,
 Croatia,1938,1.3825
 Cuba,1938,
 Cyprus,1938,
@@ -17073,8 +17073,8 @@ Jordan,1938,
 Kazakhstan,1938,29.2310
 Kenya,1938,
 Kiribati,1938,
-Korea (North),1938,2.8616
-Korea (South),1938,6.2105
+North Korea,1938,2.8616
+South Korea,1938,6.2105
 Kuwait,1938,
 Kyrgyzstan,1938,1.8694
 Laos,1938,
@@ -17086,7 +17086,7 @@ Libya,1938,
 Liechtenstein,1938,
 Lithuania,1938,2.9692
 Luxembourg,1938,
-"Macedonia, FYR",1938,0.7181
+Macedonia,1938,0.7181
 Madagascar,1938,
 Malawi,1938,
 Malaysia,1938,1.9126
@@ -17146,7 +17146,7 @@ Somalia,1938,
 South Africa,1938,38.7028
 Spain,1938,13.2234
 Sri Lanka,1938,
-Sudan,1938,
+South Sudan,1938,
 Suriname,1938,
 Swaziland,1938,
 Sweden,1938,26.1390
@@ -17218,7 +17218,7 @@ Congo,1939,
 "Congo, Dem. Republic",1939,0.0916
 Cook Islands,1939,
 Costa Rica,1939,
-Cote d'Ivoire,1939,
+Ivory Coast,1939,
 Croatia,1939,1.4409
 Cuba,1939,
 Cyprus,1939,
@@ -17266,8 +17266,8 @@ Jordan,1939,
 Kazakhstan,1939,29.5906
 Kenya,1939,
 Kiribati,1939,
-Korea (North),1939,4.0004
-Korea (South),1939,7.8417
+North Korea,1939,4.0004
+South Korea,1939,7.8417
 Kuwait,1939,
 Kyrgyzstan,1939,1.8922
 Laos,1939,
@@ -17279,7 +17279,7 @@ Libya,1939,
 Liechtenstein,1939,
 Lithuania,1939,3.0054
 Luxembourg,1939,
-"Macedonia, FYR",1939,0.7522
+Macedonia,1939,0.7522
 Madagascar,1939,
 Malawi,1939,
 Malaysia,1939,1.7038
@@ -17339,7 +17339,7 @@ Somalia,1939,
 South Africa,1939,40.1611
 Spain,1939,15.7186
 Sri Lanka,1939,
-Sudan,1939,
+South Sudan,1939,
 Suriname,1939,
 Swaziland,1939,
 Sweden,1939,29.3047
@@ -17411,7 +17411,7 @@ Congo,1940,
 "Congo, Dem. Republic",1940,0.0733
 Cook Islands,1940,
 Costa Rica,1940,
-Cote d'Ivoire,1940,
+Ivory Coast,1940,
 Croatia,1940,1.5817
 Cuba,1940,
 Cyprus,1940,
@@ -17459,8 +17459,8 @@ Jordan,1940,
 Kazakhstan,1940,35.4887
 Kenya,1940,
 Kiribati,1940,
-Korea (North),1940,4.8043
-Korea (South),1940,10.4269
+North Korea,1940,4.8043
+South Korea,1940,10.4269
 Kuwait,1940,
 Kyrgyzstan,1940,2.2663
 Laos,1940,
@@ -17472,7 +17472,7 @@ Libya,1940,
 Liechtenstein,1940,
 Lithuania,1940,3.6000
 Luxembourg,1940,
-"Macedonia, FYR",1940,0.8598
+Macedonia,1940,0.8598
 Madagascar,1940,
 Malawi,1940,
 Malaysia,1940,2.5685
@@ -17532,7 +17532,7 @@ Somalia,1940,
 South Africa,1940,41.5204
 Spain,1940,21.6249
 Sri Lanka,1940,
-Sudan,1940,
+South Sudan,1940,
 Suriname,1940,
 Swaziland,1940,
 Sweden,1940,18.4776
@@ -17604,7 +17604,7 @@ Congo,1941,
 "Congo, Dem. Republic",1941,0.1026
 Cook Islands,1941,
 Costa Rica,1941,
-Cote d'Ivoire,1941,
+Ivory Coast,1941,
 Croatia,1941,
 Cuba,1941,0.0769
 Cyprus,1941,
@@ -17652,8 +17652,8 @@ Jordan,1941,
 Kazakhstan,1941,31.1691
 Kenya,1941,
 Kiribati,1941,
-Korea (North),1941,5.6486
-Korea (South),1941,11.3414
+North Korea,1941,5.6486
+South Korea,1941,11.3414
 Kuwait,1941,
 Kyrgyzstan,1941,1.9925
 Laos,1941,
@@ -17665,7 +17665,7 @@ Libya,1941,
 Liechtenstein,1941,
 Lithuania,1941,3.1649
 Luxembourg,1941,
-"Macedonia, FYR",1941,
+Macedonia,1941,
 Madagascar,1941,
 Malawi,1941,
 Malaysia,1941,2.1801
@@ -17725,7 +17725,7 @@ Somalia,1941,
 South Africa,1941,44.3307
 Spain,1941,21.5150
 Sri Lanka,1941,
-Sudan,1941,
+South Sudan,1941,
 Suriname,1941,
 Swaziland,1941,
 Sweden,1941,15.0480
@@ -17797,7 +17797,7 @@ Congo,1942,
 "Congo, Dem. Republic",1942,0.1429
 Cook Islands,1942,
 Costa Rica,1942,
-Cote d'Ivoire,1942,
+Ivory Coast,1942,
 Croatia,1942,
 Cuba,1942,0.0843
 Cyprus,1942,
@@ -17845,8 +17845,8 @@ Jordan,1942,
 Kazakhstan,1942,21.5023
 Kenya,1942,
 Kiribati,1942,
-Korea (North),1942,6.1780
-Korea (South),1942,12.5780
+North Korea,1942,6.1780
+South Korea,1942,12.5780
 Kuwait,1942,
 Kyrgyzstan,1942,1.3627
 Laos,1942,
@@ -17858,7 +17858,7 @@ Libya,1942,
 Liechtenstein,1942,
 Lithuania,1942,2.1661
 Luxembourg,1942,
-"Macedonia, FYR",1942,
+Macedonia,1942,
 Madagascar,1942,
 Malawi,1942,
 Malaysia,1942,0.6595
@@ -17918,7 +17918,7 @@ Somalia,1942,
 South Africa,1942,48.4271
 Spain,1942,23.0649
 Sri Lanka,1942,
-Sudan,1942,
+South Sudan,1942,
 Suriname,1942,
 Swaziland,1942,
 Sweden,1942,13.0255
@@ -17990,7 +17990,7 @@ Congo,1943,
 "Congo, Dem. Republic",1943,0.2198
 Cook Islands,1943,
 Costa Rica,1943,
-Cote d'Ivoire,1943,
+Ivory Coast,1943,
 Croatia,1943,0.1330
 Cuba,1943,0.0843
 Cyprus,1943,
@@ -18038,8 +18038,8 @@ Jordan,1943,
 Kazakhstan,1943,27.4488
 Kenya,1943,
 Kiribati,1943,
-Korea (North),1943,6.0414
-Korea (South),1943,12.1321
+North Korea,1943,6.0414
+South Korea,1943,12.1321
 Kuwait,1943,
 Kyrgyzstan,1943,1.7396
 Laos,1943,
@@ -18051,7 +18051,7 @@ Libya,1943,
 Liechtenstein,1943,
 Lithuania,1943,2.7651
 Luxembourg,1943,
-"Macedonia, FYR",1943,0.0371
+Macedonia,1943,0.0371
 Madagascar,1943,
 Malawi,1943,
 Malaysia,1943,1.3190
@@ -18111,7 +18111,7 @@ Somalia,1943,
 South Africa,1943,48.7715
 Spain,1943,23.8563
 Sri Lanka,1943,
-Sudan,1943,
+South Sudan,1943,
 Suriname,1943,
 Swaziland,1943,
 Sweden,1943,15.8431
@@ -18183,7 +18183,7 @@ Congo,1944,
 "Congo, Dem. Republic",1944,0.1722
 Cook Islands,1944,
 Costa Rica,1944,
-Cote d'Ivoire,1944,
+Ivory Coast,1944,
 Croatia,1944,0.0141
 Cuba,1944,0.0879
 Cyprus,1944,
@@ -18231,8 +18231,8 @@ Jordan,1944,
 Kazakhstan,1944,25.7071
 Kenya,1944,
 Kiribati,1944,
-Korea (North),1944,6.2772
-Korea (South),1944,12.9222
+North Korea,1944,6.2772
+South Korea,1944,12.9222
 Kuwait,1944,
 Kyrgyzstan,1944,1.6292
 Laos,1944,
@@ -18244,7 +18244,7 @@ Libya,1944,
 Liechtenstein,1944,
 Lithuania,1944,2.5896
 Luxembourg,1944,
-"Macedonia, FYR",1944,0.0076
+Macedonia,1944,0.0076
 Madagascar,1944,
 Malawi,1944,
 Malaysia,1944,1.1029
@@ -18304,7 +18304,7 @@ Somalia,1944,
 South Africa,1944,54.5716
 Spain,1944,25.8019
 Sri Lanka,1944,
-Sudan,1944,
+South Sudan,1944,
 Suriname,1944,
 Swaziland,1944,
 Sweden,1944,12.4466
@@ -18376,7 +18376,7 @@ Congo,1945,
 "Congo, Dem. Republic",1945,0.1685
 Cook Islands,1945,
 Costa Rica,1945,
-Cote d'Ivoire,1945,
+Ivory Coast,1945,
 Croatia,1945,0.8125
 Cuba,1945,0.1099
 Cyprus,1945,
@@ -18424,8 +18424,8 @@ Jordan,1945,
 Kazakhstan,1945,27.1938
 Kenya,1945,
 Kiribati,1945,
-Korea (North),1945,0.0660
-Korea (South),1945,0.0037
+North Korea,1945,0.0660
+South Korea,1945,0.0037
 Kuwait,1945,
 Kyrgyzstan,1945,1.7288
 Laos,1945,
@@ -18437,7 +18437,7 @@ Libya,1945,
 Liechtenstein,1945,
 Lithuania,1945,2.7472
 Luxembourg,1945,0.0256
-"Macedonia, FYR",1945,0.4355
+Macedonia,1945,0.4355
 Madagascar,1945,0.0073
 Malawi,1945,
 Malaysia,1945,0.6119
@@ -18497,7 +18497,7 @@ Somalia,1945,
 South Africa,1945,55.8723
 Spain,1945,28.2751
 Sri Lanka,1945,
-Sudan,1945,
+South Sudan,1945,
 Suriname,1945,
 Swaziland,1945,
 Sweden,1945,4.5507
@@ -18569,7 +18569,7 @@ Congo,1946,
 "Congo, Dem. Republic",1946,0.3114
 Cook Islands,1946,
 Costa Rica,1946,
-Cote d'Ivoire,1946,
+Ivory Coast,1946,
 Croatia,1946,1.6389
 Cuba,1946,0.1685
 Cyprus,1946,
@@ -18617,8 +18617,8 @@ Jordan,1946,
 Kazakhstan,1946,30.5433
 Kenya,1946,
 Kiribati,1946,
-Korea (North),1946,0.0733
-Korea (South),1946,0.4836
+North Korea,1946,0.0733
+South Korea,1946,0.4836
 Kuwait,1946,2.4549
 Kyrgyzstan,1946,1.9458
 Laos,1946,0.0096
@@ -18630,7 +18630,7 @@ Libya,1946,
 Liechtenstein,1946,
 Lithuania,1946,3.0915
 Luxembourg,1946,0.0366
-"Macedonia, FYR",1946,0.8633
+Macedonia,1946,0.8633
 Madagascar,1946,
 Malawi,1946,
 Malaysia,1946,0.6046
@@ -18690,7 +18690,7 @@ Somalia,1946,
 South Africa,1946,56.0482
 Spain,1946,28.0956
 Sri Lanka,1946,
-Sudan,1946,
+South Sudan,1946,
 Suriname,1946,
 Swaziland,1946,
 Sweden,1946,17.3820
@@ -18762,7 +18762,7 @@ Congo,1947,
 "Congo, Dem. Republic",1947,0.3298
 Cook Islands,1947,
 Costa Rica,1947,
-Cote d'Ivoire,1947,
+Ivory Coast,1947,
 Croatia,1947,2.3218
 Cuba,1947,0.1905
 Cyprus,1947,
@@ -18810,8 +18810,8 @@ Jordan,1947,
 Kazakhstan,1947,36.7705
 Kenya,1947,
 Kiribati,1947,
-Korea (North),1947,0.0733
-Korea (South),1947,0.8940
+North Korea,1947,0.0733
+South Korea,1947,0.8940
 Kuwait,1947,6.7491
 Kyrgyzstan,1947,2.3446
 Laos,1947,0.0095
@@ -18823,7 +18823,7 @@ Libya,1947,
 Liechtenstein,1947,
 Lithuania,1947,3.7248
 Luxembourg,1947,0.0440
-"Macedonia, FYR",1947,1.2041
+Macedonia,1947,1.2041
 Madagascar,1947,0.0037
 Malawi,1947,
 Malaysia,1947,0.6888
@@ -18883,7 +18883,7 @@ Somalia,1947,
 South Africa,1947,55.8394
 Spain,1947,31.1806
 Sri Lanka,1947,
-Sudan,1947,
+South Sudan,1947,
 Suriname,1947,
 Swaziland,1947,
 Sweden,1947,25.0984
@@ -18955,7 +18955,7 @@ Congo,1948,
 "Congo, Dem. Republic",1948,0.3737
 Cook Islands,1948,
 Costa Rica,1948,
-Cote d'Ivoire,1948,
+Ivory Coast,1948,
 Croatia,1948,2.5964
 Cuba,1948,0.1832
 Cyprus,1948,
@@ -19003,8 +19003,8 @@ Jordan,1948,
 Kazakhstan,1948,39.1089
 Kenya,1948,
 Kiribati,1948,
-Korea (North),1948,1.4033
-Korea (South),1948,1.6708
+North Korea,1948,1.4033
+South Korea,1948,1.6708
 Kuwait,1948,0.3371
 Kyrgyzstan,1948,2.4981
 Laos,1948,0.0131
@@ -19016,7 +19016,7 @@ Libya,1948,
 Liechtenstein,1948,
 Lithuania,1948,3.9682
 Luxembourg,1948,0.0513
-"Macedonia, FYR",1948,1.3555
+Macedonia,1948,1.3555
 Madagascar,1948,0.0037
 Malawi,1948,
 Malaysia,1948,1.1542
@@ -19076,7 +19076,7 @@ Somalia,1948,
 South Africa,1948,57.1034
 Spain,1948,32.7232
 Sri Lanka,1948,
-Sudan,1948,
+South Sudan,1948,
 Suriname,1948,
 Swaziland,1948,
 Sweden,1948,30.8069
@@ -19148,7 +19148,7 @@ Congo,1949,
 "Congo, Dem. Republic",1949,0.4763
 Cook Islands,1949,
 Costa Rica,1949,
-Cote d'Ivoire,1949,0.0000
+Ivory Coast,1949,0.0000
 Croatia,1949,2.9592
 Cuba,1949,0.1832
 Cyprus,1949,
@@ -19196,8 +19196,8 @@ Jordan,1949,
 Kazakhstan,1949,44.4513
 Kenya,1949,
 Kiribati,1949,
-Korea (North),1949,1.7807
-Korea (South),1949,2.1764
+North Korea,1949,1.7807
+South Korea,1949,2.1764
 Kuwait,1949,1.0626
 Kyrgyzstan,1949,2.8408
 Laos,1949,0.0137
@@ -19209,7 +19209,7 @@ Libya,1949,
 Liechtenstein,1949,
 Lithuania,1949,4.5124
 Luxembourg,1949,0.0586
-"Macedonia, FYR",1949,1.5482
+Macedonia,1949,1.5482
 Madagascar,1949,0.0037
 Malawi,1949,
 Malaysia,1949,1.2238
@@ -19269,7 +19269,7 @@ Somalia,1949,
 South Africa,1949,60.5879
 Spain,1949,35.7680
 Sri Lanka,1949,
-Sudan,1949,
+South Sudan,1949,
 Suriname,1949,
 Swaziland,1949,
 Sweden,1949,26.8388
@@ -19341,7 +19341,7 @@ Congo,1950,0.0842
 "Congo, Dem. Republic",1950,1.4803
 Cook Islands,1950,
 Costa Rica,1950,0.2858
-Cote d'Ivoire,1950,0.3295
+Ivory Coast,1950,0.3295
 Croatia,1950,2.8406
 Cuba,1950,5.6096
 Cyprus,1950,0.2638
@@ -19389,8 +19389,8 @@ Jordan,1950,0.1722
 Kazakhstan,1950,49.5283
 Kenya,1950,0.9087
 Kiribati,1950,
-Korea (North),1950,0.7804
-Korea (South),1950,2.1874
+North Korea,1950,0.7804
+South Korea,1950,2.1874
 Kuwait,1950,0.3847
 Kyrgyzstan,1950,3.1700
 Laos,1950,0.0193
@@ -19402,7 +19402,7 @@ Libya,1950,0.1429
 Liechtenstein,1950,
 Lithuania,1950,5.0346
 Luxembourg,1950,7.4196
-"Macedonia, FYR",1950,1.4869
+Macedonia,1950,1.4869
 Madagascar,1950,0.3041
 Malawi,1950,0.2214
 Malaysia,1950,3.2561
@@ -19462,7 +19462,7 @@ Somalia,1950,0.0476
 South Africa,1950,61.0349
 Spain,1950,33.0420
 Sri Lanka,1950,1.6232
-Sudan,1950,0.5533
+South Sudan,1950,0.5533
 Suriname,1950,0.2125
 Swaziland,1950,0.0037
 Sweden,1950,28.6671
@@ -19534,7 +19534,7 @@ Congo,1951,0.1122
 "Congo, Dem. Republic",1951,1.7477
 Cook Islands,1951,
 Costa Rica,1951,0.3114
-Cote d'Ivoire,1951,0.2752
+Ivory Coast,1951,0.2752
 Croatia,1951,2.6891
 Cuba,1951,6.4706
 Cyprus,1951,0.2785
@@ -19582,8 +19582,8 @@ Jordan,1951,0.1612
 Kazakhstan,1951,53.6654
 Kenya,1951,1.3923
 Kiribati,1951,
-Korea (North),1951,0.9966
-Korea (South),1951,2.9239
+North Korea,1951,0.9966
+South Korea,1951,2.9239
 Kuwait,1951,0.1172
 Kyrgyzstan,1951,3.4378
 Laos,1951,0.0162
@@ -19595,7 +19595,7 @@ Libya,1951,0.1685
 Liechtenstein,1951,
 Lithuania,1951,5.4596
 Luxembourg,1951,9.0098
-"Macedonia, FYR",1951,1.4072
+Macedonia,1951,1.4072
 Madagascar,1951,0.2455
 Malawi,1951,0.2441
 Malaysia,1951,4.8073
@@ -19655,7 +19655,7 @@ Somalia,1951,0.0476
 South Africa,1951,65.1459
 Spain,1951,33.1226
 Sri Lanka,1951,1.5462
-Sudan,1951,0.7218
+South Sudan,1951,0.7218
 Suriname,1951,0.2345
 Swaziland,1951,0.0037
 Sweden,1951,33.4450
@@ -19727,7 +19727,7 @@ Congo,1952,0.1456
 "Congo, Dem. Republic",1952,2.0885
 Cook Islands,1952,
 Costa Rica,1952,0.3884
-Cote d'Ivoire,1952,0.3047
+Ivory Coast,1952,0.3047
 Croatia,1952,2.7163
 Cuba,1952,6.2874
 Cyprus,1952,0.3151
@@ -19775,8 +19775,8 @@ Jordan,1952,0.1942
 Kazakhstan,1952,57.4572
 Kenya,1952,1.5902
 Kiribati,1952,
-Korea (North),1952,0.8904
-Korea (South),1952,3.4625
+North Korea,1952,0.8904
+South Korea,1952,3.4625
 Kuwait,1952,-0.4360
 Kyrgyzstan,1952,3.6832
 Laos,1952,0.0240
@@ -19788,7 +19788,7 @@ Libya,1952,0.1612
 Liechtenstein,1952,
 Lithuania,1952,5.8489
 Luxembourg,1952,9.3982
-"Macedonia, FYR",1952,1.4148
+Macedonia,1952,1.4148
 Madagascar,1952,0.3078
 Malawi,1952,0.2759
 Malaysia,1952,5.8545
@@ -19848,7 +19848,7 @@ Somalia,1952,0.0476
 South Africa,1952,70.8911
 Spain,1952,37.6146
 Sri Lanka,1952,1.9419
-Sudan,1952,0.7584
+South Sudan,1952,0.7584
 Suriname,1952,0.2675
 Swaziland,1952,0.0037
 Sweden,1952,34.5295
@@ -19920,7 +19920,7 @@ Congo,1953,0.1228
 "Congo, Dem. Republic",1953,2.2937
 Cook Islands,1953,
 Costa Rica,1953,0.4324
-Cote d'Ivoire,1953,0.2542
+Ivory Coast,1953,0.2542
 Croatia,1953,2.6941
 Cuba,1953,6.1922
 Cyprus,1953,0.3664
@@ -19968,8 +19968,8 @@ Jordan,1953,0.2125
 Kazakhstan,1953,60.7746
 Kenya,1953,1.5132
 Kiribati,1953,
-Korea (North),1953,1.7367
-Korea (South),1953,4.6899
+North Korea,1953,1.7367
+South Korea,1953,4.6899
 Kuwait,1953,-0.0513
 Kyrgyzstan,1953,3.8989
 Laos,1953,0.0220
@@ -19981,7 +19981,7 @@ Libya,1953,0.2492
 Liechtenstein,1953,
 Lithuania,1953,6.1911
 Luxembourg,1953,8.6544
-"Macedonia, FYR",1953,1.4044
+Macedonia,1953,1.4044
 Madagascar,1953,0.2565
 Malawi,1953,0.3016
 Malaysia,1953,5.9310
@@ -20041,7 +20041,7 @@ Somalia,1953,0.0476
 South Africa,1953,71.0047
 Spain,1953,38.9410
 Sri Lanka,1953,2.0665
-Sudan,1953,0.8317
+South Sudan,1953,0.8317
 Suriname,1953,0.3114
 Swaziland,1953,0.0037
 Sweden,1953,32.5583
@@ -20113,7 +20113,7 @@ Congo,1954,0.1298
 "Congo, Dem. Republic",1954,2.8176
 Cook Islands,1954,
 Costa Rica,1954,0.4067
-Cote d'Ivoire,1954,0.2980
+Ivory Coast,1954,0.2980
 Croatia,1954,3.2001
 Cuba,1954,5.9503
 Cyprus,1954,0.4433
@@ -20161,8 +20161,8 @@ Jordan,1954,0.2528
 Kazakhstan,1954,66.3562
 Kenya,1954,1.7001
 Kiribati,1954,
-Korea (North),1954,4.7852
-Korea (South),1954,5.1589
+North Korea,1954,4.7852
+South Korea,1954,5.1589
 Kuwait,1954,1.4033
 Kyrgyzstan,1954,4.2616
 Laos,1954,0.0349
@@ -20174,7 +20174,7 @@ Libya,1954,0.3004
 Liechtenstein,1954,
 Lithuania,1954,6.7664
 Luxembourg,1954,8.7826
-"Macedonia, FYR",1954,1.6743
+Macedonia,1954,1.6743
 Madagascar,1954,0.2895
 Malawi,1954,0.3325
 Malaysia,1954,6.4324
@@ -20234,7 +20234,7 @@ Somalia,1954,0.0476
 South Africa,1954,73.9102
 Spain,1954,39.7361
 Sri Lanka,1954,1.7844
-Sudan,1954,0.8171
+South Sudan,1954,0.8171
 Suriname,1954,0.3371
 Swaziland,1954,0.0037
 Sweden,1954,34.5039
@@ -20306,7 +20306,7 @@ Congo,1955,0.1263
 "Congo, Dem. Republic",1955,3.3892
 Cook Islands,1955,
 Costa Rica,1955,0.3481
-Cote d'Ivoire,1955,0.2904
+Ivory Coast,1955,0.2904
 Croatia,1955,3.6622
 Cuba,1955,6.7784
 Cyprus,1955,0.4507
@@ -20354,8 +20354,8 @@ Jordan,1955,0.3811
 Kazakhstan,1955,75.2306
 Kenya,1955,1.9859
 Kiribati,1955,
-Korea (North),1955,7.3463
-Korea (South),1955,6.4450
+North Korea,1955,7.3463
+South Korea,1955,6.4450
 Kuwait,1955,1.8467
 Kyrgyzstan,1955,4.8344
 Laos,1955,0.0256
@@ -20367,7 +20367,7 @@ Libya,1955,0.4287
 Liechtenstein,1955,
 Lithuania,1955,7.6755
 Luxembourg,1955,9.8818
-"Macedonia, FYR",1955,1.9172
+Macedonia,1955,1.9172
 Madagascar,1955,0.3004
 Malawi,1955,0.3925
 Malaysia,1955,6.9131
@@ -20427,7 +20427,7 @@ Somalia,1955,0.0660
 South Africa,1955,82.9456
 Spain,1955,40.2893
 Sri Lanka,1955,1.6671
-Sudan,1955,0.9270
+South Sudan,1955,0.9270
 Suriname,1955,0.3114
 Swaziland,1955,0.0037
 Sweden,1955,39.1022
@@ -20499,7 +20499,7 @@ Congo,1956,0.1666
 "Congo, Dem. Republic",1956,3.1767
 Cook Islands,1956,
 Costa Rica,1956,0.4836
-Cote d'Ivoire,1956,0.3380
+Ivory Coast,1956,0.3380
 Croatia,1956,4.1635
 Cuba,1956,5.8441
 Cyprus,1956,0.6742
@@ -20547,8 +20547,8 @@ Jordan,1956,0.4507
 Kazakhstan,1956,82.4803
 Kenya,1956,2.2204
 Kiribati,1956,
-Korea (North),1956,8.9658
-Korea (South),1956,7.5552
+North Korea,1956,8.9658
+South Korea,1956,7.5552
 Kuwait,1956,1.0406
 Kyrgyzstan,1956,5.3009
 Laos,1956,0.0586
@@ -20560,7 +20560,7 @@ Libya,1956,0.3298
 Liechtenstein,1956,
 Lithuania,1956,8.4161
 Luxembourg,1956,10.3691
-"Macedonia, FYR",1956,2.1904
+Macedonia,1956,2.1904
 Madagascar,1956,0.3188
 Malawi,1956,0.4287
 Malaysia,1956,6.9850
@@ -20620,7 +20620,7 @@ Somalia,1956,0.0696
 South Africa,1956,87.2728
 Spain,1956,42.3522
 Sri Lanka,1956,1.4180
-Sudan,1956,0.8977
+South Sudan,1956,0.8977
 Suriname,1956,0.3408
 Swaziland,1956,0.0037
 Sweden,1956,43.3854
@@ -20692,7 +20692,7 @@ Congo,1957,0.1789
 "Congo, Dem. Republic",1957,3.3306
 Cook Islands,1957,
 Costa Rica,1957,0.4617
-Cote d'Ivoire,1957,0.3447
+Ivory Coast,1957,0.3447
 Croatia,1957,4.5506
 Cuba,1957,13.8682
 Cyprus,1957,0.8171
@@ -20740,8 +20740,8 @@ Jordan,1957,0.4946
 Kazakhstan,1957,90.2380
 Kenya,1957,2.2827
 Kiribati,1957,
-Korea (North),1957,11.2924
-Korea (South),1957,8.2147
+North Korea,1957,11.2924
+South Korea,1957,8.2147
 Kuwait,1957,2.1984
 Kyrgyzstan,1957,5.8045
 Laos,1957,0.0586
@@ -20753,7 +20753,7 @@ Libya,1957,0.3114
 Liechtenstein,1957,
 Lithuania,1957,9.2150
 Luxembourg,1957,10.8344
-"Macedonia, FYR",1957,2.3805
+Macedonia,1957,2.3805
 Madagascar,1957,0.3151
 Malawi,1957,0.4430
 Malaysia,1957,2.9788
@@ -20813,7 +20813,7 @@ Somalia,1957,0.0733
 South Africa,1957,89.6654
 Spain,1957,50.2334
 Sri Lanka,1957,2.3156
-Sudan,1957,1.1542
+South Sudan,1957,1.1542
 Suriname,1957,0.3737
 Swaziland,1957,0.0037
 Sweden,1957,38.8531
@@ -20885,7 +20885,7 @@ Congo,1958,0.2052
 "Congo, Dem. Republic",1958,2.9312
 Cook Islands,1958,
 Costa Rica,1958,0.4470
-Cote d'Ivoire,1958,0.4983
+Ivory Coast,1958,0.4983
 Croatia,1958,4.4862
 Cuba,1958,18.0012
 Cyprus,1958,0.7694
@@ -20933,8 +20933,8 @@ Jordan,1958,0.5240
 Kazakhstan,1958,96.2871
 Kenya,1958,2.0885
 Kiribati,1958,
-Korea (North),1958,15.6380
-Korea (South),1958,9.0061
+North Korea,1958,15.6380
+South Korea,1958,9.0061
 Kuwait,1958,3.6896
 Kyrgyzstan,1958,6.2009
 Laos,1958,0.0733
@@ -20946,7 +20946,7 @@ Libya,1958,0.3481
 Liechtenstein,1958,
 Lithuania,1958,9.8434
 Luxembourg,1958,10.0870
-"Macedonia, FYR",1958,2.3461
+Macedonia,1958,2.3461
 Madagascar,1958,0.3737
 Malawi,1958,0.3992
 Malaysia,1958,3.2426
@@ -21006,7 +21006,7 @@ Somalia,1958,0.0843
 South Africa,1958,96.2643
 Spain,1958,55.8943
 Sri Lanka,1958,1.9529
-Sudan,1958,1.2934
+South Sudan,1958,1.2934
 Suriname,1958,0.3188
 Swaziland,1958,0.0037
 Sweden,1958,42.0774
@@ -21078,7 +21078,7 @@ Congo,1959,0.1869
 "Congo, Dem. Republic",1959,2.7004
 Cook Islands,1959,
 Costa Rica,1959,0.3847
-Cote d'Ivoire,1959,0.5459
+Ivory Coast,1959,0.5459
 Croatia,1959,5.1395
 Cuba,1959,15.6673
 Cyprus,1959,0.8317
@@ -21126,8 +21126,8 @@ Jordan,1959,0.6559
 Kazakhstan,1959,101.1857
 Kenya,1959,2.2057
 Kiribati,1959,
-Korea (North),1959,19.8699
-Korea (South),1959,11.2228
+North Korea,1959,19.8699
+South Korea,1959,11.2228
 Kuwait,1959,3.7996
 Kyrgyzstan,1959,6.5276
 Laos,1959,0.0769
@@ -21139,7 +21139,7 @@ Libya,1959,0.4287
 Liechtenstein,1959,
 Lithuania,1959,10.3605
 Luxembourg,1959,10.4204
-"Macedonia, FYR",1959,2.6896
+Macedonia,1959,2.6896
 Madagascar,1959,0.3737
 Malawi,1959,0.4397
 Malaysia,1959,2.6234
@@ -21199,7 +21199,7 @@ Somalia,1959,0.0879
 South Africa,1959,94.4836
 Spain,1959,52.1021
 Sri Lanka,1959,2.0518
-Sudan,1959,1.3667
+South Sudan,1959,1.3667
 Suriname,1959,0.3664
 Swaziland,1959,0.0037
 Sweden,1959,42.3998
@@ -21271,7 +21271,7 @@ Congo,1960,0.2235
 "Congo, Dem. Republic",1960,2.3193
 Cook Islands,1960,
 Costa Rica,1960,0.4910
-Cote d'Ivoire,1960,0.4617
+Ivory Coast,1960,0.4617
 Croatia,1960,5.6105
 Cuba,1960,13.6850
 Cyprus,1960,0.8867
@@ -21319,8 +21319,8 @@ Jordan,1960,0.7438
 Kazakhstan,1960,105.2839
 Kenya,1960,2.4292
 Kiribati,1960,
-Korea (North),1960,23.7977
-Korea (South),1960,12.5382
+North Korea,1960,23.7977
+South Korea,1960,12.5382
 Kuwait,1960,7.7970
 Kyrgyzstan,1960,6.8073
 Laos,1960,0.0806
@@ -21332,7 +21332,7 @@ Libya,1960,0.6925
 Liechtenstein,1960,
 Lithuania,1960,10.8024
 Luxembourg,1960,11.5086
-"Macedonia, FYR",1960,2.9373
+Macedonia,1960,2.9373
 Madagascar,1960,0.3994
 Malawi,1960,0.4199
 Malaysia,1960,3.5651
@@ -21392,7 +21392,7 @@ Somalia,1960,0.0843
 South Africa,1960,97.8581
 Spain,1960,48.8888
 Sri Lanka,1960,2.2570
-Sudan,1960,1.3630
+South Sudan,1960,1.3630
 Suriname,1960,0.4324
 Swaziland,1960,0.0330
 Sweden,1960,49.1819
@@ -21464,7 +21464,7 @@ Congo,1961,0.2675
 "Congo, Dem. Republic",1961,2.3596
 Cook Islands,1961,
 Costa Rica,1961,0.4910
-Cote d'Ivoire,1961,0.5533
+Ivory Coast,1961,0.5533
 Croatia,1961,5.8634
 Cuba,1961,12.1755
 Cyprus,1961,0.8647
@@ -21512,8 +21512,8 @@ Jordan,1961,0.9783
 Kazakhstan,1961,108.5253
 Kenya,1961,2.4036
 Kiribati,1961,0.0073
-Korea (North),1961,26.4358
-Korea (South),1961,14.4508
+North Korea,1961,26.4358
+South Korea,1961,14.4508
 Kuwait,1961,9.9734
 Kyrgyzstan,1961,7.0285
 Laos,1961,0.1136
@@ -21525,7 +21525,7 @@ Libya,1961,1.1981
 Liechtenstein,1961,
 Lithuania,1961,11.1520
 Luxembourg,1961,11.5819
-"Macedonia, FYR",1961,3.0775
+Macedonia,1961,3.0775
 Madagascar,1961,0.3591
 Malawi,1961,0.3562
 Malaysia,1961,3.9974
@@ -21585,7 +21585,7 @@ Somalia,1961,0.0879
 South Africa,1961,102.1303
 Spain,1961,53.6300
 Sri Lanka,1961,2.3340
-Sudan,1961,1.3850
+South Sudan,1961,1.3850
 Suriname,1961,0.4287
 Swaziland,1961,0.0037
 Sweden,1961,48.8155
@@ -21657,7 +21657,7 @@ Congo,1962,0.2382
 "Congo, Dem. Republic",1962,2.1728
 Cook Islands,1962,
 Costa Rica,1962,0.5496
-Cote d'Ivoire,1962,0.5862
+Ivory Coast,1962,0.5862
 Croatia,1962,6.0284
 Cuba,1962,14.1577
 Cyprus,1962,0.9050
@@ -21705,8 +21705,8 @@ Jordan,1962,1.0479
 Kazakhstan,1962,113.8515
 Kenya,1962,2.6198
 Kiribati,1962,0.0110
-Korea (North),1962,30.6970
-Korea (South),1962,17.2648
+North Korea,1962,30.6970
+South Korea,1962,17.2648
 Kuwait,1962,14.2749
 Kyrgyzstan,1962,7.3852
 Laos,1962,0.1319
@@ -21718,7 +21718,7 @@ Libya,1962,1.0442
 Liechtenstein,1962,
 Lithuania,1962,11.7164
 Luxembourg,1962,11.5416
-"Macedonia, FYR",1962,3.1590
+Macedonia,1962,3.1590
 Madagascar,1962,0.3957
 Malawi,1962,0.3435
 Malaysia,1962,4.0707
@@ -21778,7 +21778,7 @@ Somalia,1962,0.1063
 South Africa,1962,105.6771
 Spain,1962,60.0053
 Sri Lanka,1962,2.5611
-Sudan,1962,1.4839
+South Sudan,1962,1.4839
 Suriname,1962,0.4946
 Swaziland,1962,
 Sweden,1962,51.2850
@@ -21850,7 +21850,7 @@ Congo,1963,0.2345
 "Congo, Dem. Republic",1963,2.2900
 Cook Islands,1963,
 Costa Rica,1963,0.6009
-Cote d'Ivoire,1963,0.6229
+Ivory Coast,1963,0.6229
 Croatia,1963,6.7112
 Cuba,1963,13.0292
 Cyprus,1963,0.9856
@@ -21898,8 +21898,8 @@ Jordan,1963,1.2201
 Kazakhstan,1963,122.1043
 Kenya,1963,2.8543
 Kiribati,1963,0.0183
-Korea (North),1963,32.8368
-Korea (South),1963,21.0900
+North Korea,1963,32.8368
+South Korea,1963,21.0900
 Kuwait,1963,17.0120
 Kyrgyzstan,1963,7.9192
 Laos,1963,0.1466
@@ -21911,7 +21911,7 @@ Libya,1963,1.4656
 Liechtenstein,1963,
 Lithuania,1963,12.5637
 Luxembourg,1963,11.4390
-"Macedonia, FYR",1963,3.5146
+Macedonia,1963,3.5146
 Madagascar,1963,0.4617
 Malawi,1963,0.3303
 Malaysia,1963,4.9647
@@ -21971,7 +21971,7 @@ Somalia,1963,0.1026
 South Africa,1963,109.7331
 Spain,1963,58.7742
 Sri Lanka,1963,2.5318
-Sudan,1963,1.6781
+South Sudan,1963,1.6781
 Suriname,1963,0.5313
 Swaziland,1963,
 Sweden,1963,55.3227
@@ -22043,7 +22043,7 @@ Congo,1964,0.2675
 "Congo, Dem. Republic",1964,1.9712
 Cook Islands,1964,
 Costa Rica,1964,0.6742
-Cote d'Ivoire,1964,0.7621
+Ivory Coast,1964,0.7621
 Croatia,1964,7.5847
 Cuba,1964,14.2823
 Cyprus,1964,1.0003
@@ -22091,8 +22091,8 @@ Jordan,1964,1.2421
 Kazakhstan,1964,129.8572
 Kenya,1964,2.8249
 Kiribati,1964,0.0183
-Korea (North),1964,35.6287
-Korea (South),1964,22.2038
+North Korea,1964,35.6287
+South Korea,1964,22.2038
 Kuwait,1964,7.5588
 Kyrgyzstan,1964,8.4222
 Laos,1964,0.1722
@@ -22104,7 +22104,7 @@ Libya,1964,0.6595
 Liechtenstein,1964,
 Lithuania,1964,13.3616
 Luxembourg,1964,12.3000
-"Macedonia, FYR",1964,3.9805
+Macedonia,1964,3.9805
 Madagascar,1964,0.4800
 Malawi,1964,0.3298
 Malaysia,1964,6.4230
@@ -22164,7 +22164,7 @@ Somalia,1964,0.1356
 South Africa,1964,119.5600
 Spain,1964,64.3582
 Sri Lanka,1964,2.2717
-Sudan,1964,1.8576
+South Sudan,1964,1.8576
 Suriname,1964,0.6082
 Swaziland,1964,0.0110
 Sweden,1964,60.3827
@@ -22236,7 +22236,7 @@ Congo,1965,0.2455
 "Congo, Dem. Republic",1965,2.4732
 Cook Islands,1965,
 Costa Rica,1965,0.8464
-Cote d'Ivoire,1965,1.1725
+Ivory Coast,1965,1.1725
 Croatia,1965,7.8017
 Cuba,1965,14.5974
 Cyprus,1965,1.1505
@@ -22284,8 +22284,8 @@ Jordan,1965,1.4216
 Kazakhstan,1965,137.7091
 Kenya,1965,2.4695
 Kiribati,1965,0.0110
-Korea (North),1965,44.2318
-Korea (South),1965,24.9848
+North Korea,1965,44.2318
+South Korea,1965,24.9848
 Kuwait,1965,16.6052
 Kyrgyzstan,1965,8.9419
 Laos,1965,0.1795
@@ -22297,7 +22297,7 @@ Libya,1965,1.0149
 Liechtenstein,1965,
 Lithuania,1965,14.1847
 Luxembourg,1965,12.1938
-"Macedonia, FYR",1965,4.0953
+Macedonia,1965,4.0953
 Madagascar,1965,0.5569
 Malawi,1965,0.3481
 Malaysia,1965,6.4816
@@ -22357,7 +22357,7 @@ Somalia,1965,0.1319
 South Africa,1965,128.1557
 Spain,1965,71.0596
 Sri Lanka,1965,2.6564
-Sudan,1965,2.4256
+South Sudan,1965,2.4256
 Suriname,1965,0.7951
 Swaziland,1965,0.0806
 Sweden,1965,62.5811
@@ -22429,7 +22429,7 @@ Congo,1966,0.3078
 "Congo, Dem. Republic",1966,2.4036
 Cook Islands,1966,
 Costa Rica,1966,0.9929
-Cote d'Ivoire,1966,1.2934
+Ivory Coast,1966,1.2934
 Croatia,1966,7.7475
 Cuba,1966,15.1726
 Cyprus,1966,1.2421
@@ -22477,8 +22477,8 @@ Jordan,1966,1.5828
 Kazakhstan,1966,145.3827
 Kenya,1966,2.6784
 Kiribati,1966,0.0110
-Korea (North),1966,47.6100
-Korea (South),1966,29.9898
+North Korea,1966,47.6100
+South Korea,1966,29.9898
 Kuwait,1966,16.0813
 Kyrgyzstan,1966,9.4507
 Laos,1966,0.2345
@@ -22490,7 +22490,7 @@ Libya,1966,2.6271
 Liechtenstein,1966,
 Lithuania,1966,14.9906
 Luxembourg,1966,11.6149
-"Macedonia, FYR",1966,4.0596
+Macedonia,1966,4.0596
 Madagascar,1966,0.5789
 Malawi,1966,0.4287
 Malaysia,1966,7.6871
@@ -22550,7 +22550,7 @@ Somalia,1966,0.1392
 South Africa,1966,128.2473
 Spain,1966,77.6658
 Sri Lanka,1966,2.6601
-Sudan,1966,2.6454
+South Sudan,1966,2.6454
 Suriname,1966,1.0955
 Swaziland,1966,0.2015
 Sweden,1966,72.5362
@@ -22622,7 +22622,7 @@ Congo,1967,0.3224
 "Congo, Dem. Republic",1967,2.2900
 Cook Islands,1967,
 Costa Rica,1967,0.8757
-Cote d'Ivoire,1967,1.4876
+Ivory Coast,1967,1.4876
 Croatia,1967,7.8291
 Cuba,1967,15.7369
 Cyprus,1967,1.3630
@@ -22670,8 +22670,8 @@ Jordan,1967,1.4143
 Kazakhstan,1967,152.0045
 Kenya,1967,2.7004
 Kiribati,1967,0.0220
-Korea (North),1967,52.4025
-Korea (South),1967,35.1194
+North Korea,1967,52.4025
+South Korea,1967,35.1194
 Kuwait,1967,7.2254
 Kyrgyzstan,1967,9.8845
 Laos,1967,0.3188
@@ -22683,7 +22683,7 @@ Libya,1967,2.4476
 Liechtenstein,1967,
 Lithuania,1967,15.6782
 Luxembourg,1967,11.3511
-"Macedonia, FYR",1967,4.1005
+Macedonia,1967,4.1005
 Madagascar,1967,0.8427
 Malawi,1967,0.3664
 Malaysia,1967,8.4712
@@ -22743,7 +22743,7 @@ Somalia,1967,0.2272
 South Africa,1967,133.7763
 Spain,1967,86.4484
 Sri Lanka,1967,2.9459
-Sudan,1967,3.1840
+South Sudan,1967,3.1840
 Suriname,1967,1.3337
 Swaziland,1967,0.2272
 Sweden,1967,68.9455
@@ -22815,7 +22815,7 @@ Congo,1968,0.4507
 "Congo, Dem. Republic",1968,3.3672
 Cook Islands,1968,
 Costa Rica,1968,1.0369
-Cote d'Ivoire,1968,1.7624
+Ivory Coast,1968,1.7624
 Croatia,1968,8.3961
 Cuba,1968,16.0227
 Cyprus,1968,1.6232
@@ -22863,8 +22863,8 @@ Jordan,1968,1.5059
 Kazakhstan,1968,156.2708
 Kenya,1968,2.8213
 Kiribati,1968,0.0330
-Korea (North),1968,59.2799
-Korea (South),1968,37.2116
+North Korea,1968,59.2799
+South Korea,1968,37.2116
 Kuwait,1968,5.6829
 Kyrgyzstan,1968,10.1630
 Laos,1968,0.1685
@@ -22876,7 +22876,7 @@ Libya,1968,2.9752
 Liechtenstein,1968,
 Lithuania,1968,16.1199
 Luxembourg,1968,12.2634
-"Macedonia, FYR",1968,4.3874
+Macedonia,1968,4.3874
 Madagascar,1968,0.9123
 Malawi,1968,0.3920
 Malaysia,1968,8.5078
@@ -22936,7 +22936,7 @@ Somalia,1968,0.1539
 South Africa,1968,137.9679
 Spain,1968,97.0740
 Sri Lanka,1968,3.2390
-Sudan,1968,3.1034
+South Sudan,1968,3.1034
 Suriname,1968,1.4509
 Swaziland,1968,0.2785
 Sweden,1968,77.6218
@@ -23008,7 +23008,7 @@ Congo,1969,0.5056
 "Congo, Dem. Republic",1969,3.6493
 Cook Islands,1969,0.0110
 Costa Rica,1969,1.1468
-Cote d'Ivoire,1969,2.0848
+Ivory Coast,1969,2.0848
 Croatia,1969,8.7119
 Cuba,1969,17.2464
 Cyprus,1969,1.6708
@@ -23056,8 +23056,8 @@ Jordan,1969,1.7587
 Kazakhstan,1969,162.7630
 Kenya,1969,3.1254
 Kiribati,1969,0.0110
-Korea (North),1969,64.0944
-Korea (South),1969,42.4877
+North Korea,1969,64.0944
+South Korea,1969,42.4877
 Kuwait,1969,8.7203
 Kyrgyzstan,1969,10.5813
 Laos,1969,0.3188
@@ -23069,7 +23069,7 @@ Libya,1969,6.4780
 Liechtenstein,1969,
 Lithuania,1969,16.7837
 Luxembourg,1969,13.1831
-"Macedonia, FYR",1969,4.5497
+Macedonia,1969,4.5497
 Madagascar,1969,0.8500
 Malawi,1969,0.3774
 Malaysia,1969,9.5191
@@ -23129,7 +23129,7 @@ Somalia,1969,0.1612
 South Africa,1969,143.1635
 Spain,1969,96.8065
 Sri Lanka,1969,4.3162
-Sudan,1969,4.1806
+South Sudan,1969,4.1806
 Suriname,1969,1.5206
 Swaziland,1969,0.3041
 Sweden,1969,86.3971
@@ -23201,7 +23201,7 @@ Congo,1970,0.4580
 "Congo, Dem. Republic",1970,2.7114
 Cook Islands,1970,0.0110
 Costa Rica,1970,1.2494
-Cote d'Ivoire,1970,2.4402
+Ivory Coast,1970,2.4402
 Croatia,1970,11.3050
 Cuba,1970,18.6571
 Cyprus,1970,1.7038
@@ -23249,8 +23249,8 @@ Jordan,1970,1.5572
 Kazakhstan,1970,171.1853
 Kenya,1970,3.0814
 Kiribati,1970,0.0220
-Korea (North),1970,73.4925
-Korea (South),1970,53.7362
+North Korea,1970,73.4925
+South Korea,1970,53.7362
 Kuwait,1970,4.1953
 Kyrgyzstan,1970,11.1312
 Laos,1970,0.5716
@@ -23262,7 +23262,7 @@ Libya,1970,2.8946
 Liechtenstein,1970,
 Lithuania,1970,17.6557
 Luxembourg,1970,13.7363
-"Macedonia, FYR",1970,5.9389
+Macedonia,1970,5.9389
 Madagascar,1970,0.9710
 Malawi,1970,0.4543
 Malaysia,1970,14.3812
@@ -23322,7 +23322,7 @@ Somalia,1970,0.2162
 South Africa,1970,149.6414
 Spain,1970,116.8376
 Sri Lanka,1970,3.5944
-Sudan,1970,4.8511
+South Sudan,1970,4.8511
 Suriname,1970,1.6085
 Swaziland,1970,0.3664
 Sweden,1970,92.3035
@@ -23394,7 +23394,7 @@ Congo,1971,0.5700
 "Congo, Dem. Republic",1971,2.8072
 Cook Islands,1971,0.0110
 Costa Rica,1971,1.3763
-Cote d'Ivoire,1971,2.6492
+Ivory Coast,1971,2.6492
 Croatia,1971,10.5363
 Cuba,1971,21.1837
 Cyprus,1971,1.8902
@@ -23442,8 +23442,8 @@ Jordan,1971,1.5588
 Kazakhstan,1971,180.1116
 Kenya,1971,3.6257
 Kiribati,1971,0.0293
-Korea (North),1971,71.6163
-Korea (South),1971,56.3658
+North Korea,1971,71.6163
+South Korea,1971,56.3658
 Kuwait,1971,14.0300
 Kyrgyzstan,1971,11.7119
 Laos,1971,0.4214
@@ -23455,7 +23455,7 @@ Libya,1971,3.7566
 Liechtenstein,1971,
 Lithuania,1971,18.5768
 Luxembourg,1971,16.5819
-"Macedonia, FYR",1971,5.2490
+Macedonia,1971,5.2490
 Madagascar,1971,1.0296
 Malawi,1971,0.5020
 Malaysia,1971,13.3359
@@ -23515,7 +23515,7 @@ Somalia,1971,0.1869
 South Africa,1971,160.0065
 Spain,1971,127.5918
 Sri Lanka,1971,2.9505
-Sudan,1971,3.3053
+South Sudan,1971,3.3053
 Suriname,1971,1.7148
 Swaziland,1971,0.3994
 Sweden,1971,83.9876
@@ -23587,7 +23587,7 @@ Congo,1972,0.6100
 "Congo, Dem. Republic",1972,2.8782
 Cook Islands,1972,0.0110
 Costa Rica,1972,1.5519
-Cote d'Ivoire,1972,2.9504
+Ivory Coast,1972,2.9504
 Croatia,1972,10.5468
 Cuba,1972,20.9628
 Cyprus,1972,2.3788
@@ -23635,8 +23635,8 @@ Jordan,1972,1.8298
 Kazakhstan,1972,189.7047
 Kenya,1972,3.7794
 Kiribati,1972,0.0256
-Korea (North),1972,74.1734
-Korea (South),1972,58.0816
+North Korea,1972,74.1734
+South Korea,1972,58.0816
 Kuwait,1972,15.4500
 Kyrgyzstan,1972,12.3317
 Laos,1972,0.4873
@@ -23648,7 +23648,7 @@ Libya,1972,5.4293
 Liechtenstein,1972,
 Lithuania,1972,19.5603
 Luxembourg,1972,16.2539
-"Macedonia, FYR",1972,5.2208
+Macedonia,1972,5.2208
 Madagascar,1972,1.2861
 Malawi,1972,0.5423
 Malaysia,1972,13.1689
@@ -23708,7 +23708,7 @@ Somalia,1972,0.2345
 South Africa,1972,165.9148
 Spain,1972,134.7036
 Sri Lanka,1972,3.5805
-Sudan,1972,3.4906
+South Sudan,1972,3.4906
 Suriname,1972,1.7441
 Swaziland,1972,0.3811
 Sweden,1972,84.0709
@@ -23780,7 +23780,7 @@ Congo,1973,0.6000
 "Congo, Dem. Republic",1973,2.8875
 Cook Islands,1973,0.0110
 Costa Rica,1973,1.7656
-Cote d'Ivoire,1973,3.0398
+Ivory Coast,1973,3.0398
 Croatia,1973,11.4914
 Cuba,1973,22.4475
 Cyprus,1973,2.4935
@@ -23828,8 +23828,8 @@ Jordan,1973,2.0278
 Kazakhstan,1973,197.5192
 Kenya,1973,3.9357
 Kiribati,1973,0.0366
-Korea (North),1973,75.7546
-Korea (South),1973,72.3044
+North Korea,1973,75.7546
+South Korea,1973,72.3044
 Kuwait,1973,16.2500
 Kyrgyzstan,1973,12.8423
 Laos,1973,0.5166
@@ -23841,7 +23841,7 @@ Libya,1973,5.8203
 Liechtenstein,1973,
 Lithuania,1973,20.3700
 Luxembourg,1973,17.6095
-"Macedonia, FYR",1973,5.6837
+Macedonia,1973,5.6837
 Madagascar,1973,1.0772
 Malawi,1973,0.5752
 Malaysia,1973,13.6575
@@ -23901,7 +23901,7 @@ Somalia,1973,0.2638
 South Africa,1973,181.8585
 Spain,1973,150.4759
 Sri Lanka,1973,3.7388
-Sudan,1973,4.6426
+South Sudan,1973,4.6426
 Suriname,1973,2.1068
 Swaziland,1973,0.3701
 Sweden,1973,85.6295
@@ -23973,7 +23973,7 @@ Congo,1974,0.6000
 "Congo, Dem. Republic",1974,3.0014
 Cook Islands,1974,0.0110
 Costa Rica,1974,1.7266
-Cote d'Ivoire,1974,3.1251
+Ivory Coast,1974,3.1251
 Croatia,1974,12.3503
 Cuba,1974,24.4550
 Cyprus,1974,1.8985
@@ -24021,8 +24021,8 @@ Jordan,1974,2.1268
 Kazakhstan,1974,204.9535
 Kenya,1974,3.9450
 Kiribati,1974,0.0330
-Korea (North),1974,78.9025
-Korea (South),1974,76.0178
+North Korea,1974,78.9025
+South Korea,1974,76.0178
 Kuwait,1974,15.8236
 Kyrgyzstan,1974,13.3302
 Laos,1974,0.2931
@@ -24034,7 +24034,7 @@ Libya,1974,7.0218
 Liechtenstein,1974,
 Lithuania,1974,21.1432
 Luxembourg,1974,16.1732
-"Macedonia, FYR",1974,6.1172
+Macedonia,1974,6.1172
 Madagascar,1974,1.1871
 Malawi,1974,0.5496
 Malaysia,1974,15.9115
@@ -24094,7 +24094,7 @@ Somalia,1974,0.3298
 South Africa,1974,188.9384
 Spain,1974,161.9199
 Sri Lanka,1974,3.1245
-Sudan,1974,4.4202
+South Sudan,1974,4.4202
 Suriname,1974,1.6012
 Swaziland,1974,0.3114
 Sweden,1974,78.1288
@@ -24166,7 +24166,7 @@ Congo,1975,0.6100
 "Congo, Dem. Republic",1975,2.9314
 Cook Islands,1975,0.0147
 Costa Rica,1975,1.9049
-Cote d'Ivoire,1975,3.0400
+Ivory Coast,1975,3.0400
 Croatia,1975,12.7305
 Cuba,1975,25.2169
 Cyprus,1975,1.9641
@@ -24214,8 +24214,8 @@ Jordan,1975,2.4358
 Kazakhstan,1975,215.3443
 Kenya,1975,3.9070
 Kiribati,1975,0.0330
-Korea (North),1975,82.0908
-Korea (South),1975,82.7690
+North Korea,1975,82.0908
+South Korea,1975,82.7690
 Kuwait,1975,15.2429
 Kyrgyzstan,1975,14.0092
 Laos,1975,0.2528
@@ -24227,7 +24227,7 @@ Libya,1975,8.9778
 Liechtenstein,1975,
 Lithuania,1975,22.2198
 Luxembourg,1975,12.9022
-"Macedonia, FYR",1975,6.2964
+Macedonia,1975,6.2964
 Madagascar,1975,1.6928
 Malawi,1975,0.5789
 Malaysia,1975,16.9318
@@ -24287,7 +24287,7 @@ Somalia,1975,0.5020
 South Africa,1975,206.5461
 Spain,1975,167.7869
 Sri Lanka,1975,2.8342
-Sudan,1975,3.3163
+South Sudan,1975,3.3163
 Suriname,1975,2.0189
 Swaziland,1975,0.3371
 Sweden,1975,80.5635
@@ -24359,7 +24359,7 @@ Congo,1976,0.7400
 "Congo, Dem. Republic",1976,3.0161
 Cook Islands,1976,0.0147
 Costa Rica,1976,1.9795
-Cote d'Ivoire,1976,3.4800
+Ivory Coast,1976,3.4800
 Croatia,1976,13.0357
 Cuba,1976,26.3758
 Cyprus,1976,2.4493
@@ -24407,8 +24407,8 @@ Jordan,1976,2.9075
 Kazakhstan,1976,223.5241
 Kenya,1976,4.4610
 Kiribati,1976,0.0330
-Korea (North),1976,88.0608
-Korea (South),1976,92.3074
+North Korea,1976,88.0608
+South Korea,1976,92.3074
 Kuwait,1976,16.6349
 Kyrgyzstan,1976,14.5341
 Laos,1976,0.2235
@@ -24420,7 +24420,7 @@ Libya,1976,9.9675
 Liechtenstein,1976,
 Lithuania,1976,23.0532
 Luxembourg,1976,13.7802
-"Macedonia, FYR",1976,6.4312
+Macedonia,1976,6.4312
 Madagascar,1976,0.9893
 Malawi,1976,0.5826
 Malaysia,1976,18.5184
@@ -24480,7 +24480,7 @@ Somalia,1976,0.4800
 South Africa,1976,220.3338
 Spain,1976,185.0065
 Sri Lanka,1976,2.9025
-Sudan,1976,3.2560
+South Sudan,1976,3.2560
 Suriname,1976,1.9969
 Swaziland,1976,0.3334
 Sweden,1976,87.2490
@@ -24552,7 +24552,7 @@ Congo,1977,0.6400
 "Congo, Dem. Republic",1977,3.0455
 Cook Islands,1977,0.0293
 Costa Rica,1977,2.4815
-Cote d'Ivoire,1977,3.4100
+Ivory Coast,1977,3.4100
 Croatia,1977,13.6810
 Cuba,1977,28.7827
 Cyprus,1977,2.6449
@@ -24600,8 +24600,8 @@ Jordan,1977,3.0821
 Kazakhstan,1977,231.0503
 Kenya,1977,4.7316
 Kiribati,1977,0.0220
-Korea (North),1977,92.9981
-Korea (South),1977,105.6852
+North Korea,1977,92.9981
+South Korea,1977,105.6852
 Kuwait,1977,18.2749
 Kyrgyzstan,1977,15.0194
 Laos,1977,0.2308
@@ -24613,7 +24613,7 @@ Libya,1977,11.9158
 Liechtenstein,1977,
 Lithuania,1977,23.8236
 Luxembourg,1977,13.0866
-"Macedonia, FYR",1977,6.7490
+Macedonia,1977,6.7490
 Madagascar,1977,0.8464
 Malawi,1977,0.6375
 Malaysia,1977,18.3867
@@ -24673,7 +24673,7 @@ Somalia,1977,0.7988
 South Africa,1977,220.5356
 Spain,1977,179.1088
 Sri Lanka,1977,3.0759
-Sudan,1977,3.4633
+South Sudan,1977,3.4633
 Suriname,1977,1.8980
 Swaziland,1977,0.3408
 Sweden,1977,84.1744
@@ -24745,7 +24745,7 @@ Congo,1978,0.6800
 "Congo, Dem. Republic",1978,3.0945
 Cook Islands,1978,0.0293
 Costa Rica,1978,2.6855
-Cote d'Ivoire,1978,3.9800
+Ivory Coast,1978,3.9800
 Croatia,1978,14.7669
 Cuba,1978,31.0520
 Cyprus,1978,2.7833
@@ -24793,8 +24793,8 @@ Jordan,1978,3.6421
 Kazakhstan,1978,238.9470
 Kenya,1978,4.7106
 Kiribati,1978,0.0220
-Korea (North),1978,98.3281
-Korea (South),1978,114.9405
+North Korea,1978,98.3281
+South Korea,1978,114.9405
 Kuwait,1978,20.3114
 Kyrgyzstan,1978,15.5196
 Laos,1978,0.2308
@@ -24806,7 +24806,7 @@ Libya,1978,13.5138
 Liechtenstein,1978,
 Lithuania,1978,24.6186
 Luxembourg,1978,14.3039
-"Macedonia, FYR",1978,7.2823
+Macedonia,1978,7.2823
 Madagascar,1978,1.0186
 Malawi,1978,0.6668
 Malaysia,1978,20.5355
@@ -24866,7 +24866,7 @@ Somalia,1978,0.5569
 South Africa,1978,198.1002
 Spain,1978,179.2564
 Sri Lanka,1978,3.6258
-Sudan,1978,3.1753
+South Sudan,1978,3.1753
 Suriname,1978,2.3926
 Swaziland,1978,0.4397
 Sweden,1978,78.7225
@@ -24938,7 +24938,7 @@ Congo,1979,0.6500
 "Congo, Dem. Republic",1979,3.4235
 Cook Islands,1979,0.0256
 Costa Rica,1979,2.6938
-Cote d'Ivoire,1979,3.6500
+Ivory Coast,1979,3.6500
 Croatia,1979,15.2844
 Cuba,1979,30.9807
 Cyprus,1979,2.9943
@@ -24986,8 +24986,8 @@ Jordan,1979,3.7714
 Kazakhstan,1979,242.3265
 Kenya,1979,4.5250
 Kiribati,1979,0.0256
-Korea (North),1979,105.6564
-Korea (South),1979,129.4080
+North Korea,1979,105.6564
+South Korea,1979,129.4080
 Kuwait,1979,26.1266
 Kyrgyzstan,1979,15.7221
 Laos,1979,0.2235
@@ -24999,7 +24999,7 @@ Libya,1979,14.4338
 Liechtenstein,1979,
 Lithuania,1979,24.9420
 Luxembourg,1979,13.4076
-"Macedonia, FYR",1979,7.5342
+Macedonia,1979,7.5342
 Madagascar,1979,1.1322
 Malawi,1979,0.6412
 Malaysia,1979,22.8685
@@ -25059,7 +25059,7 @@ Somalia,1979,0.4873
 South Africa,1979,202.1768
 Spain,1979,188.6185
 Sri Lanka,1979,3.9168
-Sudan,1979,3.2316
+South Sudan,1979,3.2316
 Suriname,1979,2.2937
 Swaziland,1979,0.4470
 Sweden,1979,81.2608
@@ -25131,7 +25131,7 @@ Congo,1980,1.5836
 "Congo, Dem. Republic",1980,3.3898
 Cook Islands,1980,0.0293
 Costa Rica,1980,2.4348
-Cote d'Ivoire,1980,4.0385
+Ivory Coast,1980,4.0385
 Croatia,1980,14.8010
 Cuba,1980,31.8906
 Cyprus,1980,3.1856
@@ -25179,8 +25179,8 @@ Jordan,1980,4.7643
 Kazakhstan,1980,251.9712
 Kenya,1980,5.0239
 Kiribati,1980,0.0293
-Korea (North),1980,112.0964
-Korea (South),1980,133.3487
+North Korea,1980,112.0964
+South Korea,1980,133.3487
 Kuwait,1980,29.6534
 Kyrgyzstan,1980,16.3393
 Laos,1980,0.1869
@@ -25192,7 +25192,7 @@ Libya,1980,27.4893
 Liechtenstein,1980,
 Lithuania,1980,25.9224
 Luxembourg,1980,12.6012
-"Macedonia, FYR",1980,7.2738
+Macedonia,1980,7.2738
 Madagascar,1980,1.6122
 Malawi,1980,0.7108
 Malaysia,1980,24.8588
@@ -25252,7 +25252,7 @@ Somalia,1980,0.8134
 South Africa,1980,211.9671
 Spain,1980,200.1562
 Sri Lanka,1980,3.9058
-Sudan,1980,3.7616
+South Sudan,1980,3.7616
 Suriname,1980,2.3743
 Swaziland,1980,0.4653
 Sweden,1980,74.3101
@@ -25324,7 +25324,7 @@ Congo,1981,1.7851
 "Congo, Dem. Republic",1981,3.6355
 Cook Islands,1981,0.0660
 Costa Rica,1981,2.2508
-Cote d'Ivoire,1981,3.5872
+Ivory Coast,1981,3.5872
 Croatia,1981,16.7794
 Cuba,1981,32.0115
 Cyprus,1981,3.0466
@@ -25372,8 +25372,8 @@ Jordan,1981,5.7400
 Kazakhstan,1981,247.1310
 Kenya,1981,4.9385
 Kiribati,1981,0.0293
-Korea (North),1981,115.2964
-Korea (South),1981,139.1223
+North Korea,1981,115.2964
+South Korea,1981,139.1223
 Kuwait,1981,28.9108
 Kyrgyzstan,1981,16.0388
 Laos,1981,0.1502
@@ -25385,7 +25385,7 @@ Libya,1981,23.9663
 Liechtenstein,1981,
 Lithuania,1981,25.4439
 Luxembourg,1981,10.7022
-"Macedonia, FYR",1981,8.2792
+Macedonia,1981,8.2792
 Madagascar,1981,1.0259
 Malawi,1981,0.6082
 Malaysia,1981,26.7606
@@ -25445,7 +25445,7 @@ Somalia,1981,0.2748
 South Africa,1981,223.4641
 Spain,1981,204.5262
 Sri Lanka,1981,4.0788
-Sudan,1981,3.6533
+South Sudan,1981,3.6533
 Suriname,1981,2.0262
 Swaziland,1981,0.4360
 Sweden,1981,67.3242
@@ -25517,7 +25517,7 @@ Congo,1982,2.0766
 "Congo, Dem. Republic",1982,2.9011
 Cook Islands,1982,0.0513
 Costa Rica,1982,1.8925
-Cote d'Ivoire,1982,3.5096
+Ivory Coast,1982,3.5096
 Croatia,1982,17.7142
 Cuba,1982,32.0855
 Cyprus,1982,3.1013
@@ -25565,8 +25565,8 @@ Jordan,1982,6.3857
 Kazakhstan,1982,251.9151
 Kenya,1982,4.7185
 Kiribati,1982,0.0256
-Korea (North),1982,120.5291
-Korea (South),1982,140.0945
+North Korea,1982,120.5291
+South Korea,1982,140.0945
 Kuwait,1982,31.9584
 Kyrgyzstan,1982,16.3317
 Laos,1982,0.1576
@@ -25578,7 +25578,7 @@ Libya,1982,26.9414
 Liechtenstein,1982,
 Lithuania,1982,25.9108
 Luxembourg,1982,10.0422
-"Macedonia, FYR",1982,8.7661
+Macedonia,1982,8.7661
 Madagascar,1982,1.0113
 Malawi,1982,0.5936
 Malaysia,1982,28.1172
@@ -25638,7 +25638,7 @@ Somalia,1982,0.7181
 South Africa,1982,220.0201
 Spain,1982,199.1729
 Sri Lanka,1982,4.5424
-Sudan,1982,3.7716
+South Sudan,1982,3.7716
 Suriname,1982,1.8723
 Swaziland,1982,0.4360
 Sweden,1982,61.6068
@@ -25710,7 +25710,7 @@ Congo,1983,2.2944
 "Congo, Dem. Republic",1983,3.8365
 Cook Islands,1983,0.0513
 Costa Rica,1983,1.9205
-Cote d'Ivoire,1983,4.0588
+Ivory Coast,1983,4.0588
 Croatia,1983,18.9907
 Cuba,1983,34.7985
 Cyprus,1983,3.0890
@@ -25758,8 +25758,8 @@ Jordan,1983,7.1639
 Kazakhstan,1983,256.5714
 Kenya,1983,4.3875
 Kiribati,1983,0.0220
-Korea (North),1983,125.1291
-Korea (South),1983,149.7236
+North Korea,1983,125.1291
+South Korea,1983,149.7236
 Kuwait,1983,34.0647
 Kyrgyzstan,1983,16.5745
 Laos,1983,0.1795
@@ -25771,7 +25771,7 @@ Libya,1983,26.3491
 Liechtenstein,1983,
 Lithuania,1983,26.2950
 Luxembourg,1983,9.4059
-"Macedonia, FYR",1983,9.4331
+Macedonia,1983,9.4331
 Madagascar,1983,0.6485
 Malawi,1983,0.5752
 Malaysia,1983,34.3956
@@ -25831,7 +25831,7 @@ Somalia,1983,0.9343
 South Africa,1983,211.9151
 Spain,1983,203.1879
 Sri Lanka,1983,4.6928
-Sudan,1983,3.8489
+South Sudan,1983,3.8489
 Suriname,1983,1.3740
 Swaziland,1983,0.2711
 Sweden,1983,56.0675
@@ -25903,7 +25903,7 @@ Congo,1984,2.2618
 "Congo, Dem. Republic",1984,3.7375
 Cook Islands,1984,0.0220
 Costa Rica,1984,2.0745
-Cote d'Ivoire,1984,3.6075
+Ivory Coast,1984,3.6075
 Croatia,1984,19.4504
 Cuba,1984,36.2971
 Cyprus,1984,3.1650
@@ -25951,8 +25951,8 @@ Jordan,1984,8.0693
 Kazakhstan,1984,258.9121
 Kenya,1984,5.0389
 Kiribati,1984,0.0220
-Korea (North),1984,128.3691
-Korea (South),1984,161.5713
+North Korea,1984,128.3691
+South Korea,1984,161.5713
 Kuwait,1984,34.8535
 Kyrgyzstan,1984,16.7276
 Laos,1984,0.1832
@@ -25964,7 +25964,7 @@ Libya,1984,26.7355
 Liechtenstein,1984,
 Lithuania,1984,26.5375
 Luxembourg,1984,10.2685
-"Macedonia, FYR",1984,9.6828
+Macedonia,1984,9.6828
 Madagascar,1984,0.8684
 Malawi,1984,0.5569
 Malaysia,1984,36.6183
@@ -26024,7 +26024,7 @@ Somalia,1984,0.7145
 South Africa,1984,224.4180
 Spain,1984,191.3838
 Sri Lanka,1984,4.0692
-Sudan,1984,3.4179
+South Sudan,1984,3.4179
 Suriname,1984,1.5535
 Swaziland,1984,0.3334
 Sweden,1984,55.2108
@@ -26096,7 +26096,7 @@ Congo,1985,2.3758
 "Congo, Dem. Republic",1985,3.4698
 Cook Islands,1985,0.0220
 Costa Rica,1985,2.1882
-Cote d'Ivoire,1985,3.3871
+Ivory Coast,1985,3.3871
 Croatia,1985,20.2902
 Cuba,1985,33.7565
 Cyprus,1985,3.0898
@@ -26144,8 +26144,8 @@ Jordan,1985,8.4776
 Kazakhstan,1985,279.3615
 Kenya,1985,5.0114
 Kiribati,1985,0.0220
-Korea (North),1985,133.4091
-Korea (South),1985,165.8686
+North Korea,1985,133.4091
+South Korea,1985,165.8686
 Kuwait,1985,37.8259
 Kyrgyzstan,1985,18.0207
 Laos,1985,0.2015
@@ -26157,7 +26157,7 @@ Libya,1985,25.9160
 Liechtenstein,1985,
 Lithuania,1985,28.5927
 Luxembourg,1985,10.4766
-"Macedonia, FYR",1985,10.1302
+Macedonia,1985,10.1302
 Madagascar,1985,1.0552
 Malawi,1985,0.5606
 Malaysia,1985,37.5208
@@ -26217,7 +26217,7 @@ Somalia,1985,0.8574
 South Africa,1985,226.4364
 Spain,1985,185.0582
 Sri Lanka,1985,3.7768
-Sudan,1985,4.0753
+South Sudan,1985,4.0753
 Suriname,1985,1.5975
 Swaziland,1985,0.4397
 Sweden,1985,59.4289
@@ -26289,7 +26289,7 @@ Congo,1986,2.3058
 "Congo, Dem. Republic",1986,3.2198
 Cook Islands,1986,0.0220
 Costa Rica,1986,2.3348
-Cote d'Ivoire,1986,3.4647
+Ivory Coast,1986,3.4647
 Croatia,1986,20.9302
 Cuba,1986,34.3951
 Cyprus,1986,3.4587
@@ -26337,8 +26337,8 @@ Jordan,1986,9.1340
 Kazakhstan,1986,280.1246
 Kenya,1986,5.8622
 Kiribati,1986,0.0183
-Korea (North),1986,131.0491
-Korea (South),1986,173.7125
+North Korea,1986,131.0491
+South Korea,1986,173.7125
 Kuwait,1986,41.8992
 Kyrgyzstan,1986,18.0915
 Laos,1986,0.2088
@@ -26350,7 +26350,7 @@ Libya,1986,24.4762
 Liechtenstein,1986,
 Lithuania,1986,28.7035
 Luxembourg,1986,10.2042
-"Macedonia, FYR",1986,10.9492
+Macedonia,1986,10.9492
 Madagascar,1986,1.1395
 Malawi,1986,0.5533
 Malaysia,1986,37.9365
@@ -26410,7 +26410,7 @@ Somalia,1986,0.9233
 South Africa,1986,222.7952
 Spain,1986,189.2976
 Sri Lanka,1986,3.7268
-Sudan,1986,3.9933
+South Sudan,1986,3.9933
 Suriname,1986,1.7587
 Swaziland,1986,0.4580
 Sweden,1986,60.8623
@@ -26482,7 +26482,7 @@ Congo,1987,2.4342
 "Congo, Dem. Republic",1987,3.5655
 Cook Islands,1987,0.0220
 Costa Rica,1987,2.4895
-Cote d'Ivoire,1987,3.3761
+Ivory Coast,1987,3.3761
 Croatia,1987,19.7763
 Cuba,1987,36.3524
 Cyprus,1987,4.0150
@@ -26530,8 +26530,8 @@ Jordan,1987,9.8085
 Kazakhstan,1987,292.0212
 Kenya,1987,6.0795
 Kiribati,1987,0.0220
-Korea (North),1987,126.0437
-Korea (South),1987,181.1274
+North Korea,1987,126.0437
+South Korea,1987,181.1274
 Kuwait,1987,44.9586
 Kyrgyzstan,1987,18.8574
 Laos,1987,0.2088
@@ -26543,7 +26543,7 @@ Libya,1987,25.5071
 Liechtenstein,1987,
 Lithuania,1987,29.9200
 Luxembourg,1987,9.6728
-"Macedonia, FYR",1987,10.3295
+Macedonia,1987,10.3295
 Madagascar,1987,1.2897
 Malawi,1987,0.5459
 Malaysia,1987,36.8048
@@ -26603,7 +26603,7 @@ Somalia,1987,0.9929
 South Africa,1987,238.0662
 Spain,1987,189.5683
 Sri Lanka,1987,4.2568
-Sudan,1987,3.0623
+South Sudan,1987,3.0623
 Suriname,1987,1.7587
 Swaziland,1987,0.4360
 Sweden,1987,59.1312
@@ -26675,7 +26675,7 @@ Congo,1988,2.5667
 "Congo, Dem. Republic",1988,3.7255
 Cook Islands,1988,0.0220
 Costa Rica,1988,2.5885
-Cote d'Ivoire,1988,3.4081
+Ivory Coast,1988,3.4081
 Croatia,1988,20.6493
 Cuba,1988,38.2870
 Cyprus,1988,4.0824
@@ -26723,8 +26723,8 @@ Jordan,1988,9.3223
 Kazakhstan,1988,299.6214
 Kenya,1988,5.9992
 Kiribati,1988,0.0220
-Korea (North),1988,129.2971
-Korea (South),1988,206.3672
+North Korea,1988,129.2971
+South Korea,1988,206.3672
 Kuwait,1988,54.4245
 Kyrgyzstan,1988,19.2770
 Laos,1988,0.2088
@@ -26736,7 +26736,7 @@ Libya,1988,31.1005
 Liechtenstein,1988,
 Lithuania,1988,30.5862
 Luxembourg,1988,10.1521
-"Macedonia, FYR",1988,10.8099
+Macedonia,1988,10.8099
 Madagascar,1988,1.2934
 Malawi,1988,0.5423
 Malaysia,1988,37.5396
@@ -26796,7 +26796,7 @@ Somalia,1988,1.0076
 South Africa,1988,237.6683
 Spain,1988,193.9491
 Sri Lanka,1988,3.9679
-Sudan,1988,4.4496
+South Sudan,1988,4.4496
 Suriname,1988,1.8760
 Swaziland,1988,0.4360
 Sweden,1988,56.7012
@@ -26868,7 +26868,7 @@ Congo,1989,2.8011
 "Congo, Dem. Republic",1989,3.5272
 Cook Islands,1989,0.0220
 Costa Rica,1989,2.9341
-Cote d'Ivoire,1989,3.1792
+Ivory Coast,1989,3.1792
 Croatia,1989,20.7304
 Cuba,1989,39.3045
 Cyprus,1989,4.3303
@@ -26916,8 +26916,8 @@ Jordan,1989,9.4700
 Kazakhstan,1989,293.3001
 Kenya,1989,6.2846
 Kiribati,1989,0.0220
-Korea (North),1989,130.8077
-Korea (South),1989,218.3336
+North Korea,1989,130.8077
+South Korea,1989,218.3336
 Kuwait,1989,63.4174
 Kyrgyzstan,1989,18.8822
 Laos,1989,0.2345
@@ -26929,7 +26929,7 @@ Libya,1989,34.1981
 Liechtenstein,1989,
 Lithuania,1989,29.9583
 Luxembourg,1989,10.9231
-"Macedonia, FYR",1989,10.8672
+Macedonia,1989,10.8672
 Madagascar,1989,0.9270
 Malawi,1989,0.5643
 Malaysia,1989,44.2289
@@ -26989,7 +26989,7 @@ Somalia,1989,0.9563
 South Africa,1989,240.8311
 Spain,1989,212.3311
 Sri Lanka,1989,3.7879
-Sudan,1989,4.0233
+South Sudan,1989,4.0233
 Suriname,1989,1.8540
 Swaziland,1989,0.4360
 Sweden,1989,53.9828
@@ -27061,7 +27061,7 @@ Congo,1990,0.8481
 "Congo, Dem. Republic",1990,3.2208
 Cook Islands,1990,0.0366
 Costa Rica,1990,2.9078
-Cote d'Ivoire,1990,2.9492
+Ivory Coast,1990,2.9492
 Croatia,1990,21.7235
 Cuba,1990,35.5949
 Cyprus,1990,4.4543
@@ -27109,8 +27109,8 @@ Jordan,1990,10.2087
 Kazakhstan,1990,240.7823
 Kenya,1990,6.2711
 Kiribati,1990,0.0220
-Korea (North),1990,124.8029
-Korea (South),1990,248.4545
+North Korea,1990,124.8029
+South Korea,1990,248.4545
 Kuwait,1990,29.5600
 Kyrgyzstan,1990,23.3805
 Laos,1990,0.2162
@@ -27122,7 +27122,7 @@ Libya,1990,36.3107
 Liechtenstein,1990,
 Lithuania,1990,33.1265
 Luxembourg,1990,11.0551
-"Macedonia, FYR",1990,8.9899
+Macedonia,1990,8.9899
 Madagascar,1990,0.9490
 Malawi,1990,0.7438
 Malaysia,1990,55.8583
@@ -27182,7 +27182,7 @@ Somalia,1990,0.7328
 South Africa,1990,247.7112
 Spain,1990,216.7132
 Sri Lanka,1990,3.8679
-Sudan,1990,5.3743
+South Sudan,1990,5.3743
 Suriname,1990,1.7697
 Swaziland,1990,0.4250
 Sweden,1990,53.2948
@@ -27254,7 +27254,7 @@ Congo,1991,3.0837
 "Congo, Dem. Republic",1991,1.7546
 Cook Islands,1991,0.0366
 Costa Rica,1991,3.1081
-Cote d'Ivoire,1991,3.0392
+Ivory Coast,1991,3.0392
 Croatia,1991,15.9443
 Cuba,1991,27.5466
 Cyprus,1991,5.0043
@@ -27302,8 +27302,8 @@ Jordan,1991,10.0078
 Kazakhstan,1991,250.5097
 Kenya,1991,6.0208
 Kiribati,1991,0.0220
-Korea (North),1991,118.7929
-Korea (South),1991,273.1606
+North Korea,1991,118.7929
+South Korea,1991,273.1606
 Kuwait,1991,35.9816
 Kyrgyzstan,1991,20.9960
 Laos,1991,0.2345
@@ -27315,7 +27315,7 @@ Libya,1991,33.5140
 Liechtenstein,1991,
 Lithuania,1991,35.1296
 Luxembourg,1991,11.5744
-"Macedonia, FYR",1991,8.7579
+Macedonia,1991,8.7579
 Madagascar,1991,1.0332
 Malawi,1991,0.7988
 Malaysia,1991,63.6416
@@ -27375,7 +27375,7 @@ Somalia,1991,0.7072
 South Africa,1991,242.3806
 Spain,1991,222.9956
 Sri Lanka,1991,4.0179
-Sudan,1991,4.8143
+South Sudan,1991,4.8143
 Suriname,1991,2.0518
 Swaziland,1991,0.3261
 Sweden,1991,54.2745
@@ -27447,7 +27447,7 @@ Congo,1992,3.0210
 "Congo, Dem. Republic",1992,1.4979
 Cook Islands,1992,0.0366
 Costa Rica,1992,4.2081
-Cote d'Ivoire,1992,3.0228
+Ivory Coast,1992,3.0228
 Croatia,1992,15.0194
 Cuba,1992,22.2266
 Cyprus,1992,5.3143
@@ -27495,8 +27495,8 @@ Jordan,1992,12.3309
 Kazakhstan,1992,256.2889
 Kenya,1992,6.0911
 Kiribati,1992,0.0256
-Korea (North),1992,106.2412
-Korea (South),1992,297.9352
+North Korea,1992,106.2412
+South Korea,1992,297.9352
 Kuwait,1992,23.2938
 Kyrgyzstan,1992,13.8496
 Laos,1992,0.2565
@@ -27508,7 +27508,7 @@ Libya,1992,30.4957
 Liechtenstein,1992,
 Lithuania,1992,19.9675
 Luxembourg,1992,11.2104
-"Macedonia, FYR",1992,8.5965
+Macedonia,1992,8.5965
 Madagascar,1992,1.0039
 Malawi,1992,0.7951
 Malaysia,1992,69.7503
@@ -27568,7 +27568,7 @@ Somalia,1992,0.6815
 South Africa,1992,238.8828
 Spain,1992,234.2765
 Sri Lanka,1992,5.3167
-Sudan,1992,4.5546
+South Sudan,1992,4.5546
 Suriname,1992,2.0665
 Swaziland,1992,0.2638
 Sweden,1992,56.7795
@@ -27640,7 +27640,7 @@ Congo,1993,3.0010
 "Congo, Dem. Republic",1993,1.4433
 Cook Islands,1993,0.0403
 Costa Rica,1993,4.2387
-Cote d'Ivoire,1993,3.2092
+Ivory Coast,1993,3.2092
 Croatia,1993,15.6591
 Cuba,1993,20.1540
 Cyprus,1993,5.4823
@@ -27688,8 +27688,8 @@ Jordan,1993,12.6514
 Kazakhstan,1993,218.7803
 Kenya,1993,5.9872
 Kiribati,1993,0.0293
-Korea (North),1993,98.2612
-Korea (South),1993,326.3378
+North Korea,1993,98.2612
+South Korea,1993,326.3378
 Kuwait,1993,29.4792
 Kyrgyzstan,1993,10.1481
 Laos,1993,0.2565
@@ -27701,7 +27701,7 @@ Libya,1993,31.0298
 Liechtenstein,1993,
 Lithuania,1993,15.8683
 Luxembourg,1993,11.5691
-"Macedonia, FYR",1993,8.8992
+Macedonia,1993,8.8992
 Madagascar,1993,1.0296
 Malawi,1993,0.8904
 Malaysia,1993,72.1221
@@ -27761,7 +27761,7 @@ Somalia,1993,0.6412
 South Africa,1993,246.4840
 Spain,1993,219.5549
 Sri Lanka,1993,5.1471
-Sudan,1993,3.2146
+South Sudan,1993,3.2146
 Suriname,1993,2.0408
 Swaziland,1993,0.1319
 Sweden,1993,56.4772
@@ -27833,7 +27833,7 @@ Congo,1994,2.7864
 "Congo, Dem. Republic",1994,1.2943
 Cook Islands,1994,0.0403
 Costa Rica,1994,4.9190
-Cote d'Ivoire,1994,3.6396
+Ivory Coast,1994,3.6396
 Croatia,1994,15.0123
 Cuba,1994,21.6786
 Cyprus,1994,5.6640
@@ -27881,8 +27881,8 @@ Jordan,1994,13.5332
 Kazakhstan,1994,196.2572
 Kenya,1994,5.9918
 Kiribati,1994,0.0293
-Korea (North),1994,90.3212
-Korea (South),1994,352.5579
+North Korea,1994,90.3212
+South Korea,1994,352.5579
 Kuwait,1994,34.0683
 Kyrgyzstan,1994,6.5679
 Laos,1994,0.2748
@@ -27894,7 +27894,7 @@ Libya,1994,36.2420
 Liechtenstein,1994,
 Lithuania,1994,14.7964
 Luxembourg,1994,10.6754
-"Macedonia, FYR",1994,8.6018
+Macedonia,1994,8.6018
 Madagascar,1994,1.2677
 Malawi,1994,0.9123
 Malaysia,1994,77.9164
@@ -27954,7 +27954,7 @@ Somalia,1994,0.6302
 South Africa,1994,252.0788
 Spain,1994,229.4429
 Sri Lanka,1994,5.8517
-Sudan,1994,4.6706
+South Sudan,1994,4.6706
 Suriname,1994,2.0445
 Swaziland,1994,0.4836
 Sweden,1994,58.4336
@@ -28026,7 +28026,7 @@ Congo,1995,2.9400
 "Congo, Dem. Republic",1995,1.2572
 Cook Islands,1995,0.0403
 Costa Rica,1995,4.8724
-Cote d'Ivoire,1995,3.7583
+Ivory Coast,1995,3.7583
 Croatia,1995,15.6300
 Cuba,1995,23.1728
 Cyprus,1995,5.5593
@@ -28074,8 +28074,8 @@ Jordan,1995,14.0077
 Kazakhstan,1995,173.0826
 Kenya,1995,6.5104
 Kiribati,1995,0.0293
-Korea (North),1995,84.9912
-Korea (South),1995,384.6127
+North Korea,1995,84.9912
+South Korea,1995,384.6127
 Kuwait,1995,34.2410
 Kyrgyzstan,1995,4.6139
 Laos,1995,0.3481
@@ -28087,7 +28087,7 @@ Libya,1995,37.7689
 Liechtenstein,1995,
 Lithuania,1995,13.7524
 Luxembourg,1995,8.5754
-"Macedonia, FYR",1995,8.5801
+Macedonia,1995,8.5801
 Madagascar,1995,1.2604
 Malawi,1995,0.9197
 Malaysia,1995,84.9084
@@ -28147,7 +28147,7 @@ Somalia,1995,0.5899
 South Africa,1995,264.2714
 Spain,1995,241.3485
 Sri Lanka,1995,5.8970
-Sudan,1995,4.5042
+South Sudan,1995,4.5042
 Suriname,1995,2.0628
 Swaziland,1995,0.4543
 Sweden,1995,58.1841
@@ -28219,7 +28219,7 @@ Congo,1996,2.7980
 "Congo, Dem. Republic",1996,1.2709
 Cook Islands,1996,0.0476
 Costa Rica,1996,4.5840
-Cote d'Ivoire,1996,4.3683
+Ivory Coast,1996,4.3683
 Croatia,1996,15.5697
 Cuba,1996,25.1255
 Cyprus,1996,5.8483
@@ -28267,8 +28267,8 @@ Jordan,1996,14.4014
 Kazakhstan,1996,150.0205
 Kenya,1996,7.1350
 Kiribati,1996,0.0330
-Korea (North),1996,75.5912
-Korea (South),1996,410.6178
+North Korea,1996,75.5912
+South Korea,1996,410.6178
 Kuwait,1996,33.3666
 Kyrgyzstan,1996,5.8011
 Laos,1996,0.4763
@@ -28280,7 +28280,7 @@ Libya,1996,39.7221
 Liechtenstein,1996,
 Lithuania,1996,14.2581
 Luxembourg,1996,8.6334
-"Macedonia, FYR",1996,10.1155
+Macedonia,1996,10.1155
 Madagascar,1996,1.3593
 Malawi,1996,0.9123
 Malaysia,1996,97.0419
@@ -28340,7 +28340,7 @@ Somalia,1996,0.5679
 South Africa,1996,274.0647
 Spain,1996,230.4845
 Sri Lanka,1996,8.4417
-Sudan,1996,4.2905
+South Sudan,1996,4.2905
 Suriname,1996,2.0848
 Swaziland,1996,0.3408
 Sweden,1996,63.6201
@@ -28412,7 +28412,7 @@ Congo,1997,3.3399
 "Congo, Dem. Republic",1997,1.2123
 Cook Islands,1997,0.0476
 Costa Rica,1997,4.5590
-Cote d'Ivoire,1997,5.3296
+Ivory Coast,1997,5.3296
 Croatia,1997,17.3226
 Cuba,1997,27.5136
 Cyprus,1997,5.9243
@@ -28460,8 +28460,8 @@ Jordan,1997,14.8595
 Kazakhstan,1997,126.8798
 Kenya,1997,6.7811
 Kiribati,1997,0.0256
-Korea (North),1997,68.1681
-Korea (South),1997,432.1858
+North Korea,1997,68.1681
+South Korea,1997,432.1858
 Kuwait,1997,34.5166
 Kyrgyzstan,1997,5.7261
 Laos,1997,0.6082
@@ -28473,7 +28473,7 @@ Libya,1997,39.1786
 Liechtenstein,1997,
 Lithuania,1997,13.9054
 Luxembourg,1997,8.1408
-"Macedonia, FYR",1997,9.0492
+Macedonia,1997,9.0492
 Madagascar,1997,1.6488
 Malawi,1997,0.9636
 Malaysia,1997,103.5831
@@ -28533,7 +28533,7 @@ Somalia,1997,0.5386
 South Africa,1997,289.0099
 Spain,1997,249.5853
 Sri Lanka,1997,8.4300
-Sudan,1997,5.2092
+South Sudan,1997,5.2092
 Suriname,1997,2.1068
 Swaziland,1997,1.2018
 Sweden,1997,57.3812
@@ -28605,7 +28605,7 @@ Congo,1998,3.2295
 "Congo, Dem. Republic",1998,1.3360
 Cook Islands,1998,0.0476
 Costa Rica,1998,5.0923
-Cote d'Ivoire,1998,5.1524
+Ivory Coast,1998,5.1524
 Croatia,1998,18.7632
 Cuba,1998,27.0678
 Cyprus,1998,6.4109
@@ -28653,8 +28653,8 @@ Jordan,1998,15.0590
 Kazakhstan,1998,130.3658
 Kenya,1998,7.2908
 Kiribati,1998,0.0293
-Korea (North),1998,61.2338
-Korea (South),1998,366.4960
+North Korea,1998,61.2338
+South Korea,1998,366.4960
 Kuwait,1998,40.4405
 Kyrgyzstan,1998,6.0717
 Laos,1998,0.6852
@@ -28666,7 +28666,7 @@ Libya,1998,40.1820
 Liechtenstein,1998,
 Lithuania,1998,14.6820
 Luxembourg,1998,7.4681
-"Macedonia, FYR",1998,9.8908
+Macedonia,1998,9.8908
 Madagascar,1998,1.7367
 Malawi,1998,0.9380
 Malaysia,1998,102.8709
@@ -28726,7 +28726,7 @@ Somalia,1998,0.5130
 South Africa,1998,296.5964
 Spain,1998,258.8503
 Sri Lanka,1998,8.6860
-Sudan,1998,4.7189
+South Sudan,1998,4.7189
 Suriname,1998,2.1068
 Swaziland,1998,1.2128
 Sweden,1998,58.3312
@@ -28798,7 +28798,7 @@ Congo,1999,2.9412
 "Congo, Dem. Republic",1999,1.3306
 Cook Islands,1999,0.0476
 Costa Rica,1999,5.1096
-Cote d'Ivoire,1999,7.0124
+Ivory Coast,1999,7.0124
 Croatia,1999,18.7320
 Cuba,1999,27.9445
 Cyprus,1999,6.6452
@@ -28846,8 +28846,8 @@ Jordan,1999,15.0974
 Kazakhstan,1999,118.3418
 Kenya,1999,7.6181
 Kiribati,1999,0.0293
-Korea (North),1999,66.9532
-Korea (South),1999,401.9855
+North Korea,1999,66.9532
+South Korea,1999,401.9855
 Kuwait,1999,44.3945
 Kyrgyzstan,1999,4.8105
 Laos,1999,0.9233
@@ -28859,7 +28859,7 @@ Libya,1999,38.3573
 Liechtenstein,1999,
 Lithuania,1999,12.2334
 Luxembourg,1999,7.8201
-"Macedonia, FYR",1999,9.1501
+Macedonia,1999,9.1501
 Madagascar,1999,1.9199
 Malawi,1999,0.9416
 Malaysia,1999,111.3543
@@ -28919,7 +28919,7 @@ Somalia,1999,0.4910
 South Africa,1999,278.5529
 Spain,1999,281.6609
 Sri Lanka,1999,9.5873
-Sudan,1999,5.2036
+South Sudan,1999,5.2036
 Suriname,1999,2.1251
 Swaziland,1999,1.2348
 Sweden,1999,57.2568
@@ -28991,7 +28991,7 @@ Congo,2000,2.8634
 "Congo, Dem. Republic",2000,0.9343
 Cook Islands,2000,0.0476
 Costa Rica,2000,5.0240
-Cote d'Ivoire,2000,6.6524
+Ivory Coast,2000,6.6524
 Croatia,2000,18.2016
 Cuba,2000,28.3175
 Cyprus,2000,6.9962
@@ -29039,8 +29039,8 @@ Jordan,2000,15.7454
 Kazakhstan,2000,114.7745
 Kenya,2000,8.3316
 Kiribati,2000,0.0293
-Korea (North),2000,72.2537
-Korea (South),2000,457.2517
+North Korea,2000,72.2537
+South Korea,2000,457.2517
 Kuwait,2000,47.8099
 Kyrgyzstan,2000,4.6992
 Laos,2000,0.9380
@@ -29052,7 +29052,7 @@ Libya,2000,40.1696
 Liechtenstein,2000,
 Lithuania,2000,10.5058
 Luxembourg,2000,8.4337
-"Macedonia, FYR",2000,8.8231
+Macedonia,2000,8.8231
 Madagascar,2000,1.8686
 Malawi,2000,0.8684
 Malaysia,2000,120.7348
@@ -29112,7 +29112,7 @@ Somalia,2000,0.4800
 South Africa,2000,284.8100
 Spain,2000,297.5425
 Sri Lanka,2000,11.0220
-Sudan,2000,5.5533
+South Sudan,2000,5.5533
 Suriname,2000,1.4893
 Swaziland,2000,1.1871
 Sweden,2000,53.2927
@@ -29184,7 +29184,7 @@ Congo,2001,2.9824
 "Congo, Dem. Republic",2001,0.8089
 Cook Islands,2001,0.0330
 Costa Rica,2001,5.5072
-Cote d'Ivoire,2001,6.5824
+Ivory Coast,2001,6.5824
 Croatia,2001,19.3658
 Cuba,2001,27.2836
 Cyprus,2001,6.8715
@@ -29232,8 +29232,8 @@ Jordan,2001,15.8828
 Kazakhstan,2001,112.2754
 Kenya,2001,7.7359
 Kiribati,2001,0.0256
-Korea (North),2001,74.8821
-Korea (South),2001,471.6138
+North Korea,2001,74.8821
+South Korea,2001,471.6138
 Kuwait,2001,51.4986
 Kyrgyzstan,2001,3.9945
 Laos,2001,0.8720
@@ -29245,7 +29245,7 @@ Libya,2001,41.7367
 Liechtenstein,2001,
 Lithuania,2001,11.1338
 Luxembourg,2001,9.0527
-"Macedonia, FYR",2001,8.9951
+Macedonia,2001,8.9951
 Madagascar,2001,1.7367
 Malawi,2001,0.8610
 Malaysia,2001,127.2983
@@ -29305,7 +29305,7 @@ Somalia,2001,0.5020
 South Africa,2001,320.8030
 Spain,2001,299.9086
 Sri Lanka,2001,10.9533
-Sudan,2001,6.1153
+South Sudan,2001,6.1153
 Suriname,2001,1.5230
 Swaziland,2001,1.1395
 Sweden,2001,52.4690
@@ -29377,7 +29377,7 @@ Congo,2002,2.7977
 "Congo, Dem. Republic",2002,0.9019
 Cook Islands,2002,0.0293
 Costa Rica,2002,5.6172
-Cote d'Ivoire,2002,6.7024
+Ivory Coast,2002,6.7024
 Croatia,2002,20.5318
 Cuba,2002,26.0636
 Cyprus,2002,7.0581
@@ -29425,8 +29425,8 @@ Jordan,2002,16.9534
 Kazakhstan,2002,121.8908
 Kenya,2002,7.5591
 Kiribati,2002,0.0403
-Korea (North),2002,71.7227
-Korea (South),2002,463.3932
+North Korea,2002,71.7227
+South Korea,2002,463.3932
 Kuwait,2002,54.2660
 Kyrgyzstan,2002,5.0038
 Laos,2002,1.1468
@@ -29438,7 +29438,7 @@ Libya,2002,43.9169
 Liechtenstein,2002,
 Lithuania,2002,11.2304
 Luxembourg,2002,9.7227
-"Macedonia, FYR",2002,8.4404
+Macedonia,2002,8.4404
 Madagascar,2002,1.2348
 Malawi,2002,0.8464
 Malaysia,2002,136.2954
@@ -29498,7 +29498,7 @@ Somalia,2002,0.5862
 South Africa,2002,331.3948
 Spain,2002,318.2976
 Sri Lanka,2002,11.4756
-Sudan,2002,7.5626
+South Sudan,2002,7.5626
 Suriname,2002,1.1130
 Swaziland,2002,1.1248
 Sweden,2002,54.0454
@@ -29570,7 +29570,7 @@ Congo,2003,2.9383
 "Congo, Dem. Republic",2003,1.1049
 Cook Islands,2003,0.0330
 Costa Rica,2003,5.8843
-Cote d'Ivoire,2003,5.4724
+Ivory Coast,2003,5.4724
 Croatia,2003,22.0010
 Cuba,2003,25.3346
 Cyprus,2003,7.8371
@@ -29618,8 +29618,8 @@ Jordan,2003,16.7414
 Kazakhstan,2003,136.7836
 Kenya,2003,6.6844
 Kiribati,2003,0.0403
-Korea (North),2003,73.2890
-Korea (South),2003,467.8810
+North Korea,2003,73.2890
+South Korea,2003,467.8810
 Kuwait,2003,56.3311
 Kyrgyzstan,2003,5.6374
 Laos,2003,1.0992
@@ -29631,7 +29631,7 @@ Libya,2003,44.6217
 Liechtenstein,2003,
 Lithuania,2003,11.2268
 Luxembourg,2003,10.1954
-"Macedonia, FYR",2003,9.2211
+Macedonia,2003,9.2211
 Madagascar,2003,1.7001
 Malawi,2003,0.9160
 Malaysia,2003,144.6345
@@ -29691,7 +29691,7 @@ Somalia,2003,0.5936
 South Africa,2003,353.0483
 Spain,2003,324.8491
 Sri Lanka,2003,12.5289
-Sudan,2003,7.7756
+South Sudan,2003,7.7756
 Suriname,2003,1.2330
 Swaziland,2003,1.0442
 Sweden,2003,55.2148
@@ -29763,7 +29763,7 @@ Congo,2004,2.8589
 "Congo, Dem. Republic",2004,1.2115
 Cook Islands,2004,0.0550
 Costa Rica,2004,6.0575
-Cote d'Ivoire,2004,5.7424
+Ivory Coast,2004,5.7424
 Croatia,2004,21.4980
 Cuba,2004,25.0839
 Cyprus,2004,7.7527
@@ -29811,8 +29811,8 @@ Jordan,2004,18.7856
 Kazakhstan,2004,151.1341
 Kenya,2004,7.6104
 Kiribati,2004,0.0440
-Korea (North),2004,74.8966
-Korea (South),2004,488.0113
+North Korea,2004,74.8966
+South Korea,2004,488.0113
 Kuwait,2004,59.3370
 Kyrgyzstan,2004,5.6224
 Laos,2004,1.3923
@@ -29824,7 +29824,7 @@ Libya,2004,45.8466
 Liechtenstein,2004,
 Lithuania,2004,11.9337
 Luxembourg,2004,11.6257
-"Macedonia, FYR",2004,8.9237
+Macedonia,2004,8.9237
 Madagascar,2004,1.8064
 Malawi,2004,0.9307
 Malaysia,2004,157.4773
@@ -29884,7 +29884,7 @@ Somalia,2004,0.5936
 South Africa,2004,380.8331
 Spain,2004,341.9205
 Sri Lanka,2004,13.0062
-Sudan,2004,8.5439
+South Sudan,2004,8.5439
 Suriname,2004,1.3930
 Swaziland,2004,1.0296
 Sweden,2004,53.5797
@@ -29956,7 +29956,7 @@ Congo,2005,4.8302
 "Congo, Dem. Republic",2005,1.5401
 Cook Islands,2005,0.0623
 Costa Rica,2005,6.4366
-Cote d'Ivoire,2005,6.1324
+Ivory Coast,2005,6.1324
 Croatia,2005,21.6431
 Cuba,2005,25.9946
 Cyprus,2005,7.9477
@@ -30004,8 +30004,8 @@ Jordan,2005,20.1252
 Kazakhstan,2005,163.5223
 Kenya,2005,8.5389
 Kiribati,2005,0.0623
-Korea (North),2005,78.1696
-Korea (South),2005,483.1177
+North Korea,2005,78.1696
+South Korea,2005,483.1177
 Kuwait,2005,67.5605
 Kyrgyzstan,2005,5.3736
 Laos,2005,1.4033
@@ -30017,7 +30017,7 @@ Libya,2005,49.3780
 Liechtenstein,2005,
 Lithuania,2005,12.6840
 Luxembourg,2005,11.8574
-"Macedonia, FYR",2005,9.3433
+Macedonia,2005,9.3433
 Madagascar,2005,1.7404
 Malawi,2005,0.8757
 Malaysia,2005,167.6640
@@ -30077,7 +30077,7 @@ Somalia,2005,0.5936
 South Africa,2005,378.2757
 Spain,2005,358.7174
 Sri Lanka,2005,14.1375
-Sudan,2005,10.0249
+South Sudan,2005,10.0249
 Suriname,2005,1.6830
 Swaziland,2005,1.0149
 Sweden,2005,50.4384
@@ -30149,7 +30149,7 @@ Congo,2006,4.9555
 "Congo, Dem. Republic",2006,1.6501
 Cook Islands,2006,0.0660
 Costa Rica,2006,6.6662
-Cote d'Ivoire,2006,5.8095
+Ivory Coast,2006,5.8095
 Croatia,2006,21.7617
 Cuba,2006,26.4542
 Cyprus,2006,8.0004
@@ -30197,8 +30197,8 @@ Jordan,2006,20.4786
 Kazakhstan,2006,181.1618
 Kenya,2006,9.5245
 Kiribati,2006,0.0696
-Korea (North),2006,79.6004
-Korea (South),2006,491.4438
+North Korea,2006,79.6004
+South Korea,2006,491.4438
 Kuwait,2006,69.9720
 Kyrgyzstan,2006,5.4076
 Laos,2006,1.5499
@@ -30210,7 +30210,7 @@ Libya,2006,49.7283
 Liechtenstein,2006,
 Lithuania,2006,12.9313
 Luxembourg,2006,11.7407
-"Macedonia, FYR",2006,9.3617
+Macedonia,2006,9.3617
 Madagascar,2006,1.6818
 Malawi,2006,0.9123
 Malaysia,2006,173.6727
@@ -30270,7 +30270,7 @@ Somalia,2006,0.5936
 South Africa,2006,380.2657
 Spain,2006,351.8831
 Sri Lanka,2006,12.5788
-Sudan,2006,12.4089
+South Sudan,2006,12.4089
 Suriname,2006,1.5330
 Swaziland,2006,1.0149
 Sweden,2006,48.0793
@@ -30342,7 +30342,7 @@ Congo,2007,5.1449
 "Congo, Dem. Republic",2007,1.8038
 Cook Islands,2007,0.0660
 Costa Rica,2007,7.8168
-Cote d'Ivoire,2007,5.7845
+Ivory Coast,2007,5.7845
 Croatia,2007,23.0080
 Cuba,2007,27.3718
 Cyprus,2007,8.3543
@@ -30390,8 +30390,8 @@ Jordan,2007,21.4515
 Kazakhstan,2007,190.0296
 Kenya,2007,9.6477
 Kiribati,2007,0.0513
-Korea (North),2007,66.3258
-Korea (South),2007,503.2534
+North Korea,2007,66.3258
+South Korea,2007,503.2534
 Kuwait,2007,69.0232
 Kyrgyzstan,2007,6.5719
 Laos,2007,0.9087
@@ -30403,7 +30403,7 @@ Libya,2007,46.6807
 Liechtenstein,2007,0.0623
 Lithuania,2007,13.0796
 Luxembourg,2007,11.2286
-"Macedonia, FYR",2007,9.8127
+Macedonia,2007,9.8127
 Madagascar,2007,1.8100
 Malawi,2007,0.8830
 Malaysia,2007,190.1330
@@ -30463,7 +30463,7 @@ Somalia,2007,0.6082
 South Africa,2007,398.2440
 Spain,2007,365.0475
 Sri Lanka,2007,13.7764
-Sudan,2007,13.4112
+South Sudan,2007,13.4112
 Suriname,2007,1.4130
 Swaziland,2007,1.0626
 Sweden,2007,46.4393
@@ -30535,7 +30535,7 @@ Congo,2008,5.4149
 "Congo, Dem. Republic",2008,1.9252
 Cook Islands,2008,0.0696
 Costa Rica,2008,7.7279
-Cote d'Ivoire,2008,6.5395
+Ivory Coast,2008,6.5395
 Croatia,2008,21.8564
 Cuba,2008,26.4842
 Cyprus,2008,8.5326
@@ -30583,8 +30583,8 @@ Jordan,2008,20.8301
 Kazakhstan,2008,233.1492
 Kenya,2008,10.2306
 Kiribati,2008,0.0550
-Korea (North),2008,73.5750
-Korea (South),2008,514.4196
+North Korea,2008,73.5750
+South Korea,2008,514.4196
 Kuwait,2008,73.2500
 Kyrgyzstan,2008,7.6182
 Laos,2008,0.9453
@@ -30596,7 +30596,7 @@ Libya,2008,51.9209
 Liechtenstein,2008,0.0623
 Lithuania,2008,12.9949
 Luxembourg,2008,11.1623
-"Macedonia, FYR",2008,9.5880
+Macedonia,2008,9.5880
 Madagascar,2008,1.8870
 Malawi,2008,1.0552
 Malaysia,2008,202.4600
@@ -30656,7 +30656,7 @@ Somalia,2008,0.6009
 South Africa,2008,429.9224
 Spain,2008,330.6627
 Sri Lanka,2008,13.0177
-Sudan,2008,14.4646
+South Sudan,2008,14.4646
 Suriname,2008,1.4530
 Swaziland,2008,1.0955
 Sweden,2008,44.4019
@@ -30728,7 +30728,7 @@ Congo,2009,5.4544
 "Congo, Dem. Republic",2009,1.9708
 Cook Islands,2009,0.0696
 Costa Rica,2009,7.4079
-Cote d'Ivoire,2009,6.0592
+Ivory Coast,2009,6.0592
 Croatia,2009,20.5146
 Cuba,2009,30.3039
 Cyprus,2009,8.2365
@@ -30776,8 +30776,8 @@ Jordan,2009,21.3509
 Kazakhstan,2009,205.5359
 Kenya,2009,12.0861
 Kiribati,2009,0.0403
-Korea (North),2009,73.0777
-Korea (South),2009,526.9075
+North Korea,2009,73.0777
+South Korea,2009,526.9075
 Kuwait,2009,79.7996
 Kyrgyzstan,2009,6.8095
 Laos,2009,1.2568
@@ -30789,7 +30789,7 @@ Libya,2009,54.3820
 Liechtenstein,2009,0.0513
 Lithuania,2009,11.5695
 Luxembourg,2009,10.5683
-"Macedonia, FYR",2009,8.9743
+Macedonia,2009,8.9743
 Madagascar,2009,1.7697
 Malawi,2009,0.9453
 Malaysia,2009,182.7473
@@ -30849,7 +30849,7 @@ Somalia,2009,0.5972
 South Africa,2009,405.2934
 Spain,2009,290.7136
 Sri Lanka,2009,12.5053
-Sudan,2009,14.9614
+South Sudan,2009,14.9614
 Suriname,2009,1.4456
 Swaziland,2009,1.0442
 Sweden,2009,41.5014
@@ -30921,7 +30921,7 @@ Congo,2010,4.9886
 "Congo, Dem. Republic",2010,2.1155
 Cook Islands,2010,0.0696
 Costa Rica,2010,7.2475
-Cote d'Ivoire,2010,7.1077
+Ivory Coast,2010,7.1077
 Croatia,2010,19.4784
 Cuba,2010,33.6028
 Cyprus,2010,7.9232
@@ -30969,8 +30969,8 @@ Jordan,2010,20.8366
 Kazakhstan,2010,224.4206
 Kenya,2010,13.0603
 Kiribati,2010,0.0623
-Korea (North),2010,68.5911
-Korea (South),2010,574.4291
+North Korea,2010,68.5911
+South Korea,2010,574.4291
 Kuwait,2010,78.3496
 Kyrgyzstan,2010,6.4174
 Laos,2010,1.6415
@@ -30982,7 +30982,7 @@ Libya,2010,57.8841
 Liechtenstein,2010,0.0550
 Lithuania,2010,12.6040
 Luxembourg,2010,11.1886
-"Macedonia, FYR",2010,8.7504
+Macedonia,2010,8.7504
 Madagascar,2010,1.9566
 Malawi,2010,1.1432
 Malaysia,2010,201.8671
@@ -31042,7 +31042,7 @@ Somalia,2010,0.6119
 South Africa,2010,412.1554
 Spain,2010,275.0458
 Sri Lanka,2010,13.2647
-Sudan,2010,15.9300
+South Sudan,2010,15.9300
 Suriname,2010,1.7220
 Swaziland,2010,1.0406
 Sweden,2010,46.9340
@@ -31114,7 +31114,7 @@ Congo,2011,4.8620
 "Congo, Dem. Republic",2011,2.5672
 Cook Islands,2011,0.0696
 Costa Rica,2011,7.4562
-Cote d'Ivoire,2011,6.7577
+Ivory Coast,2011,6.7577
 Croatia,2011,19.1811
 Cuba,2011,30.6894
 Cyprus,2011,7.6009
@@ -31162,8 +31162,8 @@ Jordan,2011,21.3333
 Kazakhstan,2011,243.2670
 Kenya,2011,13.5514
 Kiribati,2011,0.0623
-Korea (North),2011,49.2300
-Korea (South),2011,597.6032
+North Korea,2011,49.2300
+South Korea,2011,597.6032
 Kuwait,2011,82.9841
 Kyrgyzstan,2011,7.7193
 Laos,2011,1.6232
@@ -31175,7 +31175,7 @@ Libya,2011,38.4117
 Liechtenstein,2011,0.0476
 Lithuania,2011,11.8446
 Luxembourg,2011,11.1659
-"Macedonia, FYR",2011,9.6473
+Macedonia,2011,9.6473
 Madagascar,2011,2.3376
 Malawi,2011,1.1798
 Malaysia,2011,204.4304
@@ -31235,7 +31235,7 @@ Somalia,2011,0.6046
 South Africa,2011,400.1486
 Spain,2011,275.8506
 Sri Lanka,2011,15.6593
-Sudan,2011,15.5149
+South Sudan,2011,15.5149
 Suriname,2011,1.8266
 Swaziland,2011,1.0479
 Sweden,2011,43.4496
@@ -31307,7 +31307,7 @@ Congo,2012,4.7651
 "Congo, Dem. Republic",2012,2.4752
 Cook Islands,2012,0.0696
 Costa Rica,2012,7.5362
-Cote d'Ivoire,2012,8.8253
+Ivory Coast,2012,8.8253
 Croatia,2012,17.4836
 Cuba,2012,31.4834
 Cyprus,2012,7.0230
@@ -31355,8 +31355,8 @@ Jordan,2012,24.8025
 Kazakhstan,2012,242.2674
 Kenya,2012,12.6620
 Kiribati,2012,0.0623
-Korea (North),2012,50.2390
-Korea (South),2012,598.6207
+North Korea,2012,50.2390
+South Korea,2012,598.6207
 Kuwait,2012,87.6521
 Kyrgyzstan,2012,10.1892
 Laos,2012,1.6928
@@ -31368,7 +31368,7 @@ Libya,2012,52.3932
 Liechtenstein,2012,0.0476
 Lithuania,2012,11.8656
 Luxembourg,2012,10.9062
-"Macedonia, FYR",2012,9.1508
+Macedonia,2012,9.1508
 Madagascar,2012,2.7040
 Malawi,2012,1.0955
 Malaysia,2012,206.1842
@@ -31428,7 +31428,7 @@ Somalia,2012,0.6082
 South Africa,2012,413.4498
 Spain,2012,268.3836
 Sri Lanka,2012,17.0603
-Sudan,2012,13.6500
+South Sudan,2012,13.6500
 Suriname,2012,2.0686
 Swaziland,2012,1.2091
 Sweden,2012,40.4062
@@ -31500,7 +31500,7 @@ Congo,2013,4.0322
 "Congo, Dem. Republic",2013,3.7035
 Cook Islands,2013,0.0696
 Costa Rica,2013,7.8591
-Cote d'Ivoire,2013,9.7868
+Ivory Coast,2013,9.7868
 Croatia,2013,17.0615
 Cuba,2013,30.3028
 Cyprus,2013,6.0450
@@ -31548,8 +31548,8 @@ Jordan,2013,24.5521
 Kazakhstan,2013,256.9225
 Kenya,2013,14.2208
 Kiribati,2013,0.0623
-Korea (North),2013,36.7994
-Korea (South),2013,595.7468
+North Korea,2013,36.7994
+South Korea,2013,595.7468
 Kuwait,2013,85.9779
 Kyrgyzstan,2013,9.7154
 Laos,2013,1.5755
@@ -31561,7 +31561,7 @@ Libya,2013,55.0949
 Liechtenstein,2013,0.0513
 Lithuania,2013,11.2649
 Luxembourg,2013,10.2573
-"Macedonia, FYR",2013,8.2511
+Macedonia,2013,8.2511
 Madagascar,2013,3.1144
 Malawi,2013,1.2201
 Malaysia,2013,222.0292
@@ -31621,7 +31621,7 @@ Somalia,2013,0.6082
 South Africa,2013,429.3839
 Spain,2013,241.9344
 Sri Lanka,2013,14.7000
-Sudan,2013,13.5300
+South Sudan,2013,13.5300
 Suriname,2013,2.0360
 Swaziland,2013,1.0882
 Sweden,2013,38.9351
@@ -31693,7 +31693,7 @@ Congo,2014,4.1291
 "Congo, Dem. Republic",2014,4.8249
 Cook Islands,2014,0.0696
 Costa Rica,2014,7.9175
-Cote d'Ivoire,2014,10.6471
+Ivory Coast,2014,10.6471
 Croatia,2014,16.3088
 Cuba,2014,30.2895
 Cyprus,2014,6.1264
@@ -31741,8 +31741,8 @@ Jordan,2014,26.3524
 Kazakhstan,2014,231.8231
 Kenya,2014,15.1310
 Kiribati,2014,0.0623
-Korea (North),2014,41.3871
-Korea (South),2014,591.2559
+North Korea,2014,41.3871
+South Korea,2014,591.2559
 Kuwait,2014,88.3572
 Kyrgyzstan,2014,9.2210
 Laos,2014,1.9492
@@ -31754,7 +31754,7 @@ Libya,2014,57.0479
 Liechtenstein,2014,0.0440
 Lithuania,2014,10.7607
 Luxembourg,2014,9.7996
-"Macedonia, FYR",2014,7.7708
+Macedonia,2014,7.7708
 Madagascar,2014,3.0704
 Malawi,2014,1.2751
 Malaysia,2014,233.5068
@@ -31814,7 +31814,7 @@ Somalia,2014,0.6082
 South Africa,2014,443.4957
 Spain,2014,239.2594
 Sri Lanka,2014,17.6780
-Sudan,2014,13.3400
+South Sudan,2014,13.3400
 Suriname,2014,2.0560
 Swaziland,2014,1.2018
 Sweden,2014,38.6658

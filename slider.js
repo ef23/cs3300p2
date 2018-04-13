@@ -1,10 +1,4 @@
-// import { d3.scan } from "d3-array";
-// import { axisBottom } from "d3-axis";
-// import { dispatch } from "d3-dispatch";
-// import { drag } from "d3-drag";
-// import { easeQuadOut } from "d3-ease";
-// import { scaleLinear, scaleTime } from "d3-scale";
-// import { d3.event, select } from "d3-selection";
+// Edited version of https://github.com/johnwalley/d3-simple-slider
 
 var UPDATE_DURATION = 200;
 
@@ -157,7 +151,7 @@ function slider() {
     fadeTickText();
 
     function dragstarted() {
-      select(this).classed("active", true);
+      d3.select(this).classed("active", true);
       var pos = identityClamped(d3.event.x);
       var newValue = alignedValue(scale.invert(pos));
 
@@ -176,7 +170,7 @@ function slider() {
     }
 
     function dragended() {
-      select(this).classed("active", false);
+      d3.select(this).classed("active", false);
       var pos = identityClamped(d3.event.x);
       var newValue = alignedValue(scale.invert(pos));
 
