@@ -4,7 +4,7 @@ h1 { font-size: 60px; font-family: 'Open Sans', sans-serif; text-align: center; 
 
 path.country {  stroke: #aaa; }
 
-.page1 { margin:auto; }
+.page1 .page2 { margin:auto; }
 
 .tooltip {
   font-family: "Open Sans", sans-serif;
@@ -22,51 +22,57 @@ path.country {  stroke: #aaa; }
   text-align: center;
 }
 
-button {
-  border: none;
-  border-radius: 15px;
-  background: #E87E04;
-  margin: 0 1%;
-  padding: 0.5% 1%;
-  color: white;
-  font-size: 15px;
-  text-align: center;
-  display: inline-block;
-  transition-duration: 0.4s;
-  vertical-align: middle;
+/* ================================= Buttons ================================= */
+
+#button_container {
+  display: block;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
 }
 
-button:hover {
-  background-color: #bdc3c7; /* Green */
-  color: white;
+button {
+  background: #e87e04;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  display: inline-block;
+  font-size: 15px;
+  margin: 0 5px;
+  outline: none;
+  padding: 10px 15px;
+  text-align: center;
+  transition-duration: 0.5s;
+}
+
+.enabled-button {}
+
+.enabled-button:hover {
+  background-color: #e89932;
+}
+
+.disabled-button {
+  background-color: #e89932;
 }
 
 #dropdown_container {
-  display: inline-block;
-  visibility: hidden;
+  background-color: #e87e04;
   border: none;
-  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
-  overflow: hidden;
-  width: 240px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
   border-radius: 15px;
-  margin: 0 1%;
-  background-color: #E87E04;
-  vertical-align: middle;
+  display: inline-block;
+  margin: 0 5px;
+  padding-left: 5px;
+  visibility: hidden;
+  width: 280px;
 }
 
 #dropdown {
-  color: #fff;
-  background: transparent;
   border: none;
+  background: transparent;
+  color: #fff;
   font-size: 15px;
-  height: 29px;
-  margin: 1% 1%;
-  padding: 0.5% 1%;
-  width: 268px;
-}
-
-#button_container {
-  vertical-align: baseline;
+  margin: 0 5px;
+  padding: 10px 0;
+  outline: none;
+  width: 265px;
 }
