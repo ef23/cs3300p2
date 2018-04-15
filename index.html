@@ -133,6 +133,7 @@ function loadData(error, map, codes, carbon, carbonPerCapita) {
 
 // renders the heatmap + donut graph
 function page1(){
+  generateSlider(1850, 2014, heatmapOnChange)
   initMap();
 }
 
@@ -683,37 +684,57 @@ function updateHeatmapLegend(toggle) {
 // *****************  end heatmap legend ***************** //
 
 // ***************** generate the slider ***************** //
-var yearTicks = []
-
-for (var i = minYear+1; i <= maxYear+1; i+=41){
-  yearTicks.push(new Date(i, 0, 0));
-}
 
 var prevVal = 1969
 
-var yearslider = slider()
-  .min(d3.min(yearTicks))
-  .max(d3.max(yearTicks))
-  .step(1000 * 60 * 60 * 24 * 365)
-  .width(heatmapWidth*.9)
-  .tickFormat(d3.timeFormat('%Y'))
-  .tickValues(yearTicks)
-  .on('onchange', val => {
-    val = val.getFullYear()
-    if (prevVal !== val){
-      var isChange = Math.abs(prevVal - val) > 3
-      updateMap(val, isChange)
-      prevVal = val;
-    }
-  });
- var g = d3.select("div#yearslider").append("svg")
-  .attr("width", heatmapWidth*.925)
-  .attr("height", 100)
-  .append("g")
-  .attr("transform", "translate(20,30)");
+// the onChange func for the heatmap slider
+function heatmapOnChange(val) {
+  val = val.getFullYear()
+  if (prevVal !== val){
+    var isChange = Math.abs(prevVal - val) > 3
+    updateMap(val, isChange)
+    prevVal = val;
+  }
+}
+
+// generates a slider with at most 4 tick marks
+// params: min --> min Year, max --> max Year, onChange --> change function taking in a val param (the year)
+function generateSlider(min, max, onChange) {
+  minYear = min
+  maxYear = max
+
+  var yearTicks = []
+  var inc = (maxYear - minYear)/4
+  for (var i = minYear+1; i <= maxYear+1; i+=inc){
+    yearTicks.push(new Date(i, 0, 0));
+  }
+
+  // generate the slider with the bounds and the change func
+  var yearslider = slider()
+    .min(d3.min(yearTicks))
+    .max(d3.max(yearTicks))
+    .step(1000 * 60 * 60 * 24 * 365)
+    .width(heatmapWidth*.9)
+    .tickFormat(d3.timeFormat('%Y'))
+    .tickValues(yearTicks)
+    .on('onchange', val => {
+      onChange(val)
+    });
+
+  // delete old slider and put in new one
+  d3.select("#yearslider").selectAll("*").remove();
+  var g = d3.select("div#yearslider").append("svg")
+    .attr("id", "yearslidersvg")
+    .attr("width", heatmapWidth*.925)
+    .attr("height", 100)
+    .append("g")
+    .attr("transform", "translate(20,30)")
 
   g.call(yearslider);
+}
 
+
+// TODO what to do with this
 var isPlaying = false;
 var interval;
 var playslider = d3.select("#playslider")
@@ -724,7 +745,7 @@ var playslider = d3.select("#playslider")
   this.innerHTML = isPlaying ? "<i class=\"fa fa-pause\"></i>" : "<i class=\"fa fa-play\"></i>"
   if (isPlaying) {
     interval = setInterval(() => {
-      if (prevVal <=2014) {
+      if (prevVal <=maxYear) {
         updateMap(prevVal, true);
         yearslider.moveHandle(new Date(prevVal+1, 0, 0))
         prevVal++
@@ -733,8 +754,8 @@ var playslider = d3.select("#playslider")
   } else {
     clearInterval(interval);
   }
-
 })
+
 // *****************  end slider ***************** //
 
 // toggle button
@@ -891,7 +912,7 @@ d3.select("#line-graph-button")
 
 // page 2 can recycle svg variable
 function page2() {
-
+  generateSlider(2010, 2014, (val) => console.log(val))
 }
 </script>
 </html>

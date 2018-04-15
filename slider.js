@@ -21,9 +21,7 @@ function slider() {
   var scale = null;
   var identityClamped = null;
 
-  var efsf = 0;
   function slider(context) {
-    efsf = context;
     selection = context.selection ? context.selection() : context;
 
     scale = domain[0] instanceof Date ? d3.scaleTime() : d3.scaleLinear();
