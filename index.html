@@ -1,63 +1,28 @@
 <html>
 <head>
-<title>INFO3300 Project 2</title>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400,700,800|Space+Mono:400,400i,700" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-<script src="https://d3js.org/topojson.v2.min.js"></script>
-<script src="slider.js"></script>
-
-<style>
-  body { background: #ecf0f1 }
-
-  h1 { font-size: 60px; font-family: 'Open Sans', sans-serif; text-align: center; }
-
-  path.country {  stroke: #aaa; }
-
-  .page1 { margin:auto; }
-
-  .tooltip {
-    font-family: "Open Sans", sans-serif;
-    position: absolute;
-    display: none;
-    width: auto;
-    height: auto;
-    background: none repeat scroll 0 0 white;
-    border: 0 none;
-    border-radius: 8px 8px 8px 8px;
-    box-shadow: -3px 3px 15px #888888;
-    color: black;
-    font: 10px;
-    padding: 5px;
-    text-align: center;
-  }
-
-  button {
-    border: none;
-    border-radius: 15px;
-    background: #E87E04;
-    margin: 1% 1%;
-    padding: 0.5% 1%;
-    color: white;
-    font-size: 15px;
-    text-align: center;
-    display: inline-block;
-    /*position: absolute;*/
-    transition-duration: 0.4s;
-  }
-
-  button:hover {
-    background-color: #bdc3c7; /* Green */
-    color: white;
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INFO3300 Project 2</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400,700,800|Space+Mono:400,400i,700">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/styles.css"/>
+  <script src="https://d3js.org/topojson.v2.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <script src="slider.js"></script>
 </head>
 <body>
 
 <h1> global green<span style="color:#E87E04">house</span> gases </h1>
-<button id="toggle">Toggle Per Capita</button>
-<button id="line-graph-button">Line Graph</button>
+<div id="button_container">
+  <button id="toggle">Toggle Per Capita</button>
+  <button id="line-graph-button">Line Graph</button>
+  <div id="dropdown_container">
+    <select id="dropdown">
+      <option value="sales" selected="selected">Automobile Sales</option>
+    </select>
+  </div>
+</div>
 <div class="page1"></div>
 </body>
 <script>
@@ -96,6 +61,8 @@ var countryCodes;
 // data of the countries from the map project
 var countries;
 
+//data on automobile sales per country
+var salesData;
 
 var minYear = 1850;
 var maxYear= 2014;
@@ -108,6 +75,7 @@ d3.queue()
   .defer(d3.json, "data/iso-3166-codes.json")
   .defer(d3.csv, "data/co-emissions.csv", parseEmissions)
   .defer(d3.csv, "data/co-emissions-per-capita.csv", parseEmissions)
+  .defer(d3.csv, "data/sales.csv", parseSales)
   .await(loadData);
 
 // convert all Emissions to be numbers for both emissions datasets
@@ -116,8 +84,13 @@ function parseEmissions(row) {
   return row;
 }
 
+function parseSales(row) {
+  row["Sales"] = Number(row["Sales"]);
+  return row;
+}
+
 // callback func for the data and calls to init the first page
-function loadData(error, map, codes, carbon, carbonPerCapita) {
+function loadData(error, map, codes, carbon, carbonPerCapita, sales) {
   mapData = map;
   countryCodes = codes.map(d => {
     d["country-code"] = Number(d["country-code"])
@@ -125,6 +98,7 @@ function loadData(error, map, codes, carbon, carbonPerCapita) {
   });
   carbonData = carbon;
   carbonPerCapitaData = carbonPerCapita;
+  salesData = sales;
   countries = topojson.feature(mapData, mapData.objects.countries);
   page1();
 }
@@ -892,6 +866,12 @@ var mapView = true;
 function toggleView() {
   mapView = !mapView;
   d3.select("#line-graph-button").text(mapView ? "Line Graph" : "Map View")
+  console.log(mapView);
+  if (!mapView) {
+    d3.select("#dropdown_container").style("visibility", "visible");
+  } else {
+    d3.select("#dropdown_container").style("visibility", "hidden");
+  }
 
   svg.transition().duration(750)
     .style("opacity", 0)
@@ -907,12 +887,45 @@ function toggleView() {
 }
 
 d3.select("#line-graph-button")
-  .style("position", "absolute")
   .on("click", () => toggleView())
 
 // page 2 can recycle svg variable
 function page2() {
   generateSlider(2010, 2014, (val) => console.log(val))
+  console.log(carbonData);
+  console.log(carbonPerCapitaData);
+  console.log(salesData);
+
+  updateSliderRange("sales")
+  yearslider.moveHandle(new Date(2009, 1, 1))
+  lineGraphTitle = svg.append("text")
+    .attr("id", "lineGraphTitle")
+    .attr("x", heatmapWidth/2)
+    .attr("y", 0.075 * heatmapHeight)
+    .style("font-family", "Open Sans, sans-serif")
+    .style("font-size", 30)
+    .style("font-weight", "bold")
+    .style("text-anchor", "middle");
+  updateLineGraphTitle(1969);
 }
+
+var lineGraphTitles = {
+  "sales" : "Automobile Sales"
+};
+
+function updateLineGraphTitle(year) {
+  d3.select("#lineGraphTitle").text(
+    lineGraphTitles[d3.select("#dropdown").node().value] + " in " + year);
+}
+
+var sliderRanges = {
+  "sales" : [2005,2014]
+};
+
+// function updateSliderRange(dataOption) {
+//   yearslider.min(sliderRanges["sales"][0])
+//     .max(sliderRanges["sales"][1]);
+// }
+
 </script>
 </html>

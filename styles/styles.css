@@ -1,0 +1,72 @@
+body { background: #ecf0f1 }
+
+h1 { font-size: 60px; font-family: 'Open Sans', sans-serif; text-align: center; }
+
+path.country {  stroke: #aaa; }
+
+.page1 { margin:auto; }
+
+.tooltip {
+  font-family: "Open Sans", sans-serif;
+  position: absolute;
+  display: none;
+  width: auto;
+  height: auto;
+  background: none repeat scroll 0 0 white;
+  border: 0 none;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: -3px 3px 15px #888888;
+  color: black;
+  font: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+button {
+  border: none;
+  border-radius: 15px;
+  background: #E87E04;
+  margin: 0 1%;
+  padding: 0.5% 1%;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  display: inline-block;
+  transition-duration: 0.4s;
+  vertical-align: middle;
+}
+
+button:hover {
+  background-color: #bdc3c7; /* Green */
+  color: white;
+}
+
+#dropdown_container {
+  display: inline-block;
+  visibility: hidden;
+  border: none;
+  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+  overflow: hidden;
+  width: 240px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  margin: 0 1%;
+  background-color: #E87E04;
+  vertical-align: middle;
+}
+
+#dropdown {
+  color: #fff;
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  height: 29px;
+  margin: 1% 1%;
+  padding: 0.5% 1%;
+  width: 268px;
+}
+
+#button_container {
+  vertical-align: baseline;
+}
