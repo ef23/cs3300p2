@@ -16,7 +16,7 @@
 <div id="button_container">
   <button id="toggle" class="enabled-button">Toggle Per Capita</button>
   <button id="heat-map-button" class="disabled-button" disabled>Heat Map</button>
-  <button id="line-graph-button" class="enabled-button">Line Graph</button>
+  <button id="line-graph-button" class="enabled-button">Scatter Plot</button>
   <div id="dropdown_container">
     <select id="dropdown">
       <option value="sales" selected="selected">Automobile Sales</option>
@@ -734,13 +734,13 @@ function togglePerCapita() {
   if (perCapita) {
     heatmapTitle = "CARBON DIOXIDE EMISSIONS PER CAPITA IN ";
     d3.select("#toggle")
-    .classed("enabled-button", false)
-    .classed("disabled-button", true);
+      .classed("enabled-button", false)
+      .classed("disabled-button", true);
   } else {
     heatmapTitle = "CARBON DIOXIDE EMISSIONS IN ";
     d3.select("#toggle")
-    .classed("enabled-button", true)
-    .classed("disabled-button", false);
+      .classed("enabled-button", true)
+      .classed("disabled-button", false);
   }
   updateMap(prevVal, true)
   updateHeatmapLegend(true)
@@ -925,6 +925,7 @@ function updateLineGraphTitle(data_option, year) {
   d3.select("#lineGraphTitle").text(title);
 }
 
+/* Filters the selected data set and emissions data set by the selected year */
 function filterDataByYear(data_option, year) {
   var data;
   if (data_option === "sales") {
@@ -944,6 +945,11 @@ function filterDataByYear(data_option, year) {
       yearData[data[i]["Country"]] = data[i];
     }
   }
+  for (var i = 0; i < countryCodes.length; i++) {
+    if (yearData[countryCodes[i]["name"]] != undefined) {
+      yearData[countryCodes[i]["name"]]["Code"] = countryCodes[i]["alpha-2"];
+    }
+  }
   var emissionsData = perCapita ? carbonPerCapitaData : carbonData;
   for (var i = 0; i < emissionsData.length; i++) {
     if (emissionsData[i]["Year"] === String(year) &&
@@ -953,13 +959,13 @@ function filterDataByYear(data_option, year) {
     }
   }
   filteredYearData = Object.values(yearData).filter(
-    d => d["Emissions"] != undefined);
+    d => d["Emissions"] != undefined && d["Code"] != undefined);
   return filteredYearData;
 }
 
+/* Displays the line graph */
 function drawLineGraph(data_option, year) {
   data = filterDataByYear(data_option, year);
-
   var xScale = d3.scaleLinear()
     .domain([d3.min(data, (d) => d["Data"]), d3.max(data, (d) => d["Data"])])
     .range([0, heatmapWidth - margin.left - margin.right]);
@@ -967,7 +973,6 @@ function drawLineGraph(data_option, year) {
     .domain([d3.min(data, (d) => d["Emissions"]),
       d3.max(data, (d) => d["Emissions"])])
     .range([heatmapHeight - margin.top - margin.bottom, 0]);
-
   var xAxis = d3.axisBottom(xScale);
   d3.select("#page2_svg").append("g")
     .attr("class", "axis")
@@ -980,12 +985,21 @@ function drawLineGraph(data_option, year) {
     .attr("transform",
       "translate(" + margin.left + "," + margin.top + ")")
     .call(yAxis);
+  d3.select("#page2_svg").select("#page2_plot").selectAll("image")
+    .data(data).enter()
+      .append("image")
+        .attr("x", (d) => xScale(d["Data"]))
+        .attr("y", (d) => yScale(d["Emissions"]))
+        .attr("width", 20)
+        .attr("height", 20)
+        .attr("xlink:href", (d) => "data/flags/" + d["Code"] + ".png")
+        .style("filter", "url(#drop-shadow)");
 }
 
 d3.select("#dropdown")
   .on("change", () => page2());
 
-/* Displays line graph */
+/* Displays page 2 visualization */
 function page2() {
   d3.select(".page2").exit()
     .remove();
@@ -995,6 +1009,7 @@ function page2() {
     .attr("height", heatmapHeight)
     .attr("width", heatmapWidth)
   var page2_plot = page2_svg.append("g")
+    .attr("id", "page2_plot")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   var page2_slider = page2.append("div")
     .attr("id", "yearslider")
