@@ -69,7 +69,7 @@ d3.queue()
   .defer(d3.json, "data/iso-3166-codes.json")
   .defer(d3.csv, "data/co-emissions.csv", parseEmissions)
   .defer(d3.csv, "data/co-emissions-per-capita.csv", parseEmissions)
-  .defer(d3.csv, "data/sales.csv", parseSales)
+  .defer(d3.csv, "data/sales.csv", parseData)
   .await(loadData);
 
 // convert all Emissions to be numbers for both emissions datasets
@@ -78,8 +78,8 @@ function parseEmissions(row) {
   return row;
 }
 
-function parseSales(row) {
-  row["Sales"] = Number(row["Sales"]);
+function parseData(row) {
+  row["Data"] = Number(row["Data"]);
   return row;
 }
 
@@ -916,23 +916,74 @@ var sliderBounds = {
   "dummy" : [0, 2018]
 };
 
-var lineGraphData = {
-  sales : salesData
-}
+var margin = {top: 100, left: 100, bottom: 80, right: 40};
 
 /* Sets the title of the line graph according to the selected data set and
  * year */
-function updateLineGraphTitle(year) {
-  var data_option = d3.select("#dropdown").node().value;
+function updateLineGraphTitle(data_option, year) {
   var title = lineGraphTitles[data_option] + " in " + year;
   d3.select("#lineGraphTitle").text(title);
 }
 
-function drawLineGraph(year) {
-  var data_option = d3.select("#dropdown").node().value;
-  var data = lineGraphData[data_option];
-
+function filterDataByYear(data_option, year) {
+  var data;
+  if (data_option === "sales") {
+    data = salesData;
+  } else {
+    // other data sets
+  }
+  var yearData = {};
+  var countries = [];
+  for (var i = 0; i < data.length; i++) {
+    if (data[i]["Year"] === String(year)) {
+      if (!countries.includes(data[i]["Country"])) {
+        countries.push(data[i]["Country"]);
+      } else {
+        break;
+      }
+      yearData[data[i]["Country"]] = data[i];
+    }
+  }
+  var emissionsData = perCapita ? carbonPerCapitaData : carbonData;
+  for (var i = 0; i < emissionsData.length; i++) {
+    if (emissionsData[i]["Year"] === String(year) &&
+      countries.includes(emissionsData[i]["Country"])) {
+      yearData[emissionsData[i]["Country"]]["Emissions"] =
+        emissionsData[i]["Emissions"];
+    }
+  }
+  filteredYearData = Object.values(yearData).filter(
+    d => d["Emissions"] != undefined);
+  return filteredYearData;
 }
+
+function drawLineGraph(data_option, year) {
+  data = filterDataByYear(data_option, year);
+
+  var xScale = d3.scaleLinear()
+    .domain([d3.min(data, (d) => d["Data"]), d3.max(data, (d) => d["Data"])])
+    .range([0, heatmapWidth - margin.left - margin.right]);
+  var yScale = d3.scaleLinear()
+    .domain([d3.min(data, (d) => d["Emissions"]),
+      d3.max(data, (d) => d["Emissions"])])
+    .range([heatmapHeight - margin.top - margin.bottom, 0]);
+
+  var xAxis = d3.axisBottom(xScale);
+  d3.select("#page2_svg").append("g")
+    .attr("class", "axis")
+    .attr("transform",
+      "translate(" + margin.left + "," + (heatmapHeight - margin.bottom) + ")")
+    .call(xAxis);
+  var yAxis = d3.axisLeft(yScale);
+  d3.select("#page2_svg").append("g")
+    .attr("class", "axis")
+    .attr("transform",
+      "translate(" + margin.left + "," + margin.top + ")")
+    .call(yAxis);
+}
+
+d3.select("#dropdown")
+  .on("change", () => page2());
 
 /* Displays line graph */
 function page2() {
@@ -940,8 +991,11 @@ function page2() {
     .remove();
   var page2 = d3.select(".page2");
   var page2_svg = page2.append("svg")
+    .attr("id", "page2_svg")
     .attr("height", heatmapHeight)
     .attr("width", heatmapWidth)
+  var page2_plot = page2_svg.append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   var page2_slider = page2.append("div")
     .attr("id", "yearslider")
     .style("display", "inline");
@@ -954,10 +1008,17 @@ function page2() {
     .style("font-weight", "bold")
     .style("text-anchor", "middle");
   var data_option = d3.select("#dropdown").node().value;
-  updateLineGraphTitle(sliderBounds[data_option][0])
-  drawLineGraph(sliderBounds[data_option][0]);
+  updateLineGraphTitle(data_option, sliderBounds[data_option][0])
+  drawLineGraph(data_option, sliderBounds[data_option][0]);
   generateSlider(".page2", sliderBounds[data_option][0],
-    sliderBounds[data_option][1], (val) => console.log(val));
+    sliderBounds[data_option][1], function (val) {
+      page2.selectAll(".axis")
+        .remove();
+      var year = val.getFullYear();
+      var data_option = d3.select("#dropdown").node().value;
+      updateLineGraphTitle(data_option, year);
+      drawLineGraph(data_option, year);
+    });
 }
 </script>
 </html>
