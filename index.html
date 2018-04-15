@@ -411,8 +411,8 @@ function initMap() {
     .style("font-weight", "bold")
     .style("text-anchor", "middle")
 
-  setDomain(1969);
-  setLeader(1969);
+  setDomain(1850);
+  setLeader(1850);
 
   projection.fitExtent([[0,.12*heatmapHeight], [svg.attr("width"), svg.attr("height")]], countries);
 
@@ -485,7 +485,7 @@ function initMap() {
   initDonut();
   initHeatmapLegend();
 
-  title.html(heatmapTitle + "<tspan style=\"stroke:#aaa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;fill:" + yearTitleScale(leader.Emissions) + "\">1969</tspan>")
+  title.html(heatmapTitle + "<tspan style=\"stroke:#aaa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;fill:" + yearTitleScale(leader.Emissions) + "\">1850</tspan>")
 }
 
 // updates the map with the given year
@@ -659,7 +659,8 @@ function updateHeatmapLegend(toggle) {
 
 // ***************** generate the slider ***************** //
 
-var prevVal = 1969
+var prevVal = 1850
+var yearslider;
 
 // the onChange func for the heatmap slider
 function heatmapOnChange(val) {
@@ -684,9 +685,10 @@ function generateSlider(min, max, onChange) {
   }
 
   // generate the slider with the bounds and the change func
-  var yearslider = slider()
+  yearslider = slider()
     .min(d3.min(yearTicks))
     .max(d3.max(yearTicks))
+    .default(d3.min(yearTicks))
     .step(1000 * 60 * 60 * 24 * 365)
     .width(heatmapWidth*.9)
     .tickFormat(d3.timeFormat('%Y'))
