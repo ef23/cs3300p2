@@ -12,57 +12,51 @@
   <script src="slider.js"></script>
 </head>
 <body>
-
-<h1> global green<span style="color:#E87E04">house</span> gases </h1>
+<h1>global green<span style="color:#E87E04">house</span> gases</h1>
 <div id="button_container">
-  <button id="toggle">Toggle Per Capita</button>
-  <button id="line-graph-button">Line Graph</button>
+  <button id="toggle" class="enabled-button">Toggle Per Capita</button>
+  <button id="heat-map-button" class="disabled-button" disabled>Heat Map</button>
+  <button id="line-graph-button" class="enabled-button">Line Graph</button>
   <div id="dropdown_container">
     <select id="dropdown">
       <option value="sales" selected="selected">Automobile Sales</option>
+      <option value="dummy">Dummy</option>
     </select>
   </div>
 </div>
 <div class="page1"></div>
+<div class="page2"></div>
 </body>
 <script>
 
-var windowHeight = window.screen.availHeight
-var windowWidth = window.screen.availWidth
+/* ============================ Global Variables ============================ */
 
-var heatmapWidth = .725 * windowWidth
-var heatmapHeight = .65 * windowHeight
+var windowHeight = window.screen.availHeight;
+var windowWidth = window.screen.availWidth;
 
-var donutWidth = .225 * windowWidth
-var donutHeight = .65 * windowHeight
+var heatmapWidth = .725 * windowWidth;
+var heatmapHeight = .65 * windowHeight;
 
-// the two svgs and the timeline slider
+var donutWidth = .225 * windowWidth;
+var donutHeight = .65 * windowHeight;
+
+var mapData; // the map projection stuff
+var carbonData; // raw data for carbon emissions by year
+var carbonPerCapitaData; // raw data for carbon emissions per capita
+var countryCodes; // raw data for the iso-3166-codes json
+var countries; // data of the countries from the map project
+var salesData; //data on automobile sales per country
+
+/* ================================= Page 1 ================================= */
+
 var svg = d3.select(".page1").append("svg").attr("height", heatmapHeight).attr("width", heatmapWidth).attr("class", "heatmap");
 var donut = d3.select(".page1").append("svg").attr("height", donutHeight).attr("width", donutWidth).attr("class", "donut");
-d3.select(".page1").append("div").attr("id", "playslider").style("top", "-50px").style("position", "relative").style("display", "inline")
-d3.select(".page1").append("div").attr("id", "yearslider").style("display", "inline")
+d3.select(".page1").append("div").attr("id", "playslider").style("top", "-50px").style("position", "relative").style("display", "inline");
+d3.select(".page1").append("div").attr("id", "yearslider").style("display", "inline");
 var hmapKey;
 
 var projection = d3.geoEquirectangular().scale(75);
 var pathGenerator = d3.geoPath().projection(projection);
-
-// the map projection stuff
-var mapData;
-
-// raw data for carbon emissions by year
-var carbonData;
-
-// raw data for carbon emissions per capita
-var carbonPerCapitaData;
-
-// raw data for the iso-3166-codes json
-var countryCodes;
-
-// data of the countries from the map project
-var countries;
-
-//data on automobile sales per country
-var salesData;
 
 var minYear = 1850;
 var maxYear= 2014;
@@ -107,7 +101,7 @@ function loadData(error, map, codes, carbon, carbonPerCapita, sales) {
 
 // renders the heatmap + donut graph
 function page1(){
-  generateSlider(1850, 2014, heatmapOnChange)
+  generateSlider(".page1", 1850, 2014, heatmapOnChange)
   initMap();
 }
 
@@ -674,7 +668,7 @@ function heatmapOnChange(val) {
 
 // generates a slider with at most 4 tick marks
 // params: min --> min Year, max --> max Year, onChange --> change function taking in a val param (the year)
-function generateSlider(min, max, onChange) {
+function generateSlider(page, min, max, onChange) {
   minYear = min
   maxYear = max
 
@@ -698,8 +692,8 @@ function generateSlider(min, max, onChange) {
     });
 
   // delete old slider and put in new one
-  d3.select("#yearslider").selectAll("*").remove();
-  var g = d3.select("div#yearslider").append("svg")
+  d3.select(page + " #yearslider").selectAll("*").remove();
+  var g = d3.select(page + " #yearslider").append("svg")
     .attr("id", "yearslidersvg")
     .attr("width", heatmapWidth*.925)
     .attr("height", 100)
@@ -737,7 +731,17 @@ var playslider = d3.select("#playslider")
 // toggle button
 function togglePerCapita() {
   perCapita = !perCapita;
-  heatmapTitle = perCapita ? "CARBON DIOXIDE EMISSIONS PER CAPITA IN " : "CARBON DIOXIDE EMISSIONS IN ";
+  if (perCapita) {
+    heatmapTitle = "CARBON DIOXIDE EMISSIONS PER CAPITA IN ";
+    d3.select("#toggle")
+    .classed("enabled-button", false)
+    .classed("disabled-button", true);
+  } else {
+    heatmapTitle = "CARBON DIOXIDE EMISSIONS IN ";
+    d3.select("#toggle")
+    .classed("enabled-button", true)
+    .classed("disabled-button", false);
+  }
   updateMap(prevVal, true)
   updateHeatmapLegend(true)
 }
@@ -861,73 +865,99 @@ function drawDonut() {
     .transition().attrTween("d", arcTween)
 }
 // ***************** end donut graph ***************** //
-/** ==================================================================== PAGE 2 ==================================================================== */
 
-var mapView = true;
-// toggle button
-function toggleView() {
-  mapView = !mapView;
-  d3.select("#line-graph-button").text(mapView ? "Line Graph" : "Map View")
-  console.log(mapView);
-  if (!mapView) {
-    d3.select("#dropdown_container").style("visibility", "visible");
-  } else {
-    d3.select("#dropdown_container").style("visibility", "hidden");
-  }
+/* ================================= Page 2 ================================= */
 
-  svg.transition().duration(750)
-    .style("opacity", 0)
-    .on("end", function() {
-      svg.selectAll("*").remove()
-      if (mapView) {
-        page1();
-      } else {
-        page2();
-      }
-      svg.transition().duration(750).style("opacity", 1)
-    });
+/* Displays heat map, disables heat map button, and re-enables line graph
+ * button */
+function viewHeatMap() {
+  d3.select("#heat-map-button")
+    .classed("enabled-button", false)
+    .classed("disabled-button", true)
+    .attr("disabled", "true");
+  d3.select("#line-graph-button")
+    .classed("enabled-button", true)
+    .classed("disabled-button", false)
+    .attr("disabled", null);;
+  d3.select(".page1").style("display", "block");
+  d3.select(".page2").style("display", "none");
+  d3.select("#dropdown_container").style("visibility", "hidden");
 }
 
+/* Displays line graph, disables line graph button, and re-enables heat map
+ * button*/
+function viewLineGraph() {
+  d3.select("#heat-map-button")
+    .classed("enabled-button", true)
+    .classed("disabled-button", false)
+    .attr("disabled", null);
+  d3.select("#line-graph-button")
+    .classed("enabled-button", false)
+    .classed("disabled-button", true)
+    .attr("disabled", "true");
+  d3.select(".page1").style("display", "none");
+  d3.select(".page2").style("display", "block");
+  d3.select("#dropdown_container").style("visibility", "visible");
+  page2();
+}
+
+d3.select("#heat-map-button")
+  .on("click", () => viewHeatMap());
 d3.select("#line-graph-button")
-  .on("click", () => toggleView())
+  .on("click", () => viewLineGraph());
 
-// page 2 can recycle svg variable
+var lineGraphTitles = {
+  "sales" : "Automobile Sales",
+  "dummy" : "Dummy"
+};
+
+var sliderBounds = {
+  "sales" : [2005, 2014],
+  "dummy" : [0, 2018]
+};
+
+var lineGraphData = {
+  sales : salesData
+}
+
+/* Sets the title of the line graph according to the selected data set and
+ * year */
+function updateLineGraphTitle(year) {
+  var data_option = d3.select("#dropdown").node().value;
+  var title = lineGraphTitles[data_option] + " in " + year;
+  d3.select("#lineGraphTitle").text(title);
+}
+
+function drawLineGraph(year) {
+  var data_option = d3.select("#dropdown").node().value;
+  var data = lineGraphData[data_option];
+
+}
+
+/* Displays line graph */
 function page2() {
-  generateSlider(2010, 2014, (val) => console.log(val))
-  console.log(carbonData);
-  console.log(carbonPerCapitaData);
-  console.log(salesData);
-
-  updateSliderRange("sales")
-  yearslider.moveHandle(new Date(2009, 1, 1))
-  lineGraphTitle = svg.append("text")
+  d3.select(".page2").exit()
+    .remove();
+  var page2 = d3.select(".page2");
+  var page2_svg = page2.append("svg")
+    .attr("height", heatmapHeight)
+    .attr("width", heatmapWidth)
+  var page2_slider = page2.append("div")
+    .attr("id", "yearslider")
+    .style("display", "inline");
+  lineGraphTitle = page2_svg.append("text")
     .attr("id", "lineGraphTitle")
-    .attr("x", heatmapWidth/2)
+    .attr("x", heatmapWidth / 2)
     .attr("y", 0.075 * heatmapHeight)
     .style("font-family", "Open Sans, sans-serif")
     .style("font-size", 30)
     .style("font-weight", "bold")
     .style("text-anchor", "middle");
-  updateLineGraphTitle(1969);
+  var data_option = d3.select("#dropdown").node().value;
+  updateLineGraphTitle(sliderBounds[data_option][0])
+  drawLineGraph(sliderBounds[data_option][0]);
+  generateSlider(".page2", sliderBounds[data_option][0],
+    sliderBounds[data_option][1], (val) => console.log(val));
 }
-
-var lineGraphTitles = {
-  "sales" : "Automobile Sales"
-};
-
-function updateLineGraphTitle(year) {
-  d3.select("#lineGraphTitle").text(
-    lineGraphTitles[d3.select("#dropdown").node().value] + " in " + year);
-}
-
-var sliderRanges = {
-  "sales" : [2005,2014]
-};
-
-// function updateSliderRange(dataOption) {
-//   yearslider.min(sliderRanges["sales"][0])
-//     .max(sliderRanges["sales"][1]);
-// }
-
 </script>
 </html>
