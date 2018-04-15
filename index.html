@@ -37,27 +37,64 @@
     border: none;
     border-radius: 15px;
     background: #E87E04;
-    margin: 1% 1%;
+    margin: 0 1%;
     padding: 0.5% 1%;
     color: white;
     font-size: 15px;
     text-align: center;
     display: inline-block;
-    /*position: absolute;*/
     transition-duration: 0.4s;
+    vertical-align: middle;
   }
 
   button:hover {
     background-color: #bdc3c7; /* Green */
     color: white;
   }
+
+  #dropdown_container {
+    display: inline-block;
+    visibility: hidden;
+    border: none;
+    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+    overflow: hidden;
+    width: 240px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin: 0 1%;
+    background-color: #E87E04;
+    vertical-align: middle;
+  }
+
+  #dropdown {
+    color: #fff;
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    height: 29px;
+    margin: 1% 1%;
+    padding: 0.5% 1%;
+    width: 268px;
+  }
+
+  #button_container {
+    vertical-align: baseline;
+  }
 </style>
 </head>
 <body>
 
 <h1> global green<span style="color:#E87E04">house</span> gases </h1>
-<button id="toggle">Toggle Per Capita</button>
-<button id="line-graph-button">Line Graph</button>
+<div id="button_container">
+  <button id="toggle">Toggle Per Capita</button>
+  <button id="line-graph-button">Line Graph</button>
+  <div id="dropdown_container">
+    <select id="dropdown">
+      <option value="sales" selected="selected">Automobile Sales</option>
+    </select>
+  </div>
+</div>
 <div class="page1"></div>
 </body>
 <script>
@@ -96,6 +133,8 @@ var countryCodes;
 // data of the countries from the map project
 var countries;
 
+//data on automobile sales per country
+var salesData;
 
 var minYear = 1850;
 var maxYear= 2014;
@@ -108,6 +147,7 @@ d3.queue()
   .defer(d3.json, "data/iso-3166-codes.json")
   .defer(d3.csv, "data/co-emissions.csv", parseEmissions)
   .defer(d3.csv, "data/co-emissions-per-capita.csv", parseEmissions)
+  .defer(d3.csv, "data/sales.csv", parseSales)
   .await(loadData);
 
 // convert all Emissions to be numbers for both emissions datasets
@@ -116,8 +156,13 @@ function parseEmissions(row) {
   return row;
 }
 
+function parseSales(row) {
+  row["Sales"] = Number(row["Sales"]);
+  return row;
+}
+
 // callback func for the data and calls to init the first page
-function loadData(error, map, codes, carbon, carbonPerCapita) {
+function loadData(error, map, codes, carbon, carbonPerCapita, sales) {
   mapData = map;
   countryCodes = codes.map(d => {
     d["country-code"] = Number(d["country-code"])
@@ -125,6 +170,7 @@ function loadData(error, map, codes, carbon, carbonPerCapita) {
   });
   carbonData = carbon;
   carbonPerCapitaData = carbonPerCapita;
+  salesData = sales;
   countries = topojson.feature(mapData, mapData.objects.countries);
   page1();
 }
@@ -705,6 +751,9 @@ var yearslider = slider()
       updateMap(val, isChange)
       prevVal = val;
     }
+    if (!mapView) {
+      updateLineGraphTitle(val);
+    }
   });
  var g = d3.select("div#yearslider").append("svg")
   .attr("width", heatmapWidth*.925)
@@ -871,6 +920,12 @@ var mapView = true;
 function toggleView() {
   mapView = !mapView;
   d3.select("#line-graph-button").text(mapView ? "Line Graph" : "Map View")
+  console.log(mapView);
+  if (!mapView) {
+    d3.select("#dropdown_container").style("visibility", "visible");
+  } else {
+    d3.select("#dropdown_container").style("visibility", "hidden");
+  }
 
   svg.transition().duration(750)
     .style("opacity", 0)
@@ -886,12 +941,44 @@ function toggleView() {
 }
 
 d3.select("#line-graph-button")
-  .style("position", "absolute")
   .on("click", () => toggleView())
 
 // page 2 can recycle svg variable
 function page2() {
+  console.log(carbonData);
+  console.log(carbonPerCapitaData);
+  console.log(salesData);
 
+  updateSliderRange("sales")
+  yearslider.moveHandle(new Date(2009, 1, 1))
+  lineGraphTitle = svg.append("text")
+    .attr("id", "lineGraphTitle")
+    .attr("x", heatmapWidth/2)
+    .attr("y", 0.075 * heatmapHeight)
+    .style("font-family", "Open Sans, sans-serif")
+    .style("font-size", 30)
+    .style("font-weight", "bold")
+    .style("text-anchor", "middle");
+  updateLineGraphTitle(1969);
 }
+
+var lineGraphTitles = {
+  "sales" : "Automobile Sales"
+};
+
+function updateLineGraphTitle(year) {
+  d3.select("#lineGraphTitle").text(
+    lineGraphTitles[d3.select("#dropdown").node().value] + " in " + year);
+}
+
+var sliderRanges = {
+  "sales" : [2005,2014]
+};
+
+// function updateSliderRange(dataOption) {
+//   yearslider.min(sliderRanges["sales"][0])
+//     .max(sliderRanges["sales"][1]);
+// }
+
 </script>
 </html>
