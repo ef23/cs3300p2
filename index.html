@@ -20,6 +20,7 @@
   <div id="dropdown_container">
     <select id="dropdown">
       <option value="sales" selected="selected">Automobile Sales</option>
+      <option value="dummy">Dummy</option>
     </select>
   </div>
 </div>
@@ -100,7 +101,7 @@ function loadData(error, map, codes, carbon, carbonPerCapita, sales) {
 
 // renders the heatmap + donut graph
 function page1(){
-  generateSlider(1850, 2014, heatmapOnChange)
+  generateSlider(".page1", 1850, 2014, heatmapOnChange)
   initMap();
 }
 
@@ -667,7 +668,7 @@ function heatmapOnChange(val) {
 
 // generates a slider with at most 4 tick marks
 // params: min --> min Year, max --> max Year, onChange --> change function taking in a val param (the year)
-function generateSlider(min, max, onChange) {
+function generateSlider(page, min, max, onChange) {
   minYear = min
   maxYear = max
 
@@ -691,8 +692,8 @@ function generateSlider(min, max, onChange) {
     });
 
   // delete old slider and put in new one
-  d3.select("#yearslider").selectAll("*").remove();
-  var g = d3.select("div#yearslider").append("svg")
+  d3.select(page + " #yearslider").selectAll("*").remove();
+  var g = d3.select(page + " #yearslider").append("svg")
     .attr("id", "yearslidersvg")
     .attr("width", heatmapWidth*.925)
     .attr("height", 100)
@@ -870,7 +871,6 @@ function drawDonut() {
 /* Displays heat map, disables heat map button, and re-enables line graph
  * button */
 function viewHeatMap() {
-  console.log("clicked");
   d3.select("#heat-map-button")
     .classed("enabled-button", false)
     .classed("disabled-button", true)
@@ -898,6 +898,7 @@ function viewLineGraph() {
   d3.select(".page1").style("display", "none");
   d3.select(".page2").style("display", "block");
   d3.select("#dropdown_container").style("visibility", "visible");
+  page2();
 }
 
 d3.select("#heat-map-button")
@@ -905,42 +906,58 @@ d3.select("#heat-map-button")
 d3.select("#line-graph-button")
   .on("click", () => viewLineGraph());
 
-function page2() {
-  generateSlider(2010, 2014, (val) => console.log(val))
-  console.log(carbonData);
-  console.log(carbonPerCapitaData);
-  console.log(salesData);
+var lineGraphTitles = {
+  "sales" : "Automobile Sales",
+  "dummy" : "Dummy"
+};
 
-  updateSliderRange("sales")
-  yearslider.moveHandle(new Date(2009, 1, 1))
-  lineGraphTitle = svg.append("text")
+var sliderBounds = {
+  "sales" : [2005, 2014],
+  "dummy" : [0, 2018]
+};
+
+var lineGraphData = {
+  sales : salesData
+}
+
+/* Sets the title of the line graph according to the selected data set and
+ * year */
+function updateLineGraphTitle(year) {
+  var data_option = d3.select("#dropdown").node().value;
+  var title = lineGraphTitles[data_option] + " in " + year;
+  d3.select("#lineGraphTitle").text(title);
+}
+
+function drawLineGraph(year) {
+  var data_option = d3.select("#dropdown").node().value;
+  var data = lineGraphData[data_option];
+
+}
+
+/* Displays line graph */
+function page2() {
+  d3.select(".page2").exit()
+    .remove();
+  var page2 = d3.select(".page2");
+  var page2_svg = page2.append("svg")
+    .attr("height", heatmapHeight)
+    .attr("width", heatmapWidth)
+  var page2_slider = page2.append("div")
+    .attr("id", "yearslider")
+    .style("display", "inline");
+  lineGraphTitle = page2_svg.append("text")
     .attr("id", "lineGraphTitle")
-    .attr("x", heatmapWidth/2)
+    .attr("x", heatmapWidth / 2)
     .attr("y", 0.075 * heatmapHeight)
     .style("font-family", "Open Sans, sans-serif")
     .style("font-size", 30)
     .style("font-weight", "bold")
     .style("text-anchor", "middle");
-  updateLineGraphTitle(1969);
+  var data_option = d3.select("#dropdown").node().value;
+  updateLineGraphTitle(sliderBounds[data_option][0])
+  drawLineGraph(sliderBounds[data_option][0]);
+  generateSlider(".page2", sliderBounds[data_option][0],
+    sliderBounds[data_option][1], (val) => console.log(val));
 }
-
-var lineGraphTitles = {
-  "sales" : "Automobile Sales"
-};
-
-function updateLineGraphTitle(year) {
-  d3.select("#lineGraphTitle").text(
-    lineGraphTitles[d3.select("#dropdown").node().value] + " in " + year);
-}
-
-var sliderRanges = {
-  "sales" : [2005,2014]
-};
-
-// function updateSliderRange(dataOption) {
-//   yearslider.min(sliderRanges["sales"][0])
-//     .max(sliderRanges["sales"][1]);
-// }
-
 </script>
 </html>

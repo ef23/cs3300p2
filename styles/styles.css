@@ -76,3 +76,7 @@ button {
   outline: none;
   width: 265px;
 }
+
+#dropdown option {
+  color: #000;
+}
