@@ -47,6 +47,8 @@ var countryCodes; // raw data for the iso-3166-codes json
 var countries; // data of the countries from the map project
 var salesData; //data on automobile sales per country
 
+var mapView = true;
+
 /* ================================= Page 1 ================================= */
 
 var svg = d3.select(".page1").append("svg").attr("height", heatmapHeight).attr("width", heatmapWidth).attr("class", "heatmap");
@@ -58,7 +60,7 @@ var hmapKey;
 var projection = d3.geoEquirectangular().scale(75);
 var pathGenerator = d3.geoPath().projection(projection);
 
-var minYear = 1850;
+var minYear = 1960;
 var maxYear= 2014;
 
 // the variable to indicate if we are using the total carbon emissions or per capita data
@@ -101,7 +103,7 @@ function loadData(error, map, codes, carbon, carbonPerCapita, sales) {
 
 // renders the heatmap + donut graph
 function page1(){
-  generateSlider(".page1", 1850, 2014, heatmapOnChange)
+  generateSlider(".page1", minYear, maxYear, heatmapOnChange)
   initMap();
 }
 
@@ -731,6 +733,9 @@ var playslider = d3.select("#playslider")
 // toggle button
 function togglePerCapita() {
   perCapita = !perCapita;
+  if (!mapView) {
+    page2();
+  }
   if (perCapita) {
     heatmapTitle = "CARBON DIOXIDE EMISSIONS PER CAPITA IN ";
     d3.select("#toggle")
@@ -871,6 +876,7 @@ function drawDonut() {
 /* Displays heat map, disables heat map button, and re-enables line graph
  * button */
 function viewHeatMap() {
+  mapView = true;
   d3.select("#heat-map-button")
     .classed("enabled-button", false)
     .classed("disabled-button", true)
@@ -887,6 +893,7 @@ function viewHeatMap() {
 /* Displays line graph, disables line graph button, and re-enables heat map
  * button*/
 function viewLineGraph() {
+  mapView = false;
   d3.select("#heat-map-button")
     .classed("enabled-button", true)
     .classed("disabled-button", false)
