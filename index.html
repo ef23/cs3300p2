@@ -110,12 +110,12 @@ function page1(){
 // linear scale based on emissions for the year, from yellow (least) -> red (most)
 var colorScale = d3.scaleLinear()
   .interpolate(d3.interpolateHcl)
-  .range(["#ffff8c","#d7191c"])
+  .range(["#feeeee","#ce5755"])
 
 // linear scale to color the year based on the maximum emissions that year
 var yearTitleScale = d3.scaleLinear()
   .interpolate(d3.interpolateHcl)
-  .range(["#ffff8c","#d7191c"])
+  .range(["#feeeee","#ce5755"])
 
 // sqrt scale since the flags are circles, based on emissions for the year
 var flagScale = d3.scaleSqrt()
@@ -565,12 +565,12 @@ function initHeatmapLegend() {
 
   heatmapLegend.append("stop")
       .attr("offset", "0%")
-      .attr("stop-color", "#ffff8c")
+      .attr("stop-color", "#feeeee")
       .attr("stop-opacity", 1);
 
   heatmapLegend.append("stop")
       .attr("offset", "100%")
-      .attr("stop-color", "#d7191c")
+      .attr("stop-color", "#ce5755")
       .attr("stop-opacity", 1);
 
   heatmapLegendKey = hmapKey.append("rect")
@@ -769,7 +769,7 @@ var regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"]
 var cumulativeData;
 var radius = (donutWidth*0.55)/2;
 var width = donutWidth/10;
-var donutColor = d3.scaleOrdinal().range(["#3498DB", "#59ABE3", "#52B3D9", "#81CFE0", "#C5EFF7"])
+var donutColor = d3.scaleOrdinal().range(["#ce5755", "#ce8482", "#e2bab9", "#e9c3c2", "#feeeee"].reverse())
 
 var arc = d3.arc()
   .innerRadius(radius - width)
