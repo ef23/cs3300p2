@@ -742,8 +742,8 @@ function togglePerCapita() {
       .classed("enabled-button", true)
       .classed("disabled-button", false);
   }
-  updateMap(prevVal, true)
-  updateHeatmapLegend(true)
+  updateMap(prevVal, true);
+  updateHeatmapLegend(true);
 }
 
 d3.select("#toggle")
@@ -990,28 +990,26 @@ function updateYearData(year) {
 }
 
 function plotYearData(data, year) {
-  if (lineGraphYearData == undefined) {
-    lineGraphYearData = data.filter(d => d["Year"] === String(year));
-  } else {
-    updateYearData(year);
-  }
+  lineGraphYearData = data.filter(d => d["Year"] === String(year));
   datapoints = d3.select("#page2_svg").select("#page2_plot").selectAll("image")
     .data(lineGraphYearData);
   datapoints.enter()
     .append("image")
-      .attr("x", (d) => xScale(d["Data"]))
-      .attr("y", (d) => yScale(d["Emissions"]))
-      .attr("width", 20)
-      .attr("height", 20)
-      .attr("xlink:href", (d) => "data/flags/" + d["Code"] + ".png")
-      .style("filter", "url(#drop-shadow)");
+      .attr("x", (d) => xScale(d["Data"]) - 15)
+      .attr("y", (d) => yScale(d["Emissions"]) - 15)
+      .attr("width", 30)
+      .attr("height", 30)
+      .attr("xlink:href", (d) => "data/flags/" + d["Code"] + ".png");
+    }
+
+function updateYearPlot(year) {
+  updateYearData(year);
+  datapoints = d3.select("#page2_svg").select("#page2_plot").selectAll("image")
+    .data(lineGraphYearData);
   datapoints.transition()
-      .duration(500)
-        .attr("x", (d) => xScale(d["Data"]))
-        .attr("y", (d) => yScale(d["Emissions"]))
-        .attr("width", 20)
-        .attr("height", 20)
-        .style("filter", "url(#drop-shadow)");
+      .duration(1000)
+        .attr("x", (d) => xScale(d["Data"]) - 15)
+        .attr("y", (d) => yScale(d["Emissions"]) - 15);
 }
 
 /* Displays the line graph */
@@ -1034,13 +1032,12 @@ function drawLineGraph(data_option, year) {
     .style("font-family", "Open Sans, sans-serif")
     .style("font-size", 20)
     .text("Emissions (Mt CO2)");
-
   lineGraphData = filterData(data_option);
-  xScale = d3.scaleLinear()
+  xScale = d3.scaleLog()
     .domain([d3.min(lineGraphData, (d) => d["Data"]),
       d3.max(lineGraphData, (d) => d["Data"])])
     .range([0, heatmapWidth - margin.left - margin.right]);
-  yScale = d3.scaleLinear()
+  yScale = d3.scaleLog()
     .domain([d3.min(lineGraphData, (d) => d["Emissions"]),
       d3.max(lineGraphData, (d) => d["Emissions"])])
     .range([heatmapHeight - margin.top - margin.bottom, 0]);
@@ -1064,7 +1061,7 @@ d3.select("#dropdown")
 
 /* Displays page 2 visualization */
 function page2() {
-  d3.select(".page2").exit()
+  d3.select(".page2").selectAll("*")
     .remove();
   var page2 = d3.select(".page2");
   var page2_svg = page2.append("svg")
@@ -1086,11 +1083,12 @@ function page2() {
     .style("font-weight", "bold")
     .style("text-anchor", "middle");
   var data_option = d3.select("#dropdown").node().value;
+  sliderVal = sliderBounds[data_option][0];
   updateLineGraphTitle(data_option, sliderBounds[data_option][0])
   drawLineGraph(data_option, sliderBounds[data_option][0]);
   generateSlider(".page2", sliderBounds[data_option][0],
     sliderBounds[data_option][1], function (val) {
-      plotYearData(lineGraphData, val.getFullYear());
+        updateYearPlot(val.getFullYear());
     });
 }
 </script>
