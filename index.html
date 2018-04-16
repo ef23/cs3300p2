@@ -53,8 +53,10 @@ var mapView = true;
 
 var svg = d3.select(".page1").append("svg").attr("height", heatmapHeight).attr("width", heatmapWidth).attr("class", "heatmap");
 var donut = d3.select(".page1").append("svg").attr("height", donutHeight).attr("width", donutWidth).attr("class", "donut");
-d3.select(".page1").append("div").attr("id", "playslider").style("top", "-50px").style("position", "relative").style("display", "inline");
-d3.select(".page1").append("div").attr("id", "yearslider").style("display", "inline");
+d3.select(".page1").append("div").attr("class", "slider-container")
+d3.select(".slider-container").append("div").attr("id", "playslider").style("top", "-50px").style("position", "relative").style("display", "inline");
+d3.select(".slider-container").append("div").attr("id", "yearslider").style("display", "inline");
+
 var hmapKey;
 
 var projection = d3.geoEquirectangular().scale(75);
@@ -693,7 +695,7 @@ function generateSlider(page, min, max, onChange) {
   yearslider = slider()
     .min(d3.min(yearTicks))
     .max(d3.max(yearTicks))
-    .default(d3.min(yearTicks))
+    .default(d3.min(yearTicks) > 1969 ? d3.min(yearTicks) : 1969)
     .step(1000 * 60 * 60 * 24 * 365)
     .width(heatmapWidth*.9)
     .tickFormat(d3.timeFormat('%Y'))
@@ -718,7 +720,7 @@ function generateSlider(page, min, max, onChange) {
 // TODO what to do with this
 var isPlaying = false;
 var interval;
-var playslider = d3.select("#playslider")
+var playslider = d3.selectAll("#playslider")
 .append("button")
 .html("<i class=\"fa fa-play\"></i>")
 .on("click", function(){
