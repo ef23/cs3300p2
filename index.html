@@ -356,7 +356,7 @@ function setTip() {
         flagLegendStroke
           .transition()
           .attr("cx", flagLegendxPos + flagLegendSize/2 - (flagLegendxPos > flagLegendSize ? flagLegendSize : 0))
-          .attr("cy", scalePadding - h + flagLegendSize/2)
+          .attr("cy", scalePadding - h/2 + flagLegendSize/2)
       }
       return true;
     }
@@ -576,8 +576,10 @@ function initHeatmapLegend() {
   heatmapLegendKey = hmapKey.append("rect")
       .attr("class", "heatmap-legend")
       .attr("width", 0)
-      .attr("height", h)
+      .attr("height", h/2)
       .attr("y", scalePadding)
+      .attr("rx", 10)
+      .attr("ry", 10)
       .style("fill", "url(#gradient)")
 
   heatmapLegendKey.transition().duration(2000)
@@ -587,9 +589,12 @@ function initHeatmapLegend() {
   hmapRange = d3.scaleLinear().domain(d3.extent(dataArr, d => d.Emissions)).range([0, 0])
   var hmapAxis = d3.axisTop()
     .scale(hmapRange)
+    .ticks(10)
+    .tickSize(0)
+    .tickSizeOuter(0);
 
   heatmapLegendAxis = hmapKey.append("g")
-    .attr("transform", "translate(0,"+ scalePadding + ")")
+    .attr("transform", "translate(0,"+ scalePadding/1.5 + ")")
     .call(hmapAxis)
 
   heatmapLegendAxisTitle = hmapKey
@@ -604,7 +609,11 @@ function initHeatmapLegend() {
   hmapRange = d3.scaleLinear().domain(d3.extent(dataArr, d => d.Emissions)).range([0, heatmapLegendWidth])
   hmapAxis = d3.axisTop()
     .scale(hmapRange)
-    .ticks(10);
+    .ticks(10)
+    .tickSize(0)
+    .tickSizeOuter(0);
+
+  d3.select(".domain").attr("stroke", "none")
 
   heatmapLegendAxis
     .transition().duration(2000)
@@ -617,7 +626,7 @@ function initHeatmapLegend() {
 
   flagLegend = hmapKey
     .append("image")
-    .attr("y", scalePadding - h)
+    .attr("y", scalePadding - h/2)
     .attr("height", flagLegendSize)
     .attr("width", flagLegendSize)
 
