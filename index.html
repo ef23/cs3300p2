@@ -1031,10 +1031,7 @@ function plotYearData(data, year) {
       .attr("width", 30)
       .attr("height", 30)
       .attr("xlink:href", (d) => "data/flags/" + d["Code"] + ".png")
-      .on("mouseover", function (d, i) {
-        this.parentNode.appendChild(this);
-        lineTip.show(d, i);
-      })
+      .on("mouseover", lineTip.show)
       .on("mouseout", lineTip.hide);
     }
 
