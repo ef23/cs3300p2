@@ -916,6 +916,10 @@ var sliderBounds = {
   "dummy" : [0, 2018]
 };
 
+var axisLabels = {
+  "sales" : "Number of Automobiles Sold"
+}
+
 var margin = {top: 100, left: 100, bottom: 80, right: 40};
 
 /* Sets the title of the line graph according to the selected data set and
@@ -966,6 +970,24 @@ function filterDataByYear(data_option, year) {
 /* Displays the line graph */
 function drawLineGraph(data_option, year) {
   data = filterDataByYear(data_option, year);
+  d3.select("#page2_svg").select("#page2_plot").append("text")
+    .attr("x", (heatmapWidth - margin.left) / 2)
+    .attr("y", heatmapHeight - (1.5 * margin.bottom))
+    .attr("text-anchor", "middle")
+    .attr("alignment-baseline", "central")
+    .style("font-family", "Open Sans, sans-serif")
+    .style("font-size", 20)
+    .text(axisLabels[data_option]);
+  d3.select("#page2_svg").select("#page2_plot").append("text")
+    .attr("x", margin.left / 2)
+    .attr("y", heatmapHeight / 2)
+    .attr("text-anchor", "middle")
+    .attr("alignment-baseline", "central")
+    .attr("transform", "rotate(-90) " +
+      "translate(-" + (heatmapHeight / 2.5) + ", -" + (heatmapWidth / 3.3) + ")")
+    .style("font-family", "Open Sans, sans-serif")
+    .style("font-size", 20)
+    .text("Emissions (Mt CO2)");
   var xScale = d3.scaleLinear()
     .domain([d3.min(data, (d) => d["Data"]), d3.max(data, (d) => d["Data"])])
     .range([0, heatmapWidth - margin.left - margin.right]);
@@ -1027,12 +1049,7 @@ function page2() {
   drawLineGraph(data_option, sliderBounds[data_option][0]);
   generateSlider(".page2", sliderBounds[data_option][0],
     sliderBounds[data_option][1], function (val) {
-      page2.selectAll(".axis")
-        .remove();
-      var year = val.getFullYear();
-      var data_option = d3.select("#dropdown").node().value;
-      updateLineGraphTitle(data_option, year);
-      drawLineGraph(data_option, year);
+      page2()
     });
 }
 </script>
