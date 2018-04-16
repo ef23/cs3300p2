@@ -929,47 +929,93 @@ function updateLineGraphTitle(data_option, year) {
   d3.select("#lineGraphTitle").text(title);
 }
 
-/* Filters the selected data set and emissions data set by the selected year */
-function filterDataByYear(data_option, year) {
+var xScale;
+var yScale;
+var lineGraphMap;
+var lineGraphData;
+var lineGraphYearData;
+
+/* Filters the selected data set and emissions data set */
+function filterData(data_option) {
   var data;
   if (data_option === "sales") {
     data = salesData;
   } else {
     // other data sets
   }
-  var yearData = {};
-  var countries = [];
+  var map = {};
   for (var i = 0; i < data.length; i++) {
-    if (data[i]["Year"] === String(year)) {
-      if (!countries.includes(data[i]["Country"])) {
-        countries.push(data[i]["Country"]);
-      } else {
-        break;
-      }
-      yearData[data[i]["Country"]] = data[i];
+    if (map[data[i]["Country"]] == undefined) {
+      map[data[i]["Country"]] = {};
     }
-  }
-  for (var i = 0; i < countryCodes.length; i++) {
-    if (yearData[countryCodes[i]["name"]] != undefined) {
-      yearData[countryCodes[i]["name"]]["Code"] = countryCodes[i]["alpha-2"];
-    }
+    map[data[i]["Country"]][data[i]["Year"]] = data[i];
   }
   var emissionsData = perCapita ? carbonPerCapitaData : carbonData;
   for (var i = 0; i < emissionsData.length; i++) {
-    if (emissionsData[i]["Year"] === String(year) &&
-      countries.includes(emissionsData[i]["Country"])) {
-      yearData[emissionsData[i]["Country"]]["Emissions"] =
+    if (map[emissionsData[i]["Country"]] != undefined &&
+      map[emissionsData[i]["Country"]][emissionsData[i]["Year"]] != undefined) {
+      map[emissionsData[i]["Country"]][emissionsData[i]["Year"]]["Emissions"] =
         emissionsData[i]["Emissions"];
     }
   }
-  filteredYearData = Object.values(yearData).filter(
-    d => d["Emissions"] != undefined && d["Code"] != undefined);
-  return filteredYearData;
+  for (var i = 0; i < countryCodes.length; i++) {
+    if (map[countryCodes[i]["name"]] != undefined) {
+      map[countryCodes[i]["name"]]["Code"] = countryCodes[i]["alpha-2"];
+    }
+  }
+  lineGraphMap = map;
+  var arr = [];
+  for (var country in map) {
+    if (map[country]["Code"] == undefined) {
+      continue;
+    }
+    for (var year in map[country]) {
+      if (year === "Code" || map[country][year]["Emissions"] == undefined) {
+        continue;
+      }
+      map[country][year]["Code"] = map[country]["Code"];
+      arr.push(map[country][year]);
+    }
+  }
+  return arr;
+}
+
+function updateYearData(year) {
+  for (var row in lineGraphYearData) {
+    var country = lineGraphYearData[row]["Country"];
+    lineGraphYearData[row]["Year"] = String(year);
+    lineGraphYearData[row]["Data"] = lineGraphMap[country][year]["Data"];
+    lineGraphYearData[row]["Emissions"] = lineGraphMap[country][year]["Emissions"];
+  }
+}
+
+function plotYearData(data, year) {
+  if (lineGraphYearData == undefined) {
+    lineGraphYearData = data.filter(d => d["Year"] === String(year));
+  } else {
+    updateYearData(year);
+  }
+  datapoints = d3.select("#page2_svg").select("#page2_plot").selectAll("image")
+    .data(lineGraphYearData);
+  datapoints.enter()
+    .append("image")
+      .attr("x", (d) => xScale(d["Data"]))
+      .attr("y", (d) => yScale(d["Emissions"]))
+      .attr("width", 20)
+      .attr("height", 20)
+      .attr("xlink:href", (d) => "data/flags/" + d["Code"] + ".png")
+      .style("filter", "url(#drop-shadow)");
+  datapoints.transition()
+      .duration(500)
+        .attr("x", (d) => xScale(d["Data"]))
+        .attr("y", (d) => yScale(d["Emissions"]))
+        .attr("width", 20)
+        .attr("height", 20)
+        .style("filter", "url(#drop-shadow)");
 }
 
 /* Displays the line graph */
 function drawLineGraph(data_option, year) {
-  data = filterDataByYear(data_option, year);
   d3.select("#page2_svg").select("#page2_plot").append("text")
     .attr("x", (heatmapWidth - margin.left) / 2)
     .attr("y", heatmapHeight - (1.5 * margin.bottom))
@@ -988,12 +1034,15 @@ function drawLineGraph(data_option, year) {
     .style("font-family", "Open Sans, sans-serif")
     .style("font-size", 20)
     .text("Emissions (Mt CO2)");
-  var xScale = d3.scaleLinear()
-    .domain([d3.min(data, (d) => d["Data"]), d3.max(data, (d) => d["Data"])])
+
+  lineGraphData = filterData(data_option);
+  xScale = d3.scaleLinear()
+    .domain([d3.min(lineGraphData, (d) => d["Data"]),
+      d3.max(lineGraphData, (d) => d["Data"])])
     .range([0, heatmapWidth - margin.left - margin.right]);
-  var yScale = d3.scaleLinear()
-    .domain([d3.min(data, (d) => d["Emissions"]),
-      d3.max(data, (d) => d["Emissions"])])
+  yScale = d3.scaleLinear()
+    .domain([d3.min(lineGraphData, (d) => d["Emissions"]),
+      d3.max(lineGraphData, (d) => d["Emissions"])])
     .range([heatmapHeight - margin.top - margin.bottom, 0]);
   var xAxis = d3.axisBottom(xScale);
   d3.select("#page2_svg").append("g")
@@ -1007,15 +1056,7 @@ function drawLineGraph(data_option, year) {
     .attr("transform",
       "translate(" + margin.left + "," + margin.top + ")")
     .call(yAxis);
-  d3.select("#page2_svg").select("#page2_plot").selectAll("image")
-    .data(data).enter()
-      .append("image")
-        .attr("x", (d) => xScale(d["Data"]))
-        .attr("y", (d) => yScale(d["Emissions"]))
-        .attr("width", 20)
-        .attr("height", 20)
-        .attr("xlink:href", (d) => "data/flags/" + d["Code"] + ".png")
-        .style("filter", "url(#drop-shadow)");
+  plotYearData(lineGraphData, year);
 }
 
 d3.select("#dropdown")
@@ -1049,7 +1090,7 @@ function page2() {
   drawLineGraph(data_option, sliderBounds[data_option][0]);
   generateSlider(".page2", sliderBounds[data_option][0],
     sliderBounds[data_option][1], function (val) {
-      page2()
+      plotYearData(lineGraphData, val.getFullYear());
     });
 }
 </script>
