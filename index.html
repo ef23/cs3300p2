@@ -60,7 +60,7 @@ var hmapKey;
 var projection = d3.geoEquirectangular().scale(75);
 var pathGenerator = d3.geoPath().projection(projection);
 
-var minYear = 1960;
+var minYear = 1850;
 var maxYear= 2014;
 
 // the variable to indicate if we are using the total carbon emissions or per capita data
@@ -407,8 +407,8 @@ function initMap() {
     .style("font-weight", "bold")
     .style("text-anchor", "middle")
 
-  setDomain(1850);
-  setLeader(1850);
+  setDomain(1969);
+  setLeader(1969);
 
   projection.fitExtent([[0,.12*heatmapHeight], [svg.attr("width"), svg.attr("height")]], countries);
 
@@ -481,7 +481,7 @@ function initMap() {
   initDonut();
   initHeatmapLegend();
 
-  title.html(heatmapTitle + "<tspan style=\"stroke:#aaa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;fill:" + yearTitleScale(leader.Emissions) + "\">1850</tspan>")
+  title.html(heatmapTitle + "<tspan style=\"stroke:#aaa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;fill:" + yearTitleScale(leader.Emissions) + "\">1969</tspan>")
 }
 
 // updates the map with the given year
@@ -529,7 +529,7 @@ function setHmapLegendScale() {
   maxEmissions = 0;
   minmaxEmissions = Number.POSITIVE_INFINITY;
   var data = perCapita ? carbonPerCapitaData : carbonData;
-  for (var i = minYear; i <= maxYear; i++) {
+  for (var i = 1850; i <= 2014; i++) {
     var maxData = data.filter(d => d.Year === String(i) && d.Country !== "World" && d.Country !== "European Union (28)")
     var maxYearEmissions = maxData.reduce((acc, l) => acc.Emissions > l.Emissions ? acc : l).Emissions
     maxEmissions = maxYearEmissions > maxEmissions ? maxYearEmissions : maxEmissions;
@@ -655,7 +655,7 @@ function updateHeatmapLegend(toggle) {
 
 // ***************** generate the slider ***************** //
 
-var prevVal = 1850
+var prevVal = 1969
 var yearslider;
 
 // the onChange func for the heatmap slider
