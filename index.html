@@ -675,7 +675,7 @@ function updateHeatmapLegend(toggle) {
 // ***************** generate the slider ***************** //
 
 var prevVal = 1969
-var yearslider;
+var yearslider1;
 
 // the onChange func for the heatmap slider
 function heatmapOnChange(val) {
@@ -700,7 +700,7 @@ function generateSlider(page, min, max, onChange) {
   }
 
   // generate the slider with the bounds and the change func
-  yearslider = slider()
+  var yearslider = slider()
     .min(d3.min(yearTicks))
     .max(d3.max(yearTicks))
     .default(d3.min(yearTicks) > 1969 ? d3.min(yearTicks) : 1969)
@@ -711,6 +711,10 @@ function generateSlider(page, min, max, onChange) {
     .on('onchange', val => {
       onChange(val)
     });
+
+  if (page === ".page1") {
+    yearslider1 = yearslider;
+  }
 
   // delete old slider and put in new one
   d3.select(page + " #yearslider").selectAll("*").remove();
@@ -725,7 +729,7 @@ function generateSlider(page, min, max, onChange) {
 }
 
 function stop() {
-    clearInterval(interval);
+  clearInterval(interval);
 }
 // TODO what to do with this
 var isPlaying = false;
@@ -740,7 +744,7 @@ var playslider = d3.selectAll("#playslider")
     interval = setInterval(() => {
       if (prevVal <=maxYear && isPlaying) {
         updateMap(prevVal, true);
-        yearslider.moveHandle(new Date(prevVal+1, 0, 0));
+        yearslider1.value(new Date(prevVal+1, 0, 0));
         prevVal++;
       } else {
         isPlaying = false;
