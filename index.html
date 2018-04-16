@@ -22,6 +22,7 @@
     <select id="dropdown">
       <option value="sales" selected="selected">Automobile Sales</option>
       <option value="population">Population</option>
+      <option value="gdp">GDP</option>
     </select>
   </div>
 </div>
@@ -48,6 +49,7 @@ var countryCodes; // raw data for the iso-3166-codes json
 var countries; // data of the countries from the map project
 var salesData; // data on automobile sales per country
 var populationData; // data on population by country
+var gdpData; // data on gdp by country
 
 var mapView = true;
 
@@ -77,6 +79,7 @@ d3.queue()
   .defer(d3.csv, "data/co-emissions-per-capita.csv", parseEmissions)
   .defer(d3.csv, "data/sales.csv", parseData)
   .defer(d3.csv, "data/population.csv", parseData)
+  .defer(d3.csv, "data/gdp.csv", parseData)
   .await(loadData);
 
 // convert all Emissions to be numbers for both emissions datasets
@@ -91,7 +94,7 @@ function parseData(row) {
 }
 
 // callback func for the data and calls to init the first page
-function loadData(error, map, codes, carbon, carbonPerCapita, sales, population) {
+function loadData(error, map, codes, carbon, carbonPerCapita, sales, population, gdp) {
   mapData = map;
   countryCodes = codes.map(d => {
     d["country-code"] = Number(d["country-code"])
@@ -101,6 +104,7 @@ function loadData(error, map, codes, carbon, carbonPerCapita, sales, population)
   carbonPerCapitaData = carbonPerCapita;
   salesData = sales;
   populationData = population;
+  gdpData = gdp;
   countries = topojson.feature(mapData, mapData.objects.countries);
   page1();
 }
@@ -930,17 +934,20 @@ d3.select("#line-graph-button")
 
 var lineGraphTitles = {
   "sales" : "Automobile Sales",
-  "population" : "Population"
+  "population" : "Population",
+  "gdp" : "Gross Domestic Product"
 };
 
 var sliderBounds = {
   "sales" : [2005, 2014],
-  "population" : [1960, 2014]
+  "population" : [1960, 2014],
+  "gdp" : [1960, 2014]
 };
 
 var axisLabels = {
   "sales" : "Number of Automobiles Sold",
-  "population" : "Population"
+  "population" : "Population",
+  "gdp" : "GDP (USD)"
 }
 
 var margin = {top: 100, left: 100, bottom: 80, right: 40};
@@ -965,6 +972,8 @@ function filterData(data_option) {
     data = salesData;
   } else if (data_option === "population") {
     data = populationData;
+  } else if (data_option === "gdp") {
+    data = gdpData;
   }
   var map = {};
   for (var i = 0; i < data.length; i++) {
@@ -1028,7 +1037,7 @@ function plotYearData(data, year) {
   datapoints.enter()
     .append("image")
       .attr("class", "point")
-      .attr("x", (d) => xScale(d["Data"]) - 15)
+      .attr("x", (d) => xScale(Math.trunc(d["Data"])) - 15)
       .attr("y", (d) => yScale(d["Emissions"]) - 15)
       .attr("width", 30)
       .attr("height", 30)
@@ -1043,7 +1052,7 @@ function updateYearPlot(year) {
     .data(lineGraphYearData);
   datapoints.transition()
       .duration(1000)
-        .attr("x", (d) => xScale(d["Data"]) - 15)
+        .attr("x", (d) => xScale(Math.trunc(d["Data"]) - 15))
         .attr("y", (d) => yScale(d["Emissions"]) - 15);
 }
 
@@ -1069,8 +1078,8 @@ function drawLineGraph(data_option, year) {
     .text("Emissions (Mt CO2)");
   lineGraphData = filterData(data_option);
   xScale = d3.scaleLog()
-    .domain([d3.min(lineGraphData, (d) => d["Data"]),
-      d3.max(lineGraphData, (d) => d["Data"])])
+    .domain([d3.min(lineGraphData, (d) => Math.trunc(d["Data"])),
+      d3.max(lineGraphData, (d) => Math.trunc(d["Data"]))])
     .range([0, heatmapWidth - margin.left - margin.right]);
   yScale = d3.scaleLog()
     .domain([d3.min(lineGraphData, (d) => d["Emissions"]),
