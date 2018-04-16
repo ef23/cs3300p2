@@ -724,7 +724,9 @@ function generateSlider(page, min, max, onChange) {
   g.call(yearslider);
 }
 
-
+function stop() {
+    clearInterval(interval);
+}
 // TODO what to do with this
 var isPlaying = false;
 var interval;
@@ -736,10 +738,14 @@ var playslider = d3.selectAll("#playslider")
   this.innerHTML = isPlaying ? "<i class=\"fa fa-pause\"></i>" : "<i class=\"fa fa-play\"></i>"
   if (isPlaying) {
     interval = setInterval(() => {
-      if (prevVal <=maxYear) {
+      if (prevVal <=maxYear && isPlaying) {
         updateMap(prevVal, true);
-        yearslider.moveHandle(new Date(prevVal+1, 0, 0))
-        prevVal++
+        yearslider.moveHandle(new Date(prevVal+1, 0, 0));
+        prevVal++;
+      } else {
+        isPlaying = false;
+        this.innerHTML = "<i class=\"fa fa-play\"></i>";
+        stop();
       }
     }, 250);
   } else {
@@ -896,6 +902,7 @@ function drawDonut() {
  * button */
 function viewHeatMap() {
   mapView = true;
+  isPlaying = false;
   d3.select("#heat-map-button")
     .classed("enabled-button", false)
     .classed("disabled-button", true)
@@ -913,6 +920,7 @@ function viewHeatMap() {
  * button*/
 function viewLineGraph() {
   mapView = false;
+  isPlaying = false;
   d3.select("#heat-map-button")
     .classed("enabled-button", true)
     .classed("disabled-button", false)
