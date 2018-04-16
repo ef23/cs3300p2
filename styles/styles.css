@@ -80,3 +80,14 @@ button {
 #dropdown option {
   color: #000;
 }
+
+.line_graph_tip {
+  background: #000;
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.2;
+  opacity: 0.6;
+  padding: 8px;
+}

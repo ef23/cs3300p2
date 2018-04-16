@@ -9,6 +9,7 @@
   <script src="https://d3js.org/topojson.v2.min.js"></script>
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
   <script src="slider.js"></script>
 </head>
 <body>
@@ -996,17 +997,29 @@ function updateYearData(year) {
   }
 }
 
+var lineTip = d3.tip()
+  .attr("class", "line_graph_tip")
+  .offset([-10, 0])
+  .html(function (d) {
+    return "<strong>" + d["Country"] + "</strong><br>" +
+      "<span>Emissions (Mt CO2): " + d["Emissions"] + "</span><br>" +
+      "<span>" + axisLabels[d3.select("#dropdown").node().value] + ": " + d["Data"] + "</span>";
+  });
+
 function plotYearData(data, year) {
   lineGraphYearData = data.filter(d => d["Year"] === String(year));
   datapoints = d3.select("#page2_svg").select("#page2_plot").selectAll("image")
     .data(lineGraphYearData);
   datapoints.enter()
     .append("image")
+      .attr("class", "point")
       .attr("x", (d) => xScale(d["Data"]) - 15)
       .attr("y", (d) => yScale(d["Emissions"]) - 15)
       .attr("width", 30)
       .attr("height", 30)
-      .attr("xlink:href", (d) => "data/flags/" + d["Code"] + ".png");
+      .attr("xlink:href", (d) => "data/flags/" + d["Code"] + ".png")
+      .on("mouseover", lineTip.show)
+      .on("mouseout", lineTip.hide);
     }
 
 function updateYearPlot(year) {
@@ -1060,6 +1073,7 @@ function drawLineGraph(data_option, year) {
     .attr("transform",
       "translate(" + margin.left + "," + margin.top + ")")
     .call(yAxis);
+  d3.select("#page2_svg").call(lineTip);
   plotYearData(lineGraphData, year);
 }
 
