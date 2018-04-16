@@ -89,7 +89,7 @@ function parseEmissions(row) {
 }
 
 function parseData(row) {
-  row["Data"] = Number(row["Data"]);
+  row["Data"] = Math.trunc(Number(row["Data"]));
   return row;
 }
 
@@ -1037,14 +1037,14 @@ function plotYearData(data, year) {
   datapoints.enter()
     .append("image")
       .attr("class", "point")
-      .attr("x", (d) => xScale(Math.trunc(d["Data"])) - 15)
+      .attr("x", (d) => xScale(d["Data"]) - 15)
       .attr("y", (d) => yScale(d["Emissions"]) - 15)
       .attr("width", 30)
       .attr("height", 30)
       .attr("xlink:href", (d) => "data/flags/" + d["Code"] + ".png")
       .on("mouseover", lineTip.show)
       .on("mouseout", lineTip.hide);
-    }
+}
 
 function updateYearPlot(year) {
   updateYearData(year);
@@ -1052,7 +1052,7 @@ function updateYearPlot(year) {
     .data(lineGraphYearData);
   datapoints.transition()
       .duration(1000)
-        .attr("x", (d) => xScale(Math.trunc(d["Data"]) - 15))
+        .attr("x", (d) => xScale(d["Data"]) - 15)
         .attr("y", (d) => yScale(d["Emissions"]) - 15);
 }
 
@@ -1078,8 +1078,8 @@ function drawLineGraph(data_option, year) {
     .text("Emissions (Mt CO2)");
   lineGraphData = filterData(data_option);
   xScale = d3.scaleLog()
-    .domain([d3.min(lineGraphData, (d) => Math.trunc(d["Data"])),
-      d3.max(lineGraphData, (d) => Math.trunc(d["Data"]))])
+    .domain([d3.min(lineGraphData, (d) => d["Data"]),
+      d3.max(lineGraphData, (d) => d["Data"])])
     .range([0, heatmapWidth - margin.left - margin.right]);
   yScale = d3.scaleLog()
     .domain([d3.min(lineGraphData, (d) => d["Emissions"]),
