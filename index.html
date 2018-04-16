@@ -1034,6 +1034,10 @@ function plotYearData(data, year) {
   lineGraphYearData = data.filter(d => d["Year"] === String(year));
   datapoints = d3.select("#page2_svg").select("#page2_plot").selectAll("image")
     .data(lineGraphYearData);
+  datapoints.transition()
+    .duration(1000)
+      .attr("x", (d) => xScale(d["Data"]) - 15)
+      .attr("y", (d) => yScale(d["Emissions"]) - 15);
   datapoints.enter()
     .append("image")
       .attr("class", "point")
@@ -1043,17 +1047,9 @@ function plotYearData(data, year) {
       .attr("height", 30)
       .attr("xlink:href", (d) => "data/flags/" + d["Code"] + ".png")
       .on("mouseover", lineTip.show)
-      .on("mouseout", lineTip.hide);
-}
-
-function updateYearPlot(year) {
-  updateYearData(year);
-  datapoints = d3.select("#page2_svg").select("#page2_plot").selectAll("image")
-    .data(lineGraphYearData);
-  datapoints.transition()
-      .duration(1000)
-        .attr("x", (d) => xScale(d["Data"]) - 15)
-        .attr("y", (d) => yScale(d["Emissions"]) - 15);
+      .on("mouseout", lineTip.hide)
+  .exit()
+    .remove();
 }
 
 /* Displays the line graph */
@@ -1134,7 +1130,7 @@ function page2() {
     sliderBounds[data_option][1], function (val) {
       updateLineGraphTitle(d3.select("#dropdown").node().value,
         val.getFullYear());
-      updateYearPlot(val.getFullYear());
+      plotYearData(lineGraphData, val.getFullYear());
     });
 }
 </script>
