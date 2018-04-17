@@ -394,7 +394,7 @@ function setTip(updateClicked) {
           .attr("width", flagScale(country.Emissions) * donutWidth*.25)
         var flagWidth = flag.node().getBBox().width/2;
         var flagHeight = flag.node().getBBox().height/2;
-        flag.attr("x", donutWidth/6)
+        flag.attr("x", donutWidth/3.5 - flagWidth)
             .attr("y", donutHeight*.3 - flagHeight)
 
         var flagLegendxPos = hmapRange(country.Emissions)
