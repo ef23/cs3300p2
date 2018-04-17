@@ -121,6 +121,7 @@ function loadData(error, map, codes, carbon, carbonPerCapita, sales, population,
 
 // renders the heatmap + donut graph
 function page1(){
+  heatmapHeight = .5 * windowHeight;
   generateSlider(".page1", minYear, maxYear, heatmapOnChange)
   initMap();
 }
@@ -1153,6 +1154,7 @@ d3.select("#dropdown")
 function page2() {
   d3.select(".page2").selectAll("*")
     .remove();
+  heatmapHeight = .7*windowHeight
   var page2 = d3.select(".page2");
   var page2_svg = page2.append("svg")
     .attr("id", "page2_svg")
