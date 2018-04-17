@@ -152,7 +152,7 @@ var validData;
 
 // USE THIS ARRAY FOR EVERYTHING! this is a "standardized" data array across both datasets
 var dataArr;
-// var heatmapTitle = "CARBON DIOXIDE EMISSIONS IN ";
+ var heatmapTitle = " ";
 slidertitle.append("div").append("button").attr("id", "slider-title").text("Emissions");
 slidertitle.append("div").attr("id", "slider-text").text("Amount of CO2 released by a country compared with current global leader.");
 
@@ -449,6 +449,32 @@ var currentSelection;
 function initMap() {
   scaleTipText();
   svg.style("opacity", 0);
+
+  svg.append("text")
+  .attr("x", 0)
+  .attr("y", 250)
+  .style("font-family", "Cubano-Reg, sans-serif")
+  .text("Year");
+
+
+  svg.append("rect")
+    .attr("x", 0)
+    .attr("y", 260)
+    .attr("width", 65)
+    .attr("height", 35)
+    .attr("fill", "#000");
+
+    var title = svg.append("text")
+       .attr("id", "title")
+       .attr("x", 10)
+       .attr("y", 282)
+       .style("font-size", 14)
+       .style("font-family", "Helvetica Neue, sans-serif")
+       .style("fill", "#fff")
+       .style("letter-spacing", 2)
+       .text("year");
+
+
   // var title = svg.append("text")
   //   .attr("id", "title")
   //   .attr("x", heatmapWidth/2)
@@ -517,7 +543,7 @@ function initMap() {
             .style("stroke","#777")
             .style("stroke-width",0.5);
       }
-      hoverTitle.text(clicked ? "Currently Selected " : "Hover over a ")
+      hoverTitle.text(clicked ? "Currently Selected " : "Hover over a country ")
     })
     .merge(paths);
   paths.transition().duration(2000)
@@ -532,7 +558,7 @@ function initMap() {
   initDonut();
   initHeatmapLegend();
 
-  //title.html(heatmapTitle + "<tspan style=\"stroke:#aaa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;fill:" + yearTitleScale(leader.Emissions) + "\">1969</tspan>")
+  title.html(heatmapTitle + "<tspan >1969</tspan>")
 }
 
 // updates the map with the given year
@@ -540,7 +566,7 @@ function updateMap(year, isChange) {
   setDomain(year);
   setLeader(year);
 
-  //d3.select("#title").html(heatmapTitle + "<tspan style=\"stroke:#aaa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;fill:" + yearTitleScale(leader.Emissions) + "\">" + year + "</tspan>")
+  d3.select("#title").html(heatmapTitle + "<tspan >" + year + "</tspan>")
 
   if (currentId != -1) {
     clicked ? setTip(true) : setTip(false)
@@ -807,12 +833,12 @@ function togglePerCapita() {
     page2();
   }
   if (perCapita) {
-  //  heatmapTitle = "CARBON DIOXIDE EMISSIONS PER CAPITA IN ";
+   heatmapTitle = "";
     d3.select("#toggle")
       .classed("enabled-button", false)
       .classed("disabled-button", true);
   } else {
-    heatmapTitle = "CARBON DIOXIDE EMISSIONS IN ";
+    heatmapTitle = "";
     d3.select("#toggle")
       .classed("enabled-button", true)
       .classed("disabled-button", false);
