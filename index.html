@@ -163,16 +163,6 @@ d3.select(".donut").append("text")
   .style("letter-spacing", 1.5)
   .text("Current Leader")
 
-// d3.select(".donut").append("text")
-//   .attr("x", donutWidth2*.42)
-//   .attr("y", donutHeight*.09)
-//   //.attr("text-anchor", "middle")
-//   .style("font-family", "Cubano-Reg, sans-serif")
-//   .style("font-weight", "bold")
-//   .style("font-size", 17)
-//   .style("letter-spacing", 1.5)
-//   .text("Leader")
-
 var countrybackground = d3.select(".donut").append("rect")
   .attr("x", donutWidth2*.42)
   .attr("y", donutHeight*.55)
@@ -244,16 +234,6 @@ var hoverTitle = d3.select(".donut").append("text")
   .style("letter-spacing", 1.5)
   .text("Hover over a country")
 
-  // d3.select(".donut").append("text")
-  //   .attr("x", donutWidth/6)
-  //   .attr("y", donutHeight*.09)
-  //   //.attr("text-anchor", "middle")
-  //   .style("font-family", "Cubano-Reg, sans-serif")
-  //   .style("font-weight", "bold")
-  //   .style("font-size", 17)
-  //   .style("letter-spacing", 1.5)
-  //   .text("country")
-
 // displays the country's name when hovered
 var countrybackground = d3.select(".donut").append("rect")
   .attr("x", donutWidth/6)
@@ -308,16 +288,6 @@ d3.select(".donut").append("text")
   .style("font-size", 17)
   .style("letter-spacing", 1.5)
   .text("Emissions By Region")
-
-// d3.select(".donut").append("text")
-//   .attr("x", donutWidth2*(5/6) - 32)
-//   .attr("y", donutHeight*.09)
-//   .attr("text-anchor", "middle")
-//   .style("font-family", "Cubano-Reg, sans-serif")
-//   .style("font-weight", "bold")
-//   .style("font-size", 17)
-//   .style("letter-spacing", 1.5)
-//   .text("By Region")
 
 var flagLegend;
 var flagLegendStroke;
@@ -887,7 +857,7 @@ function initDonut() {
   var path = donut.selectAll("path").data(pie(cumulativeData))
   var addedpaths = path.enter().append("path")
   addedpaths.merge(path)
-    .attr("transform", "translate(" + (donutWidth2*(5/6)) + "," + (donutHeight*.45) + ")")
+    .attr("transform", "translate(" + (donutWidth2*(5/6)) + "," + (donutHeight*.5) + ")")
     .transition()
       .duration(2000)
       .attrTween("d", initDonutTransition)
@@ -921,7 +891,7 @@ function initDonut() {
   .append("g")
   .attr("class", "donut-legend")
   .attr("transform", (d, i) => {
-      var height = donutHeight*.45 - radius/3;
+      var height = donutHeight*.5 - radius/3;
       var offset =  height * 2.5;
       var horz = donutWidth2*(5/6) -radius/4 + legendRectSize;
       var vert = height + i * legendSpacing;
