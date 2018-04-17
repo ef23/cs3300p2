@@ -1136,13 +1136,13 @@ function drawLineGraph(data_option, year) {
     .domain([d3.min(lineGraphData, (d) => d["Emissions"]),
       d3.max(lineGraphData, (d) => d["Emissions"])])
     .range([heatmapHeight - margin.top - margin.bottom, 0]);
-  var xAxis = d3.axisBottom(xScale);
+  var xAxis = d3.axisBottom(xScale).ticks(5).tickFormat(d3.format(".2s"));
   d3.select("#page2_svg").append("g")
     .attr("class", "axis")
     .attr("transform",
       "translate(" + margin.left + "," + (heatmapHeight - margin.bottom) + ")")
     .call(xAxis);
-  var yAxis = d3.axisLeft(yScale);
+  var yAxis = d3.axisLeft(yScale).ticks(4).tickFormat(d3.format(".2s"));
   d3.select("#page2_svg").append("g")
     .attr("class", "axis")
     .attr("transform",
