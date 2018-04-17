@@ -341,11 +341,11 @@ function scaleTipText(){
 var currentId = -1;
 var clicked = false;
 // sets the tip for the country to be displayed, with the flag and emissions
-function setTip() {
+function setTip(updateClicked) {
   for (var i in dataArr) {
     var country = dataArr[i];
     if (currentId === country["id"]){
-      if (!clicked) {
+      if (!clicked || updateClicked) {
         tip.text(country.Country)
         scaleTipText();
         emissions.text(country.Emissions + " Mt CO2" + (perCapita ? " per capita" : ""))
@@ -502,7 +502,7 @@ function updateMap(year, isChange) {
   d3.select("#title").html(heatmapTitle + "<tspan style=\"stroke:#aaa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;fill:" + yearTitleScale(leader.Emissions) + "\">" + year + "</tspan>")
 
   if (currentId != -1) {
-    setTip()
+    clicked ? setTip(true) : setTip(false)
   }
 
   var paths = svg.selectAll("path.country").data(countries.features);
