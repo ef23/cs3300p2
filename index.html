@@ -452,14 +452,14 @@ function initMap() {
 
   svg.append("text")
   .attr("x", 0)
-  .attr("y", 250)
+  .attr("y", 270)
   .style("font-family", "Cubano-Reg, sans-serif")
   .text("Year");
 
 
   svg.append("rect")
     .attr("x", 0)
-    .attr("y", 260)
+    .attr("y", 280)
     .attr("width", 65)
     .attr("height", 35)
     .attr("fill", "#000");
@@ -467,22 +467,13 @@ function initMap() {
     var title = svg.append("text")
        .attr("id", "title")
        .attr("x", 10)
-       .attr("y", 282)
+       .attr("y", 302)
        .style("font-size", 14)
        .style("font-family", "Helvetica Neue, sans-serif")
        .style("fill", "#fff")
        .style("letter-spacing", 2)
        .text("year");
 
-
-  // var title = svg.append("text")
-  //   .attr("id", "title")
-  //   .attr("x", heatmapWidth/2)
-  //   .attr("y", 0.075 * heatmapHeight)
-  //   .style("font-family", "Open Sans, sans-serif")
-  //   .style("font-size", 30)
-  //   .style("font-weight", "bold")
-  //   .style("text-anchor", "middle")
 
   setDomain(1969);
   setLeader(1969);
