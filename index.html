@@ -1004,7 +1004,7 @@ var axisLabels = {
   "gdp" : "GDP (USD)"
 }
 
-var margin = {top: 100, left: 100, bottom: 80, right: 40};
+var margin = {top: 50, left: 100, bottom: 80, right: 40};
 
 /* Sets the title of the line graph according to the selected data set and
  * year */
@@ -1110,7 +1110,7 @@ function plotYearData(data, year) {
 function drawLineGraph(data_option, year) {
   d3.select("#page2_svg").select("#page2_plot").append("text")
     .attr("x", (heatmapWidth - margin.left) / 2)
-    .attr("y", heatmapHeight - (1.5 * margin.bottom))
+    .attr("y", heatmapHeight - (1.1 * margin.bottom))
     .attr("text-anchor", "middle")
     .attr("alignment-baseline", "central")
     .style("font-family", "Cubano-Reg, sans-serif")
