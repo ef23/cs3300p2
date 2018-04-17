@@ -51,6 +51,7 @@ path.country {  stroke: #aaa; }
   float: right;
   margin-bottom: 10%;
   cursor: default;
+  width: 110px;
 }
 
 .slidertitle {
