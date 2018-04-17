@@ -569,3 +569,533 @@ El Salvador,2011,8000
 El Salvador,2012,11000
 El Salvador,2013,11400
 El Salvador,2014,11800
+Guatemala,2005,11800
+Guatemala,2006,13400
+Guatemala,2007,16600
+Guatemala,2008,18300
+Guatemala,2009,19500
+Guatemala,2010,22100
+Guatemala,2011,24000
+Guatemala,2012,26000
+Guatemala,2013,27900
+Guatemala,2014,29800
+Honduras,2005,8500
+Honduras,2006,9600
+Honduras,2007,12100
+Honduras,2008,14000
+Honduras,2009,13000
+Honduras,2010,9000
+Honduras,2011,10000
+Honduras,2012,11000
+Honduras,2013,12000
+Honduras,2014,11600
+Jamaica,2005,4000
+Jamaica,2006,4000
+Jamaica,2007,5000
+Jamaica,2008,5000
+Jamaica,2009,6000
+Jamaica,2010,3000
+Jamaica,2011,3500
+Jamaica,2012,4500
+Jamaica,2013,4700
+Jamaica,2014,5000
+Martinique,2005,17664
+Martinique,2006,17151
+Martinique,2007,17840
+Martinique,2008,16768
+Martinique,2009,15647
+Martinique,2010,15286
+Martinique,2011,15325
+Martinique,2012,13576
+Martinique,2013,13018
+Martinique,2014,13351
+Nicaragua,2005,8000
+Nicaragua,2006,10000
+Nicaragua,2007,10000
+Nicaragua,2008,10000
+Nicaragua,2009,5000
+Nicaragua,2010,6000
+Nicaragua,2011,6000
+Nicaragua,2012,8000
+Nicaragua,2013,9300
+Nicaragua,2014,9400
+Panama,2005,25000
+Panama,2006,30000
+Panama,2007,26000
+Panama,2008,35000
+Panama,2009,33000
+Panama,2010,38000
+Panama,2011,44000
+Panama,2012,48000
+Panama,2013,48300
+Panama,2014,52200
+Paraguay,2005,8000
+Paraguay,2006,8000
+Paraguay,2007,11000
+Paraguay,2008,21000
+Paraguay,2009,12000
+Paraguay,2010,19000
+Paraguay,2011,30000
+Paraguay,2012,30000
+Paraguay,2013,30600
+Paraguay,2014,31000
+Peru,2005,23346
+Peru,2006,32876
+Peru,2007,51017
+Peru,2008,92539
+Peru,2009,76932
+Peru,2010,120800
+Peru,2011,150037
+Peru,2012,190761
+Peru,2013,201326
+Peru,2014,187081
+Puerto Rico,2005,136000
+Puerto Rico,2006,120000
+Puerto Rico,2007,132000
+Puerto Rico,2008,110000
+Puerto Rico,2009,110000
+Puerto Rico,2010,75000
+Puerto Rico,2011,95000
+Puerto Rico,2012,97000
+Puerto Rico,2013,99500
+Puerto Rico,2014,100200
+Uruguay,2005,15000
+Uruguay,2006,15000
+Uruguay,2007,19000
+Uruguay,2008,25000
+Uruguay,2009,38000
+Uruguay,2010,55000
+Uruguay,2011,54969
+Uruguay,2012,56459
+Uruguay,2013,61054
+Uruguay,2014,56548
+Venezuela,2005,174757
+Venezuela,2006,209203
+Venezuela,2007,318572
+Venezuela,2008,200341
+Venezuela,2009,136517
+Venezuela,2010,125202
+Venezuela,2011,120689
+Venezuela,2012,130553
+Venezuela,2013,98878
+Venezuela,2014,23707
+Australia,2005,988269
+Australia,2006,962666
+Australia,2007,1049982
+Australia,2008,1012165
+Australia,2009,937328
+Australia,2010,1035574
+Australia,2011,1008437
+Australia,2012,1112032
+Australia,2013,1136227
+Australia,2014,1113230
+Bangladesh,2005,15000
+Bangladesh,2006,19100
+Bangladesh,2007,22000
+Bangladesh,2008,28000
+Bangladesh,2009,38500
+Bangladesh,2010,40400
+Bangladesh,2011,39900
+Bangladesh,2012,43400
+Bangladesh,2013,42500
+Bangladesh,2014,51900
+Cambodia,2005,1700
+Cambodia,2006,1700
+Cambodia,2007,2400
+Cambodia,2008,2400
+Cambodia,2009,2600
+Cambodia,2010,2900
+Cambodia,2011,3400
+Cambodia,2012,3400
+Cambodia,2013,3400
+Cambodia,2014,4100
+China,2005,5758189
+China,2006,7215972
+China,2007,8791528
+China,2008,9380502
+China,2009,13644794
+China,2010,18061936
+China,2011,18505114
+China,2012,19306435
+China,2013,21984079
+China,2014,23499001
+India,2005,1440455
+India,2006,1750892
+India,2007,1993721
+India,2008,1983071
+India,2009,2266269
+India,2010,3040390
+India,2011,3287737
+India,2012,3595508
+India,2013,3241302
+India,2014,3177005
+Indonesia,2005,533917
+Indonesia,2006,318904
+Indonesia,2007,433341
+Indonesia,2008,603774
+Indonesia,2009,486088
+Indonesia,2010,764710
+Indonesia,2011,894164
+Indonesia,2012,1116230
+Indonesia,2013,1229811
+Indonesia,2014,1195409
+Iraq,2005,30700
+Iraq,2006,32200
+Iraq,2007,35000
+Iraq,2008,62000
+Iraq,2009,63000
+Iraq,2010,165000
+Iraq,2011,131500
+Iraq,2012,120000
+Iraq,2013,117500
+Iraq,2014,87700
+Iran,2005,857500
+Iran,2006,971000
+Iran,2007,1037900
+Iran,2008,1190000
+Iran,2009,1320000
+Iran,2010,1642843
+Iran,2011,1688194
+Iran,2012,1044430
+Iran,2013,804750
+Iran,2014,1287600
+Israel,2005,156000
+Israel,2006,156000
+Israel,2007,220000
+Israel,2008,192000
+Israel,2009,174500
+Israel,2010,217000
+Israel,2011,227000
+Israel,2012,206500
+Israel,2013,215500
+Israel,2014,242400
+Japan,2005,5852034
+Japan,2006,5739520
+Japan,2007,5309200
+Japan,2008,5082233
+Japan,2009,4609333
+Japan,2010,4956148
+Japan,2011,4210224
+Japan,2012,5369721
+Japan,2013,5375513
+Japan,2014,5562888
+Jordan,2005,20000
+Jordan,2006,15100
+Jordan,2007,14700
+Jordan,2008,18000
+Jordan,2009,21000
+Jordan,2010,20000
+Jordan,2011,22000
+Jordan,2012,23000
+Jordan,2013,29000
+Jordan,2014,23800
+Kazakhstan,2005,42372
+Kazakhstan,2006,42820
+Kazakhstan,2007,45981
+Kazakhstan,2008,44500
+Kazakhstan,2009,45000
+Kazakhstan,2010,29000
+Kazakhstan,2011,43348
+Kazakhstan,2012,98231
+Kazakhstan,2013,165710
+Kazakhstan,2014,163561
+Kuwait,2005,80000
+Kuwait,2006,84000
+Kuwait,2007,90000
+Kuwait,2008,99500
+Kuwait,2009,108500
+Kuwait,2010,110000
+Kuwait,2011,114500
+Kuwait,2012,140000
+Kuwait,2013,151500
+Kuwait,2014,152300
+Laos,2005,1100
+Laos,2006,1150
+Laos,2007,1800
+Laos,2008,2600
+Laos,2009,4000
+Laos,2010,5000
+Laos,2011,5000
+Laos,2012,7000
+Laos,2013,9000
+Laos,2014,14700
+Lebanon,2005,16000
+Lebanon,2006,16000
+Lebanon,2007,21000
+Lebanon,2008,34000
+Lebanon,2009,34500
+Lebanon,2010,35500
+Lebanon,2011,33500
+Lebanon,2012,37500
+Lebanon,2013,37500
+Lebanon,2014,40300
+Malaysia,2005,551042
+Malaysia,2006,490748
+Malaysia,2007,487176
+Malaysia,2008,548115
+Malaysia,2009,536905
+Malaysia,2010,605156
+Malaysia,2011,600123
+Malaysia,2012,627753
+Malaysia,2013,655793
+Malaysia,2014,666487
+Mongolia,2005,800
+Mongolia,2006,1300
+Mongolia,2007,1700
+Mongolia,2008,3750
+Mongolia,2009,3600
+Mongolia,2010,3300
+Mongolia,2011,3290
+Mongolia,2012,2290
+Mongolia,2013,2200
+Mongolia,2014,1600
+Nepal,2005,1400
+Nepal,2006,1500
+Nepal,2007,2600
+Nepal,2008,2300
+Nepal,2009,3000
+Nepal,2010,2000
+Nepal,2011,4000
+Nepal,2012,5600
+Nepal,2013,5500
+Nepal,2014,8300
+New Zealand,2005,117426
+New Zealand,2006,112211
+New Zealand,2007,115041
+New Zealand,2008,106190
+New Zealand,2009,73202
+New Zealand,2010,83250
+New Zealand,2011,84143
+New Zealand,2012,100795
+New Zealand,2013,113294
+New Zealand,2014,126508
+Pakistan,2005,167007
+Pakistan,2006,187644
+Pakistan,2007,188109
+Pakistan,2008,157182
+Pakistan,2009,111696
+Pakistan,2010,152354
+Pakistan,2011,163260
+Pakistan,2012,157656
+Pakistan,2013,141778
+Pakistan,2014,146882
+Palestine,2005,16600
+Palestine,2006,18600
+Palestine,2007,19700
+Palestine,2008,22900
+Palestine,2009,20600
+Palestine,2010,21900
+Palestine,2011,24700
+Palestine,2012,36600
+Palestine,2013,35800
+Palestine,2014,35800
+Philippines,2005,97063
+Philippines,2006,99541
+Philippines,2007,117903
+Philippines,2008,124449
+Philippines,2009,132444
+Philippines,2010,170348
+Philippines,2011,165056
+Philippines,2012,184248
+Philippines,2013,211959
+Philippines,2014,234747
+Saudi Arabia,2005,562900
+Saudi Arabia,2006,556100
+Saudi Arabia,2007,554400
+Saudi Arabia,2008,540000
+Saudi Arabia,2009,520000
+Saudi Arabia,2010,600000
+Saudi Arabia,2011,590000
+Saudi Arabia,2012,705000
+Saudi Arabia,2013,740000
+Saudi Arabia,2014,828200
+Singapore,2005,125018
+Singapore,2006,132483
+Singapore,2007,122254
+Singapore,2008,110574
+Singapore,2009,79503
+Singapore,2010,51891
+Singapore,2011,39570
+Singapore,2012,37247
+Singapore,2013,34111
+Singapore,2014,44776
+South Korea,2005,1145230
+South Korea,2006,1176919
+South Korea,2007,1278624
+South Korea,2008,1246086
+South Korea,2009,1461865
+South Korea,2010,1511373
+South Korea,2011,1586405
+South Korea,2012,1532087
+South Korea,2013,1543564
+South Korea,2014,1661868
+Syria,2005,39985
+Syria,2006,51467
+Syria,2007,41500
+Syria,2008,46800
+Syria,2009,51600
+Syria,2010,87547
+Syria,2011,39960
+Syria,2012,44000
+Syria,2013,43100
+Syria,2014,39700
+Taiwan,2005,446477
+Taiwan,2006,306458
+Taiwan,2007,276434
+Taiwan,2008,178809
+Taiwan,2009,229450
+Taiwan,2010,252500
+Taiwan,2011,285790
+Taiwan,2012,270078
+Taiwan,2013,258753
+Taiwan,2014,282130
+Thailand,2005,692506
+Thailand,2006,674953
+Thailand,2007,631181
+Thailand,2008,615270
+Thailand,2009,548870
+Thailand,2010,800357
+Thailand,2011,794081
+Thailand,2012,1423580
+Thailand,2013,1330672
+Thailand,2014,881832
+United Arab Emirates,2005,157000
+United Arab Emirates,2006,175000
+United Arab Emirates,2007,165000
+United Arab Emirates,2008,233592
+United Arab Emirates,2009,205088
+United Arab Emirates,2010,168323
+United Arab Emirates,2011,243982
+United Arab Emirates,2012,268900
+United Arab Emirates,2013,263100
+United Arab Emirates,2014,263100
+Vietnam,2005,35264
+Vietnam,2006,41133
+Vietnam,2007,81056
+Vietnam,2008,111950
+Vietnam,2009,119459
+Vietnam,2010,112224
+Vietnam,2011,110938
+Vietnam,2012,80487
+Vietnam,2013,96692
+Vietnam,2014,134562
+Algeria,2005,99422
+Algeria,2006,109578
+Algeria,2007,127030
+Algeria,2008,146892
+Algeria,2009,176773
+Algeria,2010,133406
+Algeria,2011,227925
+Algeria,2012,255167
+Algeria,2013,304854
+Algeria,2014,292100
+Cameroon,2005,3500
+Cameroon,2006,4100
+Cameroon,2007,4000
+Cameroon,2008,3800
+Cameroon,2009,2600
+Cameroon,2010,2900
+Cameroon,2011,2900
+Cameroon,2012,3400
+Cameroon,2013,4400
+Cameroon,2014,4400
+Egypt,2005,121437
+Egypt,2006,170614
+Egypt,2007,206060
+Egypt,2008,239833
+Egypt,2009,205521
+Egypt,2010,248917
+Egypt,2011,271900
+Egypt,2012,286300
+Egypt,2013,283000
+Egypt,2014,349100
+Ghana,2005,4500
+Ghana,2006,4500
+Ghana,2007,5100
+Ghana,2008,5500
+Ghana,2009,6500
+Ghana,2010,6000
+Ghana,2011,9000
+Ghana,2012,14500
+Ghana,2013,13600
+Ghana,2014,13000
+Kenya,2005,6000
+Kenya,2006,5000
+Kenya,2007,7000
+Kenya,2008,7000
+Kenya,2009,7500
+Kenya,2010,6000
+Kenya,2011,6000
+Kenya,2012,9500
+Kenya,2013,13000
+Kenya,2014,13500
+Libya,2005,47000
+Libya,2006,48000
+Libya,2007,49500
+Libya,2008,51500
+Libya,2009,53000
+Libya,2010,54500
+Libya,2011,56500
+Libya,2012,29000
+Libya,2013,45000
+Libya,2014,45000
+Madagascar,2005,2630
+Madagascar,2006,3100
+Madagascar,2007,3000
+Madagascar,2008,2700
+Madagascar,2009,2000
+Madagascar,2010,1800
+Madagascar,2011,2100
+Madagascar,2012,2200
+Madagascar,2013,2200
+Madagascar,2014,2600
+Morocco,2005,63655
+Morocco,2006,84276
+Morocco,2007,103597
+Morocco,2008,121360
+Morocco,2009,109969
+Morocco,2010,103436
+Morocco,2011,112093
+Morocco,2012,130306
+Morocco,2013,120755
+Morocco,2014,122060
+Nigeria,2005,23000
+Nigeria,2006,38000
+Nigeria,2007,12000
+Nigeria,2008,12000
+Nigeria,2009,51000
+Nigeria,2010,37000
+Nigeria,2011,45000
+Nigeria,2012,50000
+Nigeria,2013,52000
+Nigeria,2014,53900
+South Africa,2005,617406
+South Africa,2006,714315
+South Africa,2007,676108
+South Africa,2008,533387
+South Africa,2009,395222
+South Africa,2010,492907
+South Africa,2011,572241
+South Africa,2012,623921
+South Africa,2013,650745
+South Africa,2014,644504
+Tunisia,2005,33000
+Tunisia,2006,38000
+Tunisia,2007,39000
+Tunisia,2008,43000
+Tunisia,2009,47000
+Tunisia,2010,59000
+Tunisia,2011,47500
+Tunisia,2012,49000
+Tunisia,2013,47000
+Tunisia,2014,50900
+Zimbabwe,2005,12000
+Zimbabwe,2006,11000
+Zimbabwe,2007,5000
+Zimbabwe,2008,5000
+Zimbabwe,2009,4500
+Zimbabwe,2010,3000
+Zimbabwe,2011,4300
+Zimbabwe,2012,4400
+Zimbabwe,2013,5000
+Zimbabwe,2014,5800

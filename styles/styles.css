@@ -120,3 +120,17 @@ button:hover {
 #dropdown option {
   color: #000;
 }
+<<<<<<< HEAD
+=======
+
+.line_graph_tip {
+  background: #000;
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.2;
+  opacity: 0.6;
+  padding: 8px;
+}
+>>>>>>> 6a6d5762c323dca0ee51a2a6aaedc9c1e01124ae
