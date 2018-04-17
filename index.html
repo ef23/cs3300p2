@@ -764,7 +764,7 @@ function generateSlider(page, min, max, onChange) {
     .attr("width", heatmapWidth)
     .attr("height",40)
     .append("g")
-    .attr("transform", "translate(20,25)")
+    .attr("transform", "translate(20,5)")
 
   g.call(yearslider);
 }
@@ -1163,7 +1163,7 @@ function page2() {
   var page2 = d3.select(".page2");
   var page2_svg = page2.append("svg")
     .attr("id", "page2_svg")
-    .attr("height", heatmapHeight)
+    .attr("height", heatmapHeight*1.05)
     .attr("width", heatmapWidth)
   var page2_plot = page2_svg.append("g")
     .attr("id", "page2_plot")
