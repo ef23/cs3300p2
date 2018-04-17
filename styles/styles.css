@@ -63,6 +63,9 @@ path.country {  stroke: #aaa; }
   font-size: 12px;
   line-height: 18px;
 }
+.page1 {
+  margin-top: -45px;
+}
 .page2 {
   margin-bottom: 50px;
 }
