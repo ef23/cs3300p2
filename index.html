@@ -16,7 +16,7 @@
 <body>
 <div class='title'>
   <h1>global greenhouse gases</h1>
-  <h2> An interactive timeline of the history of global co2 emissions </h2>
+  <!-- <h2> An interactive timeline of the history of global co2 emissions </h2> -->
 </div>
 <div id="button_container">
   <button id="toggle" class="enabled-button">Toggle Per Capita</button>
@@ -42,7 +42,7 @@ var windowHeight = window.screen.availHeight;
 var windowWidth = window.screen.availWidth;
 
 var heatmapWidth = .90 * windowWidth;
-var heatmapHeight = .825 * windowHeight;
+var heatmapHeight = .5 * windowHeight;
 
 var donutWidth = .225 * windowWidth;
 var donutHeight = .65 * windowHeight;
@@ -63,7 +63,7 @@ var mapView = true;
 /* ================================= Page 1 ================================= */
 
 var svg = d3.select(".page1").append("div").attr("class", "heatmap-div").append("svg").attr("height", heatmapHeight).attr("width", heatmapWidth).attr("class", "heatmap");
-d3.select(".page1").append("div").attr("id", "playslider").style("top", "-105px").style("left", "5px").style("position", "relative").style("display", "inline");
+d3.select(".page1").append("div").attr("id", "playslider").style("top", "-50px").style("left", "5px").style("position", "relative").style("display", "inline");
 d3.select(".page1").append("div").attr("id", "yearslider").style("display", "inline");
 var slidertitle = d3.select(".page1").append("div").attr("class", "slidertitle");
 var donut = d3.select(".page1").append("div").attr("class", "donut-div").append("svg").attr("height", 400).attr("width", .9*windowWidth).attr("class", "donut");
@@ -787,7 +787,7 @@ function generateSlider(page, min, max, onChange) {
   var g = d3.select(page + " #yearslider").append("svg")
     .attr("id", "yearslidersvg")
     .attr("width", heatmapWidth)
-    .attr("height", 100)
+    .attr("height",40)
     .append("g")
     .attr("transform", "translate(20,5)")
 
