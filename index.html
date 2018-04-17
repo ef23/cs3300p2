@@ -45,7 +45,7 @@ var heatmapWidth = .90 * windowWidth;
 var heatmapHeight = .5 * windowHeight;
 
 var donutWidth = .225 * windowWidth;
-var donutHeight = .65 * windowHeight;
+var donutHeight = .3 * windowHeight;
 
 var donutWidth2 = .9 * windowWidth;
 
@@ -66,7 +66,7 @@ var svg = d3.select(".page1").append("div").attr("class", "heatmap-div").append(
 d3.select(".page1").append("div").attr("id", "playslider").style("top", "-50px").style("left", "5px").style("position", "relative").style("display", "inline");
 d3.select(".page1").append("div").attr("id", "yearslider").style("display", "inline");
 var slidertitle = d3.select(".page1").append("div").attr("class", "slidertitle");
-var donut = d3.select(".page1").append("div").attr("class", "donut-div").append("svg").attr("height", 400).attr("width", .9*windowWidth).attr("class", "donut");
+var donut = d3.select(".page1").append("div").attr("class", "donut-div").append("svg").attr("height", donutHeight).attr("width", .9*windowWidth).attr("class", "donut");
 
 
 var hmapKey;
@@ -175,7 +175,7 @@ d3.select(".donut").append("text")
 
 var countrybackground = d3.select(".donut").append("rect")
   .attr("x", donutWidth2*.42)
-  .attr("y", donutHeight*.36)
+  .attr("y", donutHeight*.55)
   .attr("width", donutWidth2/6)
   .attr("height", 35)
   .attr("fill", "#000")
@@ -183,7 +183,7 @@ var countrybackground = d3.select(".donut").append("rect")
 var leaderTip = d3.select(".donut").append("text")
   .attr("class", "leader-tip")
   .attr("x", donutWidth2/2)
-  .attr("y", donutHeight*.40)
+  .attr("y", donutHeight*.6)
   .attr("text-anchor", "middle")
   .style("font-family", "Helvetica Neue, sans-serif")
   .style("font-size", "11")
@@ -195,7 +195,7 @@ var leaderTip = d3.select(".donut").append("text")
 var leaderEmissions = d3.select(".donut").append("text")
   .attr("class", "leader-emissions-tip")
   .attr("x", donutWidth2*.55)
-  .attr("y", donutHeight*.23)
+  .attr("y", donutHeight*.3)
   .attr("text-anchor", "middle")
   .style("font-family", "Roboto Mono, sans-serif")
   .style("font-weight", "bold")
@@ -203,8 +203,8 @@ var leaderEmissions = d3.select(".donut").append("text")
 
 // displays the appropriate flag
 var leaderFlag = d3.select(".donut").append("image")
-  .attr("class", "flag")
-  .attr("y", donutHeight*.18)
+  .attr("class", "leader-flag")
+  .attr("y", donutHeight*.15)
 
 //  .style("filter", "url(#drop-shadow)")
 
@@ -257,7 +257,7 @@ var hoverTitle = d3.select(".donut").append("text")
 // displays the country's name when hovered
 var countrybackground = d3.select(".donut").append("rect")
   .attr("x", donutWidth/6)
-  .attr("y", donutHeight*.36)
+  .attr("y", donutHeight*.55)
   .attr("width", donutWidth2/6)
   .attr("height", 35)
   .attr("fill", "#d6dee0")
@@ -266,7 +266,7 @@ var tip = d3.select(".donut").append("text")
   .attr("class", "country-tip")
   .attr("id", "country-tip")
   .attr("x", donutWidth/2)
-  .attr("y", donutHeight*.4)
+  .attr("y", donutHeight*.6)
   .attr("text-anchor", "middle")
   .style("font-family", "Helvetica Neue, sans-serif")
   .style("font-size", "11")
@@ -279,7 +279,7 @@ var tip = d3.select(".donut").append("text")
 var emissions = d3.select(".donut").append("text")
   .attr("class", "country-emissions-tip")
   .attr("x", donutWidth*.68)
-  .attr("y", donutHeight*.23)
+  .attr("y", donutHeight*.3)
   .attr("text-anchor", "middle")
   .style("font-family", "Roboto Mono, sans-serif")
   .style("font-weight", "bold")
@@ -420,7 +420,7 @@ function setTip(updateClicked) {
         var flagWidth = flag.node().getBBox().width/2;
         var flagHeight = flag.node().getBBox().height/2;
         flag.attr("x", donutWidth/6)
-            .attr("y", donutHeight*.22 - flagHeight)
+            .attr("y", donutHeight*.3 - flagHeight)
 
         var flagLegendxPos = hmapRange(country.Emissions)
         // ternary statement for x will ensure the flag stays within bounds of the scale
@@ -456,7 +456,7 @@ function setLeader() {
   var leaderWidth = leaderFlag.node().getBBox().width/2;
   var leaderHeight = leaderFlag.node().getBBox().height/2;
   leaderFlag.attr("x", donutWidth2*.42)
-  .attr("y", donutHeight*.22 - leaderHeight)
+  // .attr("y", donutHeight*.22 - leaderHeight)
 }
 
 // resets a path's style to be unselected
@@ -887,7 +887,7 @@ function initDonut() {
   var path = donut.selectAll("path").data(pie(cumulativeData))
   var addedpaths = path.enter().append("path")
   addedpaths.merge(path)
-    .attr("transform", "translate(" + (donutWidth2*(5/6)) + "," + (donutHeight*.3) + ")")
+    .attr("transform", "translate(" + (donutWidth2*(5/6)) + "," + (donutHeight*.45) + ")")
     .transition()
       .duration(2000)
       .attrTween("d", initDonutTransition)
@@ -921,7 +921,7 @@ function initDonut() {
   .append("g")
   .attr("class", "donut-legend")
   .attr("transform", (d, i) => {
-      var height = donutHeight*.3 - radius/3;
+      var height = donutHeight*.45 - radius/3;
       var offset =  height * 2.5;
       var horz = donutWidth2*(5/6) -radius/4 + legendRectSize;
       var vert = height + i * legendSpacing;

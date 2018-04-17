@@ -1,7 +1,3 @@
-/** {
-  border: 1px solid;
-}
-*/
 @font-face {
   font-family: 'Cubano-Reg';
   src: url(Cubano-Regular.otf);
@@ -9,7 +5,7 @@
 
 body { background: #d6dee0; }
 
-h1 { font-size: 35px; font-family: 'Cubano-Reg', sans-serif; text-align: center; letter-spacing: 5px;}
+h1 { font-size: 35px; font-family: 'Cubano-Reg', sans-serif; text-align: center; letter-spacing: 5px; margin-top: -30px}
 h2 {font-size: 10px; font-family: 'Cubano-Reg', sans-serif; text-align: center; margin: -20px 0 40px 0; letter-spacing: 2.3px;}
 .title {
   padding: 25px 0 0 0;
@@ -37,7 +33,6 @@ path.country {  stroke: #aaa; }
 .heatmap-div {
   display: flex;
   justify-content: center;
-  margin-top: -60px;
 }
 
 #yearslidersvg {
