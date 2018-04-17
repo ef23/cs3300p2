@@ -763,7 +763,7 @@ function generateSlider(page, min, max, onChange) {
     .attr("width", heatmapWidth)
     .attr("height",40)
     .append("g")
-    .attr("transform", "translate(20,5)")
+    .attr("transform", "translate(20,25)")
 
   g.call(yearslider);
 }
@@ -1112,8 +1112,9 @@ function drawLineGraph(data_option, year) {
     .attr("y", heatmapHeight - (1.5 * margin.bottom))
     .attr("text-anchor", "middle")
     .attr("alignment-baseline", "central")
-    .style("font-family", "Open Sans, sans-serif")
-    .style("font-size", 20)
+    .style("font-family", "Cubano-Reg, sans-serif")
+    .style("font-size", 15)
+    .style("letter-spacing", 2)
     .text(axisLabels[data_option]);
   d3.select("#page2_svg").select("#page2_plot").append("text")
     .attr("x", margin.left / 2)
@@ -1167,13 +1168,15 @@ function page2() {
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   var page2_slider = page2.append("div")
     .attr("id", "yearslider")
-    .style("display", "inline");
+    .style("display", "inline")
+    .style("margin-left", "5.5%");
   lineGraphTitle = page2_svg.append("text")
     .attr("id", "lineGraphTitle")
-    .attr("x", heatmapWidth / 2)
+    .attr("x", heatmapWidth / 2 + 50)
     .attr("y", 0.075 * heatmapHeight)
-    .style("font-family", "Open Sans, sans-serif")
-    .style("font-size", 30)
+    .style("font-family", "Cubano-Reg, sans-serif")
+    .style("font-size", 15)
+    .style("letter-spacing", 2)
     .style("font-weight", "bold")
     .style("text-anchor", "middle");
   var data_option = d3.select("#dropdown").node().value;
