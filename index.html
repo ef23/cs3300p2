@@ -1117,6 +1117,15 @@ function drawLineGraph(data_option, year) {
     .style("font-size", 15)
     .style("letter-spacing", 2)
     .text(axisLabels[data_option]);
+d3.select("#page2_svg").select("#page2_plot").append("text")
+  .attr("x", 0 - (heatmapHeight/3))
+  .attr("y", 0 - (margin.left/2))
+  .attr("text-anchor", "middle")
+  .attr("transform", "rotate(-90)")
+  .style("font-family", "Cubano-Reg, sans-serif")
+  .style("font-size", 15)
+  .style("letter-spacing", 2)
+  .text("Emissions (MT CO2)");
   d3.select("#page2_svg").select("#page2_plot").append("text")
     .attr("x", margin.left / 2)
     .attr("y", heatmapHeight / 2)
