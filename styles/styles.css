@@ -44,7 +44,7 @@ path.country {  stroke: #aaa; }
 
 #yearslidersvg {
   margin-top: -20px;
-  margin-bottom: 50px;
+  /*margin-bottom: 50px; */
 }
 
 #slider-title {
@@ -62,6 +62,9 @@ path.country {  stroke: #aaa; }
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 12px;
   line-height: 18px;
+}
+.page2 {
+  margin-bottom: 50px;
 }
 /* ================================= Buttons ================================= */
 
